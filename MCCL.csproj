@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3E3540CB-3101-416C-A2CD-B7392C588D74}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MC</RootNamespace>
+    <AssemblyName>MCCL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common, Version=1.0.5597.25267, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EP\Common.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v9.2, Version=9.2.8.0, Culture=neutral, PublicKeyToken=646cb77dd9f4ebfa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EP\DevExpress.Data.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v9.2, Version=9.2.8.0, Culture=neutral, PublicKeyToken=646cb77dd9f4ebfa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EP\DevExpress.Utils.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v9.2, Version=9.2.8.0, Culture=neutral, PublicKeyToken=646cb77dd9f4ebfa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EP\DevExpress.XtraEditors.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v9.2, Version=9.2.8.0, Culture=neutral, PublicKeyToken=646cb77dd9f4ebfa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EP\DevExpress.XtraGrid.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v9.2, Version=9.2.8.0, Culture=neutral, PublicKeyToken=646cb77dd9f4ebfa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EP\DevExpress.XtraLayout.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v9.2, Version=9.2.8.0, Culture=neutral, PublicKeyToken=646cb77dd9f4ebfa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EP\DevExpress.XtraTreeList.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="EF, Version=5.0.8.15384, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EP\EF.DLL</HintPath>
+    </Reference>
+    <Reference Include="EI, Version=5.0.8.15383, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EP\EI.DLL</HintPath>
+    </Reference>
+    <Reference Include="JNCommon, Version=1.0.5380.24598, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EP\JNCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="office, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EP\office.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClientsideProviders">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationTypes">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="YutouControlLED, Version=1.0.3059.29172, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EP\YutouControlLED.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph, Version=5.0.1.41097, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\..\EP\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsAutoMatchWPS.cs" />
+    <Compile Include="clsBatchinputwelder.cs" />
+    <Compile Include="clsBatchInputweldinfos.cs" />
+    <Compile Include="clsBatchinputwps.cs" />
+    <Compile Include="clsClassMargwelds.cs" />
+    <Compile Include="clsCMD.cs" />
+    <Compile Include="clsConvertXMLDataTable.cs" />
+    <Compile Include="clsDefaultWPS.cs" />
+    <Compile Include="clsEvaWelders.cs" />
+    <Compile Include="clsExcelIO.cs" />
+    <Compile Include="clsFirstDispatch.cs" />
+    <Compile Include="clsFrmBase.cs" />
+    <Compile Include="clsfrmData.cs" />
+    <Compile Include="clsProjectChooseWeldRule.cs" />
+    <Compile Include="clsProjectDispatchTaskmange.cs" />
+    <Compile Include="clsProjectProcess.cs" />
+    <Compile Include="clsProjectWeldDetail.cs" />
+    <Compile Include="clsTask.cs" />
+    <Compile Include="clsTaskWeldDetail.cs" />
+    <Compile Include="clsweldingclass.cs" />
+    <Compile Include="clsWeldWeldingAdpatEdit.cs" />
+    <Compile Include="clswpsEdit.cs" />
+    <Compile Include="EFFormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EFFormBase.Designer.cs">
+      <DependentUpon>EFFormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form000121.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form000121.Designer.cs">
+      <DependentUpon>Form000121.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formbase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formbase.Designer.cs">
+      <DependentUpon>Formbase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00010.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00010.Designer.cs">
+      <DependentUpon>FormMCCL00010.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL0002.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL0002.Designer.cs">
+      <DependentUpon>FormMCCL0002.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00022.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00022.Designer.cs">
+      <DependentUpon>FormMCCL00022.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00023.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00023.Designer.cs">
+      <DependentUpon>FormMCCL00023.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00024.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00024.Designer.cs">
+      <DependentUpon>FormMCCL00024.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00025.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00025.designer.cs">
+      <DependentUpon>FormMCCL00025.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL000251.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL000251.designer.cs">
+      <DependentUpon>FormMCCL000251.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL000252.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL000252.designer.cs">
+      <DependentUpon>FormMCCL000252.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00026.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00026.Designer.cs">
+      <DependentUpon>FormMCCL00026.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00030.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00030.designer.cs">
+      <DependentUpon>FormMCCL00030.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00031.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00031.designer.cs">
+      <DependentUpon>FormMCCL00031.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00032.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00032.designer.cs">
+      <DependentUpon>FormMCCL00032.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL000321.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL000321.designer.cs">
+      <DependentUpon>FormMCCL000321.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL000322.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL000322.designer.cs">
+      <DependentUpon>FormMCCL000322.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00033.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00033.designer.cs">
+      <DependentUpon>FormMCCL00033.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00034.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00034.Designer.cs">
+      <DependentUpon>FormMCCL00034.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00035.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00035.Designer.cs">
+      <DependentUpon>FormMCCL00035.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00036.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00036.Designer.cs">
+      <DependentUpon>FormMCCL00036.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00037.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00037.Designer.cs">
+      <DependentUpon>FormMCCL00037.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00038.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00038.Designer.cs">
+      <DependentUpon>FormMCCL00038.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00039.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00039.Designer.cs">
+      <DependentUpon>FormMCCL00039.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00051.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00051.Designer.cs">
+      <DependentUpon>FormMCCL00051.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00121.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00121.Designer.cs">
+      <DependentUpon>FormMCCL00121.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL0040CS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL0040CS.designer.cs">
+      <DependentUpon>FormMCCL0040CS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL0041.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL0041.designer.cs">
+      <DependentUpon>FormMCCL0041.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL0042.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL0042.Designer.cs">
+      <DependentUpon>FormMCCL0042.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL0043.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL0043.Designer.cs">
+      <DependentUpon>FormMCCL0043.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00431.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00431.Designer.cs">
+      <DependentUpon>FormMCCL00431.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00432.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00432.Designer.cs">
+      <DependentUpon>FormMCCL00432.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInputMergeName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputMergeName.Designer.cs">
+      <DependentUpon>frmInputMergeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWeldPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWeldPart.Designer.cs">
+      <DependentUpon>frmWeldPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EFFormBase.resx">
+      <DependentUpon>EFFormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form000121.resx">
+      <DependentUpon>Form000121.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formbase.resx">
+      <DependentUpon>Formbase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00010.resx">
+      <DependentUpon>FormMCCL00010.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL0002.resx">
+      <DependentUpon>FormMCCL0002.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00022.resx">
+      <DependentUpon>FormMCCL00022.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00023.resx">
+      <DependentUpon>FormMCCL00023.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00024.resx">
+      <DependentUpon>FormMCCL00024.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00025.resx">
+      <DependentUpon>FormMCCL00025.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL000251.resx">
+      <DependentUpon>FormMCCL000251.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL000252.resx">
+      <DependentUpon>FormMCCL000252.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00026.resx">
+      <DependentUpon>FormMCCL00026.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00030.resx">
+      <DependentUpon>FormMCCL00030.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00031.resx">
+      <DependentUpon>FormMCCL00031.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00032.resx">
+      <DependentUpon>FormMCCL00032.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL000321.resx">
+      <DependentUpon>FormMCCL000321.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL000322.resx">
+      <DependentUpon>FormMCCL000322.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00033.resx">
+      <DependentUpon>FormMCCL00033.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00034.resx">
+      <DependentUpon>FormMCCL00034.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00035.resx">
+      <DependentUpon>FormMCCL00035.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00036.resx">
+      <DependentUpon>FormMCCL00036.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00037.resx">
+      <DependentUpon>FormMCCL00037.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00038.resx">
+      <DependentUpon>FormMCCL00038.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00039.resx">
+      <DependentUpon>FormMCCL00039.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00051.resx">
+      <DependentUpon>FormMCCL00051.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00121.resx">
+      <DependentUpon>FormMCCL00121.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL0040CS.resx">
+      <DependentUpon>FormMCCL0040CS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL0041.resx">
+      <DependentUpon>FormMCCL0041.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL0042.resx">
+      <DependentUpon>FormMCCL0042.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL0043.resx">
+      <DependentUpon>FormMCCL0043.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00431.resx">
+      <DependentUpon>FormMCCL00431.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00432.resx">
+      <DependentUpon>FormMCCL00432.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputMergeName.resx">
+      <DependentUpon>frmInputMergeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWeldPart.resx">
+      <DependentUpon>frmWeldPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL0003.resx">
+      <DependentUpon>FormMCCL0003.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL0004.resx">
+      <DependentUpon>FormMCCL0004.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL0005.resx">
+      <DependentUpon>FormMCCL0005.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL0006.resx">
+      <DependentUpon>FormMCCL0006.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL0008.resx">
+      <DependentUpon>FormMCCL0008.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL0007.resx">
+      <DependentUpon>FormMCCL0007.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL0009.resx">
+      <DependentUpon>FormMCCL0009.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00011.resx">
+      <DependentUpon>FormMCCL00011.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00012.resx">
+      <DependentUpon>FormMCCL00012.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00013.resx">
+      <DependentUpon>FormMCCL00013.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00014.resx">
+      <DependentUpon>FormMCCL00014.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00015.resx">
+      <DependentUpon>FormMCCL00015.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00016.resx">
+      <DependentUpon>FormMCCL00016.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00017.resx">
+      <DependentUpon>FormMCCL00017.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00018.resx">
+      <DependentUpon>FormMCCL00018.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00019.resx">
+      <DependentUpon>FormMCCL00019.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00020.resx">
+      <DependentUpon>FormMCCL00020.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00021.resx">
+      <DependentUpon>FormMCCL00021.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WeldServiceReference\JN.WELD.Service.wsdl" />
+    <None Include="Service References\WeldServiceReference\JN.WELD.Service.xsd" />
+    <None Include="Service References\WeldServiceReference\JN_WELD_Service.xsd" />
+    <None Include="Service References\WeldServiceReference\service.wsdl" />
+    <None Include="Service References\WeldServiceReference\service.xsd" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="FormMCCL0003.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL0003.Designer.cs">
+      <DependentUpon>FormMCCL0003.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL0004.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL0004.Designer.cs">
+      <DependentUpon>FormMCCL0004.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL0005.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL0005.Designer.cs">
+      <DependentUpon>FormMCCL0005.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL0006.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL0006.Designer.cs">
+      <DependentUpon>FormMCCL0006.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL0008.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL0008.Designer.cs">
+      <DependentUpon>FormMCCL0008.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL0007.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL0007.Designer.cs">
+      <DependentUpon>FormMCCL0007.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL0009.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL0009.Designer.cs">
+      <DependentUpon>FormMCCL0009.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00011.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00011.Designer.cs">
+      <DependentUpon>FormMCCL00011.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00012.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00012.Designer.cs">
+      <DependentUpon>FormMCCL00012.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00013.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00013.Designer.cs">
+      <DependentUpon>FormMCCL00013.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00014.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00014.Designer.cs">
+      <DependentUpon>FormMCCL00014.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00015.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00015.Designer.cs">
+      <DependentUpon>FormMCCL00015.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00016.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00016.Designer.cs">
+      <DependentUpon>FormMCCL00016.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00017.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00017.Designer.cs">
+      <DependentUpon>FormMCCL00017.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00018.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00018.Designer.cs">
+      <DependentUpon>FormMCCL00018.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00019.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00019.Designer.cs">
+      <DependentUpon>FormMCCL00019.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00020.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00020.Designer.cs">
+      <DependentUpon>FormMCCL00020.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00021.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00021.Designer.cs">
+      <DependentUpon>FormMCCL00021.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WeldServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="weldEquipmentbase.cs" />
+    <Compile Include="_MyClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxReadCardInfo">
+      <Guid>{123FDA00-F4A6-4C8D-A090-28825172D046}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="ReadCardInfo">
+      <Guid>{123FDA00-F4A6-4C8D-A090-28825172D046}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WeldServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WeldServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WeldServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Service References\WeldServiceReference\MC.WeldServiceReference.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WeldServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
