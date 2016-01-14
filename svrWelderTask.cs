@@ -371,14 +371,34 @@ namespace JN_WELD_Service
 	                        //[FWELDCHANNEL] [int] NOT NULL,
 	                        //[FSTATE] [int] NULL,
 	                        //[FWPSID] [bigint] NULL,
-                            String insertTaskDoingChannleSQL = "insert into [t_Task_Doing_Channel] (FTaskID,FWELDPASS,FWELDCHANNEL,FWPSID,FWeldDevice,FSTARTTIME) values(";
-                            insertTaskDoingChannleSQL += Convert.ToInt64(dt.Rows[0]["FID"]).ToString() + "," + wpsrow["WELD_PASS"].ToString() + "," + wpsrow["FActChannel"].ToString() + "," + wpsrow["FWELDWPSID"].ToString() + ",'" + dt.Rows[0]["FweldDriverID"].ToString() + "','" + DateTime.Now.ToShortDateString() + "')";
-                            _sqldbhelper.ExecuteNonQuery(insertTaskDoingChannleSQL);
+                            if (wpsrow["FActChannel"].ToString().Length > 0)
+                            {
+                                String insertTaskDoingChannleSQL = "insert into [t_Task_Doing_Channel] (FTaskID,FWELDPASS,FWELDCHANNEL,FWPSID,FWeldDevice,FSTARTTIME) values(";
+                                insertTaskDoingChannleSQL += Convert.ToInt64(dt.Rows[0]["FID"]).ToString() + "," + wpsrow["WELD_PASS"].ToString() + "," + wpsrow["FActChannel"].ToString() + "," + wpsrow["FWELDWPSID"].ToString() + ",'" + dt.Rows[0]["FweldDriverID"].ToString() + "','" + DateTime.Now.ToShortDateString() + "')";
+                                _sqldbhelper.ExecuteNonQuery(insertTaskDoingChannleSQL);
+                            }
                         }
 
                         break;
                     }
-                case 2:case 3:case 5:case 4:
+                case 2:
+                    {
+                        String proname = "evaluate_weld";
+                        SqlParameter[] StoredProcedureparas = new SqlParameter[2];
+                        SqlParameter spa = new SqlParameter();
+                        spa.ParameterName = "@PID";
+                        spa.SqlDbType = SqlDbType.BigInt;
+                        spa.SqlValue = fid;
+                        StoredProcedureparas[0] = spa;
+                        spa = new SqlParameter();
+                        spa.ParameterName = "@WELD_PASS";
+                        spa.SqlDbType = SqlDbType.Int;
+                        spa.SqlValue = 0;
+                        StoredProcedureparas[1] = spa;
+                        DataTable rpdt = _sqldbhelper.ExecuteDataTable(proname, CommandType.StoredProcedure, StoredProcedureparas);
+                        break;
+                    }
+                case 3:case 5:case 4:
                     {
                         break;
                     }

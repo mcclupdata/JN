@@ -73,7 +73,7 @@ namespace JN_WELD_Service
                 }
                 if (Convert.ToString(fdt.Rows[0]["TREE_NAME"]) != "%%")
                 {
-                    strfilter += " TREE_NAME='" + fdt.Rows[0]["TREE_NAME"].ToString() + "'  and ";
+                    strfilter += " TREE_NAME='" + fdt.Rows[0]["TREE_NAME"].ToString() + "'  ";
                 }
                 else
                 {

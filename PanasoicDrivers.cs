@@ -399,7 +399,7 @@ namespace JN_WELD_Service
             //保存参数
             _frm.button3_Click(null, null);
             //下载参数
-            Thread.Sleep(2000);
+            Thread.Sleep(3000);
             _frm.button5_Click(null, null);
             Thread.Sleep(2000);
             //_DriversID = int.Parse(_frm.cobWeldNom.Text);
