@@ -304,9 +304,9 @@ namespace JN_WELD_Service
                 //ivvmi = Convert.ToDouble(_frm.txt_BJv_D.Text);// = vmi.ToString();
                 //ivimx = Convert.ToDouble(_frm.txtwa_up.Text);//= imx.ToString();
                 //ivimi = Convert.ToDouble(_frm.txtwa_down.Text);// = imi.ToString();
-                int eqva, eqvv;
-                eqva = Convert.ToInt32(_frm.txtva.Text);
-                eqvv = Convert.ToInt32(_frm.txtvv.Text);
+                double eqva, eqvv;
+                eqva = Convert.ToDouble(_frm.txtva.Text);
+                eqvv = Convert.ToDouble(_frm.txtvv.Text);
                 //if (Convert.ToDouble(System.Math.Abs((vimx - ivimx))) == 0 && Convert.ToDouble(System.Math.Abs((vimi - ivimi))) == 0 && Convert.ToDouble(System.Math.Abs((vvmx - ivvmx))) == 0 && Convert.ToDouble(System.Math.Abs((vvmi - ivvmi))) == 0)
                 if (System.Math.Abs(Convert.ToDouble(iva - eqva)) < 0.5 && System.Math.Abs(Convert.ToDouble(ivv - eqvv)) < 0.5)
                 {
