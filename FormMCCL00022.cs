@@ -11,7 +11,7 @@ using EF;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraEditors.Repository;
-
+using System.Threading;
 namespace MC
 {
     public partial class FormMCCL00022 : Formbase
@@ -36,6 +36,10 @@ namespace MC
 
         int taskcount = 0;
 
+        Thread readCardThread;
+        int threadFlage = 0;
+
+
         AxReadCardInfo.AxReadCard ReadCard;
        
         public FormMCCL00022()
@@ -48,16 +52,66 @@ namespace MC
             this.FSTARTTIME.Value = DateTime.Now;
             AxReadCardInfo.AxReadCard ReadCard = new AxReadCardInfo.AxReadCard();
 
-            ReadCardTimer.Interval = 1000;
+            ReadCardTimer.Interval = 3000;
             this.tabPage1.Parent = this.Control1;
             this.tabPage2.Parent = null;
             
            // ReadCardTimer.Start();
             //this.dataGrid.AutoGenerateColumns = false;
            // this.welderDrvs.Visible = false;
+            
+            //this.dataGrid.AutoGenerateColumns = false;
+            // this.welderDrvs.Visible = false;
+            //开启新线程进行处理
+            readCardThread = new Thread(readCardThreadpro);
+            ReadCardTimer.Start();
 
         }
+        private void readCardThreadpro()
+        {
 
+            String empNO = "", empName = "";
+            int cardId = 0;
+
+
+            //String ss = axCard1.
+            //MessageBox.Show(axCard1.EmpName + "" + axCard1.EmpNo);
+            //ReadCardTimer.Stop();
+            ////try
+            //{
+            //    string empNO = ""; string empName = "";
+            //    int cardId = 0;
+            //    //int retValue=axReadCard1.ReadCard(ref empNO, ref empName, ref cardId);
+            //    String ss = axCard1.ReadCard();
+            //    int retValue = Convert.ToInt32(ss);// this.ReadCard.ReadCard(ref empNO, ref empName, ref cardId);
+
+            int retValue = 0;
+            try
+            {
+
+                ReadCardTimer.Stop();
+                retValue = this.axReadCard1.ReadCard(ref empNO, ref empName, ref cardId);
+
+                //MessageBox.Show("Len=" + empNO.Length + "TRIMLEN= " + empNO.TrimStart().TrimEnd().Length + " NO=" + empNO);
+                if (retValue == 0)
+                {
+                    if (empNO.Length == 13 && Fnum.Text != empNO.Substring(0, 8))
+                    {
+                        Fnum.Text = empNO.Substring(0, 8);
+                    }
+
+                }
+                ReadCardTimer.Start();
+
+            }
+            catch (Exception ex)
+            {
+                ReadCardTimer.Stop();
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            return;
+        }
         private void Fnum_TextChanged(object sender, EventArgs e)
         {
             //焊工发生变化
@@ -127,7 +181,12 @@ namespace MC
             
             //开启焊工等级与焊缝焊接等级要求匹配模式
             clsTaskWeldDetail cls = new clsTaskWeldDetail();
-            dt= cls.checkWeldWeldingClassAD(dt, dt.Rows[0]["FName"].ToString());
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("工号=‘" + Fnum.Text + "’ 不存在焊接任务");
+                return;
+            }
+            dt= cls.checkWeldWeldingClassAD(dt, dt.Rows[0]["FNum"].ToString());
             if (dt.Rows.Count > 0)
             {
                 FName.Text = dt.Rows[0]["FName"].ToString();
@@ -137,6 +196,7 @@ namespace MC
             else
             {
                 MessageBox.Show("工号=‘" + Fnum.Text + "’ 不存在焊接任务");
+                return;
             }
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -445,6 +505,9 @@ namespace MC
         /// <returns></returns>
         protected Boolean CheckWelderCanused(int nom)
         {
+#if DEBUG
+            return true; 
+#endif
             DataTable panasoicWelderDT = new DataTable();
             panasoicWelderDT = _Client.ServiceCall(cmd_WeldDrivers_GetDrivers, null);
             for (int i = 0; i < panasoicWelderDT.Rows.Count; i++)
@@ -620,7 +683,7 @@ namespace MC
                         //显示匹配的焊机，以及焊机的通道设定信息，包含WPS信息等；
 
 
-                        showdt = _Client.ServiceCall(clsCMD.cmd_WeldTask_CheckWPSAndPreChannel, _curWelderTaskFID_DT);
+                        //showdt = _Client.ServiceCall(clsCMD.cmd_WeldTask_CheckWPSAndPreChannel, _curWelderTaskFID_DT);
 
                         if (showdt.Rows.Count == 0)
                         {
@@ -841,27 +904,30 @@ namespace MC
 
         private void ReadCardTimer_Tick(object sender, EventArgs e)
         {
-            string empNO = "";string empName = "";
-            int cardId = 0;
-            int retValue = this.ReadCard.ReadCard(ref empNO, ref empName, ref cardId);
+            readCardThread.Start();
+            return;
 
-            if (retValue == -1)
-            {
-                MessageBox.Show("打开串口错误，未能识别读卡器！", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (retValue == -2)
-            {
-                MessageBox.Show("卡片信息有误，未能识别卡片信息！", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (empNO.Length == 0)
-                return;
-            if (empNO == Fnum.Text)
-                return;
-            if (empNO.Length != 8)
-                return;
-            Fnum.Text = empNO; FName.EFEnterText = empName;
+            //string empNO = "";string empName = "";
+            //int cardId = 0;
+            //int retValue = this.ReadCard.ReadCard(ref empNO, ref empName, ref cardId);
+
+            //if (retValue == -1)
+            //{
+            //    MessageBox.Show("打开串口错误，未能识别读卡器！", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
+            //else if (retValue == -2)
+            //{
+            //    MessageBox.Show("卡片信息有误，未能识别卡片信息！", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
+            //if (empNO.Length == 0)
+            //    return;
+            //if (empNO == Fnum.Text)
+            //    return;
+            //if (empNO.Length != 8)
+            //    return;
+            //Fnum.Text = empNO; FName.EFEnterText = empName;
         }
 
         private void efButton1_Click(object sender, EventArgs e)
