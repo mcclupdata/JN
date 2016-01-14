@@ -251,6 +251,7 @@ namespace MC
                                 ((YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED)cl).TP_DateTime = DateTime.Now;
                             else
                                 ((YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED)cl).TP_DateTime = Convert.ToDateTime(row[cl.Name].ToString());
+                            ((YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED)cl).Refresh();
                         }
                     }
                 }

@@ -42,13 +42,13 @@
             this.CWELD_NO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CRULNUM = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CWELD_PASS = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CWELD_MOD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CWELD_MATERIAL = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CWELD_I_MAX = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CWELD_I_MIN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CWELD_V_MAX = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CWELD_V_MIN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).BeginInit();
             this.efGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox2)).BeginInit();
@@ -63,13 +63,14 @@
             // 
             this.efGroupBox1.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.efGroupBox1.Appearance.Options.UseBackColor = true;
+            this.efGroupBox1.Controls.Add(this.butCancel);
             this.efGroupBox1.Controls.Add(this.nom);
+            this.efGroupBox1.Controls.Add(this.butOK);
             this.efGroupBox1.Controls.Add(this.FName);
             this.efGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efGroupBox1.Location = new System.Drawing.Point(0, 0);
-            this.efGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efGroupBox1.Name = "efGroupBox1";
-            this.efGroupBox1.Size = new System.Drawing.Size(1328, 101);
+            this.efGroupBox1.Size = new System.Drawing.Size(903, 64);
             this.efGroupBox1.TabIndex = 4;
             this.efGroupBox1.Text = "任务概要";
             // 
@@ -84,11 +85,10 @@
             this.nom.EFLen = 32767;
             this.nom.EFType = EF.ValueType.EFString;
             this.nom.EFUpperCase = false;
-            this.nom.Location = new System.Drawing.Point(310, 42);
-            this.nom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.nom.Location = new System.Drawing.Point(215, 26);
             this.nom.Name = "nom";
             this.nom.ReadOnly = true;
-            this.nom.Size = new System.Drawing.Size(257, 29);
+            this.nom.Size = new System.Drawing.Size(180, 23);
             this.nom.TabIndex = 1;
             // 
             // FName
@@ -102,25 +102,21 @@
             this.FName.EFLen = 32767;
             this.FName.EFType = EF.ValueType.EFString;
             this.FName.EFUpperCase = false;
-            this.FName.Location = new System.Drawing.Point(19, 42);
-            this.FName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FName.Location = new System.Drawing.Point(13, 27);
             this.FName.Name = "FName";
             this.FName.ReadOnly = true;
-            this.FName.Size = new System.Drawing.Size(266, 29);
+            this.FName.Size = new System.Drawing.Size(186, 23);
             this.FName.TabIndex = 0;
             // 
             // efGroupBox2
             // 
             this.efGroupBox2.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.efGroupBox2.Appearance.Options.UseBackColor = true;
-            this.efGroupBox2.Controls.Add(this.butCancel);
-            this.efGroupBox2.Controls.Add(this.butOK);
             this.efGroupBox2.Controls.Add(this.dataGrid);
             this.efGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efGroupBox2.Location = new System.Drawing.Point(0, 101);
-            this.efGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efGroupBox2.Location = new System.Drawing.Point(0, 64);
             this.efGroupBox2.Name = "efGroupBox2";
-            this.efGroupBox2.Size = new System.Drawing.Size(1328, 470);
+            this.efGroupBox2.Size = new System.Drawing.Size(903, 299);
             this.efGroupBox2.TabIndex = 5;
             this.efGroupBox2.Text = "明细";
             // 
@@ -130,10 +126,9 @@
             this.butCancel.EnabledEx = true;
             this.butCancel.FnNo = 0;
             this.butCancel.Hint = "";
-            this.butCancel.Location = new System.Drawing.Point(591, 390);
-            this.butCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butCancel.Location = new System.Drawing.Point(616, 26);
             this.butCancel.Name = "butCancel";
-            this.butCancel.Size = new System.Drawing.Size(147, 69);
+            this.butCancel.Size = new System.Drawing.Size(103, 33);
             this.butCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butCancel.TabIndex = 2;
             this.butCancel.Text = "取消";
@@ -146,10 +141,9 @@
             this.butOK.EnabledEx = true;
             this.butOK.FnNo = 0;
             this.butOK.Hint = "";
-            this.butOK.Location = new System.Drawing.Point(290, 390);
-            this.butOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butOK.Location = new System.Drawing.Point(425, 26);
             this.butOK.Name = "butOK";
-            this.butOK.Size = new System.Drawing.Size(147, 69);
+            this.butOK.Size = new System.Drawing.Size(103, 32);
             this.butOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butOK.TabIndex = 1;
             this.butOK.Text = "确定";
@@ -159,11 +153,10 @@
             // dataGrid
             // 
             this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGrid.Location = new System.Drawing.Point(2, 30);
+            this.dataGrid.Location = new System.Drawing.Point(2, 23);
             this.dataGrid.MainView = this.gridView1;
-            this.dataGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(1324, 438);
+            this.dataGrid.Size = new System.Drawing.Size(899, 274);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -237,6 +230,15 @@
             this.CWELD_PASS.VisibleIndex = 5;
             this.CWELD_PASS.Width = 129;
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "焊机通道";
+            this.gridColumn1.FieldName = "FActChannel";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 110;
+            // 
             // CWELD_MOD
             // 
             this.CWELD_MOD.Caption = "焊接方法";
@@ -289,24 +291,15 @@
             this.CWELD_V_MIN.Visible = true;
             this.CWELD_V_MIN.VisibleIndex = 11;
             // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "焊机通道";
-            this.gridColumn1.FieldName = "FActChannel";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 110;
-            // 
             // FormMCCL00023
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1328, 643);
+            this.ClientSize = new System.Drawing.Size(903, 409);
             this.Controls.Add(this.efGroupBox2);
             this.Controls.Add(this.efGroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "FormMCCL00023";
             this.Text = "任务明细";
             this.Controls.SetChildIndex(this.efGroupBox1, 0);

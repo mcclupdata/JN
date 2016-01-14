@@ -84,8 +84,9 @@
             this.han.Controls.Add(this.efLabel1);
             this.han.Dock = System.Windows.Forms.DockStyle.Top;
             this.han.Location = new System.Drawing.Point(0, 0);
+            this.han.Margin = new System.Windows.Forms.Padding(2);
             this.han.Name = "han";
-            this.han.Size = new System.Drawing.Size(1620, 100);
+            this.han.Size = new System.Drawing.Size(896, 64);
             this.han.TabIndex = 4;
             this.han.Text = "焊缝集合";
             // 
@@ -96,9 +97,10 @@
             this.butOK.EnabledEx = true;
             this.butOK.FnNo = 0;
             this.butOK.Hint = "";
-            this.butOK.Location = new System.Drawing.Point(1516, 30);
+            this.butOK.Location = new System.Drawing.Point(823, 23);
+            this.butOK.Margin = new System.Windows.Forms.Padding(2);
             this.butOK.Name = "butOK";
-            this.butOK.Size = new System.Drawing.Size(102, 68);
+            this.butOK.Size = new System.Drawing.Size(71, 39);
             this.butOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butOK.TabIndex = 10;
             this.butOK.Text = "确定";
@@ -108,78 +110,86 @@
             // luAS3
             // 
             this.luAS3.EditValue = "*";
-            this.luAS3.Location = new System.Drawing.Point(1000, 50);
+            this.luAS3.Location = new System.Drawing.Point(700, 32);
+            this.luAS3.Margin = new System.Windows.Forms.Padding(2);
             this.luAS3.Name = "luAS3";
             this.luAS3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.luAS3.Size = new System.Drawing.Size(198, 28);
+            this.luAS3.Size = new System.Drawing.Size(139, 21);
             this.luAS3.TabIndex = 9;
             // 
             // luTREENAME
             // 
             this.luTREENAME.EditValue = "*";
-            this.luTREENAME.Location = new System.Drawing.Point(668, 50);
+            this.luTREENAME.Location = new System.Drawing.Point(468, 32);
+            this.luTREENAME.Margin = new System.Windows.Forms.Padding(2);
             this.luTREENAME.Name = "luTREENAME";
             this.luTREENAME.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.luTREENAME.Size = new System.Drawing.Size(198, 28);
+            this.luTREENAME.Size = new System.Drawing.Size(139, 21);
             this.luTREENAME.TabIndex = 7;
             this.luTREENAME.EditValueChanged += new System.EventHandler(this.luTREENAME_EditValueChanged);
             // 
             // luBUFF1
             // 
             this.luBUFF1.EditValue = "*";
-            this.luBUFF1.Location = new System.Drawing.Point(359, 50);
+            this.luBUFF1.Location = new System.Drawing.Point(251, 32);
+            this.luBUFF1.Margin = new System.Windows.Forms.Padding(2);
             this.luBUFF1.Name = "luBUFF1";
             this.luBUFF1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.luBUFF1.Size = new System.Drawing.Size(198, 28);
+            this.luBUFF1.Size = new System.Drawing.Size(139, 21);
             this.luBUFF1.TabIndex = 6;
             this.luBUFF1.EditValueChanged += new System.EventHandler(this.luBUFF1_EditValueChanged);
             // 
             // luSHIP_NO
             // 
-            this.luSHIP_NO.Location = new System.Drawing.Point(76, 50);
+            this.luSHIP_NO.Location = new System.Drawing.Point(53, 32);
+            this.luSHIP_NO.Margin = new System.Windows.Forms.Padding(2);
             this.luSHIP_NO.Name = "luSHIP_NO";
             this.luSHIP_NO.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.luSHIP_NO.Size = new System.Drawing.Size(198, 28);
+            this.luSHIP_NO.Size = new System.Drawing.Size(139, 21);
             this.luSHIP_NO.TabIndex = 5;
             this.luSHIP_NO.EditValueChanged += new System.EventHandler(this.luSHIP_NO_EditValueChanged);
             // 
             // efLabel5
             // 
             this.efLabel5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel5.Location = new System.Drawing.Point(924, 49);
+            this.efLabel5.Location = new System.Drawing.Point(647, 31);
+            this.efLabel5.Margin = new System.Windows.Forms.Padding(2);
             this.efLabel5.Name = "efLabel5";
-            this.efLabel5.Size = new System.Drawing.Size(59, 31);
+            this.efLabel5.Size = new System.Drawing.Size(41, 20);
             this.efLabel5.TabIndex = 4;
             this.efLabel5.Text = "AS3";
             // 
             // efLabel3
             // 
             this.efLabel3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel3.Location = new System.Drawing.Point(603, 49);
+            this.efLabel3.Location = new System.Drawing.Point(422, 31);
+            this.efLabel3.Margin = new System.Windows.Forms.Padding(2);
             this.efLabel3.Name = "efLabel3";
-            this.efLabel3.Size = new System.Drawing.Size(59, 31);
+            this.efLabel3.Size = new System.Drawing.Size(41, 20);
             this.efLabel3.TabIndex = 2;
             this.efLabel3.Text = "分段";
             // 
             // efLabel2
             // 
             this.efLabel2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel2.Location = new System.Drawing.Point(305, 49);
+            this.efLabel2.Location = new System.Drawing.Point(213, 31);
+            this.efLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.efLabel2.Name = "efLabel2";
-            this.efLabel2.Size = new System.Drawing.Size(59, 31);
+            this.efLabel2.Size = new System.Drawing.Size(41, 20);
             this.efLabel2.TabIndex = 1;
             this.efLabel2.Text = "阶段";
             // 
             // efLabel1
             // 
             this.efLabel1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel1.Location = new System.Drawing.Point(23, 49);
+            this.efLabel1.Location = new System.Drawing.Point(16, 31);
+            this.efLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.efLabel1.Name = "efLabel1";
-            this.efLabel1.Size = new System.Drawing.Size(59, 31);
+            this.efLabel1.Size = new System.Drawing.Size(41, 20);
             this.efLabel1.TabIndex = 0;
             this.efLabel1.Text = "号船";
             // 
@@ -188,9 +198,10 @@
             this.efPanel1.Controls.Add(this.efGroupBox2);
             this.efPanel1.Controls.Add(this.efGroupBox1);
             this.efPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efPanel1.Location = new System.Drawing.Point(0, 100);
+            this.efPanel1.Location = new System.Drawing.Point(0, 64);
+            this.efPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.efPanel1.Name = "efPanel1";
-            this.efPanel1.Size = new System.Drawing.Size(1620, 598);
+            this.efPanel1.Size = new System.Drawing.Size(896, 380);
             this.efPanel1.TabIndex = 5;
             // 
             // efGroupBox2
@@ -199,9 +210,10 @@
             this.efGroupBox2.Appearance.Options.UseBackColor = true;
             this.efGroupBox2.Controls.Add(this.weldsdataGrid);
             this.efGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efGroupBox2.Location = new System.Drawing.Point(652, 0);
+            this.efGroupBox2.Location = new System.Drawing.Point(485, 0);
+            this.efGroupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.efGroupBox2.Name = "efGroupBox2";
-            this.efGroupBox2.Size = new System.Drawing.Size(968, 598);
+            this.efGroupBox2.Size = new System.Drawing.Size(411, 380);
             this.efGroupBox2.TabIndex = 1;
             this.efGroupBox2.Text = "统计列表";
             // 
@@ -209,8 +221,9 @@
             // 
             this.weldsdataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.weldsdataGrid.IsUseCustomPageBar = true;
-            this.weldsdataGrid.Location = new System.Drawing.Point(2, 30);
+            this.weldsdataGrid.Location = new System.Drawing.Point(2, 23);
             this.weldsdataGrid.MainView = this.weldsGridView;
+            this.weldsdataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.weldsdataGrid.Name = "weldsdataGrid";
             this.weldsdataGrid.ShowContextMenuAddCopyNew = false;
             this.weldsdataGrid.ShowContextMenuAddNew = false;
@@ -221,7 +234,7 @@
             this.weldsdataGrid.ShowContextMenuUnChooseAll = false;
             this.weldsdataGrid.ShowDeleteRowButton = true;
             this.weldsdataGrid.ShowSaveLayoutButton = false;
-            this.weldsdataGrid.Size = new System.Drawing.Size(964, 566);
+            this.weldsdataGrid.Size = new System.Drawing.Size(407, 355);
             this.weldsdataGrid.TabIndex = 0;
             this.weldsdataGrid.UseEmbeddedNavigator = true;
             this.weldsdataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -334,8 +347,9 @@
             this.efGroupBox1.Controls.Add(this.zgc);
             this.efGroupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.efGroupBox1.Location = new System.Drawing.Point(0, 0);
+            this.efGroupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.efGroupBox1.Name = "efGroupBox1";
-            this.efGroupBox1.Size = new System.Drawing.Size(652, 598);
+            this.efGroupBox1.Size = new System.Drawing.Size(485, 380);
             this.efGroupBox1.TabIndex = 0;
             this.efGroupBox1.Text = "统计饼图";
             // 
@@ -365,8 +379,8 @@
             this.zgc.IsZoomOnMouseCenter = false;
             this.zgc.LinkButtons = System.Windows.Forms.MouseButtons.Left;
             this.zgc.LinkModifierKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.None)));
-            this.zgc.Location = new System.Drawing.Point(2, 30);
-            this.zgc.Margin = new System.Windows.Forms.Padding(6);
+            this.zgc.Location = new System.Drawing.Point(2, 23);
+            this.zgc.Margin = new System.Windows.Forms.Padding(4);
             this.zgc.Name = "zgc";
             this.zgc.PanButtons = System.Windows.Forms.MouseButtons.Left;
             this.zgc.PanButtons2 = System.Windows.Forms.MouseButtons.Middle;
@@ -380,7 +394,7 @@
             this.zgc.ScrollMinX = 0;
             this.zgc.ScrollMinY = 0;
             this.zgc.ScrollMinY2 = 0;
-            this.zgc.Size = new System.Drawing.Size(648, 566);
+            this.zgc.Size = new System.Drawing.Size(481, 355);
             this.zgc.TabIndex = 1;
             this.zgc.ZoomButtons = System.Windows.Forms.MouseButtons.Left;
             this.zgc.ZoomButtons2 = System.Windows.Forms.MouseButtons.None;
@@ -390,10 +404,11 @@
             // 
             // FormMCCL0041
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
-            this.ClientSize = new System.Drawing.Size(1620, 770);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.ClientSize = new System.Drawing.Size(896, 490);
             this.Controls.Add(this.efPanel1);
             this.Controls.Add(this.han);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "FormMCCL0041";
             this.Text = "焊缝评估-焊缝";
             this.Load += new System.EventHandler(this.FormMCCL0041_Load);

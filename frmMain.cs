@@ -207,7 +207,7 @@ namespace MC
 
         private void efButton31_Click(object sender, EventArgs e)
         {
-            FormMCCL0040cs frm = new FormMCCL0040cs();
+            FormMCCL0040CS frm = new FormMCCL0040CS();
             frm.ShowDialog(this);
         }
 

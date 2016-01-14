@@ -36,12 +36,92 @@ namespace MC
 
         int taskcount = 0;
 
-        Thread readCardThread;
-        int threadFlage = 0;
+        //AxReadCardInfo.AxReadCard ReadCard;
+
+        //Thread readCardThread ;//= new Thread(readCardThreadpro);
+
+        Thread showDownloadThread ;//= new Thread(showDownLoadThreadpro);
+        //System.Timers.Timer RCD_Timer;
+
+        clsReadCardThread clsrd;
+
+        System.Threading.Timer th_Timer;
+
+        int threadflage = 0;
+
+        public delegate void dgt_readcard();
+
+        private void actreadcard()
+        {
+            
+            string empNO = ""; string empName = "";
+            int cardId = 0;
+            ReadCardTimer.Enabled = false;
+            ReadCardTimer.Stop();
+            //RCD_Timer.Enabled = false;
+            //RCD_Timer.Stop();
+            //while (1 == 1)
+            //{
+            int retValue = this.axReadCard1.ReadCard(ref empNO, ref empName, ref cardId);
+
+            if (retValue == -1)
+            {
+                MessageBox.Show("打开串口错误，未能识别读卡器！", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            //else if (retValue == -2)
+            //{
+            //    MessageBox.Show("卡片信息有误，未能识别卡片信息！", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
+            if (retValue == 0)
+            {
+                if (empNO.Length == 13)// && Fnum.Text != empNO.Substring(0, 8))
+                {
+
+                    Fnum.Text = empNO.Substring(0, 8); FName.EFEnterText = empName;
+                    ReadCardTimer.Stop();
+                    ReadCardTimer.Enabled = false;
+                    return;
+                }
+            }
+            else
+            {
+                //MessageBox.Show("打开串口错误，未能识别读卡器！", "警告", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //ReadCardTimer.Stop();
+                //return;
+
+            }
+                //Thread.Sleep(3000);
+            //}
+           // this.readCardThread.Abort();
+
+            ReadCardTimer.Enabled = true;
+            ReadCardTimer.Start();
+               // RCD_Timer.Start();
+            //RCD_Timer.Enabled=true;
+                threadflage = 1;
+        }
+        private void showDownLoadThreadpro()
+        {
+            FormMCCLTaskPros vf = new FormMCCLTaskPros();
+            vf.ShowDialog();
+
+        }
 
 
-        AxReadCardInfo.AxReadCard ReadCard;
+        private void readCardThreadpro()
+        {
+            //RCD_Timer.Stop();
        
+            //this.ReadCardTimer.Enabled = true;
+            //dgt_readcard rd = new dgt_readcard(actreadcard);
+            //BeginInvoke(rd);
+            //RCD_Timer.Start();
+            
+            //this.readCardThread.Abort();
+        }
+
         public FormMCCL00022()
         {
             InitializeComponent();
@@ -52,72 +132,76 @@ namespace MC
             this.FSTARTTIME.Value = DateTime.Now;
             AxReadCardInfo.AxReadCard ReadCard = new AxReadCardInfo.AxReadCard();
 
-            ReadCardTimer.Interval = 3000;
+            ReadCardTimer.Interval = 1000;
+            ReadCardTimer.Enabled = false;
             this.tabPage1.Parent = this.Control1;
             this.tabPage2.Parent = null;
-            
-           // ReadCardTimer.Start();
-            //this.dataGrid.AutoGenerateColumns = false;
-           // this.welderDrvs.Visible = false;
-            
+
+            // ReadCardTimer.Start();
             //this.dataGrid.AutoGenerateColumns = false;
             // this.welderDrvs.Visible = false;
-            //开启新线程进行处理
-            readCardThread = new Thread(readCardThreadpro);
-            ReadCardTimer.Start();
+            //  readCardThread = new Thread(readCardThreadpro);
+            showDownloadThread = new Thread(showDownLoadThreadpro);
+            //ReadCardTimer.Start();
+            //    RCD_Timer = new System.Timers.Timer(3000);
 
+            //    RCD_Timer.Elapsed += new System.Timers.ElapsedEventHandler(RCD_Timer_Elapsed);
+
+            //    RCD_Timer.Start();
+            //}
+            
+            //clsrd = new clsReadCardThread(ref Fnum,ref FName);
+            //clsrd.start();
+
+           // th_Timer = new System.Threading.Timer(new System.Threading.TimerCallback(actreadcard), this, 5000, 5000);
+    
         }
-        private void readCardThreadpro()
+        void RCD_Timer_Elapsed(object sende)
         {
-
-            String empNO = "", empName = "";
-            int cardId = 0;
-
-
-            //String ss = axCard1.
-            //MessageBox.Show(axCard1.EmpName + "" + axCard1.EmpNo);
-            //ReadCardTimer.Stop();
-            ////try
-            //{
-            //    string empNO = ""; string empName = "";
-            //    int cardId = 0;
-            //    //int retValue=axReadCard1.ReadCard(ref empNO, ref empName, ref cardId);
-            //    String ss = axCard1.ReadCard();
-            //    int retValue = Convert.ToInt32(ss);// this.ReadCard.ReadCard(ref empNO, ref empName, ref cardId);
-
-            int retValue = 0;
+            //throw new NotImplementedException();
             try
             {
+                //dgt_readcard rd = new dgt_readcard(actreadcard);
+                //BeginInvoke(rd);
+                //ThreadState ss = readCardThread.ThreadState;
+                //if (ss==ThreadState.Unstarted)
+                //    readCardThread.Start();
+               // RCD_Timer.Stop();
+                //readCardThread = new Thread(new ThreadStart(readCardThreadpro));
+                //readCardThread.ApartmentState=ApartmentState.MTA;
+                //readCardThread.Start();
+                //while (threadflage==0)
+                //{
+                    
+                //}
+                //threadflage = 0;
 
-                ReadCardTimer.Stop();
-                retValue = this.axReadCard1.ReadCard(ref empNO, ref empName, ref cardId);
+                //actreadcard();
+                //dgt_readcard rd = new dgt_readcard(actreadcard);
+                //BeginInvoke(rd);
+                //RCD_Timer.Start();
+                
+                //if (readCardThread.IsAlive)
+                //{
 
-                //MessageBox.Show("Len=" + empNO.Length + "TRIMLEN= " + empNO.TrimStart().TrimEnd().Length + " NO=" + empNO);
-                if (retValue == 0)
-                {
-                    if (empNO.Length == 13 && Fnum.Text != empNO.Substring(0, 8))
-                    {
-                        Fnum.Text = empNO.Substring(0, 8);
-                    }
-
-                }
-                ReadCardTimer.Start();
-
+                //}
+                //else
+                //{
+                //    readCardThread.Start();
+                //}
             }
-            catch (Exception ex)
-            {
-                ReadCardTimer.Stop();
-                MessageBox.Show(ex.Message);
-                return;
-            }
-            return;
+            catch (Exception ex) { String exss = ex.Message.ToString(); }
         }
+
         private void Fnum_TextChanged(object sender, EventArgs e)
         {
             //焊工发生变化
+            bool ss = this.ReadCardTimer.Enabled;
+          
             String weldernum = this.Fnum.Text;
             if (weldernum.Length != 8)
                 return;
+            
             FSTARTTIME_ValueChanged(null, null);//加载素具
             //获取班组未分配任务;
             DataTable fdt = new DataTable();
@@ -164,12 +248,7 @@ namespace MC
             //if (dt.Rows.Count > 0)
             //{//存在正在进行的焊接，则不能显示其他焊接任务
             //   // MessageBox.Show(this, "您正在进行一项任务不能选取新任务", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //  //  return;
-            //}
-            //else
-            //{//不存在正在进行的焊接，则实现未开工的焊接任务
-            //    dv.RowFilter = "";
-            //    rowfilter = "Fnum='{0}' and FSTATE<>1 and FSTARTTIME=#{1}#";
+             ;
             //    dv.RowFilter = String.Format(rowfilter, weldernum, stime);
             //    dt = dv.ToTable();
             //    //for (int i = 0; i < unDispList.Rows.Count; i++)
@@ -186,7 +265,7 @@ namespace MC
                 MessageBox.Show("工号=‘" + Fnum.Text + "’ 不存在焊接任务");
                 return;
             }
-            dt= cls.checkWeldWeldingClassAD(dt, dt.Rows[0]["FNum"].ToString());
+            dt= cls.checkWeldWeldingClassAD(dt, dt.Rows[0]["FName"].ToString());
             if (dt.Rows.Count > 0)
             {
                 FName.Text = dt.Rows[0]["FName"].ToString();
@@ -196,7 +275,6 @@ namespace MC
             else
             {
                 MessageBox.Show("工号=‘" + Fnum.Text + "’ 不存在焊接任务");
-                return;
             }
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -208,6 +286,7 @@ namespace MC
             this.tabPage1.Parent = Control1;
             this.tabPage2.Parent = null;
             this.Control1.SelectTab(tabPage1);
+            this.gridView1.BestFitColumns();
         }
 
         private void FSTARTTIME_ValueChanged(object sender, EventArgs e)
@@ -505,9 +584,6 @@ namespace MC
         /// <returns></returns>
         protected Boolean CheckWelderCanused(int nom)
         {
-#if DEBUG
-            return true; 
-#endif
             DataTable panasoicWelderDT = new DataTable();
             panasoicWelderDT = _Client.ServiceCall(cmd_WeldDrivers_GetDrivers, null);
             for (int i = 0; i < panasoicWelderDT.Rows.Count; i++)
@@ -705,7 +781,10 @@ namespace MC
                             FormMCCL00023 vfrm = new FormMCCL00023(showdt);
                             if (vfrm.ShowDialog(this) == DialogResult.Yes)
                             {
+                                
+                                showDownloadThread.Start();
                                 DataTable rsdt = _Client.ServiceCall(7004, _curWelderTaskFID_DT);
+                                
                                 // this.dataGrid.DataSource = _curWelderTaskFID_DT;
                                 this.dataGrid.Refresh();
                                 //更新界面；
@@ -786,7 +865,7 @@ namespace MC
                         break;
                     }
             }
-
+           
             welderDrvs.Enabled = false;
             Fnum_TextChanged(Fnum, null);
             return false;
@@ -904,9 +983,6 @@ namespace MC
 
         private void ReadCardTimer_Tick(object sender, EventArgs e)
         {
-            readCardThread.Start();
-            return;
-
             //string empNO = "";string empName = "";
             //int cardId = 0;
             //int retValue = this.ReadCard.ReadCard(ref empNO, ref empName, ref cardId);
@@ -928,6 +1004,31 @@ namespace MC
             //if (empNO.Length != 8)
             //    return;
             //Fnum.Text = empNO; FName.EFEnterText = empName;
+            //ReadCardTimer.Enabled = false;
+
+         
+
+            try
+            {
+                dgt_readcard rd = new dgt_readcard(actreadcard);
+                BeginInvoke(rd);
+                //ThreadState ss = readCardThread.ThreadState;
+                //if (ss==ThreadState.Unstarted)
+                //    readCardThread.Start();
+                //readCardThread = new Thread(new ThreadStart(readCardThreadpro));
+                //readCardThread.Start();
+                //if (readCardThread.IsAlive)
+                //{
+
+                //}
+                //else
+                //{
+                //    readCardThread.Start();
+                //}
+            }
+            catch (Exception ex) { String exss = ex.Message.ToString(); }
+            
+            //ReadCardTimer.Enabled = true;
         }
 
         private void efButton1_Click(object sender, EventArgs e)
@@ -974,6 +1075,12 @@ namespace MC
         private void butCancel_Click(object sender, EventArgs e)
         {
             this.Fnum_TextChanged(null, null);
+        }
+
+        private void Read_Click(object sender, EventArgs e)
+        {
+            ReadCardTimer.Enabled = true;
+            ReadCardTimer.Start();
         }
     }
 }

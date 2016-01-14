@@ -23,7 +23,7 @@ namespace MC
             _alldt = _cls.getAllWeldType();
             //SHIP_NO;
             DataView v = _alldt.Copy().DefaultView;
-            DataTable shipno_dt = v.ToTable("SHIP_NO");
+            DataTable shipno_dt = v.ToTable(true,"SHIP_NO");
            
             this.luSHIP_NO.Properties.DataSource = shipno_dt;
             this.luSHIP_NO.Properties.DisplayMember = "SHIP_NO";
@@ -38,7 +38,7 @@ namespace MC
             //SHIP_NO;
             DataView v = _alldt.Copy().DefaultView;
             v.RowFilter = "SHIP_NO='" + ship_no + "'";
-            DataTable dt = v.ToTable("BUFF1");
+            DataTable dt = v.ToTable(true,"BUFF1");
             dt.Rows.Add("*");
             dt.DefaultView.Sort = "BUFF1";
             this.luBUFF1.Properties.DataSource = dt;
@@ -55,7 +55,7 @@ namespace MC
             String ship_no = this.luSHIP_NO.EditValue.ToString();
             DataView v = _alldt.Copy().DefaultView;
             v.RowFilter = "SHIP_NO='" + ship_no + "' and BUFF1='" + buff1 + "' and TREE_NAME='"+treename+"'";
-            DataTable dt = v.ToTable("AS3");
+            DataTable dt = v.ToTable(true, "AS3");
             dt.Rows.Add("*");
             v.Sort = "AS3";
             this.luAS3.Properties.DataSource = dt;
@@ -71,7 +71,7 @@ namespace MC
             String ship_no = this.luSHIP_NO.EditValue.ToString();
             DataView v = _alldt.Copy().DefaultView;
             v.RowFilter = "SHIP_NO='" + ship_no + "' and BUFF1='" + buff1 + "'";
-            DataTable dt = v.ToTable("TREE_NAME");
+            DataTable dt = v.ToTable(true, "TREE_NAME");
             dt.Rows.Add("*");
             v.Sort = "TREE_NAME";
             this.luTREENAME.Properties.DataSource = dt;
@@ -163,6 +163,8 @@ namespace MC
 
             // Calculate the Axis Scale Ranges
             zgc.AxisChange();
+            zgc.Refresh();
+
         }
 
         private void weldsGridView_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)

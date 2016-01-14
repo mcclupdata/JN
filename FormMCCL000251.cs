@@ -447,7 +447,9 @@ namespace MC
         /// <param name="e"></param>
         private void Timer_ZED_Tick(object sender, EventArgs e)
         {
+            Timer_ZED.Stop();
             Timer_WeldEquipmentReal();
+            Timer_ZED.Start();
         }
         /// <summary>
         /// 焊机基本状态 1分钟更新一次
@@ -492,7 +494,9 @@ namespace MC
         /// <param name="e"></param>
         private void Timer_Task_Tick(object sender, EventArgs e)
         {
+            Timer_Task.Stop();
             loadweldEquipmentTask();
+            Timer_Task.Start();
         }
 
         
@@ -595,6 +599,7 @@ namespace MC
         private void Timer_WeldDevs_Tick(object sender, EventArgs e)
         {
             //刷新设备状态；
+            Timer_WeldDevs.Stop();
             DataTable dt = _Client.ServiceCall(clsCMD.cmd_weldEquipment_Real_PaicTask, null);
 
             DataTable welddt = _Client.ServiceCall(1030, null);
@@ -662,7 +667,13 @@ namespace MC
                  dt.DefaultView.RowFilter="";
             }
             //this.gridView1.FocusedRowHandle = curIndex;
+            Timer_WeldDevs.Start();
+        }
+
+        private void weldTime_Load(object sender, EventArgs e)
+        {
 
         }
+       
     }
 }

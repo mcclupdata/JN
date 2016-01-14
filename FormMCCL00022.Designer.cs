@@ -35,6 +35,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("hgg", "焊机1.jpg");
             this.efGroupBox1 = new EF.EFGroupBox(this.components);
+            this.Read = new EF.EFButton();
             this.axReadCard1 = new AxReadCardInfo.AxReadCard();
             this.butCancel = new EF.EFButton();
             this.Fnum = new EF.EFTextBox();
@@ -78,6 +79,7 @@
             this.efButton1 = new EF.EFButton();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).BeginInit();
             this.efGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Read)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axReadCard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.butCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button1)).BeginInit();
@@ -99,6 +101,8 @@
             // 
             this.efGroupBox1.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.efGroupBox1.Appearance.Options.UseBackColor = true;
+            this.efGroupBox1.Controls.Add(this.Read);
+            this.efGroupBox1.Controls.Add(this.axReadCard1);
             this.efGroupBox1.Controls.Add(this.butCancel);
             this.efGroupBox1.Controls.Add(this.Fnum);
             this.efGroupBox1.Controls.Add(this.efLabel2);
@@ -107,23 +111,35 @@
             this.efGroupBox1.Controls.Add(this.FSTARTTIME);
             this.efGroupBox1.Controls.Add(this.FDepartName);
             this.efGroupBox1.Controls.Add(this.FName);
-            this.efGroupBox1.Controls.Add(this.axReadCard1);
             this.efGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efGroupBox1.Location = new System.Drawing.Point(0, 0);
-            this.efGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efGroupBox1.Name = "efGroupBox1";
-            this.efGroupBox1.Size = new System.Drawing.Size(1536, 102);
+            this.efGroupBox1.Size = new System.Drawing.Size(1153, 65);
             this.efGroupBox1.TabIndex = 5;
             this.efGroupBox1.Text = "刷卡区";
+            // 
+            // Read
+            // 
+            this.Read.Authorizable = false;
+            this.Read.EnabledEx = true;
+            this.Read.FnNo = 0;
+            this.Read.Hint = "";
+            this.Read.Location = new System.Drawing.Point(764, 30);
+            this.Read.Name = "Read";
+            this.Read.Size = new System.Drawing.Size(75, 25);
+            this.Read.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Read.TabIndex = 10;
+            this.Read.Text = "读卡";
+            this.Read.ViewMode = EF.ViewModeEnum.Enable;
+            this.Read.Click += new System.EventHandler(this.Read_Click);
             // 
             // axReadCard1
             // 
             this.axReadCard1.Enabled = true;
-            this.axReadCard1.Location = new System.Drawing.Point(798, 35);
-            this.axReadCard1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.axReadCard1.Location = new System.Drawing.Point(1037, 11);
             this.axReadCard1.Name = "axReadCard1";
             this.axReadCard1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axReadCard1.OcxState")));
-            this.axReadCard1.Size = new System.Drawing.Size(56, 30);
+            this.axReadCard1.Size = new System.Drawing.Size(80, 48);
             this.axReadCard1.TabIndex = 9;
             this.axReadCard1.Visible = false;
             // 
@@ -133,10 +149,9 @@
             this.butCancel.EnabledEx = true;
             this.butCancel.FnNo = 0;
             this.butCancel.Hint = "";
-            this.butCancel.Location = new System.Drawing.Point(1366, 47);
-            this.butCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butCancel.Location = new System.Drawing.Point(956, 30);
             this.butCancel.Name = "butCancel";
-            this.butCancel.Size = new System.Drawing.Size(107, 39);
+            this.butCancel.Size = new System.Drawing.Size(75, 25);
             this.butCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butCancel.TabIndex = 8;
             this.butCancel.Text = "取消";
@@ -148,20 +163,18 @@
             this.Fnum.EFEname = null;
             this.Fnum.EFLeaveExpression = ".*";
             this.Fnum.EFLen = 32767;
-            this.Fnum.Location = new System.Drawing.Point(67, 42);
-            this.Fnum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Fnum.Location = new System.Drawing.Point(47, 27);
             this.Fnum.Name = "Fnum";
-            this.Fnum.Size = new System.Drawing.Size(168, 29);
+            this.Fnum.Size = new System.Drawing.Size(119, 22);
             this.Fnum.TabIndex = 7;
             this.Fnum.TextChanged += new System.EventHandler(this.Fnum_TextChanged);
             // 
             // efLabel2
             // 
             this.efLabel2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel2.Location = new System.Drawing.Point(13, 47);
-            this.efLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efLabel2.Location = new System.Drawing.Point(9, 30);
             this.efLabel2.Name = "efLabel2";
-            this.efLabel2.Size = new System.Drawing.Size(46, 28);
+            this.efLabel2.Size = new System.Drawing.Size(32, 18);
             this.efLabel2.TabIndex = 6;
             this.efLabel2.Text = "工号";
             // 
@@ -171,10 +184,9 @@
             this.button1.EnabledEx = true;
             this.button1.FnNo = 0;
             this.button1.Hint = "";
-            this.button1.Location = new System.Drawing.Point(1233, 47);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(863, 30);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 39);
+            this.button1.Size = new System.Drawing.Size(75, 25);
             this.button1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.button1.TabIndex = 5;
             this.button1.Text = "刷新";
@@ -184,20 +196,18 @@
             // efLabel1
             // 
             this.efLabel1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel1.Location = new System.Drawing.Point(723, 55);
-            this.efLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efLabel1.Location = new System.Drawing.Point(506, 35);
             this.efLabel1.Name = "efLabel1";
-            this.efLabel1.Size = new System.Drawing.Size(89, 22);
+            this.efLabel1.Size = new System.Drawing.Size(62, 14);
             this.efLabel1.TabIndex = 4;
             this.efLabel1.Text = "当前时间";
             // 
             // FSTARTTIME
             // 
             this.FSTARTTIME.ColumnName = null;
-            this.FSTARTTIME.Location = new System.Drawing.Point(820, 52);
-            this.FSTARTTIME.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FSTARTTIME.Location = new System.Drawing.Point(574, 33);
             this.FSTARTTIME.Name = "FSTARTTIME";
-            this.FSTARTTIME.Size = new System.Drawing.Size(284, 29);
+            this.FSTARTTIME.Size = new System.Drawing.Size(158, 22);
             this.FSTARTTIME.TabIndex = 3;
             this.FSTARTTIME.ValueChanged += new System.EventHandler(this.FSTARTTIME_ValueChanged);
             // 
@@ -212,11 +222,10 @@
             this.FDepartName.EFLen = 32767;
             this.FDepartName.EFType = EF.ValueType.EFString;
             this.FDepartName.EFUpperCase = false;
-            this.FDepartName.Location = new System.Drawing.Point(484, 47);
-            this.FDepartName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FDepartName.Location = new System.Drawing.Point(339, 30);
             this.FDepartName.Name = "FDepartName";
             this.FDepartName.ReadOnly = true;
-            this.FDepartName.Size = new System.Drawing.Size(230, 30);
+            this.FDepartName.Size = new System.Drawing.Size(161, 22);
             this.FDepartName.TabIndex = 2;
             // 
             // FName
@@ -230,11 +239,10 @@
             this.FName.EFLen = 32767;
             this.FName.EFType = EF.ValueType.EFString;
             this.FName.EFUpperCase = false;
-            this.FName.Location = new System.Drawing.Point(259, 47);
-            this.FName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FName.Location = new System.Drawing.Point(181, 30);
             this.FName.Name = "FName";
             this.FName.ReadOnly = true;
-            this.FName.Size = new System.Drawing.Size(217, 30);
+            this.FName.Size = new System.Drawing.Size(152, 22);
             this.FName.TabIndex = 1;
             // 
             // timer1
@@ -254,10 +262,9 @@
             this.efGroupBox2.Appearance.Options.UseBackColor = true;
             this.efGroupBox2.Controls.Add(this.Control1);
             this.efGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efGroupBox2.Location = new System.Drawing.Point(0, 102);
-            this.efGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efGroupBox2.Location = new System.Drawing.Point(0, 65);
             this.efGroupBox2.Name = "efGroupBox2";
-            this.efGroupBox2.Size = new System.Drawing.Size(1536, 824);
+            this.efGroupBox2.Size = new System.Drawing.Size(1153, 524);
             this.efGroupBox2.TabIndex = 6;
             this.efGroupBox2.Text = "任务区";
             // 
@@ -266,21 +273,19 @@
             this.Control1.Controls.Add(this.tabPage1);
             this.Control1.Controls.Add(this.tabPage2);
             this.Control1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Control1.Location = new System.Drawing.Point(2, 30);
-            this.Control1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Control1.Location = new System.Drawing.Point(2, 23);
             this.Control1.Name = "Control1";
             this.Control1.SelectedIndex = 0;
-            this.Control1.Size = new System.Drawing.Size(1532, 792);
+            this.Control1.Size = new System.Drawing.Size(1149, 499);
             this.Control1.TabIndex = 1;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dataGrid);
-            this.tabPage1.Location = new System.Drawing.Point(4, 31);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage1.Size = new System.Drawing.Size(1524, 757);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1141, 472);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "选择任务";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -288,16 +293,15 @@
             // dataGrid
             // 
             this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGrid.Location = new System.Drawing.Point(4, 5);
+            this.dataGrid.Location = new System.Drawing.Point(3, 3);
             this.dataGrid.MainView = this.gridView1;
-            this.dataGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.but_Start,
             this.but_Pause,
             this.but_End,
             this.ItemCheck});
-            this.dataGrid.Size = new System.Drawing.Size(1516, 747);
+            this.dataGrid.Size = new System.Drawing.Size(1135, 466);
             this.dataGrid.TabIndex = 1;
             this.dataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -506,11 +510,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.welderDrvs);
-            this.tabPage2.Location = new System.Drawing.Point(4, 31);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage2.Size = new System.Drawing.Size(1522, 738);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1141, 472);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "选择焊机";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -527,10 +530,9 @@
             this.welderDrvs.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
             this.welderDrvs.LargeImageList = this.imageList1;
-            this.welderDrvs.Location = new System.Drawing.Point(4, 5);
-            this.welderDrvs.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.welderDrvs.Location = new System.Drawing.Point(3, 3);
             this.welderDrvs.Name = "welderDrvs";
-            this.welderDrvs.Size = new System.Drawing.Size(1514, 728);
+            this.welderDrvs.Size = new System.Drawing.Size(1135, 466);
             this.welderDrvs.SmallImageList = this.imageList1;
             this.welderDrvs.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.welderDrvs.StateImageList = this.imageList1;
@@ -559,14 +561,14 @@
             // 
             // FormMCCL00022
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1536, 998);
+            this.ClientSize = new System.Drawing.Size(1153, 635);
             this.Controls.Add(this.efGroupBox2);
             this.Controls.Add(this.efGroupBox1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.EFMsgInfo = "执行 F1 操作";
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "FormMCCL00022";
             this.Text = "焊工领取任务端";
             this.EF_DO_F1 += new EF.EFButtonBar.EFDoFnEventHandler(this.FormMCCL00022_EF_DO_F1);
@@ -576,6 +578,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).EndInit();
             this.efGroupBox1.ResumeLayout(false);
             this.efGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Read)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axReadCard1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.butCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button1)).EndInit();
@@ -640,6 +643,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn FNewName;
         private EF.EFButton butCancel;
         private AxReadCardInfo.AxReadCard axReadCard1;
+        private EF.EFButton Read;
 
 
     }

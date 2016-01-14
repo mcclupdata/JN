@@ -64,7 +64,7 @@ namespace MC
 
         private void DepartList_EditValueChanged(object sender, EventArgs e)
         {
-            ((DataTable)this.dataGrid.DataSource).DefaultView.RowFilter = "Fdepart=" + DepartList.EditValue;
+             ((DataTable)this.dataGrid.DataSource).DefaultView.RowFilter = "Fdepart=" + DepartList.EditValue;
         }
 
         private void leveButton_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)

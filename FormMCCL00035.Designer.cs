@@ -58,8 +58,9 @@
             this.efGroupBoxEx1.Controls.Add(this.efPanel1);
             this.efGroupBoxEx1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efGroupBoxEx1.Location = new System.Drawing.Point(0, 0);
+            this.efGroupBoxEx1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.efGroupBoxEx1.Name = "efGroupBoxEx1";
-            this.efGroupBoxEx1.Size = new System.Drawing.Size(1024, 722);
+            this.efGroupBoxEx1.Size = new System.Drawing.Size(717, 443);
             this.efGroupBoxEx1.TabIndex = 4;
             this.efGroupBoxEx1.Text = "焊接等级库";
             // 
@@ -67,9 +68,10 @@
             // 
             this.efPanel2.Controls.Add(this.dataGrid);
             this.efPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efPanel2.Location = new System.Drawing.Point(2, 82);
+            this.efPanel2.Location = new System.Drawing.Point(2, 56);
+            this.efPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.efPanel2.Name = "efPanel2";
-            this.efPanel2.Size = new System.Drawing.Size(1020, 638);
+            this.efPanel2.Size = new System.Drawing.Size(713, 385);
             this.efPanel2.TabIndex = 2;
             // 
             // dataGrid
@@ -78,12 +80,13 @@
             this.dataGrid.IsUseCustomPageBar = true;
             this.dataGrid.Location = new System.Drawing.Point(0, 0);
             this.dataGrid.MainView = this.View;
+            this.dataGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.ShowAddCopyRowButton = true;
             this.dataGrid.ShowAddRowButton = true;
             this.dataGrid.ShowContextMenu = true;
             this.dataGrid.ShowDeleteRowButton = true;
-            this.dataGrid.Size = new System.Drawing.Size(1020, 638);
+            this.dataGrid.Size = new System.Drawing.Size(713, 385);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.UseEmbeddedNavigator = true;
             this.dataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -119,7 +122,7 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "WeldingProcessName";
+            this.gridColumn2.Caption = "焊接方法描述";
             this.gridColumn2.FieldName = "WeldingProcessName";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
@@ -127,7 +130,7 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "WeldingProcessAb";
+            this.gridColumn3.Caption = "焊接方法";
             this.gridColumn3.FieldName = "WeldingProcessAb";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
@@ -135,7 +138,7 @@
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "WeldingType";
+            this.gridColumn4.Caption = "母材";
             this.gridColumn4.FieldName = "WeldingType";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -143,7 +146,7 @@
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "WorkDisk";
+            this.gridColumn5.Caption = "作业范围描述";
             this.gridColumn5.FieldName = "FWorkDisk";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
@@ -151,7 +154,7 @@
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "WeldingClass";
+            this.gridColumn6.Caption = "焊接等级";
             this.gridColumn6.FieldName = "WeldingClass";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
@@ -161,9 +164,10 @@
             // 
             this.efPanel1.Controls.Add(this.but_OK);
             this.efPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efPanel1.Location = new System.Drawing.Point(2, 30);
+            this.efPanel1.Location = new System.Drawing.Point(2, 23);
+            this.efPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.efPanel1.Name = "efPanel1";
-            this.efPanel1.Size = new System.Drawing.Size(1020, 52);
+            this.efPanel1.Size = new System.Drawing.Size(713, 33);
             this.efPanel1.TabIndex = 1;
             // 
             // but_OK
@@ -173,9 +177,10 @@
             this.but_OK.EnabledEx = true;
             this.but_OK.FnNo = 0;
             this.but_OK.Hint = "";
-            this.but_OK.Location = new System.Drawing.Point(917, 0);
+            this.but_OK.Location = new System.Drawing.Point(641, 0);
+            this.but_OK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.but_OK.Name = "but_OK";
-            this.but_OK.Size = new System.Drawing.Size(103, 52);
+            this.but_OK.Size = new System.Drawing.Size(72, 33);
             this.but_OK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.but_OK.TabIndex = 0;
             this.but_OK.Text = "更新";
@@ -184,9 +189,10 @@
             // 
             // FormMCCL00035
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
-            this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.ClientSize = new System.Drawing.Size(717, 489);
             this.Controls.Add(this.efGroupBoxEx1);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "FormMCCL00035";
             this.Text = "焊接等级库管理";
             this.Load += new System.EventHandler(this.FormMCCL00035_Load);

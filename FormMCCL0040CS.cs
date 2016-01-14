@@ -8,16 +8,16 @@ using System.Windows.Forms;
 using ZedGraph;
 namespace MC
 {
-    public partial class FormMCCL0040cs : Formbase
+    public partial class FormMCCL0040CS : Formbase
     {
         _MyClient _Client = new _MyClient();
         clsEvaWelders _cls = new clsEvaWelders();
-        public FormMCCL0040cs()
+        public FormMCCL0040CS()
         {
             InitializeComponent();
         }
 
-        private void FormMCCL0040cs_Load(object sender, EventArgs e)
+        private void FormMCCL0040CS_Load(object sender, EventArgs e)
         {
             DataTable depart_dt = _Client.ServiceCall(clsCMD.cmd_welderedit_getwelderdepart, null);
             depart_dt.Rows.Add(0, "全部");
@@ -31,8 +31,8 @@ namespace MC
             //Load welders
             DataTable welders_dt = _Client.ServiceCall(clsCMD.cmd_welderedit_getwelders, null);
             this.welderdataGrid.DataSource = welders_dt;
-            this.EndDate.Value = DateTime.Now;
-            this.StartDate.Value = DateTime.Now.AddDays(1);
+            this.StartDate.Value = DateTime.Now;
+            this.EndDate.Value = DateTime.Now.AddDays(1);
         }
 
         private void DepartList_EditValueChanged(object sender, EventArgs e)
@@ -135,6 +135,7 @@ namespace MC
             myPane.Fill = new Fill(Color.White, Color.FromArgb(200, 200, 255), 45.0f);
             myPane.Chart.Fill = new Fill(Color.White, Color.LightGoldenrodYellow, 45.0f);
             this.zedGraphControl1.AxisChange();
+            this.zedGraphControl1.Refresh();
             return false;
         }
     }
