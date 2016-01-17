@@ -11,12 +11,12 @@ using System.Reflection;
 using System.Threading;
 namespace JN_WELD_Service
 {
-    class panasonicClass
+    class panasonicDevices : JN_WELD_Service.IDevices
     {
         Form1 _frm = new Form1();
         public int _DriversID = 0;
         public int _DriverChannID = 0;
-        public panasonicClass()
+        public panasonicDevices()
         {
             String sxip = "";
             INIClass incls = new INIClass();
@@ -27,7 +27,7 @@ namespace JN_WELD_Service
         /// 获取松下焊机及其状态
         /// </summary>
         /// <returns></returns>
-        public DataTable GetPanasponicDrives()
+        public DataTable GetDrives()
         {
             //{ "焊机序号", "设备编号", "工作状态", "机型", "初期电流", "初期电压", "预置电流", "预置电压", "收弧电流", "收弧电压", "焊接电流", "焊接电压", "送丝速度", "气体", "材质", "丝径", "焊接控制", "脉冲有无", "点焊时间", "操作者", "故障类型", "任务编号","工件温度", "气体流量", "瞬时功率", "上传时间", "开机时间", "关机时间", "焊接时间", "工作时间", "当前通道", "通道数量" };
             //{ "nom", "equipname", "state", "name", "vai", "vvi", "va", "vv", "vaf", "vvf", "wa", "wv", "rpm", "wp", "mt", "wd", "wc", "mp", "pwtime", "emplon", "errnom", "PieceNum", "PieceTemp", "GasFlux", "Power", "NowTime", "StartTime", "EndTime", "weldTime", "workTime", "channel", "channelcount" };
@@ -68,7 +68,7 @@ namespace JN_WELD_Service
         /// 获取松下焊机的通道参数配置
         /// </summary>
         /// <returns></returns>
-        public DataTable GetPanasoicDrivesChannelInfos()
+        public DataTable GetDrivesChannelInfos()
         {
             DataTable chanDT = new DataTable();
             List<StandardDataClass> list_sdc = _frm.SD.SelectAll();
@@ -336,6 +336,7 @@ namespace JN_WELD_Service
 
                 _frm.cobChannel_SelectedIndexChanged(null, null);
 
+                //材质
                 for (int i = 0; i < _frm.cobMT.Items.Count; i++)
                 {
                     if (_frm.cobMT.Items[0].ToString() == Convert.ToString(row["WELD_MATERIAL"]))
@@ -344,7 +345,7 @@ namespace JN_WELD_Service
                 }
 
                 //WELD_WIRE_DIA	Decimal	cobWD
-
+                //丝径
                 for (int i = 0; i < _frm.cobWD.Items.Count; i++)
                 {
                     if (_frm.cobWD.Items[i].ToString()== Convert.ToString(row["WELD_WIRE_DIA"]))
@@ -353,16 +354,22 @@ namespace JN_WELD_Service
                 }
 
                 //WELD_I	Decimal	txtva
+                //焊接电流
                 _frm.txtva.Text = Convert.ToString(row["WELD_I"]);
                 //WELD_V	Decimal	txtvv
+                //焊接电压
                 _frm.txtvv.Text = Convert.ToString(row["WELD_V"]);
                 //WELD_I_MAX	Decimal	txtwa_up
+                //焊接电流上限
                 _frm.txtwa_up.Text = Convert.ToString(row["WELD_I_MAX"]);
                 //WELD_I_MIN	Decimal	txtwa_down
+                //焊接电流下限
                 _frm.txtwa_down.Text = Convert.ToString(row["WELD_I_MIN"]);
                 //CLOSEING_I	Decimal	txtvaf
+                //收弧电流
                 _frm.txtvaf.Text = Convert.ToString(row["CLOSEING_I"]);
                 //CLOSEING_V	Decimal	txtvvf
+                //收弧电压
                 _frm.txtvvf.Text = Convert.ToString(row["CLOSEING_V"]);
                 //PLUS	int	cobMP
                 int imx = 0, imi = 0, vmx = 0, vmi = 0, ib = 0, vb = 0;
@@ -375,16 +382,23 @@ namespace JN_WELD_Service
                 int irang = (imx-imi) / 2;
                 int vrang = (vmx-vmi) / 2;
                 //
+                //焊接电流微调
                 _frm.txtva_wt.Text = irang.ToString();
+                //焊接电压微调
                 _frm.txtvv_wt.Text = vrang.ToString();
+                //焊接电流报警上
                 _frm.txtwabj_up.Text = imx.ToString();
+                //焊接电流报警下
                 _frm.txtwabj_down.Text = imi.ToString();
+                //焊接电压报警上下限
                 _frm.txt_BJv_U.Text = vmx.ToString();
                 _frm.txt_BJv_D.Text = vmi.ToString();
+                //焊接电流上限
                 _frm.txtwa_up.Text = imx.ToString();
                 _frm.txtwa_down.Text = imi.ToString();
 
                 //_frm.cobMP.SelectedText = Convert.ToString(row["PLUS"]);
+                //有无脉冲
                 for (int i = 0; i < _frm.cobMP.Items.Count; i++)
                 {
                     if (_frm.cobMP.Items[i].ToString() == Convert.ToString(row["PLUS"]))
@@ -407,7 +421,7 @@ namespace JN_WELD_Service
             _frm.button7_Click(null, null);
 
         }
-         ~panasonicClass()
+        ~panasonicDevices()
         {
             _frm.Dispose();
         }

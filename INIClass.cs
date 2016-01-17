@@ -41,6 +41,16 @@ namespace JN_WELD_Service
             return sxIP;
         }
         /// <summary>
+        /// 获取OTC服务地址
+        /// </summary>
+        /// <returns></returns>
+        public String getOTCService()
+        {
+            String sxIP = "";
+            sxIP = IniReadValue("OTC", "serviceip");
+            return sxIP;
+        }
+        /// <summary>
         /// 获取数据库连接串
         /// </summary>
         /// <returns></returns>

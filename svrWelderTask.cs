@@ -139,7 +139,7 @@ namespace JN_WELD_Service
         /// <returns>0 没有命中 >0 命中</returns>
         public DataTable CheckEqumswps(DataTable dt)
         {
-            panasonicClass pcls = new panasonicClass();
+            svrDevices pcls = new svrDevices();
             DataTable wpss = new DataTable() ;
             String sesql = "select * from View_Task_Welder_ALL where FID=0";
             wpss = _sqldbhelper.ExecuteDataTable(sesql);
@@ -157,7 +157,7 @@ namespace JN_WELD_Service
                 {
                     DataRow row = wps.Rows[k];
                     String vnom = dt.Rows[i]["FweldDriverID"].ToString();
-                    int prechannel = pcls.testEqumsChannelparams(row, vnom);
+                    int prechannel =0;//= pcls.testEqumsChannelparams(row, vnom);
                     wps.Rows[k]["prechannel"] = prechannel;
                     wpss.ImportRow(wps.Rows[k]);
                 }
@@ -355,7 +355,7 @@ namespace JN_WELD_Service
             {
                 case 1:case 0://开始
                     {
-                        panasonicClass mcls = new panasonicClass();
+                        svrDevices mcls = new svrDevices();
                         for (int k = 0; k < wps.Rows.Count; k++)
                         {
                             //判断是否与焊机默认WPS一致;

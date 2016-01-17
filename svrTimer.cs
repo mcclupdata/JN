@@ -13,7 +13,7 @@ namespace JN_WELD_Service
     {
          static Timer _timer;
          static SqlDbHelper _sqldhelper = new SqlDbHelper();
-         static panasonicClass _panansoincSvr = new panasonicClass();
+         static svrDevices _panansoincSvr = new svrDevices();
          static DataTable _vdt;
        public static void Start()
        {
@@ -53,7 +53,7 @@ namespace JN_WELD_Service
        {
            
            
-           DataTable dt = _panansoincSvr.GetPanasponicDrives();
+           DataTable dt = _panansoincSvr.getweldEquipmentinfos();
 
            DataView dv = dt.DefaultView;
            dv.RowFilter = "nom=" + nom;
@@ -69,7 +69,7 @@ namespace JN_WELD_Service
        {
 
 
-           DataTable dt = _panansoincSvr.GetPanasponicDrives();
+           DataTable dt = _panansoincSvr.getweldEquipmentinfos();//GetPanasponicDrives();
            return dt;
        }
 
@@ -77,7 +77,7 @@ namespace JN_WELD_Service
        {
            //throw new NotImplementedException();
             //获取松下焊机数据，并保存到数据库中
-           DataTable dt = _panansoincSvr.GetPanasponicDrives();
+           DataTable dt = _panansoincSvr.getweldEquipmentinfos();//GetPanasponicDrives();
            //将数据保存到数据库中；
 
            String sql = "insert into t_PanasonicDriRecord (";

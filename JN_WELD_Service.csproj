@@ -69,13 +69,19 @@
   <ItemGroup>
     <Compile Include="clsConvertXMLDataTable.cs" />
     <Compile Include="clsExcelIO.cs" />
+    <Compile Include="IDevices.cs" />
+    <Compile Include="OTCDevices.cs" />
     <Compile Include="svrAutoMatchwps.cs" />
     <Compile Include="svrClassMergeWeld.cs" />
     <Compile Include="svrDefaultWPS.cs" />
     <Compile Include="svrDepartmags.cs" />
+    <Compile Include="svrDevices.cs" />
     <Compile Include="svrEvaluationRpt.cs" />
     <Compile Include="svrPlanDispaTaskNewmange.cs" />
     <Compile Include="svrReport.cs" />
+    <Compile Include="svrTimer.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="svrweldEquipmentmanage.cs" />
     <Compile Include="svrWeldEquipmentReal.cs" />
     <Compile Include="Form1.cs">
@@ -100,7 +106,6 @@
     <Compile Include="svrRealTime.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="svrTimer.cs" />
     <Compile Include="svrWelderEdit.cs" />
     <Compile Include="svrWelderTask.cs" />
     <Compile Include="svrweldingclass.cs" />

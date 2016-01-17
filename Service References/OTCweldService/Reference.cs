@@ -21,23 +21,11 @@ namespace JN_WELD_Service.OTCweldService {
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
-        string setChargeInfo(string in0);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
-        string getUserData(string in0);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
-        string SendWpsById(string in0);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
         string CurrData(string in0);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
-        string getPriceData(string in0);
+        string SendWpsById(string in0);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
@@ -46,6 +34,30 @@ namespace JN_WELD_Service.OTCweldService {
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
         string SendWps(string in0);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
+        string CurrDataById(string in0);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
+        string getWpsById(string in0);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
+        string setChargeInfo(string in0);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
+        string SendWpsByManchineId(string in0);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
+        string getUserData(string in0);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
+        string getPriceData(string in0);
         
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
@@ -58,10 +70,6 @@ namespace JN_WELD_Service.OTCweldService {
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
         string example(string in0);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="out")]
-        string CurrDataById(string in0);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
@@ -95,24 +103,12 @@ namespace JN_WELD_Service.OTCweldService {
             return base.Channel.getMeterData(in0);
         }
         
-        public string setChargeInfo(string in0) {
-            return base.Channel.setChargeInfo(in0);
-        }
-        
-        public string getUserData(string in0) {
-            return base.Channel.getUserData(in0);
-        }
-        
-        public string SendWpsById(string in0) {
-            return base.Channel.SendWpsById(in0);
-        }
-        
         public string CurrData(string in0) {
             return base.Channel.CurrData(in0);
         }
         
-        public string getPriceData(string in0) {
-            return base.Channel.getPriceData(in0);
+        public string SendWpsById(string in0) {
+            return base.Channel.SendWpsById(in0);
         }
         
         public string getChargeRecord(string in0) {
@@ -121,6 +117,30 @@ namespace JN_WELD_Service.OTCweldService {
         
         public string SendWps(string in0) {
             return base.Channel.SendWps(in0);
+        }
+        
+        public string CurrDataById(string in0) {
+            return base.Channel.CurrDataById(in0);
+        }
+        
+        public string getWpsById(string in0) {
+            return base.Channel.getWpsById(in0);
+        }
+        
+        public string setChargeInfo(string in0) {
+            return base.Channel.setChargeInfo(in0);
+        }
+        
+        public string SendWpsByManchineId(string in0) {
+            return base.Channel.SendWpsByManchineId(in0);
+        }
+        
+        public string getUserData(string in0) {
+            return base.Channel.getUserData(in0);
+        }
+        
+        public string getPriceData(string in0) {
+            return base.Channel.getPriceData(in0);
         }
         
         public string setCardInfo(string in0) {
@@ -133,10 +153,6 @@ namespace JN_WELD_Service.OTCweldService {
         
         public string example(string in0) {
             return base.Channel.example(in0);
-        }
-        
-        public string CurrDataById(string in0) {
-            return base.Channel.CurrDataById(in0);
         }
     }
 }

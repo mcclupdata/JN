@@ -16,48 +16,6 @@
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-      <xsd:element name="setChargeInfo">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="setChargeInfoResponse">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="getUserData">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="getUserDataResponse">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="SendWpsById">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="SendWpsByIdResponse">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
       <xsd:element name="CurrData">
         <xsd:complexType>
           <xsd:sequence>
@@ -72,14 +30,14 @@
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-      <xsd:element name="getPriceData">
+      <xsd:element name="SendWpsById">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-      <xsd:element name="getPriceDataResponse">
+      <xsd:element name="SendWpsByIdResponse">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
@@ -108,6 +66,90 @@
         </xsd:complexType>
       </xsd:element>
       <xsd:element name="SendWpsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CurrDataById">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CurrDataByIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWpsById">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getWpsByIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setChargeInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="setChargeInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendWpsByManchineId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendWpsByManchineIdResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getUserData">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getUserDataResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPriceData">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPriceDataResponse">
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
@@ -152,45 +194,16 @@
           </xsd:sequence>
         </xsd:complexType>
       </xsd:element>
-      <xsd:element name="CurrDataById">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element minOccurs="1" maxOccurs="1" name="in0" nillable="true" type="xsd:string" />
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
-      <xsd:element name="CurrDataByIdResponse">
-        <xsd:complexType>
-          <xsd:sequence>
-            <xsd:element minOccurs="1" maxOccurs="1" name="out" nillable="true" type="xsd:string" />
-          </xsd:sequence>
-        </xsd:complexType>
-      </xsd:element>
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="getPriceDataRequest">
     <wsdl:part name="parameters" element="tns:getPriceData" />
-  </wsdl:message>
-  <wsdl:message name="CurrDataByIdRequest">
-    <wsdl:part name="parameters" element="tns:CurrDataById" />
-  </wsdl:message>
-  <wsdl:message name="setChargeInfoRequest">
-    <wsdl:part name="parameters" element="tns:setChargeInfo" />
-  </wsdl:message>
-  <wsdl:message name="SendWpsByIdRequest">
-    <wsdl:part name="parameters" element="tns:SendWpsById" />
   </wsdl:message>
   <wsdl:message name="setCardInfoRequest">
     <wsdl:part name="parameters" element="tns:setCardInfo" />
   </wsdl:message>
   <wsdl:message name="CurrDataRequest">
     <wsdl:part name="parameters" element="tns:CurrData" />
-  </wsdl:message>
-  <wsdl:message name="getPriceDataResponse">
-    <wsdl:part name="parameters" element="tns:getPriceDataResponse" />
-  </wsdl:message>
-  <wsdl:message name="exampleResponse">
-    <wsdl:part name="parameters" element="tns:exampleResponse" />
   </wsdl:message>
   <wsdl:message name="aaResponse">
     <wsdl:part name="parameters" element="tns:aaResponse" />
@@ -210,14 +223,38 @@
   <wsdl:message name="getUserDataRequest">
     <wsdl:part name="parameters" element="tns:getUserData" />
   </wsdl:message>
-  <wsdl:message name="SendWpsByIdResponse">
-    <wsdl:part name="parameters" element="tns:SendWpsByIdResponse" />
-  </wsdl:message>
   <wsdl:message name="setChargeInfoResponse">
     <wsdl:part name="parameters" element="tns:setChargeInfoResponse" />
   </wsdl:message>
   <wsdl:message name="CurrDataByIdResponse">
     <wsdl:part name="parameters" element="tns:CurrDataByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="getWpsByIdRequest">
+    <wsdl:part name="parameters" element="tns:getWpsById" />
+  </wsdl:message>
+  <wsdl:message name="getMeterDataResponse">
+    <wsdl:part name="parameters" element="tns:getMeterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="CurrDataResponse">
+    <wsdl:part name="parameters" element="tns:CurrDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="CurrDataByIdRequest">
+    <wsdl:part name="parameters" element="tns:CurrDataById" />
+  </wsdl:message>
+  <wsdl:message name="SendWpsByIdRequest">
+    <wsdl:part name="parameters" element="tns:SendWpsById" />
+  </wsdl:message>
+  <wsdl:message name="setChargeInfoRequest">
+    <wsdl:part name="parameters" element="tns:setChargeInfo" />
+  </wsdl:message>
+  <wsdl:message name="getPriceDataResponse">
+    <wsdl:part name="parameters" element="tns:getPriceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="exampleResponse">
+    <wsdl:part name="parameters" element="tns:exampleResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendWpsByIdResponse">
+    <wsdl:part name="parameters" element="tns:SendWpsByIdResponse" />
   </wsdl:message>
   <wsdl:message name="exampleRequest">
     <wsdl:part name="parameters" element="tns:example" />
@@ -225,45 +262,36 @@
   <wsdl:message name="SendWpsResponse">
     <wsdl:part name="parameters" element="tns:SendWpsResponse" />
   </wsdl:message>
+  <wsdl:message name="getWpsByIdResponse">
+    <wsdl:part name="parameters" element="tns:getWpsByIdResponse" />
+  </wsdl:message>
   <wsdl:message name="SendWpsRequest">
     <wsdl:part name="parameters" element="tns:SendWps" />
+  </wsdl:message>
+  <wsdl:message name="SendWpsByManchineIdResponse">
+    <wsdl:part name="parameters" element="tns:SendWpsByManchineIdResponse" />
   </wsdl:message>
   <wsdl:message name="setCardInfoResponse">
     <wsdl:part name="parameters" element="tns:setCardInfoResponse" />
   </wsdl:message>
-  <wsdl:message name="getMeterDataResponse">
-    <wsdl:part name="parameters" element="tns:getMeterDataResponse" />
+  <wsdl:message name="SendWpsByManchineIdRequest">
+    <wsdl:part name="parameters" element="tns:SendWpsByManchineId" />
   </wsdl:message>
   <wsdl:message name="getChargeRecordResponse">
     <wsdl:part name="parameters" element="tns:getChargeRecordResponse" />
-  </wsdl:message>
-  <wsdl:message name="CurrDataResponse">
-    <wsdl:part name="parameters" element="tns:CurrDataResponse" />
   </wsdl:message>
   <wsdl:portType name="SetCardPortType">
     <wsdl:operation name="getMeterData">
       <wsdl:input name="getMeterDataRequest" message="tns:getMeterDataRequest" />
       <wsdl:output name="getMeterDataResponse" message="tns:getMeterDataResponse" />
     </wsdl:operation>
-    <wsdl:operation name="setChargeInfo">
-      <wsdl:input name="setChargeInfoRequest" message="tns:setChargeInfoRequest" />
-      <wsdl:output name="setChargeInfoResponse" message="tns:setChargeInfoResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="getUserData">
-      <wsdl:input name="getUserDataRequest" message="tns:getUserDataRequest" />
-      <wsdl:output name="getUserDataResponse" message="tns:getUserDataResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="SendWpsById">
-      <wsdl:input name="SendWpsByIdRequest" message="tns:SendWpsByIdRequest" />
-      <wsdl:output name="SendWpsByIdResponse" message="tns:SendWpsByIdResponse" />
-    </wsdl:operation>
     <wsdl:operation name="CurrData">
       <wsdl:input name="CurrDataRequest" message="tns:CurrDataRequest" />
       <wsdl:output name="CurrDataResponse" message="tns:CurrDataResponse" />
     </wsdl:operation>
-    <wsdl:operation name="getPriceData">
-      <wsdl:input name="getPriceDataRequest" message="tns:getPriceDataRequest" />
-      <wsdl:output name="getPriceDataResponse" message="tns:getPriceDataResponse" />
+    <wsdl:operation name="SendWpsById">
+      <wsdl:input name="SendWpsByIdRequest" message="tns:SendWpsByIdRequest" />
+      <wsdl:output name="SendWpsByIdResponse" message="tns:SendWpsByIdResponse" />
     </wsdl:operation>
     <wsdl:operation name="getChargeRecord">
       <wsdl:input name="getChargeRecordRequest" message="tns:getChargeRecordRequest" />
@@ -272,6 +300,30 @@
     <wsdl:operation name="SendWps">
       <wsdl:input name="SendWpsRequest" message="tns:SendWpsRequest" />
       <wsdl:output name="SendWpsResponse" message="tns:SendWpsResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CurrDataById">
+      <wsdl:input name="CurrDataByIdRequest" message="tns:CurrDataByIdRequest" />
+      <wsdl:output name="CurrDataByIdResponse" message="tns:CurrDataByIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getWpsById">
+      <wsdl:input name="getWpsByIdRequest" message="tns:getWpsByIdRequest" />
+      <wsdl:output name="getWpsByIdResponse" message="tns:getWpsByIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setChargeInfo">
+      <wsdl:input name="setChargeInfoRequest" message="tns:setChargeInfoRequest" />
+      <wsdl:output name="setChargeInfoResponse" message="tns:setChargeInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWpsByManchineId">
+      <wsdl:input name="SendWpsByManchineIdRequest" message="tns:SendWpsByManchineIdRequest" />
+      <wsdl:output name="SendWpsByManchineIdResponse" message="tns:SendWpsByManchineIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserData">
+      <wsdl:input name="getUserDataRequest" message="tns:getUserDataRequest" />
+      <wsdl:output name="getUserDataResponse" message="tns:getUserDataResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPriceData">
+      <wsdl:input name="getPriceDataRequest" message="tns:getPriceDataRequest" />
+      <wsdl:output name="getPriceDataResponse" message="tns:getPriceDataResponse" />
     </wsdl:operation>
     <wsdl:operation name="setCardInfo">
       <wsdl:input name="setCardInfoRequest" message="tns:setCardInfoRequest" />
@@ -285,10 +337,6 @@
       <wsdl:input name="exampleRequest" message="tns:exampleRequest" />
       <wsdl:output name="exampleResponse" message="tns:exampleResponse" />
     </wsdl:operation>
-    <wsdl:operation name="CurrDataById">
-      <wsdl:input name="CurrDataByIdRequest" message="tns:CurrDataByIdRequest" />
-      <wsdl:output name="CurrDataByIdResponse" message="tns:CurrDataByIdResponse" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="SetCardHttpBinding" type="tns:SetCardPortType">
     <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -301,33 +349,6 @@
         <wsdlsoap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="setChargeInfo">
-      <wsdlsoap:operation soapAction="" />
-      <wsdl:input name="setChargeInfoRequest">
-        <wsdlsoap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="setChargeInfoResponse">
-        <wsdlsoap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="getUserData">
-      <wsdlsoap:operation soapAction="" />
-      <wsdl:input name="getUserDataRequest">
-        <wsdlsoap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="getUserDataResponse">
-        <wsdlsoap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="SendWpsById">
-      <wsdlsoap:operation soapAction="" />
-      <wsdl:input name="SendWpsByIdRequest">
-        <wsdlsoap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="SendWpsByIdResponse">
-        <wsdlsoap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="CurrData">
       <wsdlsoap:operation soapAction="" />
       <wsdl:input name="CurrDataRequest">
@@ -337,12 +358,12 @@
         <wsdlsoap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="getPriceData">
+    <wsdl:operation name="SendWpsById">
       <wsdlsoap:operation soapAction="" />
-      <wsdl:input name="getPriceDataRequest">
+      <wsdl:input name="SendWpsByIdRequest">
         <wsdlsoap:body use="literal" />
       </wsdl:input>
-      <wsdl:output name="getPriceDataResponse">
+      <wsdl:output name="SendWpsByIdResponse">
         <wsdlsoap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
@@ -361,6 +382,60 @@
         <wsdlsoap:body use="literal" />
       </wsdl:input>
       <wsdl:output name="SendWpsResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CurrDataById">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="CurrDataByIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CurrDataByIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWpsById">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getWpsByIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getWpsByIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setChargeInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="setChargeInfoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="setChargeInfoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendWpsByManchineId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="SendWpsByManchineIdRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="SendWpsByManchineIdResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserData">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getUserDataRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getUserDataResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPriceData">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPriceDataRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPriceDataResponse">
         <wsdlsoap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
@@ -388,15 +463,6 @@
         <wsdlsoap:body use="literal" />
       </wsdl:input>
       <wsdl:output name="exampleResponse">
-        <wsdlsoap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="CurrDataById">
-      <wsdlsoap:operation soapAction="" />
-      <wsdl:input name="CurrDataByIdRequest">
-        <wsdlsoap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="CurrDataByIdResponse">
         <wsdlsoap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>

@@ -519,9 +519,9 @@ namespace JN_WELD_Service
                     }
                 case 1030:////1030;//查询得到焊机名，编号，状态
                     {
-                        panasonicClass cls = new panasonicClass();
+                        svrDevices cls = new svrDevices();
                        // DataTable fdt = clsConvertXMLDataTable.ConvertXMLToDataTable(cmd.weldDataTable);
-                        DataTable empbd = cls.GetPanasponicDrives();
+                        DataTable empbd = cls.getweldEquipmentinfos();//GetPanasponicDrives();
                         empbd.TableName = "Task_welders";
 
                         rst.RowsCount = empbd.Rows.Count;
@@ -536,7 +536,7 @@ namespace JN_WELD_Service
                     }
                 case 1031:////1031;//查询得到焊机Channel信息
                     {
-                        panasonicClass cls = new panasonicClass();
+                        svrDevices cls = new svrDevices();
                         // DataTable fdt = clsConvertXMLDataTable.ConvertXMLToDataTable(cmd.weldDataTable);
                         DataTable empbd = cls.GetPanasoicDrivesChannelInfos();
                         empbd.TableName = "Task_welders";
