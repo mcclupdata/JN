@@ -14,12 +14,12 @@ namespace MC
 {
      public class _MyClient//:WeldServiceReference.WeldServiceClient
     {
-        protected System.ServiceModel.WSHttpBinding _wshttpbing;
-        protected WeldServiceReference.WeldServiceClient _svrclient;
+        protected static System.ServiceModel.WSHttpBinding _wshttpbing;
+        protected static WeldServiceReference.WeldServiceClient _svrclient;
          //WCF服务器地址，端口
         //const String _WCFSVRDress = "http://10.30.30.51:8734/JN_WELD_Service/Service1/";
-       // const String _WCFSVRDress = "http://127.0.0.1:8734/JN_WELD_Service/Service1/";
-        const String _WCFSVRDress = "http://10.30.7.34:8734/JN_WELD_Service/Service1/";
+        const String _WCFSVRDress = "http://127.0.0.1:8734/JN_WELD_Service/Service1/";
+        //const String _WCFSVRDress = "http://10.30.7.34:8734/JN_WELD_Service/Service1/";
         protected void buildConnectSvr()
         {
             //建立连接绑定

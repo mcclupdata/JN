@@ -781,8 +781,15 @@ namespace MC
                             FormMCCL00023 vfrm = new FormMCCL00023(showdt);
                             if (vfrm.ShowDialog(this) == DialogResult.Yes)
                             {
-                                
-                                showDownloadThread.Start();
+                                try
+                                {
+                                    showDownloadThread.Start();
+                                }
+                                catch
+                                {
+                                   showDownloadThread= new Thread(showDownLoadThreadpro);
+                                   showDownloadThread.Start();
+                                }
                                 DataTable rsdt = _Client.ServiceCall(7004, _curWelderTaskFID_DT);
                                 
                                 // this.dataGrid.DataSource = _curWelderTaskFID_DT;

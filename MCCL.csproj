@@ -136,6 +136,7 @@
     <Compile Include="clsProjectDispatchTaskmange.cs" />
     <Compile Include="clsProjectProcess.cs" />
     <Compile Include="clsProjectWeldDetail.cs" />
+    <Compile Include="clsReadCardThread.cs" />
     <Compile Include="clsTask.cs" />
     <Compile Include="clsTaskWeldDetail.cs" />
     <Compile Include="clsweldingclass.cs" />
@@ -333,6 +334,12 @@
     <Compile Include="FormMCCL00432.Designer.cs">
       <DependentUpon>FormMCCL00432.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMCCLTaskPros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCLTaskPros.Designer.cs">
+      <DependentUpon>FormMCCLTaskPros.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInputMergeName.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,6 +351,12 @@
     </Compile>
     <Compile Include="frmMain.designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReadCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReadCard.Designer.cs">
+      <DependentUpon>frmReadCard.cs</DependentUpon>
     </Compile>
     <Compile Include="frmWeldPart.cs">
       <SubType>Form</SubType>
@@ -449,11 +462,17 @@
     <EmbeddedResource Include="FormMCCL00432.resx">
       <DependentUpon>FormMCCL00432.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCLTaskPros.resx">
+      <DependentUpon>FormMCCLTaskPros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInputMergeName.resx">
       <DependentUpon>frmInputMergeName.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReadCard.resx">
+      <DependentUpon>frmReadCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWeldPart.resx">
       <DependentUpon>frmWeldPart.cs</DependentUpon>
