@@ -224,7 +224,7 @@ namespace JN_WELD_Service
                             case 1:
 
 
-                                rsdt.Rows[k]["state"] = "待机";
+                                rsdt.Rows[k]["state"] = "焊接";
                                 break;
                             case 2:
                                 rsdt.Rows[k]["state"] = "待机";
