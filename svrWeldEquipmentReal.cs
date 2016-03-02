@@ -160,12 +160,14 @@ namespace JN_WELD_Service
                 
                
 
-                String selSQL = "select top 20 t1.FSTARTTIME,t1.FENDTIME,T2.Fnum,t2.FName,t2.FweldDriverID ,t2.PART1_NAME2,t2.PART2_NAME2 ,t2.FDepartName,t2.WELD_T_LEN from View_TaskDoingrec_left as T1 ";
+                String selSQL = "select distinct top 20 t1.FSTARTTIME,t1.FENDTIME,T2.Fnum,t2.FName,t2.FweldDriverID ,t2.PART1_NAME2,t2.PART2_NAME2 ,t2.FDepartName,t2.WELD_T_LEN  ,T3.Gv,T3.Gx,T3.Gy,T3.Gz,T3.G from View_TaskDoingrec_left as T1 ";
                 if (fdt.Columns.IndexOf("SFSTARTTIME") > -1)
                 {
-                    selSQL = "select  t1.FSTARTTIME,t1.FENDTIME,T2.Fnum,t2.FName,t2.FweldDriverID ,t2.PART1_NAME2,t2.PART2_NAME2 ,t2.FDepartName,t2.WELD_T_LEN from View_TaskDoingrec_left as T1 ";
+                    selSQL = "select distinct t1.FSTARTTIME,t1.FENDTIME,T2.Fnum,t2.FName,t2.FweldDriverID ,t2.PART1_NAME2,t2.PART2_NAME2 ,t2.FDepartName,t2.WELD_T_LEN,T3.Gv,T3.Gx,T3.Gy,T3.Gz,T3.G from View_TaskDoingrec_left as T1 ";
                 }
                 selSQL+=" inner join View_Task_Welder_ALl as T2 on t1.FTaskID=t2.FiD ";
+
+                selSQL += " inner join t_EvaluateRec as T3 on T1.FTaskID=T3.FTaskID";
                        
                 selSQL += " where  T2.FweldDriverID=" + weldid;
 

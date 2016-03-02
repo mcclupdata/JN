@@ -104,9 +104,11 @@ namespace JN_WELD_Service
             {
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
+                    
                     connection.Open();
                     command.Connection = connection;
                     command.CommandType = CommandType.Text;//设置command的CommandType为指定的CommandType
+                    command.CommandTimeout = 5 * 60;
                     //如果同时传入了参数，则添加这些参数
                     if (parameters != null)
                     {
@@ -313,6 +315,7 @@ namespace JN_WELD_Service
                     connection.Open();
                     command.Connection = connection;
                     command.CommandType = commandType;//设置command的CommandType为指定的CommandType
+                    command.CommandTimeout = 5 * 60;
                     //如果同时传入了参数，则添加这些参数
                     if (parameters != null)
                     {
@@ -360,6 +363,7 @@ namespace JN_WELD_Service
         {
             SqlConnection connection = new SqlConnection(connectionString);
             SqlCommand command = new SqlCommand(sql, connection);
+            command.CommandTimeout = 5 * 60;
             //如果同时传入了参数，则添加这些参数
             if (parameters != null)
             {
@@ -407,6 +411,7 @@ namespace JN_WELD_Service
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
                     command.CommandType = commandType;//设置command的CommandType为指定的CommandType
+                    command.CommandTimeout = 5 * 60;
                     //如果同时传入了参数，则添加这些参数
                     if (parameters != null)
                     {
@@ -458,6 +463,7 @@ namespace JN_WELD_Service
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
                     command.CommandType = commandType;//设置command的CommandType为指定的CommandType
+                    command.CommandTimeout = 5 * 60;
                     //如果同时传入了参数，则添加这些参数
                     if (parameters != null)
                     {
@@ -490,6 +496,7 @@ namespace JN_WELD_Service
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
                     command.CommandType = commandType;//设置command的CommandType为指定的CommandType
+                    command.CommandTimeout = 5 * 60;
                     //如果同时传入了参数，则添加这些参数
                     if (parameters != null)
                     {

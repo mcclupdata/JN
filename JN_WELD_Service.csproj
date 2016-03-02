@@ -117,6 +117,7 @@
     <Compile Include="svrTask.cs" />
     <Compile Include="svrBatchInputWPS.cs" />
     <Compile Include="svrWPSEdit.cs" />
+    <Compile Include="svrweldCodePostEdit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

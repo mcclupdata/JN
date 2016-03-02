@@ -211,13 +211,13 @@ namespace JN_WELD_Service
 
             //}
             String sql = "select * from (";
-            sql+="Select IsNull(t_wps_RULE.FID,0)  as RuleFID, t_Weld.* ,t_ProcessPlanBody.FID as ProcessPlanBodyID , 1 as FChecked from  t_ProcessPlanBody  ";
+            sql+="Select t_wps_RULE.FID  as RuleFID, t_Weld.* ,t_ProcessPlanBody.FID as ProcessPlanBodyID , 1 as FChecked from  t_ProcessPlanBody  ";
             sql+="inner join t_WELD on t_WELD.FID=t_ProcessPlanBody.FWELDID  ";
             sql+=" left join t_wps_RULE on t_ProcessPlanBody.FWELDWPSID=t_wps_RULE.FID ";
             sql += "  where  SHIP_NO =@SHIP_NO  and TREE_NAME = @TREE_NAME and FProjectHeadID = @FProjectHeadID and FDoDepartID=@FDoDepartID";
             sql+=" union ";
             //sql+=" Select isnull(RuleNum,0) as RuleNum  ,0  as RuleFID, t_Weld.* ,0 as ProcessPlanBodyID ,0 as FChecked  from  t_WELD  ";
-            sql+=" Select isNull(t_wps_RULE.FID,0) as RuleFID, t_Weld.* ,0 as ProcessPlanBodyID ,0 as FChecked  from  t_WELD ";
+            sql+=" Select t_wps_RULE.FID as RuleFID, t_Weld.* ,0 as ProcessPlanBodyID ,0 as FChecked  from  t_WELD ";
             sql += " left join t_wps_RULE on t_wps_RULE.RuleNum=t_WELD.RuleNum";
             sql+=" where SHIP_NO =@SHIP_NO  and TREE_NAME = @TREE_NAME ";
             sql += " and t_WELD.FID not in (select FWELDID from t_ProcessPlanBody )";

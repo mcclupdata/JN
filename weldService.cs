@@ -2451,6 +2451,113 @@ namespace JN_WELD_Service
                         rst.weldDataTable = xml;
                         break;
                     }
+                /// <summary>
+                /// 获取全部坡口代码数据
+                /// 6030101
+                /// </summary>
+                case 6030101:
+                    {
+                        //DataTable data = clsConvertXMLDataTable.ConvertXMLToDataTable(cmd.weldDataTable);
+                        //int vtype = Convert.ToInt32(cmd.StringValue);
+                        svrweldcodepostEdit svr = new svrweldcodepostEdit();
+                        DataTable sdt = new DataTable();
+                        sdt = svr.getCODE();
+
+                        String xml;
+                        if (sdt.Rows.Count == 0)
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToSchema(sdt);
+                        }
+                        else
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToXML(sdt);
+
+                        }
+                        rst.BoolValue = true;
+                        rst.weldDataTable = xml;
+                        break;
+                    }
+                /// <summary>
+                /// 获取全部焊接位置数据
+                /// 6030102
+                /// </summary>
+                case 6030102:
+                    {
+                        //DataTable data = clsConvertXMLDataTable.ConvertXMLToDataTable(cmd.weldDataTable);
+                        //int vtype = Convert.ToInt32(cmd.StringValue);
+                        svrweldcodepostEdit svr = new svrweldcodepostEdit();
+                        DataTable sdt = new DataTable();
+                        sdt = svr.getPOST();
+
+                        String xml;
+                        if (sdt.Rows.Count == 0)
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToSchema(sdt);
+                        }
+                        else
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToXML(sdt);
+
+                        }
+                        rst.BoolValue = true;
+                        rst.weldDataTable = xml;
+                        break;
+                    }
+                /// <summary>
+                /// 更新坡口代码
+                /// 6030103
+                /// </summary>
+                case 6030103:
+                    {
+                        DataTable data = clsConvertXMLDataTable.ConvertXMLToDataTable(cmd.weldDataTable);
+                        int vtype = Convert.ToInt32(cmd.StringValue);
+                        svrweldcodepostEdit svr = new svrweldcodepostEdit();
+                        DataTable sdt = new DataTable();
+
+                        sdt = svr.UpdatCode(data, vtype);
+
+                        String xml;
+                        if (sdt.Rows.Count == 0)
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToSchema(sdt);
+                        }
+                        else
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToXML(sdt);
+
+                        }
+                        rst.BoolValue = true;
+                        rst.weldDataTable = xml;
+                        break;
+                    }
+                /// <summary>
+                /// 更新位置代码
+                /// 6030104
+                /// </summary>
+                case 6030104:
+                    {
+                        DataTable data = clsConvertXMLDataTable.ConvertXMLToDataTable(cmd.weldDataTable);
+                        int vtype = Convert.ToInt32(cmd.StringValue);
+                        svrweldcodepostEdit svr = new svrweldcodepostEdit();
+                        DataTable sdt = new DataTable();
+
+                        sdt = svr.UpdatPost(data, vtype);
+
+                        String xml;
+                        
+                        if (sdt.Rows.Count == 0)
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToSchema(sdt);
+                        }
+                        else
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToXML(sdt);
+
+                        }
+                        rst.BoolValue = true;
+                        rst.weldDataTable = xml;
+                        break;
+                    }
                 case 9001://开启定时器
                     {
                         //svrTimer.Start();
