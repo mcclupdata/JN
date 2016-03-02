@@ -100,7 +100,7 @@ namespace MC
                 dv.Refresh();
                // ((DataGridView)cl).ReadOnly = true;
                 GridView efGridView = (GridView)dv.Views[0];
-                efGridView.PopulateColumns();
+                //efGridView.PopulateColumns();
             }
 
         }
