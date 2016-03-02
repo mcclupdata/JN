@@ -48,19 +48,11 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.efPanelStyleXP1 = new EF.EFPanelStyleXP();
-            this.weldEquipList = new EF.EFTreeView(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.efPanel1 = new EF.EFPanel(this.components);
-            this.StartTime = new EF.EFDevTimeEdit(this.components);
-            this.EndTime = new EF.EFDevTimeEdit(this.components);
-            this.EndDate = new EF.EFDateTimePicker();
-            this.StartDate = new EF.EFDateTimePicker();
-            this.efLabel8 = new EF.EFLabel();
-            this.efLabel9 = new EF.EFLabel();
-            this.Timer_ZED = new System.Windows.Forms.Timer(this.components);
-            this.Timer_Equip = new System.Windows.Forms.Timer(this.components);
-            this.Timer_Task = new System.Windows.Forms.Timer(this.components);
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.efPanelStyleXP3 = new EF.EFPanelStyleXP();
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.efPanelStyleXP5 = new EF.EFPanelStyleXP();
@@ -90,23 +82,36 @@
             this.va = new YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED();
             this.state = new EF.EFTextBox();
             this.efLabel14 = new EF.EFLabel();
+            this.efPanelStyleXP1 = new EF.EFPanelStyleXP();
+            this.weldEquipList = new EF.EFTreeView(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.efPanel1 = new EF.EFPanel(this.components);
+            this.StartTime = new EF.EFDevTimeEdit(this.components);
+            this.EndTime = new EF.EFDevTimeEdit(this.components);
+            this.EndDate = new EF.EFDateTimePicker();
+            this.StartDate = new EF.EFDateTimePicker();
+            this.efLabel8 = new EF.EFLabel();
+            this.efLabel9 = new EF.EFLabel();
+            this.Timer_ZED = new System.Windows.Forms.Timer(this.components);
+            this.Timer_Equip = new System.Windows.Forms.Timer(this.components);
+            this.Timer_Task = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).BeginInit();
             this.efGroupBox1.SuspendLayout();
             this.efPanelStyleXP2.SuspendLayout();
             this.efPanelStyleXP4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            this.efPanelStyleXP1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.efPanel1)).BeginInit();
-            this.efPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StartTime.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EndTime.Properties)).BeginInit();
             this.efPanelStyleXP3.SuspendLayout();
             this.efPanelStyleXP5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox3)).BeginInit();
             this.efGroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox2)).BeginInit();
             this.efGroupBox2.SuspendLayout();
+            this.efPanelStyleXP1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efPanel1)).BeginInit();
+            this.efPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efGroupBox1
@@ -119,7 +124,7 @@
             this.efGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.efGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efGroupBox1.Name = "efGroupBox1";
-            this.efGroupBox1.Size = new System.Drawing.Size(1330, 883);
+            this.efGroupBox1.Size = new System.Drawing.Size(1330, 811);
             this.efGroupBox1.TabIndex = 4;
             this.efGroupBox1.Text = "焊机监控";
             this.efGroupBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.efGroupBox1_Paint);
@@ -165,7 +170,12 @@
             this.gridColumn4,
             this.gridColumn6,
             this.gridColumn7,
-            this.gridColumn5});
+            this.gridColumn5,
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn11,
+            this.gridColumn12,
+            this.gridColumn13});
             this.gridView1.FixedLineWidth = 1;
             this.gridView1.GridControl = this.dataGrid;
             this.gridView1.IndicatorWidth = 35;
@@ -248,131 +258,46 @@
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
             // 
-            // efPanelStyleXP1
+            // gridColumn9
             // 
-            this.efPanelStyleXP1.Controls.Add(this.weldEquipList);
-            this.efPanelStyleXP1.Controls.Add(this.efPanel1);
-            this.efPanelStyleXP1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.efPanelStyleXP1.Location = new System.Drawing.Point(2, 30);
-            this.efPanelStyleXP1.Name = "efPanelStyleXP1";
-            this.efPanelStyleXP1.Size = new System.Drawing.Size(407, 851);
-            this.efPanelStyleXP1.TabIndex = 0;
+            this.gridColumn9.Caption = "Gv";
+            this.gridColumn9.FieldName = "Gv";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 8;
             // 
-            // weldEquipList
+            // gridColumn10
             // 
-            this.weldEquipList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.weldEquipList.ImageIndex = 0;
-            this.weldEquipList.ImageList = this.imageList1;
-            this.weldEquipList.Location = new System.Drawing.Point(0, 159);
-            this.weldEquipList.Name = "weldEquipList";
-            treeNode1.ImageIndex = 1;
-            treeNode1.Name = "节点2";
-            treeNode1.Text = "焊机001";
-            treeNode2.Name = "节点1";
-            treeNode2.Text = "班组一";
-            treeNode3.Name = "root";
-            treeNode3.Text = "焊机总成";
-            this.weldEquipList.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3});
-            this.weldEquipList.SelectedImageIndex = 0;
-            this.weldEquipList.Size = new System.Drawing.Size(407, 692);
-            this.weldEquipList.TabIndex = 0;
-            this.weldEquipList.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.weldEquipList_NodeMouseDoubleClick);
+            this.gridColumn10.Caption = "Gx";
+            this.gridColumn10.CustomizationCaption = "Gx";
+            this.gridColumn10.FieldName = "Gx";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 9;
             // 
-            // imageList1
+            // gridColumn11
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "OK.jpg");
-            this.imageList1.Images.SetKeyName(1, "ER.jpg");
+            this.gridColumn11.Caption = "Gy";
+            this.gridColumn11.FieldName = "Gy";
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 10;
             // 
-            // efPanel1
+            // gridColumn12
             // 
-            this.efPanel1.Controls.Add(this.StartTime);
-            this.efPanel1.Controls.Add(this.EndTime);
-            this.efPanel1.Controls.Add(this.EndDate);
-            this.efPanel1.Controls.Add(this.StartDate);
-            this.efPanel1.Controls.Add(this.efLabel8);
-            this.efPanel1.Controls.Add(this.efLabel9);
-            this.efPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efPanel1.Location = new System.Drawing.Point(0, 0);
-            this.efPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.efPanel1.Name = "efPanel1";
-            this.efPanel1.Size = new System.Drawing.Size(407, 159);
-            this.efPanel1.TabIndex = 10;
+            this.gridColumn12.Caption = "Gz";
+            this.gridColumn12.FieldName = "Gz";
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.Visible = true;
+            this.gridColumn12.VisibleIndex = 11;
             // 
-            // StartTime
+            // gridColumn13
             // 
-            this.StartTime.EditValue = new System.DateTime(2015, 9, 27, 0, 0, 0, 0);
-            this.StartTime.Location = new System.Drawing.Point(183, 40);
-            this.StartTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.StartTime.Name = "StartTime";
-            this.StartTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.StartTime.Size = new System.Drawing.Size(143, 28);
-            this.StartTime.TabIndex = 8;
-            // 
-            // EndTime
-            // 
-            this.EndTime.EditValue = new System.DateTime(2015, 9, 27, 0, 0, 0, 0);
-            this.EndTime.Location = new System.Drawing.Point(183, 114);
-            this.EndTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.EndTime.Name = "EndTime";
-            this.EndTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.EndTime.Size = new System.Drawing.Size(143, 28);
-            this.EndTime.TabIndex = 9;
-            // 
-            // EndDate
-            // 
-            this.EndDate.Location = new System.Drawing.Point(4, 113);
-            this.EndDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.EndDate.Name = "EndDate";
-            this.EndDate.Size = new System.Drawing.Size(161, 29);
-            this.EndDate.TabIndex = 4;
-            // 
-            // StartDate
-            // 
-            this.StartDate.Location = new System.Drawing.Point(4, 38);
-            this.StartDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.StartDate.Name = "StartDate";
-            this.StartDate.Size = new System.Drawing.Size(161, 29);
-            this.StartDate.TabIndex = 1;
-            // 
-            // efLabel8
-            // 
-            this.efLabel8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel8.Location = new System.Drawing.Point(4, 8);
-            this.efLabel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.efLabel8.Name = "efLabel8";
-            this.efLabel8.Size = new System.Drawing.Size(107, 20);
-            this.efLabel8.TabIndex = 2;
-            this.efLabel8.Text = "开始日期";
-            // 
-            // efLabel9
-            // 
-            this.efLabel9.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel9.Location = new System.Drawing.Point(4, 83);
-            this.efLabel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.efLabel9.Name = "efLabel9";
-            this.efLabel9.Size = new System.Drawing.Size(107, 20);
-            this.efLabel9.TabIndex = 3;
-            this.efLabel9.Text = "结束日期";
-            // 
-            // Timer_ZED
-            // 
-            this.Timer_ZED.Interval = 1000;
-            this.Timer_ZED.Tick += new System.EventHandler(this.Timer_ZED_Tick);
-            // 
-            // Timer_Equip
-            // 
-            this.Timer_Equip.Interval = 60000;
-            this.Timer_Equip.Tick += new System.EventHandler(this.Timer_Equip_Tick);
-            // 
-            // Timer_Task
-            // 
-            this.Timer_Task.Interval = 60000;
-            this.Timer_Task.Tick += new System.EventHandler(this.Timer_Task_Tick);
+            this.gridColumn13.Caption = "G";
+            this.gridColumn13.FieldName = "G";
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 12;
             // 
             // efPanelStyleXP3
             // 
@@ -874,6 +799,132 @@
             this.efLabel14.TabIndex = 8;
             this.efLabel14.Text = "A";
             // 
+            // efPanelStyleXP1
+            // 
+            this.efPanelStyleXP1.Controls.Add(this.weldEquipList);
+            this.efPanelStyleXP1.Controls.Add(this.efPanel1);
+            this.efPanelStyleXP1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.efPanelStyleXP1.Location = new System.Drawing.Point(2, 30);
+            this.efPanelStyleXP1.Name = "efPanelStyleXP1";
+            this.efPanelStyleXP1.Size = new System.Drawing.Size(407, 779);
+            this.efPanelStyleXP1.TabIndex = 0;
+            // 
+            // weldEquipList
+            // 
+            this.weldEquipList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.weldEquipList.ImageIndex = 0;
+            this.weldEquipList.ImageList = this.imageList1;
+            this.weldEquipList.Location = new System.Drawing.Point(0, 159);
+            this.weldEquipList.Name = "weldEquipList";
+            treeNode1.ImageIndex = 1;
+            treeNode1.Name = "节点2";
+            treeNode1.Text = "焊机001";
+            treeNode2.Name = "节点1";
+            treeNode2.Text = "班组一";
+            treeNode3.Name = "root";
+            treeNode3.Text = "焊机总成";
+            this.weldEquipList.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode3});
+            this.weldEquipList.SelectedImageIndex = 0;
+            this.weldEquipList.Size = new System.Drawing.Size(407, 620);
+            this.weldEquipList.TabIndex = 0;
+            this.weldEquipList.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.weldEquipList_NodeMouseDoubleClick);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "OK.jpg");
+            this.imageList1.Images.SetKeyName(1, "ER.jpg");
+            // 
+            // efPanel1
+            // 
+            this.efPanel1.Controls.Add(this.StartTime);
+            this.efPanel1.Controls.Add(this.EndTime);
+            this.efPanel1.Controls.Add(this.EndDate);
+            this.efPanel1.Controls.Add(this.StartDate);
+            this.efPanel1.Controls.Add(this.efLabel8);
+            this.efPanel1.Controls.Add(this.efLabel9);
+            this.efPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efPanel1.Location = new System.Drawing.Point(0, 0);
+            this.efPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efPanel1.Name = "efPanel1";
+            this.efPanel1.Size = new System.Drawing.Size(407, 159);
+            this.efPanel1.TabIndex = 10;
+            // 
+            // StartTime
+            // 
+            this.StartTime.EditValue = new System.DateTime(2015, 9, 27, 0, 0, 0, 0);
+            this.StartTime.Location = new System.Drawing.Point(183, 40);
+            this.StartTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.StartTime.Name = "StartTime";
+            this.StartTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.StartTime.Size = new System.Drawing.Size(143, 28);
+            this.StartTime.TabIndex = 8;
+            // 
+            // EndTime
+            // 
+            this.EndTime.EditValue = new System.DateTime(2015, 9, 27, 0, 0, 0, 0);
+            this.EndTime.Location = new System.Drawing.Point(183, 114);
+            this.EndTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.EndTime.Name = "EndTime";
+            this.EndTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.EndTime.Size = new System.Drawing.Size(143, 28);
+            this.EndTime.TabIndex = 9;
+            // 
+            // EndDate
+            // 
+            this.EndDate.Location = new System.Drawing.Point(4, 113);
+            this.EndDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.EndDate.Name = "EndDate";
+            this.EndDate.Size = new System.Drawing.Size(161, 29);
+            this.EndDate.TabIndex = 4;
+            // 
+            // StartDate
+            // 
+            this.StartDate.Location = new System.Drawing.Point(4, 38);
+            this.StartDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.StartDate.Name = "StartDate";
+            this.StartDate.Size = new System.Drawing.Size(161, 29);
+            this.StartDate.TabIndex = 1;
+            // 
+            // efLabel8
+            // 
+            this.efLabel8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.efLabel8.Location = new System.Drawing.Point(4, 8);
+            this.efLabel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efLabel8.Name = "efLabel8";
+            this.efLabel8.Size = new System.Drawing.Size(107, 20);
+            this.efLabel8.TabIndex = 2;
+            this.efLabel8.Text = "开始日期";
+            // 
+            // efLabel9
+            // 
+            this.efLabel9.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.efLabel9.Location = new System.Drawing.Point(4, 83);
+            this.efLabel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efLabel9.Name = "efLabel9";
+            this.efLabel9.Size = new System.Drawing.Size(107, 20);
+            this.efLabel9.TabIndex = 3;
+            this.efLabel9.Text = "结束日期";
+            // 
+            // Timer_ZED
+            // 
+            this.Timer_ZED.Interval = 1000;
+            this.Timer_ZED.Tick += new System.EventHandler(this.Timer_ZED_Tick);
+            // 
+            // Timer_Equip
+            // 
+            this.Timer_Equip.Interval = 60000;
+            this.Timer_Equip.Tick += new System.EventHandler(this.Timer_Equip_Tick);
+            // 
+            // Timer_Task
+            // 
+            this.Timer_Task.Interval = 60000;
+            this.Timer_Task.Tick += new System.EventHandler(this.Timer_Task_Tick);
+            // 
             // FormMCCL000252
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -891,11 +942,6 @@
             this.efPanelStyleXP4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            this.efPanelStyleXP1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.efPanel1)).EndInit();
-            this.efPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.StartTime.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EndTime.Properties)).EndInit();
             this.efPanelStyleXP3.ResumeLayout(false);
             this.efPanelStyleXP5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox3)).EndInit();
@@ -903,6 +949,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox2)).EndInit();
             this.efGroupBox2.ResumeLayout(false);
             this.efGroupBox2.PerformLayout();
+            this.efPanelStyleXP1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efPanel1)).EndInit();
+            this.efPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.StartTime.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EndTime.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -964,6 +1015,11 @@
         private YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED va;
         private EF.EFTextBox state;
         private EF.EFLabel efLabel14;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
 
     }
 }

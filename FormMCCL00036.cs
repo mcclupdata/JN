@@ -32,9 +32,9 @@ namespace MC
             dt_welds.AcceptChanges();
 
             this.dataGrid.DataSource = dt_welds;
-
+           // this.dataGrid.b
             this.ItemLookUp_SHIPMOD.DataSource = dt_shipmod;
-            this.View.PopulateColumns(dt_welds);
+            //this.View.PopulateColumns(dt_welds);
             this.View.Columns["SHIP_MOD"].ColumnEdit = this.ItemLookUp_SHIPMOD;
             this.View.Columns["FID"].Visible=true;
             return false;

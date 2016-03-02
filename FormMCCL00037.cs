@@ -71,7 +71,7 @@ namespace MC
             
             this.wpsDataGrid.DataSource = _dt_wps;
             this.SubwpsDataGrid.DataSource = null;
-            this.wpsGridView.PopulateColumns();
+           // this.wpsGridView.PopulateColumns();
 
             DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition5 =new DevExpress.XtraGrid.StyleFormatCondition();
             styleFormatCondition5.Appearance.BackColor = System.Drawing.Color.LightGreen;

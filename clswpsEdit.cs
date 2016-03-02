@@ -43,7 +43,7 @@ namespace MC
             DevExpress.XtraGrid.Views.Grid.GridView wpsview = (DevExpress.XtraGrid.Views.Grid.GridView)((EFDevGrid)cl).Views[0];
             
             
-            wpsview.PopulateColumns();
+           // wpsview.PopulateColumns();
             wpsview.Columns["FID"].Visible = false;
             //cl = FindControl(contr_dataGrid_wpssub);
             //((DataGridView)cl).AutoGenerateColumns = true;

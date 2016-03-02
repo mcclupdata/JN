@@ -21,13 +21,13 @@ namespace MC
             DataTable weldundt = cls.loadUnmatchwpswelds();
             DataTable weldwps = cls.loadWeldswithWPS();
             this.weldwithwpsDataGrid.DataSource = weldwps;
-            this.weldwithwpsGridView.PopulateColumns();
+            //this.weldwithwpsGridView.PopulateColumns();
             for (int i = 0; i < this.weldwithwpsGridView.Columns.Count; i++)
             {
                 this.weldwithwpsGridView.Columns[i].OptionsColumn.AllowEdit = false;
             }
             this.weldwithnotwpsdataGrid.DataSource = weldundt;
-            this.weldwithnotwpsgridView.PopulateColumns();
+          //  this.weldwithnotwpsgridView.PopulateColumns();
             for (int i = 0; i < this.weldwithnotwpsgridView.Columns.Count; i++)
             {
                 this.weldwithnotwpsgridView.Columns[i].OptionsColumn.AllowEdit = false;

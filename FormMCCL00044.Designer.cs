@@ -1,6 +1,6 @@
 ﻿namespace MC
 {
-    partial class FormMCCL00035
+    partial class FormMCCL00044
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -41,6 +41,8 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.efPanel1 = new EF.EFPanel(this.components);
             this.but_OK = new EF.EFButton();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBoxEx1)).BeginInit();
             this.efGroupBoxEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efPanel2)).BeginInit();
@@ -61,7 +63,7 @@
             this.efGroupBoxEx1.Name = "efGroupBoxEx1";
             this.efGroupBoxEx1.Size = new System.Drawing.Size(1024, 696);
             this.efGroupBoxEx1.TabIndex = 4;
-            this.efGroupBoxEx1.Text = "焊接等级库";
+            this.efGroupBoxEx1.Text = "焊接位置";
             // 
             // efPanel2
             // 
@@ -97,7 +99,9 @@
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5,
-            this.gridColumn6});
+            this.gridColumn6,
+            this.gridColumn7,
+            this.gridColumn8});
             this.View.FixedLineWidth = 1;
             this.View.GridControl = this.dataGrid;
             this.View.IndicatorWidth = 35;
@@ -119,40 +123,40 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "焊接方法描述";
-            this.gridColumn2.FieldName = "WeldingProcessName";
+            this.gridColumn2.Caption = "位置";
+            this.gridColumn2.FieldName = "WELD_POST";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "焊接方法";
-            this.gridColumn3.FieldName = "WeldingProcessAb";
+            this.gridColumn3.Caption = "代号";
+            this.gridColumn3.FieldName = "WELD_TYPE";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "母材";
-            this.gridColumn4.FieldName = "WeldingType";
+            this.gridColumn4.Caption = "最小轴线倾斜角";
+            this.gridColumn4.FieldName = "ANGEL3_MIN";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "作业范围描述";
-            this.gridColumn5.FieldName = "FWorkDisk";
+            this.gridColumn5.Caption = "最大轴线倾斜角";
+            this.gridColumn5.FieldName = "ANGEL3_MAX";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "焊接等级";
-            this.gridColumn6.FieldName = "WeldingClass";
+            this.gridColumn6.Caption = "最小面旋转角";
+            this.gridColumn6.FieldName = "ANGEL2_MIN";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
@@ -182,14 +186,30 @@
             this.but_OK.ViewMode = EF.ViewModeEnum.Enable;
             this.but_OK.Click += new System.EventHandler(this.but_OK_Click);
             // 
-            // FormMCCL00035
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "最大面旋转角";
+            this.gridColumn7.FieldName = "ANGEL2_MAX";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 6;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "连接形式";
+            this.gridColumn8.FieldName = "WELD_LINK_TYPE";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 7;
+            // 
+            // FormMCCL00044
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.efGroupBoxEx1);
             this.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.Name = "FormMCCL00035";
-            this.Text = "焊接等级库管理";
+            this.Name = "FormMCCL00044";
+            this.Text = "焊接位置基础信息维护";
             this.Load += new System.EventHandler(this.FormMCCL00035_Load);
             this.Controls.SetChildIndex(this.efGroupBoxEx1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBoxEx1)).EndInit();
@@ -219,5 +239,7 @@
         private EF.EFPanel efPanel2;
         private EF.EFPanel efPanel1;
         private EF.EFButton but_OK;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
     }
 }

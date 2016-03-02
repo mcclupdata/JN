@@ -87,7 +87,7 @@
             this.efGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.efGroupBox1.Name = "efGroupBox1";
-            this.efGroupBox1.Size = new System.Drawing.Size(893, 47);
+            this.efGroupBox1.Size = new System.Drawing.Size(899, 47);
             this.efGroupBox1.TabIndex = 4;
             // 
             // butOk
@@ -159,7 +159,7 @@
             this.efGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efGroupBox2.Location = new System.Drawing.Point(0, 47);
             this.efGroupBox2.Name = "efGroupBox2";
-            this.efGroupBox2.Size = new System.Drawing.Size(893, 542);
+            this.efGroupBox2.Size = new System.Drawing.Size(899, 542);
             this.efGroupBox2.TabIndex = 5;
             this.efGroupBox2.Text = "数据";
             // 
@@ -170,7 +170,7 @@
             this.dataGrid.Location = new System.Drawing.Point(2, 23);
             this.dataGrid.MainView = this.gridView1;
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(889, 517);
+            this.dataGrid.Size = new System.Drawing.Size(895, 517);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.UseEmbeddedNavigator = true;
             this.dataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -218,8 +218,8 @@
             // 
             // SHIP_ID
             // 
-            this.SHIP_ID.Caption = "SHIP_ID";
-            this.SHIP_ID.CustomizationCaption = "SHIP_ID";
+            this.SHIP_ID.Caption = "工程名";
+            this.SHIP_ID.CustomizationCaption = "工程名";
             this.SHIP_ID.FieldName = "SHIP_ID";
             this.SHIP_ID.Name = "SHIP_ID";
             this.SHIP_ID.Visible = true;
@@ -227,8 +227,8 @@
             // 
             // SHIP_NO
             // 
-            this.SHIP_NO.Caption = "SHIP_NO";
-            this.SHIP_NO.CustomizationCaption = "SHIP_NO";
+            this.SHIP_NO.Caption = "工程号";
+            this.SHIP_NO.CustomizationCaption = "工程号";
             this.SHIP_NO.FieldName = "SHIP_NO";
             this.SHIP_NO.Name = "SHIP_NO";
             this.SHIP_NO.Visible = true;
@@ -236,8 +236,8 @@
             // 
             // BLK_NO
             // 
-            this.BLK_NO.Caption = "BLK_NO";
-            this.BLK_NO.CustomizationCaption = "BLK_NO";
+            this.BLK_NO.Caption = "分段号";
+            this.BLK_NO.CustomizationCaption = "分段号";
             this.BLK_NO.FieldName = "BLK_NO";
             this.BLK_NO.Name = "BLK_NO";
             this.BLK_NO.Visible = true;
@@ -245,8 +245,8 @@
             // 
             // TREE_NAME
             // 
-            this.TREE_NAME.Caption = "TREE_NAME";
-            this.TREE_NAME.CustomizationCaption = "TREE_NAME";
+            this.TREE_NAME.Caption = "分段号";
+            this.TREE_NAME.CustomizationCaption = "分段号";
             this.TREE_NAME.FieldName = "TREE_NAME";
             this.TREE_NAME.Name = "TREE_NAME";
             this.TREE_NAME.Visible = true;
@@ -254,8 +254,8 @@
             // 
             // WELD_NO
             // 
-            this.WELD_NO.Caption = "WELD_NO";
-            this.WELD_NO.CustomizationCaption = "WELD_NO";
+            this.WELD_NO.Caption = "焊缝名";
+            this.WELD_NO.CustomizationCaption = "焊缝名";
             this.WELD_NO.FieldName = "WELD_NO";
             this.WELD_NO.Name = "WELD_NO";
             this.WELD_NO.Visible = true;
@@ -263,8 +263,8 @@
             // 
             // PART1_NAME2
             // 
-            this.PART1_NAME2.Caption = "PART1_NAME2";
-            this.PART1_NAME2.CustomizationCaption = "PART1_NAME2";
+            this.PART1_NAME2.Caption = "零件名1";
+            this.PART1_NAME2.CustomizationCaption = "零件名1";
             this.PART1_NAME2.FieldName = "PART1_NAME2";
             this.PART1_NAME2.Name = "PART1_NAME2";
             this.PART1_NAME2.Visible = true;
@@ -272,8 +272,8 @@
             // 
             // PART2_NAME2
             // 
-            this.PART2_NAME2.Caption = "PART2_NAME2";
-            this.PART2_NAME2.CustomizationCaption = "PART2_NAME2";
+            this.PART2_NAME2.Caption = "零件名2";
+            this.PART2_NAME2.CustomizationCaption = "零件名2";
             this.PART2_NAME2.FieldName = "PART2_NAME2";
             this.PART2_NAME2.Name = "PART2_NAME2";
             this.PART2_NAME2.Visible = true;
@@ -281,8 +281,8 @@
             // 
             // AS3
             // 
-            this.AS3.Caption = "AS3";
-            this.AS3.CustomizationCaption = "AS3";
+            this.AS3.Caption = "组立";
+            this.AS3.CustomizationCaption = "组立";
             this.AS3.FieldName = "AS3";
             this.AS3.Name = "AS3";
             this.AS3.Visible = true;
@@ -290,8 +290,8 @@
             // 
             // BUFF1
             // 
-            this.BUFF1.Caption = "BUFF1";
-            this.BUFF1.CustomizationCaption = "BUFF1";
+            this.BUFF1.Caption = "阶段";
+            this.BUFF1.CustomizationCaption = "阶段";
             this.BUFF1.FieldName = "BUFF1";
             this.BUFF1.Name = "BUFF1";
             this.BUFF1.Visible = true;
@@ -299,8 +299,8 @@
             // 
             // THICK1
             // 
-            this.THICK1.Caption = "THICK1";
-            this.THICK1.CustomizationCaption = "THICK1";
+            this.THICK1.Caption = "板厚";
+            this.THICK1.CustomizationCaption = "板厚";
             this.THICK1.FieldName = "THICK1";
             this.THICK1.Name = "THICK1";
             this.THICK1.Visible = true;
@@ -308,8 +308,8 @@
             // 
             // THICK2
             // 
-            this.THICK2.Caption = "THICK2";
-            this.THICK2.CustomizationCaption = "THICK2";
+            this.THICK2.Caption = "板厚";
+            this.THICK2.CustomizationCaption = "板厚";
             this.THICK2.FieldName = "THICK2";
             this.THICK2.Name = "THICK2";
             this.THICK2.Visible = true;
@@ -317,8 +317,8 @@
             // 
             // WELD1_CODE
             // 
-            this.WELD1_CODE.Caption = "WELD1_CODE";
-            this.WELD1_CODE.CustomizationCaption = "WELD1_CODE";
+            this.WELD1_CODE.Caption = "坡口代码";
+            this.WELD1_CODE.CustomizationCaption = "坡口代码";
             this.WELD1_CODE.FieldName = "WELD1_CODE";
             this.WELD1_CODE.Name = "WELD1_CODE";
             this.WELD1_CODE.Visible = true;
@@ -326,8 +326,8 @@
             // 
             // WELD2_CODE
             // 
-            this.WELD2_CODE.Caption = "WELD2_CODE";
-            this.WELD2_CODE.CustomizationCaption = "WELD2_CODE";
+            this.WELD2_CODE.Caption = "坡口角度";
+            this.WELD2_CODE.CustomizationCaption = "坡口角度";
             this.WELD2_CODE.FieldName = "WELD2_CODE";
             this.WELD2_CODE.Name = "WELD2_CODE";
             this.WELD2_CODE.Visible = true;
@@ -335,8 +335,8 @@
             // 
             // GRADE1
             // 
-            this.GRADE1.Caption = "GRADE1";
-            this.GRADE1.CustomizationCaption = "GRADE1";
+            this.GRADE1.Caption = "材质";
+            this.GRADE1.CustomizationCaption = "材质";
             this.GRADE1.FieldName = "GRADE1";
             this.GRADE1.Name = "GRADE1";
             this.GRADE1.Visible = true;
@@ -344,8 +344,8 @@
             // 
             // GRADE2
             // 
-            this.GRADE2.Caption = "GRADE2";
-            this.GRADE2.CustomizationCaption = "GRADE2";
+            this.GRADE2.Caption = "材质";
+            this.GRADE2.CustomizationCaption = "材质";
             this.GRADE2.FieldName = "GRADE2";
             this.GRADE2.Name = "GRADE2";
             this.GRADE2.Visible = true;
@@ -353,8 +353,8 @@
             // 
             // WELD_TYPE
             // 
-            this.WELD_TYPE.Caption = "WELD_TYPE";
-            this.WELD_TYPE.CustomizationCaption = "WELD_TYPE";
+            this.WELD_TYPE.Caption = "接头形式";
+            this.WELD_TYPE.CustomizationCaption = "接头形式";
             this.WELD_TYPE.FieldName = "WELD_TYPE";
             this.WELD_TYPE.Name = "WELD_TYPE";
             this.WELD_TYPE.Visible = true;
@@ -362,8 +362,8 @@
             // 
             // ASS1_NAME
             // 
-            this.ASS1_NAME.Caption = "ASS1_NAME";
-            this.ASS1_NAME.CustomizationCaption = "ASS1_NAME";
+            this.ASS1_NAME.Caption = "阻断名";
+            this.ASS1_NAME.CustomizationCaption = "阻断名";
             this.ASS1_NAME.FieldName = "ASS1_NAME";
             this.ASS1_NAME.Name = "ASS1_NAME";
             this.ASS1_NAME.Visible = true;
@@ -371,8 +371,8 @@
             // 
             // WELD_ANGLE_H
             // 
-            this.WELD_ANGLE_H.Caption = "WELD_ANGLE_H";
-            this.WELD_ANGLE_H.CustomizationCaption = "WELD_ANGLE_H";
+            this.WELD_ANGLE_H.Caption = "焊脚高度";
+            this.WELD_ANGLE_H.CustomizationCaption = "焊脚高度";
             this.WELD_ANGLE_H.FieldName = "WELD_ANGLE_H";
             this.WELD_ANGLE_H.Name = "WELD_ANGLE_H";
             this.WELD_ANGLE_H.Visible = true;
@@ -380,8 +380,8 @@
             // 
             // ASS2_NAME
             // 
-            this.ASS2_NAME.Caption = "ASS2_NAME";
-            this.ASS2_NAME.CustomizationCaption = "ASS2_NAME";
+            this.ASS2_NAME.Caption = "阻断名";
+            this.ASS2_NAME.CustomizationCaption = "阻断名";
             this.ASS2_NAME.FieldName = "ASS2_NAME";
             this.ASS2_NAME.Name = "ASS2_NAME";
             this.ASS2_NAME.Visible = true;
@@ -389,8 +389,8 @@
             // 
             // WELD_COUNT
             // 
-            this.WELD_COUNT.Caption = "WELD_COUNT";
-            this.WELD_COUNT.CustomizationCaption = "WELD_COUNT";
+            this.WELD_COUNT.Caption = "焊缝数";
+            this.WELD_COUNT.CustomizationCaption = "焊缝数";
             this.WELD_COUNT.FieldName = "WELD_COUNT";
             this.WELD_COUNT.Name = "WELD_COUNT";
             this.WELD_COUNT.Visible = true;
@@ -398,8 +398,8 @@
             // 
             // PART1_TYPE
             // 
-            this.PART1_TYPE.Caption = "PART1_TYPE";
-            this.PART1_TYPE.CustomizationCaption = "PART1_TYPE";
+            this.PART1_TYPE.Caption = "零件号";
+            this.PART1_TYPE.CustomizationCaption = "零件号";
             this.PART1_TYPE.FieldName = "PART1_TYPE";
             this.PART1_TYPE.Name = "PART1_TYPE";
             this.PART1_TYPE.Visible = true;
@@ -407,8 +407,8 @@
             // 
             // PART２_TYPE
             // 
-            this.PART２_TYPE.Caption = "PART２_TYPE";
-            this.PART２_TYPE.CustomizationCaption = "PART２_TYPE";
+            this.PART２_TYPE.Caption = "零件号";
+            this.PART２_TYPE.CustomizationCaption = "零件号";
             this.PART２_TYPE.FieldName = "PART２_TYPE";
             this.PART２_TYPE.Name = "PART２_TYPE";
             this.PART２_TYPE.Visible = true;
@@ -416,8 +416,8 @@
             // 
             // TIP_ANGLE
             // 
-            this.TIP_ANGLE.Caption = "TIP_ANGLE";
-            this.TIP_ANGLE.CustomizationCaption = "TIP_ANGLE";
+            this.TIP_ANGLE.Caption = "倾斜角度";
+            this.TIP_ANGLE.CustomizationCaption = "倾斜角度";
             this.TIP_ANGLE.FieldName = "TIP_ANGLE";
             this.TIP_ANGLE.Name = "TIP_ANGLE";
             this.TIP_ANGLE.Visible = true;
@@ -425,8 +425,8 @@
             // 
             // WELD_T_LEN
             // 
-            this.WELD_T_LEN.Caption = "WELD_T_LEN";
-            this.WELD_T_LEN.CustomizationCaption = "WELD_T_LEN";
+            this.WELD_T_LEN.Caption = "装配长度";
+            this.WELD_T_LEN.CustomizationCaption = "装配长度";
             this.WELD_T_LEN.FieldName = "WELD_T_LEN";
             this.WELD_T_LEN.Name = "WELD_T_LEN";
             this.WELD_T_LEN.Visible = true;
@@ -434,8 +434,8 @@
             // 
             // WELD_NOTE
             // 
-            this.WELD_NOTE.Caption = "WELD_NOTE";
-            this.WELD_NOTE.CustomizationCaption = "WELD_NOTE";
+            this.WELD_NOTE.Caption = "备注";
+            this.WELD_NOTE.CustomizationCaption = "备注";
             this.WELD_NOTE.FieldName = "WELD_NOTE";
             this.WELD_NOTE.Name = "WELD_NOTE";
             this.WELD_NOTE.Visible = true;
@@ -443,8 +443,8 @@
             // 
             // WELD_POS
             // 
-            this.WELD_POS.Caption = "WELD_POS";
-            this.WELD_POS.CustomizationCaption = "WELD_POS";
+            this.WELD_POS.Caption = "焊接位置";
+            this.WELD_POS.CustomizationCaption = "焊接位置";
             this.WELD_POS.FieldName = "WELD_POS";
             this.WELD_POS.Name = "WELD_POS";
             this.WELD_POS.Visible = true;
@@ -452,8 +452,8 @@
             // 
             // WELD_MOD
             // 
-            this.WELD_MOD.Caption = "WELD_MOD";
-            this.WELD_MOD.CustomizationCaption = "WELD_MOD";
+            this.WELD_MOD.Caption = "焊接方法";
+            this.WELD_MOD.CustomizationCaption = "焊接方法";
             this.WELD_MOD.FieldName = "WELD_MOD";
             this.WELD_MOD.Name = "WELD_MOD";
             this.WELD_MOD.Visible = true;
@@ -461,8 +461,8 @@
             // 
             // RuleNum
             // 
-            this.RuleNum.Caption = "RuleNum";
-            this.RuleNum.CustomizationCaption = "RuleNum";
+            this.RuleNum.Caption = "规程编号";
+            this.RuleNum.CustomizationCaption = "规程编号";
             this.RuleNum.FieldName = "RuleNum";
             this.RuleNum.Name = "RuleNum";
             this.RuleNum.Visible = true;
@@ -472,7 +472,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 635);
+            this.ClientSize = new System.Drawing.Size(899, 635);
             this.Controls.Add(this.efGroupBox2);
             this.Controls.Add(this.efGroupBox1);
             this.Margin = new System.Windows.Forms.Padding(3);

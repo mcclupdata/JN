@@ -120,6 +120,11 @@ namespace MC
         {
             
         }
+
+        private void butOK_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
        
 
     }

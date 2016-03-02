@@ -133,7 +133,8 @@ namespace MC
                 dg.DataSourceChanged += new EventHandler(dg_DataSourceChanged);
                 for (int k = 0; k < dg.Views.Count; k++)
                 {
-                   // ((DevExpress.XtraGrid.Views.Grid.GridView)dg.Views[k]).OptionsView.ColumnAutoWidth = true;
+                    
+                   ((DevExpress.XtraGrid.Views.Grid.GridView)dg.Views[k]).OptionsView.ColumnAutoWidth = false;
                    // ((DevExpress.XtraGrid.Views.Grid.GridView)dg.Views[k]).OptionsView.
                 }
                 return cl;

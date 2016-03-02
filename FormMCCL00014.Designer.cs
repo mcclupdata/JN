@@ -105,8 +105,9 @@
             this.efGroupBox1.Controls.Add(this.butreturn);
             this.efGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efGroupBox1.Location = new System.Drawing.Point(0, 0);
+            this.efGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efGroupBox1.Name = "efGroupBox1";
-            this.efGroupBox1.Size = new System.Drawing.Size(893, 51);
+            this.efGroupBox1.Size = new System.Drawing.Size(1276, 80);
             this.efGroupBox1.TabIndex = 4;
             // 
             // butCancel
@@ -115,9 +116,10 @@
             this.butCancel.EnabledEx = true;
             this.butCancel.FnNo = 0;
             this.butCancel.Hint = "";
-            this.butCancel.Location = new System.Drawing.Point(922, 29);
+            this.butCancel.Location = new System.Drawing.Point(1317, 46);
+            this.butCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.butCancel.Name = "butCancel";
-            this.butCancel.Size = new System.Drawing.Size(75, 53);
+            this.butCancel.Size = new System.Drawing.Size(107, 83);
             this.butCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butCancel.TabIndex = 12;
             this.butCancel.Text = "取消";
@@ -126,25 +128,29 @@
             // butOK
             // 
             this.butOK.Authorizable = false;
+            this.butOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.butOK.EnabledEx = true;
             this.butOK.FnNo = 0;
             this.butOK.Hint = "";
-            this.butOK.Location = new System.Drawing.Point(685, 18);
+            this.butOK.Location = new System.Drawing.Point(979, 28);
+            this.butOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.butOK.Name = "butOK";
-            this.butOK.Size = new System.Drawing.Size(75, 23);
+            this.butOK.Size = new System.Drawing.Size(107, 36);
             this.butOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butOK.TabIndex = 11;
             this.butOK.Text = "确定";
             this.butOK.ViewMode = EF.ViewModeEnum.Enable;
+            this.butOK.Click += new System.EventHandler(this.butOK_Click);
             // 
             // txtValue
             // 
             this.txtValue.EFEname = null;
             this.txtValue.EFLeaveExpression = ".*";
             this.txtValue.EFLen = 32767;
-            this.txtValue.Location = new System.Drawing.Point(293, 22);
+            this.txtValue.Location = new System.Drawing.Point(419, 35);
+            this.txtValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtValue.Name = "txtValue";
-            this.txtValue.Size = new System.Drawing.Size(226, 22);
+            this.txtValue.Size = new System.Drawing.Size(321, 29);
             this.txtValue.TabIndex = 9;
             this.txtValue.Visible = false;
             // 
@@ -154,9 +160,10 @@
             this.butSeachin.EnabledEx = true;
             this.butSeachin.FnNo = 0;
             this.butSeachin.Hint = "";
-            this.butSeachin.Location = new System.Drawing.Point(524, 18);
+            this.butSeachin.Location = new System.Drawing.Point(749, 28);
+            this.butSeachin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.butSeachin.Name = "butSeachin";
-            this.butSeachin.Size = new System.Drawing.Size(76, 23);
+            this.butSeachin.Size = new System.Drawing.Size(109, 36);
             this.butSeachin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butSeachin.TabIndex = 8;
             this.butSeachin.Text = "结果内搜索F1";
@@ -170,9 +177,10 @@
             this.butSelectAll.EnabledEx = true;
             this.butSelectAll.FnNo = 0;
             this.butSelectAll.Hint = "";
-            this.butSelectAll.Location = new System.Drawing.Point(605, 18);
+            this.butSelectAll.Location = new System.Drawing.Point(864, 28);
+            this.butSelectAll.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.butSelectAll.Name = "butSelectAll";
-            this.butSelectAll.Size = new System.Drawing.Size(74, 23);
+            this.butSelectAll.Size = new System.Drawing.Size(106, 36);
             this.butSelectAll.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butSelectAll.TabIndex = 7;
             this.butSelectAll.Text = "全选";
@@ -186,9 +194,10 @@
             this.cbbCondition.EFCname = "";
             this.cbbCondition.EFDropDown = false;
             this.cbbCondition.FormattingEnabled = true;
-            this.cbbCondition.Location = new System.Drawing.Point(225, 22);
+            this.cbbCondition.Location = new System.Drawing.Point(321, 35);
+            this.cbbCondition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbbCondition.Name = "cbbCondition";
-            this.cbbCondition.Size = new System.Drawing.Size(64, 22);
+            this.cbbCondition.Size = new System.Drawing.Size(90, 30);
             this.cbbCondition.SQL = null;
             this.cbbCondition.TabIndex = 6;
             this.cbbCondition.UserValue = "";
@@ -201,9 +210,10 @@
             this.cbbField.EFCname = "";
             this.cbbField.EFDropDown = false;
             this.cbbField.FormattingEnabled = true;
-            this.cbbField.Location = new System.Drawing.Point(4, 22);
+            this.cbbField.Location = new System.Drawing.Point(6, 35);
+            this.cbbField.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbbField.Name = "cbbField";
-            this.cbbField.Size = new System.Drawing.Size(216, 22);
+            this.cbbField.Size = new System.Drawing.Size(307, 30);
             this.cbbField.SQL = null;
             this.cbbField.TabIndex = 5;
             this.cbbField.UserValue = "";
@@ -215,9 +225,10 @@
             this.butreturn.EnabledEx = true;
             this.butreturn.FnNo = 0;
             this.butreturn.Hint = "";
-            this.butreturn.Location = new System.Drawing.Point(402, 18);
+            this.butreturn.Location = new System.Drawing.Point(574, 28);
+            this.butreturn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.butreturn.Name = "butreturn";
-            this.butreturn.Size = new System.Drawing.Size(74, 23);
+            this.butreturn.Size = new System.Drawing.Size(106, 36);
             this.butreturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butreturn.TabIndex = 1;
             this.butreturn.Text = "还原F2";
@@ -231,9 +242,10 @@
             this.efGroupBox2.Appearance.Options.UseBackColor = true;
             this.efGroupBox2.Controls.Add(this.dataGrid);
             this.efGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efGroupBox2.Location = new System.Drawing.Point(0, 51);
+            this.efGroupBox2.Location = new System.Drawing.Point(0, 80);
+            this.efGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efGroupBox2.Name = "efGroupBox2";
-            this.efGroupBox2.Size = new System.Drawing.Size(893, 538);
+            this.efGroupBox2.Size = new System.Drawing.Size(1276, 846);
             this.efGroupBox2.TabIndex = 5;
             this.efGroupBox2.Text = "数据";
             // 
@@ -241,8 +253,9 @@
             // 
             this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid.IsUseCustomPageBar = true;
-            this.dataGrid.Location = new System.Drawing.Point(2, 23);
+            this.dataGrid.Location = new System.Drawing.Point(2, 30);
             this.dataGrid.MainView = this.view;
+            this.dataGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.ShowContextMenuAddCopyNew = false;
             this.dataGrid.ShowContextMenuAddNew = false;
@@ -256,7 +269,7 @@
             this.dataGrid.ShowRefreshButton = false;
             this.dataGrid.ShowRowIndicator = false;
             this.dataGrid.ShowSaveLayoutButton = false;
-            this.dataGrid.Size = new System.Drawing.Size(889, 513);
+            this.dataGrid.Size = new System.Drawing.Size(1272, 814);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.UseEmbeddedNavigator = true;
             this.dataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -472,12 +485,12 @@
             // 
             // FormMCCL00014
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 635);
+            this.ClientSize = new System.Drawing.Size(1276, 998);
             this.Controls.Add(this.efGroupBox2);
             this.Controls.Add(this.efGroupBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormMCCL00014";
             this.Text = "焊缝-WPS配置";
             this.EF_DO_F1 += new EF.EFButtonBar.EFDoFnEventHandler(this.FormMCCL00014_EF_DO_F1);

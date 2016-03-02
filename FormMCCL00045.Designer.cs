@@ -1,6 +1,6 @@
 ﻿namespace MC
 {
-    partial class FormMCCL00035
+    partial class FormMCCL00045
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -39,6 +39,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.efPanel1 = new EF.EFPanel(this.components);
             this.but_OK = new EF.EFButton();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBoxEx1)).BeginInit();
@@ -61,7 +62,7 @@
             this.efGroupBoxEx1.Name = "efGroupBoxEx1";
             this.efGroupBoxEx1.Size = new System.Drawing.Size(1024, 696);
             this.efGroupBoxEx1.TabIndex = 4;
-            this.efGroupBoxEx1.Text = "焊接等级库";
+            this.efGroupBoxEx1.Text = "焊接坡口";
             // 
             // efPanel2
             // 
@@ -97,7 +98,8 @@
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5,
-            this.gridColumn6});
+            this.gridColumn6,
+            this.gridColumn7});
             this.View.FixedLineWidth = 1;
             this.View.GridControl = this.dataGrid;
             this.View.IndicatorWidth = 35;
@@ -119,8 +121,8 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "焊接方法描述";
-            this.gridColumn2.FieldName = "WeldingProcessName";
+            this.gridColumn2.Caption = "坡口代码";
+            this.gridColumn2.FieldName = "WELD_CODE";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
@@ -128,34 +130,42 @@
             // gridColumn3
             // 
             this.gridColumn3.Caption = "焊接方法";
-            this.gridColumn3.FieldName = "WeldingProcessAb";
+            this.gridColumn3.FieldName = "WELD_MOD";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "母材";
-            this.gridColumn4.FieldName = "WeldingType";
+            this.gridColumn4.Caption = "坡口形式";
+            this.gridColumn4.FieldName = "WELD_CODE_TYPE";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "作业范围描述";
-            this.gridColumn5.FieldName = "FWorkDisk";
+            this.gridColumn5.Caption = "坡口角度";
+            this.gridColumn5.FieldName = "WELD_CODE_ANGEL";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "焊接等级";
-            this.gridColumn6.FieldName = "WeldingClass";
+            this.gridColumn6.Caption = "最大留根长度";
+            this.gridColumn6.FieldName = "WELD_CODE_ROOTMAX";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "最小留根长度";
+            this.gridColumn7.FieldName = "WELD_CODE_ROOTMIN";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 6;
             // 
             // efPanel1
             // 
@@ -182,14 +192,14 @@
             this.but_OK.ViewMode = EF.ViewModeEnum.Enable;
             this.but_OK.Click += new System.EventHandler(this.but_OK_Click);
             // 
-            // FormMCCL00035
+            // FormMCCL00045
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.efGroupBoxEx1);
             this.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.Name = "FormMCCL00035";
-            this.Text = "焊接等级库管理";
+            this.Name = "FormMCCL00045";
+            this.Text = "焊接坡口基础信息维护";
             this.Load += new System.EventHandler(this.FormMCCL00035_Load);
             this.Controls.SetChildIndex(this.efGroupBoxEx1, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBoxEx1)).EndInit();
@@ -219,5 +229,6 @@
         private EF.EFPanel efPanel2;
         private EF.EFPanel efPanel1;
         private EF.EFButton but_OK;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
     }
 }

@@ -63,6 +63,8 @@
             this.efButton32 = new EF.EFButton();
             this.efButton33 = new EF.EFButton();
             this.efButton34 = new EF.EFButton();
+            this.efButton35 = new EF.EFButton();
+            this.efButton36 = new EF.EFButton();
             ((System.ComponentModel.ISupportInitialize)(this.efButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton3)).BeginInit();
@@ -97,6 +99,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.efButton32)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efButton35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efButton36)).BeginInit();
             this.SuspendLayout();
             // 
             // efButton1
@@ -646,11 +650,45 @@
             this.efButton34.ViewMode = EF.ViewModeEnum.Enable;
             this.efButton34.Click += new System.EventHandler(this.efButton34_Click);
             // 
+            // efButton35
+            // 
+            this.efButton35.Authorizable = false;
+            this.efButton35.EnabledEx = true;
+            this.efButton35.FnNo = 0;
+            this.efButton35.Hint = "";
+            this.efButton35.Location = new System.Drawing.Point(1224, 38);
+            this.efButton35.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton35.Name = "efButton35";
+            this.efButton35.Size = new System.Drawing.Size(161, 74);
+            this.efButton35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.efButton35.TabIndex = 38;
+            this.efButton35.Text = "焊接位置维护";
+            this.efButton35.ViewMode = EF.ViewModeEnum.Enable;
+            this.efButton35.Click += new System.EventHandler(this.efButton35_Click);
+            // 
+            // efButton36
+            // 
+            this.efButton36.Authorizable = false;
+            this.efButton36.EnabledEx = true;
+            this.efButton36.FnNo = 0;
+            this.efButton36.Hint = "";
+            this.efButton36.Location = new System.Drawing.Point(1224, 162);
+            this.efButton36.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton36.Name = "efButton36";
+            this.efButton36.Size = new System.Drawing.Size(161, 74);
+            this.efButton36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.efButton36.TabIndex = 39;
+            this.efButton36.Text = "焊接坡口维护";
+            this.efButton36.ViewMode = EF.ViewModeEnum.Enable;
+            this.efButton36.Click += new System.EventHandler(this.efButton36_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1398, 755);
+            this.Controls.Add(this.efButton36);
+            this.Controls.Add(this.efButton35);
             this.Controls.Add(this.efButton34);
             this.Controls.Add(this.efButton33);
             this.Controls.Add(this.efButton32);
@@ -722,6 +760,8 @@
             this.Controls.SetChildIndex(this.efButton32, 0);
             this.Controls.SetChildIndex(this.efButton33, 0);
             this.Controls.SetChildIndex(this.efButton34, 0);
+            this.Controls.SetChildIndex(this.efButton35, 0);
+            this.Controls.SetChildIndex(this.efButton36, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton3)).EndInit();
@@ -756,6 +796,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.efButton32)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efButton35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efButton36)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -797,5 +839,7 @@
         private EF.EFButton efButton32;
         private EF.EFButton efButton33;
         private EF.EFButton efButton34;
+        private EF.EFButton efButton35;
+        private EF.EFButton efButton36;
     }
 }

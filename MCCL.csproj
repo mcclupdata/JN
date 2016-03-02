@@ -536,6 +536,12 @@
     <EmbeddedResource Include="FormMCCL00021.resx">
       <DependentUpon>FormMCCL00021.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00044.resx">
+      <DependentUpon>FormMCCL00044.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL00045.resx">
+      <DependentUpon>FormMCCL00045.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -671,6 +677,18 @@
     </Compile>
     <Compile Include="weldEquipmentbase.cs" />
     <Compile Include="_MyClient.cs" />
+    <Compile Include="FormMCCL00044.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00044.Designer.cs">
+      <DependentUpon>FormMCCL00044.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMCCL00045.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL00045.Designer.cs">
+      <DependentUpon>FormMCCL00045.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AxReadCardInfo">

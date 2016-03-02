@@ -381,7 +381,7 @@
             this.tabControl.Controls.Add(this.MergedweldsTab);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(2, 23);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(889, 495);
@@ -392,9 +392,9 @@
             this.UnMergweldsTab.Controls.Add(this.dataGrid);
             this.UnMergweldsTab.Controls.Add(this.efPanel1);
             this.UnMergweldsTab.Location = new System.Drawing.Point(4, 23);
-            this.UnMergweldsTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UnMergweldsTab.Margin = new System.Windows.Forms.Padding(2);
             this.UnMergweldsTab.Name = "UnMergweldsTab";
-            this.UnMergweldsTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UnMergweldsTab.Padding = new System.Windows.Forms.Padding(2);
             this.UnMergweldsTab.Size = new System.Drawing.Size(881, 468);
             this.UnMergweldsTab.TabIndex = 0;
             this.UnMergweldsTab.Text = "未合并焊缝";
@@ -443,7 +443,7 @@
             // 
             // gridColumn12
             // 
-            this.gridColumn12.Caption = "SHIP_NO";
+            this.gridColumn12.Caption = "工程名";
             this.gridColumn12.FieldName = "SHIP_NO";
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
@@ -451,7 +451,7 @@
             // 
             // gridColumn13
             // 
-            this.gridColumn13.Caption = "BLK_NO";
+            this.gridColumn13.Caption = "分段号";
             this.gridColumn13.FieldName = "BLK_NO";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.Visible = true;
@@ -459,7 +459,7 @@
             // 
             // gridColumn14
             // 
-            this.gridColumn14.Caption = "TREE_NAME";
+            this.gridColumn14.Caption = "分段号";
             this.gridColumn14.FieldName = "TREE_NAME";
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.Visible = true;
@@ -467,7 +467,7 @@
             // 
             // gridColumn15
             // 
-            this.gridColumn15.Caption = "WELD_NO";
+            this.gridColumn15.Caption = "焊缝名";
             this.gridColumn15.FieldName = "WELD_NO";
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.Visible = true;
@@ -475,7 +475,7 @@
             // 
             // gridColumn16
             // 
-            this.gridColumn16.Caption = "AS3";
+            this.gridColumn16.Caption = "组立";
             this.gridColumn16.FieldName = "AS3";
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.Visible = true;
@@ -483,7 +483,7 @@
             // 
             // gridColumn17
             // 
-            this.gridColumn17.Caption = "BUFF1";
+            this.gridColumn17.Caption = "阶段";
             this.gridColumn17.FieldName = "BUFF1";
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.Visible = true;
@@ -491,7 +491,7 @@
             // 
             // gridColumn18
             // 
-            this.gridColumn18.Caption = "PART1_NAME2";
+            this.gridColumn18.Caption = "零件名";
             this.gridColumn18.FieldName = "PART1_NAME2";
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.Visible = true;
@@ -499,7 +499,7 @@
             // 
             // gridColumn19
             // 
-            this.gridColumn19.Caption = "PART2_NAME2";
+            this.gridColumn19.Caption = "零件名";
             this.gridColumn19.FieldName = "PART2_NAME2";
             this.gridColumn19.Name = "gridColumn19";
             this.gridColumn19.Visible = true;
@@ -529,7 +529,7 @@
             this.efPanel1.Controls.Add(this.butMerge);
             this.efPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efPanel1.Location = new System.Drawing.Point(2, 2);
-            this.efPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.efPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.efPanel1.Name = "efPanel1";
             this.efPanel1.Size = new System.Drawing.Size(877, 34);
             this.efPanel1.TabIndex = 6;
@@ -554,10 +554,10 @@
             // 
             this.MergedweldsTab.Controls.Add(this.dataGridMerged);
             this.MergedweldsTab.Location = new System.Drawing.Point(4, 23);
-            this.MergedweldsTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MergedweldsTab.Margin = new System.Windows.Forms.Padding(2);
             this.MergedweldsTab.Name = "MergedweldsTab";
-            this.MergedweldsTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MergedweldsTab.Size = new System.Drawing.Size(885, 476);
+            this.MergedweldsTab.Padding = new System.Windows.Forms.Padding(2);
+            this.MergedweldsTab.Size = new System.Drawing.Size(881, 468);
             this.MergedweldsTab.TabIndex = 1;
             this.MergedweldsTab.Text = "已合并焊缝";
             this.MergedweldsTab.UseVisualStyleBackColor = true;
@@ -574,7 +574,7 @@
             this.dataGridMerged.ShowPageButton = false;
             this.dataGridMerged.ShowRowIndicator = false;
             this.dataGridMerged.ShowSaveLayoutButton = false;
-            this.dataGridMerged.Size = new System.Drawing.Size(881, 472);
+            this.dataGridMerged.Size = new System.Drawing.Size(877, 464);
             this.dataGridMerged.TabIndex = 6;
             this.dataGridMerged.UseEmbeddedNavigator = true;
             this.dataGridMerged.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -604,7 +604,7 @@
             // 
             // gridColumn21
             // 
-            this.gridColumn21.Caption = "SHIP_NO";
+            this.gridColumn21.Caption = "工程号";
             this.gridColumn21.FieldName = "SHIP_NO";
             this.gridColumn21.Name = "gridColumn21";
             this.gridColumn21.Visible = true;
@@ -612,7 +612,7 @@
             // 
             // gridColumn22
             // 
-            this.gridColumn22.Caption = "BLK_NO";
+            this.gridColumn22.Caption = "分段号";
             this.gridColumn22.FieldName = "BLK_NO";
             this.gridColumn22.Name = "gridColumn22";
             this.gridColumn22.Visible = true;
@@ -620,7 +620,7 @@
             // 
             // gridColumn23
             // 
-            this.gridColumn23.Caption = "TREE_NAME";
+            this.gridColumn23.Caption = "分段号";
             this.gridColumn23.FieldName = "TREE_NAME";
             this.gridColumn23.Name = "gridColumn23";
             this.gridColumn23.Visible = true;
@@ -628,7 +628,7 @@
             // 
             // gridColumn24
             // 
-            this.gridColumn24.Caption = "WELD_NO";
+            this.gridColumn24.Caption = "焊缝号";
             this.gridColumn24.FieldName = "WELD_NO";
             this.gridColumn24.Name = "gridColumn24";
             this.gridColumn24.Visible = true;
@@ -636,7 +636,7 @@
             // 
             // gridColumn25
             // 
-            this.gridColumn25.Caption = "AS3";
+            this.gridColumn25.Caption = "组立";
             this.gridColumn25.FieldName = "AS3";
             this.gridColumn25.Name = "gridColumn25";
             this.gridColumn25.Visible = true;
@@ -644,7 +644,7 @@
             // 
             // gridColumn26
             // 
-            this.gridColumn26.Caption = "BUFF1";
+            this.gridColumn26.Caption = "阶段";
             this.gridColumn26.FieldName = "BUFF1";
             this.gridColumn26.Name = "gridColumn26";
             this.gridColumn26.Visible = true;
@@ -652,7 +652,7 @@
             // 
             // gridColumn27
             // 
-            this.gridColumn27.Caption = "PART1_NAME2";
+            this.gridColumn27.Caption = "零件名";
             this.gridColumn27.FieldName = "PART1_NAME2";
             this.gridColumn27.Name = "gridColumn27";
             this.gridColumn27.Visible = true;
@@ -660,7 +660,7 @@
             // 
             // gridColumn28
             // 
-            this.gridColumn28.Caption = "PART2_NAME2";
+            this.gridColumn28.Caption = "零件名";
             this.gridColumn28.FieldName = "PART2_NAME2";
             this.gridColumn28.Name = "gridColumn28";
             this.gridColumn28.Visible = true;
@@ -677,7 +677,7 @@
             // 
             // New
             // 
-            this.New.Caption = "NewName";
+            this.New.Caption = "新工程名";
             this.New.FieldName = "FNewName";
             this.New.Name = "New";
             this.New.Visible = true;
@@ -690,7 +690,7 @@
             this.ClientSize = new System.Drawing.Size(893, 635);
             this.Controls.Add(this.efGroupBoxEx2);
             this.Controls.Add(this.efGroupBoxEx1);
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "FormMCCL00121";
             this.Text = "班组焊缝组合打包";
             this.Load += new System.EventHandler(this.FormMCCL00121_Load);

@@ -71,6 +71,7 @@ namespace MC
             EFDevGrid weldDT = (EFDevGrid)FindControl(_colrstGrid);
             GridView efGridView = (GridView)weldDT.Views[0];
             efGridView.Columns["RuleFID"].FieldName = "FWELDWPSID";
+            //efGridView.Columns[FWELDWPSID].
           //  _BBINFO =bbinfo;
             _DT = bbinfo._Project_WeldInfos;
             initicls();
