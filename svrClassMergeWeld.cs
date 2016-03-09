@@ -205,8 +205,9 @@ namespace JN_WELD_Service
         /// <returns></returns>
         public DataTable GetMergedWelds(DataTable fdt)
         {
-            String selSQL = "select t_WELD.FID,FNewName,SHIP_NO,BLK_NO,TREE_NAME,WELD_NO,PART1_NAME2,PART2_NAME2,AS3,BUFF1 ,FParentID from t_Weld ";
+            String selSQL = "select t_DispatchingBody.FID, t_DispatchingBody.FWELDID, FWELDWPSID,FNewName,t_WPS_RULE.RuleNum,RuleName,SHIP_NO,BLK_NO,TREE_NAME,WELD_NO,PART1_NAME2,PART2_NAME2,AS3,BUFF1 ,FParentID from t_Weld ";
             selSQL+=" inner join t_DispatchingBody on t_WELD.FID=t_DispatchingBody.FWELDID ";
+            selSQL += " inner join t_WPS_RULE on t_WPS_RULE.FID=t_DispatchingBody.FWELDWPSID ";
             selSQL+=" where t_WELD.FParentID=t_WELD.FID and t_DispatchingBody.FOPDEPARTID= ";
             long classid = 0;
             if (fdt != null && fdt.Rows.Count == 1)
@@ -216,6 +217,17 @@ namespace JN_WELD_Service
             selSQL += classid.ToString();
             DataTable rsdt = _sqldbhelper.ExecuteDataTable(selSQL);
             return rsdt;
+        }
+        /// <summary>
+        /// 更新合并后焊缝的WPS;6030901
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public DataTable UpdateMargedweldwps(DataTable data)
+        {
+            String sql = "Select FID,FWELDWPSID from t_DispatchingBody";
+            DataTable rs=_sqldbhelper.UpdateByDataTable(sql, data, "FID", 0);
+            return rs;
         }
     }
 }

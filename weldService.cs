@@ -2558,6 +2558,35 @@ namespace JN_WELD_Service
                         rst.weldDataTable = xml;
                         break;
                     }
+                /// <summary>
+                /// 更新合并后焊缝的WPS;
+                /// 6030901
+                /// 
+                /// </summary>
+                case 6030901:
+                    {
+                        DataTable data = clsConvertXMLDataTable.ConvertXMLToDataTable(cmd.weldDataTable);
+                        //int vtype = Convert.ToInt32(cmd.StringValue);
+                        svrClassMergeWeld svr = new svrClassMergeWeld();
+                        DataTable sdt = new DataTable();
+
+                        sdt = svr.UpdateMargedweldwps(data);
+
+                        String xml;
+
+                        if (sdt.Rows.Count == 0)
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToSchema(sdt);
+                        }
+                        else
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToXML(sdt);
+
+                        }
+                        rst.BoolValue = true;
+                        rst.weldDataTable = xml;
+                        break;
+                    }
                 case 9001://开启定时器
                     {
                         //svrTimer.Start();
