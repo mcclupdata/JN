@@ -17,6 +17,38 @@ namespace MC
 {
     class clsClassMargwelds:clsTask
     {
+        /// <summary>
+        /// 焊缝合并，更新合并后新焊缝的WPS 命令；
+        /// </summary>
+        static int cmd_Margwelds_UpnewWPS = 6030901;
+        /// <summary>
+        /// 焊缝合并，更新合并后新焊缝的WPS
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public DataTable UpdateMargedWeldWPS(DataTable vdata)
+        {
+            //提取修改后的数据;
+            DataTable data= vdata.GetChanges(DataRowState.Modified);
+            if (data == null)
+                return vdata;
+
+            //对字段进行过滤，保留FID和FWELDWPSID
+            for (int i = 0; i < data.Columns.Count; i++)
+            {
+                if (data.Columns.IndexOf("FID") > -1 || data.Columns.IndexOf("FWELDWPSID") > -1)
+                {
+                }
+                else
+                {
+                    data.Columns.Remove(data.Columns[i]);
+                }
+
+            }
+            data.AcceptChanges();
+            DataTable rs=_Client.ServiceCall(cmd_Margwelds_UpnewWPS, data);
+            return rs;
+        }
         public clsClassMargwelds(ref Formbase frm)
         {
             this._frm = frm;
@@ -86,6 +118,7 @@ namespace MC
             //rs.Columns.Add("FChecked", typeof(int));
             DataColumn col = new DataColumn(); col.ColumnName = "FChecked"; col.DataType = typeof(int); col.DefaultValue = 0;
             rs.Columns.Add(col);
+            rs.AcceptChanges();
             return rs;
         }
         /// <summary>

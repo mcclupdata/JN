@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
@@ -85,6 +86,11 @@
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.New = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.FID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.RuleName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.RuleFID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ChooseWPSButtonEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.butUpdate = new EF.EFButton();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
@@ -107,6 +113,8 @@
             this.MergedweldsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMerged)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChooseWPSButtonEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.butUpdate)).BeginInit();
             this.SuspendLayout();
             // 
             // repositoryItemCheckEdit4
@@ -298,26 +306,29 @@
             this.efGroupBoxEx1.Controls.Add(this.WorkGroup);
             this.efGroupBoxEx1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efGroupBoxEx1.Location = new System.Drawing.Point(0, 0);
+            this.efGroupBoxEx1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efGroupBoxEx1.Name = "efGroupBoxEx1";
-            this.efGroupBoxEx1.Size = new System.Drawing.Size(893, 69);
+            this.efGroupBoxEx1.Size = new System.Drawing.Size(1276, 108);
             this.efGroupBoxEx1.TabIndex = 4;
             this.efGroupBoxEx1.Text = "条件";
             // 
             // efLabel1
             // 
             this.efLabel1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel1.Location = new System.Drawing.Point(369, 38);
+            this.efLabel1.Location = new System.Drawing.Point(527, 60);
+            this.efLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel1.Name = "efLabel1";
-            this.efLabel1.Size = new System.Drawing.Size(33, 25);
+            this.efLabel1.Size = new System.Drawing.Size(47, 39);
             this.efLabel1.TabIndex = 14;
             this.efLabel1.Text = "班组";
             // 
             // efLabel2
             // 
             this.efLabel2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel2.Location = new System.Drawing.Point(29, 41);
+            this.efLabel2.Location = new System.Drawing.Point(41, 64);
+            this.efLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel2.Name = "efLabel2";
-            this.efLabel2.Size = new System.Drawing.Size(75, 14);
+            this.efLabel2.Size = new System.Drawing.Size(107, 22);
             this.efLabel2.TabIndex = 13;
             this.efLabel2.Text = "作业区";
             // 
@@ -328,9 +339,10 @@
             this.ClassGroup.EFCname = "";
             this.ClassGroup.EFDropDown = false;
             this.ClassGroup.FormattingEnabled = true;
-            this.ClassGroup.Location = new System.Drawing.Point(408, 40);
+            this.ClassGroup.Location = new System.Drawing.Point(583, 63);
+            this.ClassGroup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ClassGroup.Name = "ClassGroup";
-            this.ClassGroup.Size = new System.Drawing.Size(221, 22);
+            this.ClassGroup.Size = new System.Drawing.Size(314, 30);
             this.ClassGroup.SQL = null;
             this.ClassGroup.TabIndex = 12;
             this.ClassGroup.UserValue = "";
@@ -342,9 +354,10 @@
             this.WorkGroup.EFCname = "";
             this.WorkGroup.EFDropDown = false;
             this.WorkGroup.FormattingEnabled = true;
-            this.WorkGroup.Location = new System.Drawing.Point(104, 38);
+            this.WorkGroup.Location = new System.Drawing.Point(149, 60);
+            this.WorkGroup.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.WorkGroup.Name = "WorkGroup";
-            this.WorkGroup.Size = new System.Drawing.Size(220, 22);
+            this.WorkGroup.Size = new System.Drawing.Size(313, 30);
             this.WorkGroup.SQL = null;
             this.WorkGroup.TabIndex = 11;
             this.WorkGroup.UserValue = "";
@@ -356,9 +369,10 @@
             this.butMerge.EnabledEx = true;
             this.butMerge.FnNo = 0;
             this.butMerge.Hint = "";
-            this.butMerge.Location = new System.Drawing.Point(751, 0);
+            this.butMerge.Location = new System.Drawing.Point(1078, 0);
+            this.butMerge.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.butMerge.Name = "butMerge";
-            this.butMerge.Size = new System.Drawing.Size(126, 34);
+            this.butMerge.Size = new System.Drawing.Size(180, 53);
             this.butMerge.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butMerge.TabIndex = 15;
             this.butMerge.Text = "合并";
@@ -369,9 +383,10 @@
             // 
             this.efGroupBoxEx2.Controls.Add(this.tabControl);
             this.efGroupBoxEx2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efGroupBoxEx2.Location = new System.Drawing.Point(0, 69);
+            this.efGroupBoxEx2.Location = new System.Drawing.Point(0, 108);
+            this.efGroupBoxEx2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efGroupBoxEx2.Name = "efGroupBoxEx2";
-            this.efGroupBoxEx2.Size = new System.Drawing.Size(893, 520);
+            this.efGroupBoxEx2.Size = new System.Drawing.Size(1276, 818);
             this.efGroupBoxEx2.TabIndex = 5;
             this.efGroupBoxEx2.Text = "数据";
             // 
@@ -380,22 +395,20 @@
             this.tabControl.Controls.Add(this.UnMergweldsTab);
             this.tabControl.Controls.Add(this.MergedweldsTab);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl.Location = new System.Drawing.Point(2, 23);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControl.Location = new System.Drawing.Point(2, 30);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(889, 495);
+            this.tabControl.Size = new System.Drawing.Size(1272, 786);
             this.tabControl.TabIndex = 6;
             // 
             // UnMergweldsTab
             // 
             this.UnMergweldsTab.Controls.Add(this.dataGrid);
             this.UnMergweldsTab.Controls.Add(this.efPanel1);
-            this.UnMergweldsTab.Location = new System.Drawing.Point(4, 23);
-            this.UnMergweldsTab.Margin = new System.Windows.Forms.Padding(2);
+            this.UnMergweldsTab.Location = new System.Drawing.Point(4, 31);
             this.UnMergweldsTab.Name = "UnMergweldsTab";
-            this.UnMergweldsTab.Padding = new System.Windows.Forms.Padding(2);
-            this.UnMergweldsTab.Size = new System.Drawing.Size(881, 468);
+            this.UnMergweldsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.UnMergweldsTab.Size = new System.Drawing.Size(1264, 751);
             this.UnMergweldsTab.TabIndex = 0;
             this.UnMergweldsTab.Text = "未合并焊缝";
             this.UnMergweldsTab.UseVisualStyleBackColor = true;
@@ -404,8 +417,9 @@
             // 
             this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid.IsUseCustomPageBar = true;
-            this.dataGrid.Location = new System.Drawing.Point(2, 36);
+            this.dataGrid.Location = new System.Drawing.Point(3, 56);
             this.dataGrid.MainView = this.gridView1;
+            this.dataGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.CheckEdit});
@@ -414,7 +428,7 @@
             this.dataGrid.ShowPageButton = false;
             this.dataGrid.ShowRowIndicator = false;
             this.dataGrid.ShowSaveLayoutButton = false;
-            this.dataGrid.Size = new System.Drawing.Size(877, 430);
+            this.dataGrid.Size = new System.Drawing.Size(1258, 692);
             this.dataGrid.TabIndex = 5;
             this.dataGrid.UseEmbeddedNavigator = true;
             this.dataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -528,10 +542,9 @@
             this.efPanel1.Controls.Add(this.butSelectALL);
             this.efPanel1.Controls.Add(this.butMerge);
             this.efPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.efPanel1.Location = new System.Drawing.Point(2, 2);
-            this.efPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.efPanel1.Location = new System.Drawing.Point(3, 3);
             this.efPanel1.Name = "efPanel1";
-            this.efPanel1.Size = new System.Drawing.Size(877, 34);
+            this.efPanel1.Size = new System.Drawing.Size(1258, 53);
             this.efPanel1.TabIndex = 6;
             // 
             // butSelectALL
@@ -541,9 +554,10 @@
             this.butSelectALL.EnabledEx = true;
             this.butSelectALL.FnNo = 0;
             this.butSelectALL.Hint = "";
-            this.butSelectALL.Location = new System.Drawing.Point(625, 0);
+            this.butSelectALL.Location = new System.Drawing.Point(898, 0);
+            this.butSelectALL.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.butSelectALL.Name = "butSelectALL";
-            this.butSelectALL.Size = new System.Drawing.Size(126, 34);
+            this.butSelectALL.Size = new System.Drawing.Size(180, 53);
             this.butSelectALL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butSelectALL.TabIndex = 16;
             this.butSelectALL.Text = "全选/反选";
@@ -553,11 +567,11 @@
             // MergedweldsTab
             // 
             this.MergedweldsTab.Controls.Add(this.dataGridMerged);
-            this.MergedweldsTab.Location = new System.Drawing.Point(4, 23);
-            this.MergedweldsTab.Margin = new System.Windows.Forms.Padding(2);
+            this.MergedweldsTab.Controls.Add(this.butUpdate);
+            this.MergedweldsTab.Location = new System.Drawing.Point(4, 31);
             this.MergedweldsTab.Name = "MergedweldsTab";
-            this.MergedweldsTab.Padding = new System.Windows.Forms.Padding(2);
-            this.MergedweldsTab.Size = new System.Drawing.Size(881, 468);
+            this.MergedweldsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.MergedweldsTab.Size = new System.Drawing.Size(1264, 751);
             this.MergedweldsTab.TabIndex = 1;
             this.MergedweldsTab.Text = "已合并焊缝";
             this.MergedweldsTab.UseVisualStyleBackColor = true;
@@ -566,15 +580,18 @@
             // 
             this.dataGridMerged.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridMerged.IsUseCustomPageBar = true;
-            this.dataGridMerged.Location = new System.Drawing.Point(2, 2);
+            this.dataGridMerged.Location = new System.Drawing.Point(3, 56);
             this.dataGridMerged.MainView = this.gridView3;
+            this.dataGridMerged.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridMerged.Name = "dataGridMerged";
+            this.dataGridMerged.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.ChooseWPSButtonEdit});
             this.dataGridMerged.ShowExportButton = false;
             this.dataGridMerged.ShowGroupButton = false;
             this.dataGridMerged.ShowPageButton = false;
             this.dataGridMerged.ShowRowIndicator = false;
             this.dataGridMerged.ShowSaveLayoutButton = false;
-            this.dataGridMerged.Size = new System.Drawing.Size(877, 464);
+            this.dataGridMerged.Size = new System.Drawing.Size(1258, 692);
             this.dataGridMerged.TabIndex = 6;
             this.dataGridMerged.UseEmbeddedNavigator = true;
             this.dataGridMerged.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -592,7 +609,10 @@
             this.gridColumn27,
             this.gridColumn28,
             this.gridColumn29,
-            this.New});
+            this.New,
+            this.FID,
+            this.RuleName,
+            this.RuleFID});
             this.gridView3.FixedLineWidth = 1;
             this.gridView3.GridControl = this.dataGridMerged;
             this.gridView3.IndicatorWidth = 35;
@@ -684,13 +704,61 @@
             this.New.VisibleIndex = 1;
             this.New.Width = 158;
             // 
+            // FID
+            // 
+            this.FID.Caption = "FID";
+            this.FID.FieldName = "FID";
+            this.FID.Name = "FID";
+            // 
+            // RuleName
+            // 
+            this.RuleName.Caption = "规程名称";
+            this.RuleName.FieldName = "RuleNum";
+            this.RuleName.Name = "RuleName";
+            this.RuleName.Visible = true;
+            this.RuleName.VisibleIndex = 10;
+            // 
+            // RuleFID
+            // 
+            this.RuleFID.Caption = "规程";
+            this.RuleFID.ColumnEdit = this.ChooseWPSButtonEdit;
+            this.RuleFID.FieldName = "FWELDWPSID";
+            this.RuleFID.Name = "RuleFID";
+            this.RuleFID.Visible = true;
+            this.RuleFID.VisibleIndex = 11;
+            // 
+            // ChooseWPSButtonEdit
+            // 
+            this.ChooseWPSButtonEdit.AutoHeight = false;
+            this.ChooseWPSButtonEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "选择规程", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.ChooseWPSButtonEdit.Name = "ChooseWPSButtonEdit";
+            this.ChooseWPSButtonEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.ChooseWPSButtonEdit.Click += new System.EventHandler(this.ChooseWPSButtonEdit_Click);
+            // 
+            // butUpdate
+            // 
+            this.butUpdate.Authorizable = false;
+            this.butUpdate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.butUpdate.EnabledEx = true;
+            this.butUpdate.FnNo = 0;
+            this.butUpdate.Hint = "";
+            this.butUpdate.Location = new System.Drawing.Point(3, 3);
+            this.butUpdate.Name = "butUpdate";
+            this.butUpdate.Size = new System.Drawing.Size(1258, 53);
+            this.butUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.butUpdate.TabIndex = 7;
+            this.butUpdate.Text = "保存";
+            this.butUpdate.ViewMode = EF.ViewModeEnum.Enable;
+            this.butUpdate.Click += new System.EventHandler(this.efButton1_Click);
+            // 
             // FormMCCL00121
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
-            this.ClientSize = new System.Drawing.Size(893, 635);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.ClientSize = new System.Drawing.Size(1276, 998);
             this.Controls.Add(this.efGroupBoxEx2);
             this.Controls.Add(this.efGroupBoxEx1);
-            this.Margin = new System.Windows.Forms.Padding(3);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormMCCL00121";
             this.Text = "班组焊缝组合打包";
             this.Load += new System.EventHandler(this.FormMCCL00121_Load);
@@ -719,6 +787,8 @@
             this.MergedweldsTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMerged)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChooseWPSButtonEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.butUpdate)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -781,6 +851,11 @@
         private EF.EFPanel efPanel1;
         private EF.EFButton butSelectALL;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit4;
+        private DevExpress.XtraGrid.Columns.GridColumn FID;
+        private DevExpress.XtraGrid.Columns.GridColumn RuleName;
+        private DevExpress.XtraGrid.Columns.GridColumn RuleFID;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ChooseWPSButtonEdit;
+        private EF.EFButton butUpdate;
 
     }
 }

@@ -14,7 +14,7 @@ namespace MC
     public partial class Formbase : EFForm
     {
         EFButtonBar _bar;
-        int _DebugFlage = 0;//独立调试模式，1 PMS模式
+        int _DebugFlage = 1;//独立调试模式，1 PMS模式
          protected _MyClient _wcfClient = new _MyClient();
         
          //protected DataTable _del_data = new DataTable();
@@ -28,8 +28,10 @@ namespace MC
         public Formbase()
         {
             
-           
             InitializeComponent();
+#if DEBUG
+            _DebugFlage = 0;
+#endif
             Control[] cos = this.Controls.Find("Fn", true);
             if (cos.Length > 0)
             {
@@ -67,7 +69,9 @@ namespace MC
                     //    cl.Visible = false;
 
                     //}
-                    Control cl2 = HideEFButton(cl);
+                    Control cl2;
+                    if (this.Modal==true)
+                        cl2 = HideEFButton(cl);
                 }
             }
             DevExpress.XtraGrid.Views.Grid.GridView v;

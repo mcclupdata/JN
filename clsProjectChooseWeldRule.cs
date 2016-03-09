@@ -113,15 +113,23 @@ namespace MC
             
             //注册butOK事件
             EFButton butok = (EFButton)FindControl("butOK");
+            int allWPS=0;
             //butok.Click += butok_Click;
             //通过过滤得到WPS数据
-            _filter_GRADE1 = (String)_row["GRADE1"];
-            _filter_GRADE2 = Convert.IsDBNull(_row["GRADE2"]) == false ? "" : _row["GRADE2"].ToString();
-            _filter_THICK1 = (String)_row["THICK1"].ToString();
-            _filter_THICK2 = (String)_row["THICK2"].ToString();
-            _filter_WELD_MOD = (String)_row["WELD_MOD"].ToString();
-            _Filter_WELD_TYPE = (String)_row["WELD_TYPE"].ToString();
-            _filter_WELD2_CODE = (String)_row["WELD2_CODE"].ToString();
+            try
+            {
+                _filter_GRADE1 = (String)_row["GRADE1"];
+                _filter_GRADE2 = Convert.IsDBNull(_row["GRADE2"]) == false ? "" : _row["GRADE2"].ToString();
+                _filter_THICK1 = (String)_row["THICK1"].ToString();
+                _filter_THICK2 = (String)_row["THICK2"].ToString();
+                _filter_WELD_MOD = (String)_row["WELD_MOD"].ToString();
+                _Filter_WELD_TYPE = (String)_row["WELD_TYPE"].ToString();
+                _filter_WELD2_CODE = (String)_row["WELD2_CODE"].ToString();
+            }
+            catch(Exception tex)
+            {
+                allWPS=1;
+            }
           
             //构件DT传输参数;
             DataTable dt = new DataTable();
@@ -193,13 +201,16 @@ namespace MC
                    // WeldServiceReference.CompositeType srst = _Client.ServiceCall(sdata);
                     //_Weld = clsConvertXMLDataTable.ConvertXMLToDataTable(srst.weldDataTable);
             _Weld = _Client.ServiceCall(cmd_GetWPS_BYFILTER, dt);
-            if (_row.Table.Columns.IndexOf("SHIP_NO") < 0)
+            if (allWPS==0)
             {
-                _Weld.DefaultView.RowFilter = "FSHIP_NO='" + _ship_NO + "'";
-            }
-            else
-            {
-                _Weld.DefaultView.RowFilter = "FSHIP_NO='" + _row["SHIP_NO"].ToString() + "'";
+                if (_row.Table.Columns.IndexOf("SHIP_NO") < 0)
+                {
+                    _Weld.DefaultView.RowFilter = "FSHIP_NO='" + _ship_NO + "'";
+                }
+                else
+                {
+                    _Weld.DefaultView.RowFilter = "FSHIP_NO='" + _row["SHIP_NO"].ToString() + "'";
+                }
             }
             weldDT.DataSource = _Weld;
             RepositoryItemButtonEdit but = (RepositoryItemButtonEdit)efV.Columns["but_Choose"].ColumnEdit;

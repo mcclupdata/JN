@@ -222,7 +222,7 @@ namespace MC
             Control cl = FindControl(contr_dataGrid_wpssub);
             ((EF.EFDevGrid)cl).DataSource = _dt_wpssub;// dv.ToTable();
             DevExpress.XtraGrid.Views.Grid.GridView wpsview = (DevExpress.XtraGrid.Views.Grid.GridView)((EFDevGrid)cl).Views[0];
-            wpsview.PopulateColumns();
+           // wpsview.PopulateColumns();
             cl = FindControl("tabControl1");
             ((TabControl)cl).SelectTab("tabPage2");
             //throw new NotImplementedException();

@@ -189,6 +189,8 @@ namespace MC
             }
             else
             {
+                if (dt.Rows.Count == 0)
+                    return;
                 DataRow row = dt.Rows[0];
                 try
                 {

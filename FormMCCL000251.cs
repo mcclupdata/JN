@@ -309,10 +309,11 @@ namespace MC
             {
                 DataTable panansonicinfos = _Client.ServiceCall(clsCMD.cmd_weldEquipment_getBase_Bynom, dtweldFiler);
 
-                
+                if (panansonicinfos.Rows.Count == 0)
+                    return;
                 Formbase vfrm = (Formbase)this;
                 _clsfrm.FillfrmData(panansonicinfos, ref vfrm);
-
+               
                 x = (double)new XDate(Convert.ToDateTime(panansonicinfos.Rows[0]["NowTime"]));//焊机返回时间
                 wa = Convert.ToDouble(panansonicinfos.Rows[0]["wa"]);
                 wv = Convert.ToDouble(panansonicinfos.Rows[0]["wv"]);

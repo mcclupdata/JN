@@ -65,7 +65,34 @@
             this.efPanel1 = new EF.EFPanel(this.components);
             this.luSHIPNO = new EF.EFDevLookUpEdit(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.efButton1 = new EF.EFButton();
             this.dataGrid_WPSSub = new EF.EFDevGrid();
+            this.GridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dataGrid = new EF.EFDevGrid();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).BeginInit();
             this.efGroupBox1.SuspendLayout();
@@ -82,7 +109,9 @@
             this.efPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.luSHIPNO.Properties)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_WPSSub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -443,6 +472,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.efButton1);
             this.tabPage2.Controls.Add(this.dataGrid_WPSSub);
             this.tabPage2.Location = new System.Drawing.Point(4, 31);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -453,16 +483,267 @@
             this.tabPage2.Text = "WPS规程-焊道";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // efButton1
+            // 
+            this.efButton1.Authorizable = false;
+            this.efButton1.EnabledEx = true;
+            this.efButton1.FnNo = 0;
+            this.efButton1.Hint = "";
+            this.efButton1.Location = new System.Drawing.Point(1044, 71);
+            this.efButton1.Name = "efButton1";
+            this.efButton1.Size = new System.Drawing.Size(9, 8);
+            this.efButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.efButton1.TabIndex = 1;
+            this.efButton1.Text = "efButton1";
+            this.efButton1.ViewMode = EF.ViewModeEnum.Enable;
+            // 
             // dataGrid_WPSSub
             // 
             this.dataGrid_WPSSub.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGrid_WPSSub.IsUseCustomPageBar = true;
             this.dataGrid_WPSSub.Location = new System.Drawing.Point(4, 5);
-            this.dataGrid_WPSSub.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGrid_WPSSub.MainView = this.GridView;
             this.dataGrid_WPSSub.Name = "dataGrid_WPSSub";
             this.dataGrid_WPSSub.Size = new System.Drawing.Size(1260, 481);
             this.dataGrid_WPSSub.TabIndex = 0;
-            this.dataGrid_WPSSub.UseEmbeddedNavigator = true;
+            this.dataGrid_WPSSub.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.GridView});
+            // 
+            // GridView
+            // 
+            this.GridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7,
+            this.gridColumn8,
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn11,
+            this.gridColumn12,
+            this.gridColumn13,
+            this.gridColumn14,
+            this.gridColumn15,
+            this.gridColumn16,
+            this.gridColumn17,
+            this.gridColumn18,
+            this.gridColumn19,
+            this.gridColumn20,
+            this.gridColumn21,
+            this.gridColumn22,
+            this.gridColumn23,
+            this.gridColumn24,
+            this.gridColumn25});
+            this.GridView.FixedLineWidth = 1;
+            this.GridView.GridControl = this.dataGrid_WPSSub;
+            this.GridView.IndicatorWidth = 35;
+            this.GridView.Name = "GridView";
+            this.GridView.OptionsView.ColumnAutoWidth = false;
+            this.GridView.OptionsView.EnableAppearanceEvenRow = true;
+            this.GridView.OptionsView.EnableAppearanceOddRow = true;
+            this.GridView.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "FID";
+            this.gridColumn1.FieldName = "FID";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "规程编号";
+            this.gridColumn2.FieldName = "Rule Num";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "焊道编号";
+            this.gridColumn3.FieldName = "WELD_PASS";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "焊道属性";
+            this.gridColumn4.FieldName = "WELD_PASS_ATTRIB";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "焊接方法";
+            this.gridColumn5.FieldName = "WELD_MOD";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "焊接位置";
+            this.gridColumn6.FieldName = "WELD_ATTRIB";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 5;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "焊接材料";
+            this.gridColumn7.FieldName = "WELD_MATERIAL";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 6;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "焊丝直径";
+            this.gridColumn8.FieldName = "WELD_WIRE_DIA";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 7;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "焊接电流";
+            this.gridColumn9.FieldName = "WELD_I";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 8;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "焊接电压";
+            this.gridColumn10.FieldName = "WELD_V";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 9;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "电流上限";
+            this.gridColumn11.FieldName = "WELD_I_MAX";
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 10;
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "电流下限";
+            this.gridColumn12.FieldName = "WELD_I_MIN";
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.Visible = true;
+            this.gridColumn12.VisibleIndex = 11;
+            // 
+            // gridColumn13
+            // 
+            this.gridColumn13.Caption = "电压上限";
+            this.gridColumn13.FieldName = "WELD_V_MAX";
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 12;
+            // 
+            // gridColumn14
+            // 
+            this.gridColumn14.Caption = "电压下限";
+            this.gridColumn14.FieldName = "WELD_V_MIN";
+            this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.Visible = true;
+            this.gridColumn14.VisibleIndex = 13;
+            // 
+            // gridColumn15
+            // 
+            this.gridColumn15.Caption = "焊接速度";
+            this.gridColumn15.FieldName = "WELD_SPEED";
+            this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.Visible = true;
+            this.gridColumn15.VisibleIndex = 14;
+            // 
+            // gridColumn16
+            // 
+            this.gridColumn16.Caption = "收弧电流";
+            this.gridColumn16.FieldName = "CLOSEING_I";
+            this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.Visible = true;
+            this.gridColumn16.VisibleIndex = 15;
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.Caption = "收弧电压";
+            this.gridColumn17.FieldName = "CLOSEING_V";
+            this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.Visible = true;
+            this.gridColumn17.VisibleIndex = 16;
+            // 
+            // gridColumn18
+            // 
+            this.gridColumn18.Caption = "电流种类";
+            this.gridColumn18.FieldName = "I_TYPE";
+            this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.Visible = true;
+            this.gridColumn18.VisibleIndex = 17;
+            // 
+            // gridColumn19
+            // 
+            this.gridColumn19.Caption = "警告时间";
+            this.gridColumn19.FieldName = "ALTER_TIME";
+            this.gridColumn19.Name = "gridColumn19";
+            this.gridColumn19.Visible = true;
+            this.gridColumn19.VisibleIndex = 18;
+            // 
+            // gridColumn20
+            // 
+            this.gridColumn20.Caption = "限流时间";
+            this.gridColumn20.FieldName = "LIMIT_TIME";
+            this.gridColumn20.Name = "gridColumn20";
+            this.gridColumn20.Visible = true;
+            this.gridColumn20.VisibleIndex = 19;
+            // 
+            // gridColumn21
+            // 
+            this.gridColumn21.Caption = "再起弧时间";
+            this.gridColumn21.FieldName = "AGAIN_TIME";
+            this.gridColumn21.Name = "gridColumn21";
+            this.gridColumn21.Visible = true;
+            this.gridColumn21.VisibleIndex = 20;
+            // 
+            // gridColumn22
+            // 
+            this.gridColumn22.Caption = "脉冲有无";
+            this.gridColumn22.FieldName = "PLUS";
+            this.gridColumn22.Name = "gridColumn22";
+            this.gridColumn22.Visible = true;
+            this.gridColumn22.VisibleIndex = 21;
+            // 
+            // gridColumn23
+            // 
+            this.gridColumn23.Caption = "焊接速度上限";
+            this.gridColumn23.FieldName = "WELD_SPEED_MAX";
+            this.gridColumn23.Name = "gridColumn23";
+            this.gridColumn23.Visible = true;
+            this.gridColumn23.VisibleIndex = 22;
+            // 
+            // gridColumn24
+            // 
+            this.gridColumn24.Caption = "焊接速度下限";
+            this.gridColumn24.FieldName = "WELD_SPEED_MIN";
+            this.gridColumn24.Name = "gridColumn24";
+            this.gridColumn24.Visible = true;
+            this.gridColumn24.VisibleIndex = 23;
+            // 
+            // gridColumn25
+            // 
+            this.gridColumn25.Caption = "实际焊接材料";
+            this.gridColumn25.FieldName = "WELD_MATERAIL_ACT";
+            this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.Visible = true;
+            this.gridColumn25.VisibleIndex = 24;
             // 
             // dataGrid
             // 
@@ -501,7 +782,9 @@
             this.efPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.luSHIPNO.Properties)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_WPSSub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ResumeLayout(false);
 
@@ -516,7 +799,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private EF.EFDevGrid dataGrid_WPS;
-        private EF.EFDevGrid dataGrid_WPSSub;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn CFSelected;
         private DevExpress.XtraGrid.Columns.GridColumn CRuleNum;
@@ -547,6 +829,34 @@
         private DevExpress.XtraGrid.Columns.GridColumn WELD_MATERIAL_ACT;
         private DevExpress.XtraGrid.Columns.GridColumn FSHIP_NO;
         private DevExpress.XtraGrid.Columns.GridColumn FID;
+        private EF.EFButton efButton1;
+        private EF.EFDevGrid dataGrid_WPSSub;
+        private DevExpress.XtraGrid.Views.Grid.GridView GridView;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
 
     }
 }

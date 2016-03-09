@@ -152,5 +152,44 @@ namespace MC
             }
             gridView1.SetFocusedRowModified();
         }
+        /// <summary>
+        /// 点击选择规程
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ChooseWPSButtonEdit_Click(object sender, EventArgs e)
+        {
+            DataRow row = this.gridView3.GetFocusedDataRow();
+           
+            if (row == null)
+                return;
+            clsProjectChooseWeldRule clsfrm = new clsProjectChooseWeldRule(row, this);
+            if (clsfrm._choosedRuleFID > -100)
+            {
+                this.gridView3.SetFocusedRowCellValue("FWELDWPSID", clsfrm._choosedRuleFID);
+                this.gridView3.SetFocusedRowCellValue("RuleNum", clsfrm._choosedRuleNum);
+                //dgv.SetRowCellValue(this.gridView3.SetFocusedRowCellValue, "RuleFID", clsfrm._choosedRuleFID);//_grid_RuleFID].Value = clsfrm._choosedRuleFID;
+                //dgv.SetRowCellValue(rindex, "RuleNum", clsfrm._choosedRuleNum);//row.Cells[_grid_RuleNum].Value = clsfrm._choosedRuleNum;
+            }
+        }
+        /// <summary>
+        /// 提交数据进行保存;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void efButton1_Click(object sender, EventArgs e)
+        {
+            DataTable dt = (DataTable)this.dataGridMerged.DataSource;
+            if (dt == null)
+                return;
+            if (MessageBox.Show(this, "是否确定进行更新?", "消息", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+            {
+                dt = _cls.UpdateMargedWeldWPS(dt);
+            }
+            long classid = 0;
+            DataRowView workdrw = (DataRowView)this.ClassGroup.SelectedItem;
+            classid = Convert.ToInt64(workdrw["FID"]);
+            this.dataGridMerged.DataSource = _cls.getClassMergedwelds(classid) ;
+        }
     }
 }

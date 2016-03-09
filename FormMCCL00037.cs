@@ -40,7 +40,7 @@ namespace MC
            
             this.SubwpsDataGrid.DataSource = _dt_subwps;// dv.ToTable();
             
-            wpsGridView.PopulateColumns();
+            //wpsGridView.PopulateColumns();
             DevExpress.XtraGrid.Columns.GridColumn col=new DevExpress.XtraGrid.Columns.GridColumn();
             col.Name="bakname";
             col.FieldName="FsetDefault";
