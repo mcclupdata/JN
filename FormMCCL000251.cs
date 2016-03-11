@@ -314,7 +314,7 @@ namespace MC
                 Formbase vfrm = (Formbase)this;
                 _clsfrm.FillfrmData(panansonicinfos, ref vfrm);
                
-                x = (double)new XDate(Convert.ToDateTime(panansonicinfos.Rows[0]["NowTime"]));//焊机返回时间
+                x = (double)new XDate(Convert.ToDateTime(panansonicinfos.Rows[0]["nowtime"]));//焊机返回时间
                 wa = Convert.ToDouble(panansonicinfos.Rows[0]["wa"]);
                 wv = Convert.ToDouble(panansonicinfos.Rows[0]["wv"]);
                 _BA = Convert.ToDouble(panansonicinfos.Rows[0]["va"]);

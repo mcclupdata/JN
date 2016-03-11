@@ -57,7 +57,7 @@ namespace MC
             this.EF_DO_F7 += new EFButtonBar.EFDoFnEventHandler(Formbase_EF_DO);
             this.EF_DO_F8 += new EFButtonBar.EFDoFnEventHandler(Formbase_EF_DO);
             this.EF_DO_F9 += new EFButtonBar.EFDoFnEventHandler(Formbase_EF_DO);
-
+            
             //查找所有But，并隐藏，在非独立调试模式下
             if (_DebugFlage != 0)
             {
