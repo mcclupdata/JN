@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition5 = new DevExpress.XtraGrid.StyleFormatCondition();
-            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition6 = new DevExpress.XtraGrid.StyleFormatCondition();
-            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition7 = new DevExpress.XtraGrid.StyleFormatCondition();
-            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition8 = new DevExpress.XtraGrid.StyleFormatCondition();
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("焊机001");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("班组一", new System.Windows.Forms.TreeNode[] {
-            treeNode4});
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("焊机总成", new System.Windows.Forms.TreeNode[] {
-            treeNode5});
+            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition1 = new DevExpress.XtraGrid.StyleFormatCondition();
+            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition2 = new DevExpress.XtraGrid.StyleFormatCondition();
+            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition3 = new DevExpress.XtraGrid.StyleFormatCondition();
+            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition4 = new DevExpress.XtraGrid.StyleFormatCondition();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("焊机001");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("班组一", new System.Windows.Forms.TreeNode[] {
+            treeNode1});
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("焊机总成", new System.Windows.Forms.TreeNode[] {
+            treeNode2});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMCCL000251));
             this.CState = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -66,9 +66,9 @@
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.efPanelStyleXP5 = new EF.EFPanelStyleXP();
             this.efGroupBox3 = new EF.EFGroupBox(this.components);
-            this.workTime = new YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED();
-            this.weldTime = new YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED();
-            this.StartTime = new YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED();
+            this.worktime = new YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED();
+            this.weldtime = new YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED();
+            this.starttime = new YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED();
             this.efLabel10 = new EF.EFLabel();
             this.efLabel11 = new EF.EFLabel();
             this.efLabel12 = new EF.EFLabel();
@@ -138,8 +138,9 @@
             this.efGroupBox1.Controls.Add(this.efPanelStyleXP1);
             this.efGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efGroupBox1.Location = new System.Drawing.Point(0, 0);
+            this.efGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efGroupBox1.Name = "efGroupBox1";
-            this.efGroupBox1.Size = new System.Drawing.Size(896, 516);
+            this.efGroupBox1.Size = new System.Drawing.Size(1280, 811);
             this.efGroupBox1.TabIndex = 4;
             this.efGroupBox1.Text = "焊机监控";
             this.efGroupBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.efGroupBox1_Paint);
@@ -149,10 +150,9 @@
             this.efPanelStyleXP2.Controls.Add(this.efPanelStyleXP4);
             this.efPanelStyleXP2.Controls.Add(this.efPanelStyleXP3);
             this.efPanelStyleXP2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efPanelStyleXP2.Location = new System.Drawing.Point(197, 23);
-            this.efPanelStyleXP2.Margin = new System.Windows.Forms.Padding(2);
+            this.efPanelStyleXP2.Location = new System.Drawing.Point(281, 30);
             this.efPanelStyleXP2.Name = "efPanelStyleXP2";
-            this.efPanelStyleXP2.Size = new System.Drawing.Size(697, 491);
+            this.efPanelStyleXP2.Size = new System.Drawing.Size(997, 779);
             this.efPanelStyleXP2.TabIndex = 1;
             this.efPanelStyleXP2.Paint += new System.Windows.Forms.PaintEventHandler(this.efPanelStyleXP2_Paint);
             // 
@@ -160,10 +160,9 @@
             // 
             this.efPanelStyleXP4.Controls.Add(this.dataGrid);
             this.efPanelStyleXP4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efPanelStyleXP4.Location = new System.Drawing.Point(0, 351);
-            this.efPanelStyleXP4.Margin = new System.Windows.Forms.Padding(2);
+            this.efPanelStyleXP4.Location = new System.Drawing.Point(0, 552);
             this.efPanelStyleXP4.Name = "efPanelStyleXP4";
-            this.efPanelStyleXP4.Size = new System.Drawing.Size(697, 140);
+            this.efPanelStyleXP4.Size = new System.Drawing.Size(997, 227);
             this.efPanelStyleXP4.TabIndex = 1;
             // 
             // dataGrid
@@ -171,9 +170,8 @@
             this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid.Location = new System.Drawing.Point(0, 0);
             this.dataGrid.MainView = this.gridView1;
-            this.dataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(697, 140);
+            this.dataGrid.Size = new System.Drawing.Size(997, 227);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -200,35 +198,35 @@
             this.gridColumn17,
             this.gridColumn18});
             this.gridView1.FixedLineWidth = 1;
-            styleFormatCondition5.Appearance.BackColor = System.Drawing.Color.Gray;
-            styleFormatCondition5.Appearance.Options.UseBackColor = true;
-            styleFormatCondition5.ApplyToRow = true;
-            styleFormatCondition5.Column = this.CState;
-            styleFormatCondition5.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal;
-            styleFormatCondition5.Value1 = "关闭";
-            styleFormatCondition6.Appearance.BackColor = System.Drawing.Color.LightSkyBlue;
-            styleFormatCondition6.Appearance.Options.UseBackColor = true;
-            styleFormatCondition6.ApplyToRow = true;
-            styleFormatCondition6.Column = this.CState;
-            styleFormatCondition6.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal;
-            styleFormatCondition6.Value1 = "待机";
-            styleFormatCondition7.Appearance.BackColor = System.Drawing.Color.Red;
-            styleFormatCondition7.Appearance.Options.UseBackColor = true;
-            styleFormatCondition7.ApplyToRow = true;
-            styleFormatCondition7.Column = this.CState;
-            styleFormatCondition7.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal;
-            styleFormatCondition7.Value1 = "报警";
-            styleFormatCondition8.Appearance.BackColor = System.Drawing.Color.Lime;
-            styleFormatCondition8.Appearance.Options.UseBackColor = true;
-            styleFormatCondition8.ApplyToRow = true;
-            styleFormatCondition8.Column = this.CState;
-            styleFormatCondition8.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal;
-            styleFormatCondition8.Value1 = "焊接";
+            styleFormatCondition1.Appearance.BackColor = System.Drawing.Color.Gray;
+            styleFormatCondition1.Appearance.Options.UseBackColor = true;
+            styleFormatCondition1.ApplyToRow = true;
+            styleFormatCondition1.Column = this.CState;
+            styleFormatCondition1.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal;
+            styleFormatCondition1.Value1 = "关闭";
+            styleFormatCondition2.Appearance.BackColor = System.Drawing.Color.LightSkyBlue;
+            styleFormatCondition2.Appearance.Options.UseBackColor = true;
+            styleFormatCondition2.ApplyToRow = true;
+            styleFormatCondition2.Column = this.CState;
+            styleFormatCondition2.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal;
+            styleFormatCondition2.Value1 = "待机";
+            styleFormatCondition3.Appearance.BackColor = System.Drawing.Color.Red;
+            styleFormatCondition3.Appearance.Options.UseBackColor = true;
+            styleFormatCondition3.ApplyToRow = true;
+            styleFormatCondition3.Column = this.CState;
+            styleFormatCondition3.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal;
+            styleFormatCondition3.Value1 = "报警";
+            styleFormatCondition4.Appearance.BackColor = System.Drawing.Color.Lime;
+            styleFormatCondition4.Appearance.Options.UseBackColor = true;
+            styleFormatCondition4.ApplyToRow = true;
+            styleFormatCondition4.Column = this.CState;
+            styleFormatCondition4.Condition = DevExpress.XtraGrid.FormatConditionEnum.Equal;
+            styleFormatCondition4.Value1 = "焊接";
             this.gridView1.FormatConditions.AddRange(new DevExpress.XtraGrid.StyleFormatCondition[] {
-            styleFormatCondition5,
-            styleFormatCondition6,
-            styleFormatCondition7,
-            styleFormatCondition8});
+            styleFormatCondition1,
+            styleFormatCondition2,
+            styleFormatCondition3,
+            styleFormatCondition4});
             this.gridView1.GridControl = this.dataGrid;
             this.gridView1.IndicatorWidth = 35;
             this.gridView1.Name = "gridView1";
@@ -328,7 +326,7 @@
             // gridColumn13
             // 
             this.gridColumn13.Caption = "上传时间";
-            this.gridColumn13.FieldName = "NowTime";
+            this.gridColumn13.FieldName = "nowtime";
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 12;
@@ -379,9 +377,8 @@
             this.efPanelStyleXP3.Controls.Add(this.efPanelStyleXP5);
             this.efPanelStyleXP3.Dock = System.Windows.Forms.DockStyle.Top;
             this.efPanelStyleXP3.Location = new System.Drawing.Point(0, 0);
-            this.efPanelStyleXP3.Margin = new System.Windows.Forms.Padding(2);
             this.efPanelStyleXP3.Name = "efPanelStyleXP3";
-            this.efPanelStyleXP3.Size = new System.Drawing.Size(697, 351);
+            this.efPanelStyleXP3.Size = new System.Drawing.Size(997, 552);
             this.efPanelStyleXP3.TabIndex = 0;
             // 
             // zedGraphControl1
@@ -411,8 +408,8 @@
             this.zedGraphControl1.IsZoomOnMouseCenter = false;
             this.zedGraphControl1.LinkButtons = System.Windows.Forms.MouseButtons.Left;
             this.zedGraphControl1.LinkModifierKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.None)));
-            this.zedGraphControl1.Location = new System.Drawing.Point(461, 0);
-            this.zedGraphControl1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.zedGraphControl1.Location = new System.Drawing.Point(659, 0);
+            this.zedGraphControl1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.zedGraphControl1.Name = "zedGraphControl1";
             this.zedGraphControl1.PanButtons = System.Windows.Forms.MouseButtons.Left;
             this.zedGraphControl1.PanButtons2 = System.Windows.Forms.MouseButtons.Middle;
@@ -426,7 +423,7 @@
             this.zedGraphControl1.ScrollMinX = 0;
             this.zedGraphControl1.ScrollMinY = 0;
             this.zedGraphControl1.ScrollMinY2 = 0;
-            this.zedGraphControl1.Size = new System.Drawing.Size(236, 351);
+            this.zedGraphControl1.Size = new System.Drawing.Size(338, 552);
             this.zedGraphControl1.TabIndex = 3;
             this.zedGraphControl1.ZoomButtons = System.Windows.Forms.MouseButtons.Left;
             this.zedGraphControl1.ZoomButtons2 = System.Windows.Forms.MouseButtons.None;
@@ -440,18 +437,17 @@
             this.efPanelStyleXP5.Controls.Add(this.efGroupBox2);
             this.efPanelStyleXP5.Dock = System.Windows.Forms.DockStyle.Left;
             this.efPanelStyleXP5.Location = new System.Drawing.Point(0, 0);
-            this.efPanelStyleXP5.Margin = new System.Windows.Forms.Padding(2);
             this.efPanelStyleXP5.Name = "efPanelStyleXP5";
-            this.efPanelStyleXP5.Size = new System.Drawing.Size(461, 351);
+            this.efPanelStyleXP5.Size = new System.Drawing.Size(659, 552);
             this.efPanelStyleXP5.TabIndex = 0;
             // 
             // efGroupBox3
             // 
             this.efGroupBox3.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.efGroupBox3.Appearance.Options.UseBackColor = true;
-            this.efGroupBox3.Controls.Add(this.workTime);
-            this.efGroupBox3.Controls.Add(this.weldTime);
-            this.efGroupBox3.Controls.Add(this.StartTime);
+            this.efGroupBox3.Controls.Add(this.worktime);
+            this.efGroupBox3.Controls.Add(this.weldtime);
+            this.efGroupBox3.Controls.Add(this.starttime);
             this.efGroupBox3.Controls.Add(this.efLabel10);
             this.efGroupBox3.Controls.Add(this.efLabel11);
             this.efGroupBox3.Controls.Add(this.efLabel12);
@@ -462,73 +458,78 @@
             this.efGroupBox3.Controls.Add(this.wa);
             this.efGroupBox3.Controls.Add(this.wv);
             this.efGroupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efGroupBox3.Location = new System.Drawing.Point(0, 181);
-            this.efGroupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.efGroupBox3.Location = new System.Drawing.Point(0, 284);
             this.efGroupBox3.Name = "efGroupBox3";
-            this.efGroupBox3.Size = new System.Drawing.Size(461, 170);
+            this.efGroupBox3.Size = new System.Drawing.Size(659, 268);
             this.efGroupBox3.TabIndex = 1;
             this.efGroupBox3.Text = "焊接参数";
             // 
-            // workTime
+            // worktime
             // 
-            this.workTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.workTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.workTime.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.workTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.workTime.Location = new System.Drawing.Point(309, 120);
-            this.workTime.Name = "workTime";
-            this.workTime.Size = new System.Drawing.Size(132, 37);
-            this.workTime.TabIndex = 36;
-            this.workTime.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.TimeOnlyShow;
-            this.workTime.TP_DateTime = new System.DateTime(2016, 1, 11, 10, 54, 20, 0);
-            this.workTime.TP_Doub_Number = 0;
-            this.workTime.TP_DrawShadow = false;
-            this.workTime.TP_IntDigitsNumber = new int[] {
+            this.worktime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.worktime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.worktime.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.worktime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.worktime.Location = new System.Drawing.Point(441, 189);
+            this.worktime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.worktime.Name = "worktime";
+            this.worktime.Size = new System.Drawing.Size(188, 57);
+            this.worktime.TabIndex = 36;
+            this.worktime.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.TimeOnlyShow;
+            this.worktime.TP_DateTime = new System.DateTime(2016, 1, 11, 10, 54, 20, 0);
+            this.worktime.TP_Doub_Number = 0;
+            this.worktime.TP_DrawShadow = false;
+            this.worktime.TP_IntDigitsNumber = new int[] {
         5,
         3};
-            this.workTime.TP_IntMarginSize = 5;
-            this.workTime.TP_TimerEnable = false;
+            this.worktime.TP_IntMarginSize = 5;
+            this.worktime.TP_MainTimer = null;
+            this.worktime.TP_TimerEnable = false;
             // 
-            // weldTime
+            // weldtime
             // 
-            this.weldTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.weldTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.weldTime.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weldTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.weldTime.Location = new System.Drawing.Point(309, 71);
-            this.weldTime.Name = "weldTime";
-            this.weldTime.Size = new System.Drawing.Size(132, 37);
-            this.weldTime.TabIndex = 35;
-            this.weldTime.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.TimeOnlyShow;
-            this.weldTime.TP_DateTime = new System.DateTime(2016, 1, 11, 10, 54, 24, 0);
-            this.weldTime.TP_Doub_Number = 0;
-            this.weldTime.TP_DrawShadow = false;
-            this.weldTime.TP_IntDigitsNumber = new int[] {
+            this.weldtime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.weldtime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.weldtime.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weldtime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.weldtime.Location = new System.Drawing.Point(441, 112);
+            this.weldtime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.weldtime.Name = "weldtime";
+            this.weldtime.Size = new System.Drawing.Size(188, 57);
+            this.weldtime.TabIndex = 35;
+            this.weldtime.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.TimeOnlyShow;
+            this.weldtime.TP_DateTime = new System.DateTime(2016, 1, 11, 10, 54, 24, 0);
+            this.weldtime.TP_Doub_Number = 0;
+            this.weldtime.TP_DrawShadow = false;
+            this.weldtime.TP_IntDigitsNumber = new int[] {
         5,
         3};
-            this.weldTime.TP_IntMarginSize = 5;
-            this.weldTime.TP_TimerEnable = false;
-            this.weldTime.Load += new System.EventHandler(this.weldTime_Load);
+            this.weldtime.TP_IntMarginSize = 5;
+            this.weldtime.TP_MainTimer = null;
+            this.weldtime.TP_TimerEnable = false;
+            this.weldtime.Load += new System.EventHandler(this.weldTime_Load);
             // 
-            // StartTime
+            // starttime
             // 
-            this.StartTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.StartTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.StartTime.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StartTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.StartTime.Location = new System.Drawing.Point(309, 22);
-            this.StartTime.Name = "StartTime";
-            this.StartTime.Size = new System.Drawing.Size(132, 37);
-            this.StartTime.TabIndex = 34;
-            this.StartTime.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.TimeOnlyShow;
-            this.StartTime.TP_DateTime = new System.DateTime(2016, 1, 11, 10, 54, 27, 0);
-            this.StartTime.TP_Doub_Number = 0;
-            this.StartTime.TP_DrawShadow = false;
-            this.StartTime.TP_IntDigitsNumber = new int[] {
+            this.starttime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.starttime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.starttime.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.starttime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.starttime.Location = new System.Drawing.Point(441, 35);
+            this.starttime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.starttime.Name = "starttime";
+            this.starttime.Size = new System.Drawing.Size(188, 57);
+            this.starttime.TabIndex = 34;
+            this.starttime.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.TimeOnlyShow;
+            this.starttime.TP_DateTime = new System.DateTime(2016, 1, 11, 10, 54, 27, 0);
+            this.starttime.TP_Doub_Number = 0;
+            this.starttime.TP_DrawShadow = false;
+            this.starttime.TP_IntDigitsNumber = new int[] {
         5,
         3};
-            this.StartTime.TP_IntMarginSize = 5;
-            this.StartTime.TP_TimerEnable = false;
+            this.starttime.TP_IntMarginSize = 5;
+            this.starttime.TP_MainTimer = null;
+            this.starttime.TP_TimerEnable = false;
             // 
             // efLabel10
             // 
@@ -537,10 +538,9 @@
             this.efLabel10.Appearance.Options.UseFont = true;
             this.efLabel10.Appearance.Options.UseForeColor = true;
             this.efLabel10.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel10.Location = new System.Drawing.Point(200, 120);
-            this.efLabel10.Margin = new System.Windows.Forms.Padding(2);
+            this.efLabel10.Location = new System.Drawing.Point(286, 189);
             this.efLabel10.Name = "efLabel10";
-            this.efLabel10.Size = new System.Drawing.Size(81, 29);
+            this.efLabel10.Size = new System.Drawing.Size(116, 46);
             this.efLabel10.TabIndex = 33;
             this.efLabel10.Text = "工作时间";
             // 
@@ -551,10 +551,9 @@
             this.efLabel11.Appearance.Options.UseFont = true;
             this.efLabel11.Appearance.Options.UseForeColor = true;
             this.efLabel11.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel11.Location = new System.Drawing.Point(200, 71);
-            this.efLabel11.Margin = new System.Windows.Forms.Padding(2);
+            this.efLabel11.Location = new System.Drawing.Point(286, 112);
             this.efLabel11.Name = "efLabel11";
-            this.efLabel11.Size = new System.Drawing.Size(81, 29);
+            this.efLabel11.Size = new System.Drawing.Size(116, 46);
             this.efLabel11.TabIndex = 32;
             this.efLabel11.Text = "焊接时间";
             // 
@@ -565,10 +564,9 @@
             this.efLabel12.Appearance.Options.UseFont = true;
             this.efLabel12.Appearance.Options.UseForeColor = true;
             this.efLabel12.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel12.Location = new System.Drawing.Point(200, 22);
-            this.efLabel12.Margin = new System.Windows.Forms.Padding(2);
+            this.efLabel12.Location = new System.Drawing.Point(286, 35);
             this.efLabel12.Name = "efLabel12";
-            this.efLabel12.Size = new System.Drawing.Size(89, 29);
+            this.efLabel12.Size = new System.Drawing.Size(127, 46);
             this.efLabel12.TabIndex = 31;
             this.efLabel12.Text = "开机时间";
             // 
@@ -579,10 +577,9 @@
             this.efLabel6.Appearance.Options.UseFont = true;
             this.efLabel6.Appearance.Options.UseForeColor = true;
             this.efLabel6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel6.Location = new System.Drawing.Point(12, 115);
-            this.efLabel6.Margin = new System.Windows.Forms.Padding(2);
+            this.efLabel6.Location = new System.Drawing.Point(17, 181);
             this.efLabel6.Name = "efLabel6";
-            this.efLabel6.Size = new System.Drawing.Size(26, 42);
+            this.efLabel6.Size = new System.Drawing.Size(37, 66);
             this.efLabel6.TabIndex = 30;
             this.efLabel6.Text = "R";
             // 
@@ -593,10 +590,9 @@
             this.efLabel4.Appearance.Options.UseFont = true;
             this.efLabel4.Appearance.Options.UseForeColor = true;
             this.efLabel4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel4.Location = new System.Drawing.Point(12, 67);
-            this.efLabel4.Margin = new System.Windows.Forms.Padding(2);
+            this.efLabel4.Location = new System.Drawing.Point(17, 105);
             this.efLabel4.Name = "efLabel4";
-            this.efLabel4.Size = new System.Drawing.Size(26, 42);
+            this.efLabel4.Size = new System.Drawing.Size(37, 66);
             this.efLabel4.TabIndex = 29;
             this.efLabel4.Text = "V";
             // 
@@ -607,10 +603,9 @@
             this.efLabel3.Appearance.Options.UseFont = true;
             this.efLabel3.Appearance.Options.UseForeColor = true;
             this.efLabel3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel3.Location = new System.Drawing.Point(12, 21);
-            this.efLabel3.Margin = new System.Windows.Forms.Padding(2);
+            this.efLabel3.Location = new System.Drawing.Point(17, 33);
             this.efLabel3.Name = "efLabel3";
-            this.efLabel3.Size = new System.Drawing.Size(26, 42);
+            this.efLabel3.Size = new System.Drawing.Size(37, 66);
             this.efLabel3.TabIndex = 28;
             this.efLabel3.Text = "A";
             // 
@@ -620,9 +615,10 @@
             this.rpm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rpm.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rpm.ForeColor = System.Drawing.Color.Red;
-            this.rpm.Location = new System.Drawing.Point(55, 120);
+            this.rpm.Location = new System.Drawing.Point(79, 189);
+            this.rpm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rpm.Name = "rpm";
-            this.rpm.Size = new System.Drawing.Size(132, 37);
+            this.rpm.Size = new System.Drawing.Size(188, 57);
             this.rpm.TabIndex = 27;
             this.rpm.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.NotClockShow;
             this.rpm.TP_DateTime = new System.DateTime(2015, 12, 25, 18, 23, 22, 79);
@@ -641,9 +637,10 @@
             this.wa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wa.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wa.ForeColor = System.Drawing.Color.Red;
-            this.wa.Location = new System.Drawing.Point(55, 22);
+            this.wa.Location = new System.Drawing.Point(79, 35);
+            this.wa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.wa.Name = "wa";
-            this.wa.Size = new System.Drawing.Size(132, 37);
+            this.wa.Size = new System.Drawing.Size(188, 57);
             this.wa.TabIndex = 25;
             this.wa.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.NotClockShow;
             this.wa.TP_DateTime = new System.DateTime(2015, 12, 25, 18, 23, 22, 79);
@@ -662,9 +659,10 @@
             this.wv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.wv.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wv.ForeColor = System.Drawing.Color.Red;
-            this.wv.Location = new System.Drawing.Point(55, 71);
+            this.wv.Location = new System.Drawing.Point(79, 112);
+            this.wv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.wv.Name = "wv";
-            this.wv.Size = new System.Drawing.Size(132, 37);
+            this.wv.Size = new System.Drawing.Size(188, 57);
             this.wv.TabIndex = 26;
             this.wv.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.NotClockShow;
             this.wv.TP_DateTime = new System.DateTime(2015, 12, 25, 18, 23, 22, 84);
@@ -695,9 +693,8 @@
             this.efGroupBox2.Controls.Add(this.efLabel1);
             this.efGroupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.efGroupBox2.Location = new System.Drawing.Point(0, 0);
-            this.efGroupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.efGroupBox2.Name = "efGroupBox2";
-            this.efGroupBox2.Size = new System.Drawing.Size(461, 181);
+            this.efGroupBox2.Size = new System.Drawing.Size(659, 284);
             this.efGroupBox2.TabIndex = 0;
             this.efGroupBox2.Text = "预制参数";
             // 
@@ -708,11 +705,10 @@
             this.wd.EFLen = 32767;
             this.wd.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wd.ForeColor = System.Drawing.Color.Blue;
-            this.wd.Location = new System.Drawing.Point(260, 125);
-            this.wd.Margin = new System.Windows.Forms.Padding(2);
+            this.wd.Location = new System.Drawing.Point(371, 196);
             this.wd.Name = "wd";
             this.wd.ReadOnly = true;
-            this.wd.Size = new System.Drawing.Size(181, 36);
+            this.wd.Size = new System.Drawing.Size(257, 51);
             this.wd.TabIndex = 28;
             // 
             // efLabel9
@@ -722,10 +718,9 @@
             this.efLabel9.Appearance.Options.UseFont = true;
             this.efLabel9.Appearance.Options.UseForeColor = true;
             this.efLabel9.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel9.Location = new System.Drawing.Point(12, 129);
-            this.efLabel9.Margin = new System.Windows.Forms.Padding(2);
+            this.efLabel9.Location = new System.Drawing.Point(17, 203);
             this.efLabel9.Name = "efLabel9";
-            this.efLabel9.Size = new System.Drawing.Size(39, 29);
+            this.efLabel9.Size = new System.Drawing.Size(56, 46);
             this.efLabel9.TabIndex = 27;
             this.efLabel9.Text = "S";
             // 
@@ -736,10 +731,9 @@
             this.efLabel7.Appearance.Options.UseFont = true;
             this.efLabel7.Appearance.Options.UseForeColor = true;
             this.efLabel7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel7.Location = new System.Drawing.Point(200, 129);
-            this.efLabel7.Margin = new System.Windows.Forms.Padding(2);
+            this.efLabel7.Location = new System.Drawing.Point(286, 203);
             this.efLabel7.Name = "efLabel7";
-            this.efLabel7.Size = new System.Drawing.Size(61, 29);
+            this.efLabel7.Size = new System.Drawing.Size(87, 46);
             this.efLabel7.TabIndex = 26;
             this.efLabel7.Text = "丝径";
             // 
@@ -750,10 +744,9 @@
             this.efLabel5.Appearance.Options.UseFont = true;
             this.efLabel5.Appearance.Options.UseForeColor = true;
             this.efLabel5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel5.Location = new System.Drawing.Point(200, 80);
-            this.efLabel5.Margin = new System.Windows.Forms.Padding(2);
+            this.efLabel5.Location = new System.Drawing.Point(286, 126);
             this.efLabel5.Name = "efLabel5";
-            this.efLabel5.Size = new System.Drawing.Size(61, 29);
+            this.efLabel5.Size = new System.Drawing.Size(87, 46);
             this.efLabel5.TabIndex = 25;
             this.efLabel5.Text = "材质";
             // 
@@ -764,11 +757,10 @@
             this.mt.EFLen = 32767;
             this.mt.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mt.ForeColor = System.Drawing.Color.Blue;
-            this.mt.Location = new System.Drawing.Point(260, 77);
-            this.mt.Margin = new System.Windows.Forms.Padding(2);
+            this.mt.Location = new System.Drawing.Point(371, 121);
             this.mt.Name = "mt";
             this.mt.ReadOnly = true;
-            this.mt.Size = new System.Drawing.Size(181, 36);
+            this.mt.Size = new System.Drawing.Size(257, 51);
             this.mt.TabIndex = 24;
             // 
             // efLabel2
@@ -778,10 +770,9 @@
             this.efLabel2.Appearance.Options.UseFont = true;
             this.efLabel2.Appearance.Options.UseForeColor = true;
             this.efLabel2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel2.Location = new System.Drawing.Point(200, 23);
-            this.efLabel2.Margin = new System.Windows.Forms.Padding(2);
+            this.efLabel2.Location = new System.Drawing.Point(286, 36);
             this.efLabel2.Name = "efLabel2";
-            this.efLabel2.Size = new System.Drawing.Size(61, 29);
+            this.efLabel2.Size = new System.Drawing.Size(87, 46);
             this.efLabel2.TabIndex = 24;
             this.efLabel2.Text = "气体";
             // 
@@ -792,11 +783,10 @@
             this.wp.EFLen = 32767;
             this.wp.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wp.ForeColor = System.Drawing.Color.Blue;
-            this.wp.Location = new System.Drawing.Point(260, 22);
-            this.wp.Margin = new System.Windows.Forms.Padding(2);
+            this.wp.Location = new System.Drawing.Point(371, 35);
             this.wp.Name = "wp";
             this.wp.ReadOnly = true;
-            this.wp.Size = new System.Drawing.Size(181, 36);
+            this.wp.Size = new System.Drawing.Size(257, 51);
             this.wp.TabIndex = 22;
             // 
             // efLabel8
@@ -806,10 +796,9 @@
             this.efLabel8.Appearance.Options.UseFont = true;
             this.efLabel8.Appearance.Options.UseForeColor = true;
             this.efLabel8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel8.Location = new System.Drawing.Point(12, 80);
-            this.efLabel8.Margin = new System.Windows.Forms.Padding(2);
+            this.efLabel8.Location = new System.Drawing.Point(17, 126);
             this.efLabel8.Name = "efLabel8";
-            this.efLabel8.Size = new System.Drawing.Size(26, 34);
+            this.efLabel8.Size = new System.Drawing.Size(37, 53);
             this.efLabel8.TabIndex = 14;
             this.efLabel8.Text = "V";
             // 
@@ -819,9 +808,10 @@
             this.vv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vv.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vv.ForeColor = System.Drawing.Color.Blue;
-            this.vv.Location = new System.Drawing.Point(55, 80);
+            this.vv.Location = new System.Drawing.Point(79, 126);
+            this.vv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.vv.Name = "vv";
-            this.vv.Size = new System.Drawing.Size(132, 37);
+            this.vv.Size = new System.Drawing.Size(188, 57);
             this.vv.TabIndex = 13;
             this.vv.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.NotClockShow;
             this.vv.TP_DateTime = new System.DateTime(2015, 12, 25, 18, 23, 22, 156);
@@ -840,9 +830,10 @@
             this.va.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.va.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.va.ForeColor = System.Drawing.Color.Blue;
-            this.va.Location = new System.Drawing.Point(55, 22);
+            this.va.Location = new System.Drawing.Point(79, 35);
+            this.va.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.va.Name = "va";
-            this.va.Size = new System.Drawing.Size(132, 37);
+            this.va.Size = new System.Drawing.Size(188, 57);
             this.va.TabIndex = 12;
             this.va.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.NotClockShow;
             this.va.TP_DateTime = new System.DateTime(2015, 12, 25, 18, 23, 22, 155);
@@ -862,11 +853,10 @@
             this.state.EFLen = 32767;
             this.state.Font = new System.Drawing.Font("Tahoma", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.state.ForeColor = System.Drawing.Color.Blue;
-            this.state.Location = new System.Drawing.Point(55, 129);
-            this.state.Margin = new System.Windows.Forms.Padding(2);
+            this.state.Location = new System.Drawing.Point(79, 203);
             this.state.Name = "state";
             this.state.ReadOnly = true;
-            this.state.Size = new System.Drawing.Size(133, 43);
+            this.state.Size = new System.Drawing.Size(188, 61);
             this.state.TabIndex = 11;
             // 
             // efLabel1
@@ -876,10 +866,9 @@
             this.efLabel1.Appearance.Options.UseFont = true;
             this.efLabel1.Appearance.Options.UseForeColor = true;
             this.efLabel1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel1.Location = new System.Drawing.Point(12, 17);
-            this.efLabel1.Margin = new System.Windows.Forms.Padding(2);
+            this.efLabel1.Location = new System.Drawing.Point(17, 27);
             this.efLabel1.Name = "efLabel1";
-            this.efLabel1.Size = new System.Drawing.Size(26, 42);
+            this.efLabel1.Size = new System.Drawing.Size(37, 66);
             this.efLabel1.TabIndex = 8;
             this.efLabel1.Text = "A";
             // 
@@ -887,10 +876,9 @@
             // 
             this.efPanelStyleXP1.Controls.Add(this.weldEquipList);
             this.efPanelStyleXP1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.efPanelStyleXP1.Location = new System.Drawing.Point(2, 23);
-            this.efPanelStyleXP1.Margin = new System.Windows.Forms.Padding(2);
+            this.efPanelStyleXP1.Location = new System.Drawing.Point(2, 30);
             this.efPanelStyleXP1.Name = "efPanelStyleXP1";
-            this.efPanelStyleXP1.Size = new System.Drawing.Size(195, 491);
+            this.efPanelStyleXP1.Size = new System.Drawing.Size(279, 779);
             this.efPanelStyleXP1.TabIndex = 0;
             // 
             // weldEquipList
@@ -900,21 +888,21 @@
             this.weldEquipList.ImageList = this.imageList1;
             this.weldEquipList.Indent = 20;
             this.weldEquipList.Location = new System.Drawing.Point(0, 0);
-            this.weldEquipList.Margin = new System.Windows.Forms.Padding(0, 2, 2, 2);
+            this.weldEquipList.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.weldEquipList.Name = "weldEquipList";
-            treeNode4.ImageIndex = 1;
-            treeNode4.Name = "节点2";
-            treeNode4.Text = "焊机001";
-            treeNode5.Name = "节点1";
-            treeNode5.Text = "班组一";
-            treeNode6.Name = "root";
-            treeNode6.Text = "焊机总成";
+            treeNode1.ImageIndex = 1;
+            treeNode1.Name = "节点2";
+            treeNode1.Text = "焊机001";
+            treeNode2.Name = "节点1";
+            treeNode2.Text = "班组一";
+            treeNode3.Name = "root";
+            treeNode3.Text = "焊机总成";
             this.weldEquipList.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode6});
+            treeNode3});
             this.weldEquipList.SelectedImageIndex = 0;
             this.weldEquipList.ShowNodeToolTips = true;
             this.weldEquipList.ShowRootLines = false;
-            this.weldEquipList.Size = new System.Drawing.Size(195, 491);
+            this.weldEquipList.Size = new System.Drawing.Size(279, 779);
             this.weldEquipList.TabIndex = 0;
             this.weldEquipList.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.weldEquipList_NodeMouseDoubleClick);
             this.weldEquipList.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.weldEquipList_NodeMouseClick);
@@ -948,11 +936,11 @@
             // 
             // FormMCCL000251
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 562);
+            this.ClientSize = new System.Drawing.Size(1280, 883);
             this.Controls.Add(this.efGroupBox1);
-            this.Margin = new System.Windows.Forms.Padding(3);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormMCCL000251";
             this.Text = "焊机监控";
             this.Load += new System.EventHandler(this.FormMCCL0004_Load);
@@ -1027,9 +1015,9 @@
         private EF.EFLabel efLabel5;
         private EF.EFLabel efLabel2;
         private EF.EFTextBox wd;
-        private YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED workTime;
-        private YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED weldTime;
-        private YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED StartTime;
+        private YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED worktime;
+        private YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED weldtime;
+        private YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED starttime;
         private EF.EFLabel efLabel10;
         private EF.EFLabel efLabel11;
         private EF.EFLabel efLabel12;

@@ -61,8 +61,8 @@ namespace MC
             //初始化时间
             StartDate.Value = DateTime.Now;
             EndDate.Value = DateTime.Now;
-            StartTime.EditValue = "08:00:00";
-            EndTime.EditValue = "20:59:59";
+            DStartTime.EditValue = "08:00:00";
+            DEndTime.EditValue = "20:59:59";
         }
         /// <summary>
         /// 退出
@@ -205,7 +205,7 @@ namespace MC
                 for (int i = 0; 0 < historyrec.Rows.Count; i++)
                 {
                    rw = historyrec.Rows[i];
-                   double x = (double)new XDate(Convert.ToDateTime(historyrec.Rows[i]["NowTime"]));//焊机返回时间
+                   double x = (double)new XDate(Convert.ToDateTime(historyrec.Rows[i]["nowtime"]));//焊机返回时间
                    double wa = Convert.ToDouble(historyrec.Rows[i]["wa"]);
                    double wv = Convert.ToDouble(historyrec.Rows[i]["wv"]);
                    list1.Add(x, wa);//电流曲线
@@ -303,7 +303,7 @@ namespace MC
                 Formbase vfrm = (Formbase)this;
                 _clsfrm.FillfrmData(panansonicinfos, ref vfrm);
 
-                x = (double)new XDate(Convert.ToDateTime(panansonicinfos.Rows[0]["NowTime"]));//焊机返回时间
+                x = (double)new XDate(Convert.ToDateTime(panansonicinfos.Rows[0]["nowtime"]));//焊机返回时间
                 wa = Convert.ToDouble(panansonicinfos.Rows[0]["wa"]);
                 wv = Convert.ToDouble(panansonicinfos.Rows[0]["wv"]);
             }
@@ -430,8 +430,8 @@ namespace MC
             dtf.Rows.Add(row);
             String vStartDateTime;
             String vEndDateTime;
-            vStartDateTime = StartDate.Value.ToShortDateString() + " " + StartTime.Text;
-            vEndDateTime = EndDate.Value.ToShortDateString() + " " + EndTime.Text;
+            vStartDateTime = StartDate.Value.ToShortDateString() + " " + DStartTime.Text;
+            vEndDateTime = EndDate.Value.ToShortDateString() + " " + DEndTime.Text;
             dtf.Rows[0]["SFSTARTTIME"] =vStartDateTime;
             dtf.Rows[0]["SFENDTIME"] = vEndDateTime;
             //请求服务器查询
@@ -531,7 +531,7 @@ namespace MC
         private void efButton1_Click(object sender, EventArgs e)
         {
             //进行历史曲线查询
-            String t = StartTime.Text;
+            String t = DStartTime.Text;
             MessageBox.Show(t);
         }
 

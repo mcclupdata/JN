@@ -57,9 +57,9 @@
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.efPanelStyleXP5 = new EF.EFPanelStyleXP();
             this.efGroupBox3 = new EF.EFGroupBox(this.components);
-            this.workTime = new YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED();
-            this.weldTime = new YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED();
-            this.tC_SevenSegmentLED1 = new YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED();
+            this.worktime = new YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED();
+            this.weldtime = new YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED();
+            this.starttime = new YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED();
             this.efLabel10 = new EF.EFLabel();
             this.efLabel11 = new EF.EFLabel();
             this.efLabel12 = new EF.EFLabel();
@@ -86,8 +86,8 @@
             this.weldEquipList = new EF.EFTreeView(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.efPanel1 = new EF.EFPanel(this.components);
-            this.StartTime = new EF.EFDevTimeEdit(this.components);
-            this.EndTime = new EF.EFDevTimeEdit(this.components);
+            this.DStartTime = new EF.EFDevTimeEdit(this.components);
+            this.DEndTime = new EF.EFDevTimeEdit(this.components);
             this.EndDate = new EF.EFDateTimePicker();
             this.StartDate = new EF.EFDateTimePicker();
             this.efLabel8 = new EF.EFLabel();
@@ -110,8 +110,8 @@
             this.efPanelStyleXP1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efPanel1)).BeginInit();
             this.efPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.StartTime.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EndTime.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DStartTime.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DEndTime.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // efGroupBox1
@@ -373,9 +373,9 @@
             // 
             this.efGroupBox3.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.efGroupBox3.Appearance.Options.UseBackColor = true;
-            this.efGroupBox3.Controls.Add(this.workTime);
-            this.efGroupBox3.Controls.Add(this.weldTime);
-            this.efGroupBox3.Controls.Add(this.tC_SevenSegmentLED1);
+            this.efGroupBox3.Controls.Add(this.worktime);
+            this.efGroupBox3.Controls.Add(this.weldtime);
+            this.efGroupBox3.Controls.Add(this.starttime);
             this.efGroupBox3.Controls.Add(this.efLabel10);
             this.efGroupBox3.Controls.Add(this.efLabel11);
             this.efGroupBox3.Controls.Add(this.efLabel12);
@@ -392,71 +392,71 @@
             this.efGroupBox3.TabIndex = 1;
             this.efGroupBox3.Text = "焊接参数";
             // 
-            // workTime
+            // worktime
             // 
-            this.workTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.workTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.workTime.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.workTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.workTime.Location = new System.Drawing.Point(441, 189);
-            this.workTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.workTime.Name = "workTime";
-            this.workTime.Size = new System.Drawing.Size(188, 57);
-            this.workTime.TabIndex = 36;
-            this.workTime.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.TimeOnlyShow;
-            this.workTime.TP_DateTime = new System.DateTime(2015, 12, 25, 18, 23, 22, 84);
-            this.workTime.TP_Doub_Number = 0;
-            this.workTime.TP_DrawShadow = false;
-            this.workTime.TP_IntDigitsNumber = new int[] {
+            this.worktime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.worktime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.worktime.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.worktime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.worktime.Location = new System.Drawing.Point(441, 189);
+            this.worktime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.worktime.Name = "worktime";
+            this.worktime.Size = new System.Drawing.Size(188, 57);
+            this.worktime.TabIndex = 36;
+            this.worktime.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.TimeOnlyShow;
+            this.worktime.TP_DateTime = new System.DateTime(2015, 12, 25, 18, 23, 22, 84);
+            this.worktime.TP_Doub_Number = 0;
+            this.worktime.TP_DrawShadow = false;
+            this.worktime.TP_IntDigitsNumber = new int[] {
         5,
         3};
-            this.workTime.TP_IntMarginSize = 5;
-            this.workTime.TP_MainTimer = null;
-            this.workTime.TP_TimerEnable = false;
+            this.worktime.TP_IntMarginSize = 5;
+            this.worktime.TP_MainTimer = null;
+            this.worktime.TP_TimerEnable = false;
             // 
-            // weldTime
+            // weldtime
             // 
-            this.weldTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.weldTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.weldTime.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weldTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.weldTime.Location = new System.Drawing.Point(441, 111);
-            this.weldTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.weldTime.Name = "weldTime";
-            this.weldTime.Size = new System.Drawing.Size(188, 57);
-            this.weldTime.TabIndex = 35;
-            this.weldTime.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.TimeOnlyShow;
-            this.weldTime.TP_DateTime = new System.DateTime(2015, 12, 25, 18, 23, 22, 84);
-            this.weldTime.TP_Doub_Number = 0;
-            this.weldTime.TP_DrawShadow = false;
-            this.weldTime.TP_IntDigitsNumber = new int[] {
+            this.weldtime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.weldtime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.weldtime.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weldtime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.weldtime.Location = new System.Drawing.Point(441, 111);
+            this.weldtime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.weldtime.Name = "weldtime";
+            this.weldtime.Size = new System.Drawing.Size(188, 57);
+            this.weldtime.TabIndex = 35;
+            this.weldtime.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.TimeOnlyShow;
+            this.weldtime.TP_DateTime = new System.DateTime(2015, 12, 25, 18, 23, 22, 84);
+            this.weldtime.TP_Doub_Number = 0;
+            this.weldtime.TP_DrawShadow = false;
+            this.weldtime.TP_IntDigitsNumber = new int[] {
         5,
         3};
-            this.weldTime.TP_IntMarginSize = 5;
-            this.weldTime.TP_MainTimer = null;
-            this.weldTime.TP_TimerEnable = false;
+            this.weldtime.TP_IntMarginSize = 5;
+            this.weldtime.TP_MainTimer = null;
+            this.weldtime.TP_TimerEnable = false;
             // 
-            // tC_SevenSegmentLED1
+            // starttime
             // 
-            this.tC_SevenSegmentLED1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.tC_SevenSegmentLED1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tC_SevenSegmentLED1.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tC_SevenSegmentLED1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.tC_SevenSegmentLED1.Location = new System.Drawing.Point(441, 35);
-            this.tC_SevenSegmentLED1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tC_SevenSegmentLED1.Name = "tC_SevenSegmentLED1";
-            this.tC_SevenSegmentLED1.Size = new System.Drawing.Size(188, 57);
-            this.tC_SevenSegmentLED1.TabIndex = 34;
-            this.tC_SevenSegmentLED1.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.TimeOnlyShow;
-            this.tC_SevenSegmentLED1.TP_DateTime = new System.DateTime(2015, 12, 25, 18, 23, 22, 79);
-            this.tC_SevenSegmentLED1.TP_Doub_Number = 0;
-            this.tC_SevenSegmentLED1.TP_DrawShadow = false;
-            this.tC_SevenSegmentLED1.TP_IntDigitsNumber = new int[] {
+            this.starttime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.starttime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.starttime.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.starttime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.starttime.Location = new System.Drawing.Point(441, 35);
+            this.starttime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.starttime.Name = "starttime";
+            this.starttime.Size = new System.Drawing.Size(188, 57);
+            this.starttime.TabIndex = 34;
+            this.starttime.TP_ClockStyle = YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.TimeOnlyShow;
+            this.starttime.TP_DateTime = new System.DateTime(2015, 12, 25, 18, 23, 22, 79);
+            this.starttime.TP_Doub_Number = 0;
+            this.starttime.TP_DrawShadow = false;
+            this.starttime.TP_IntDigitsNumber = new int[] {
         5,
         3};
-            this.tC_SevenSegmentLED1.TP_IntMarginSize = 5;
-            this.tC_SevenSegmentLED1.TP_MainTimer = null;
-            this.tC_SevenSegmentLED1.TP_TimerEnable = false;
+            this.starttime.TP_IntMarginSize = 5;
+            this.starttime.TP_MainTimer = null;
+            this.starttime.TP_TimerEnable = false;
             // 
             // efLabel10
             // 
@@ -839,8 +839,8 @@
             // 
             // efPanel1
             // 
-            this.efPanel1.Controls.Add(this.StartTime);
-            this.efPanel1.Controls.Add(this.EndTime);
+            this.efPanel1.Controls.Add(this.DStartTime);
+            this.efPanel1.Controls.Add(this.DEndTime);
             this.efPanel1.Controls.Add(this.EndDate);
             this.efPanel1.Controls.Add(this.StartDate);
             this.efPanel1.Controls.Add(this.efLabel8);
@@ -852,27 +852,27 @@
             this.efPanel1.Size = new System.Drawing.Size(407, 159);
             this.efPanel1.TabIndex = 10;
             // 
-            // StartTime
+            // DStartTime
             // 
-            this.StartTime.EditValue = new System.DateTime(2015, 9, 27, 0, 0, 0, 0);
-            this.StartTime.Location = new System.Drawing.Point(183, 40);
-            this.StartTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.StartTime.Name = "StartTime";
-            this.StartTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DStartTime.EditValue = new System.DateTime(2015, 9, 27, 0, 0, 0, 0);
+            this.DStartTime.Location = new System.Drawing.Point(183, 40);
+            this.DStartTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DStartTime.Name = "DStartTime";
+            this.DStartTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.StartTime.Size = new System.Drawing.Size(143, 28);
-            this.StartTime.TabIndex = 8;
+            this.DStartTime.Size = new System.Drawing.Size(143, 28);
+            this.DStartTime.TabIndex = 8;
             // 
-            // EndTime
+            // DEndTime
             // 
-            this.EndTime.EditValue = new System.DateTime(2015, 9, 27, 0, 0, 0, 0);
-            this.EndTime.Location = new System.Drawing.Point(183, 114);
-            this.EndTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.EndTime.Name = "EndTime";
-            this.EndTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.DEndTime.EditValue = new System.DateTime(2015, 9, 27, 0, 0, 0, 0);
+            this.DEndTime.Location = new System.Drawing.Point(183, 114);
+            this.DEndTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DEndTime.Name = "DEndTime";
+            this.DEndTime.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.EndTime.Size = new System.Drawing.Size(143, 28);
-            this.EndTime.TabIndex = 9;
+            this.DEndTime.Size = new System.Drawing.Size(143, 28);
+            this.DEndTime.TabIndex = 9;
             // 
             // EndDate
             // 
@@ -952,8 +952,8 @@
             this.efPanelStyleXP1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efPanel1)).EndInit();
             this.efPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.StartTime.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EndTime.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DStartTime.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DEndTime.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -983,16 +983,16 @@
         private EF.EFDateTimePicker StartDate;
         private EF.EFLabel efLabel8;
         private EF.EFLabel efLabel9;
-        private EF.EFDevTimeEdit StartTime;
-        private EF.EFDevTimeEdit EndTime;
+        private EF.EFDevTimeEdit DStartTime;
+        private EF.EFDevTimeEdit DEndTime;
         private EF.EFPanel efPanel1;
         private EF.EFPanelStyleXP efPanelStyleXP3;
         private ZedGraph.ZedGraphControl zedGraphControl1;
         private EF.EFPanelStyleXP efPanelStyleXP5;
         private EF.EFGroupBox efGroupBox3;
-        private YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED workTime;
-        private YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED weldTime;
-        private YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED tC_SevenSegmentLED1;
+        private YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED worktime;
+        private YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED weldtime;
+        private YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED starttime;
         private EF.EFLabel efLabel10;
         private EF.EFLabel efLabel11;
         private EF.EFLabel efLabel12;
