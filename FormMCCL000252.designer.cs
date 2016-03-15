@@ -189,6 +189,8 @@
             // gridColumn1
             // 
             this.gridColumn1.Caption = "开始时间";
+            this.gridColumn1.DisplayFormat.FormatString = "d";
+            this.gridColumn1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn1.FieldName = "FSTARTTIME";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
@@ -198,6 +200,8 @@
             // gridColumn2
             // 
             this.gridColumn2.Caption = "结束时间";
+            this.gridColumn2.DisplayFormat.FormatString = "d";
+            this.gridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn2.FieldName = "FENDTIME";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
@@ -966,7 +970,6 @@
         private EF.EFPanelStyleXP efPanelStyleXP4;
         private EF.EFDevGrid dataGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
@@ -1020,6 +1023,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
 
     }
 }

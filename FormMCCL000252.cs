@@ -202,7 +202,7 @@ namespace MC
                 _clsfrm.FillfrmData(rw, ref this_frm);
 
 
-                for (int i = 0; 0 < historyrec.Rows.Count; i++)
+                for (int i = 0; i < historyrec.Rows.Count-1; i++)
                 {
                    rw = historyrec.Rows[i];
                    double x = (double)new XDate(Convert.ToDateTime(historyrec.Rows[i]["nowtime"]));//焊机返回时间

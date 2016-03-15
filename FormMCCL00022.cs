@@ -674,13 +674,18 @@ namespace MC
                     {
                         vitem = welderDrvs.SelectedItems[0];
                         nom = Convert.ToInt32(vitem.ToolTipText);
-                        if (CheckWelderCanused(nom) == false)
+#if DEBUG
+                       
+#else
+ if (CheckWelderCanused(nom) == false)
                         {
                             //焊机状态不是待机状态，不能使用；
                             MessageBox.Show("焊机被使用中或报警中不能分配任务");
                             Fnum_TextChanged(Fnum, null);
-                            return true;
+                              return true;
+
                         }
+#endif
                         drs = MessageBox.Show(this, "请确认使用该焊机进行焊接", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
                         //检测焊机状态 
                        

@@ -530,6 +530,18 @@ namespace MC
                     }
                     else
                     {
+                        if (cl.GetType()==typeof(YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED))
+                        {
+                            if (((YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED)cl).TP_ClockStyle == YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.NotClockShow)
+                            {
+                                ((YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED)cl).TP_Doub_Number =Convert.ToDouble( row[i].ToString());
+                            }
+                            if (((YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED)cl).TP_ClockStyle == YutouCSharpNameSpace.TNS_YutouControlLED.Enum_LEDClockStyle.TimeOnlyShow)
+                            {
+                                ((YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED)cl).TP_DateTime = Convert.ToDateTime(row[i].ToString());
+                            }
+                        }
+
                         if (cl.GetType() == typeof(EF.EFLabelText))
                         {
                             EFLabelText ltxt=(EFLabelText)cl;
