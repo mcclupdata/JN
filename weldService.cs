@@ -2596,6 +2596,7 @@ namespace JN_WELD_Service
                 case 9002://关闭定时器
                     {
                         //svrTimer.Stop();
+                        ///都会接受对方
                         break;
                     }
                 default:
