@@ -350,6 +350,12 @@ namespace JN_WELD_Service
             DataTable wps = _sqldbhelper.ExecuteDataTable(selsql);
             //添加字段保存实际使用的焊机通道;
             wps.Columns.Add("FActChannel",typeof(int));
+
+
+      
+         
+
+
             //向松下服务器发送执行指令
             switch (state)
             {
@@ -383,12 +389,18 @@ namespace JN_WELD_Service
                     }
                 case 2:
                     {
+                        /* 调整到后面
                         String proname = "evaluate_weld";
                         SqlParameter[] StoredProcedureparas = new SqlParameter[2];
                         SqlParameter spa = new SqlParameter();
                         spa.ParameterName = "@PID";
                         spa.SqlDbType = SqlDbType.BigInt;
-                        spa.SqlValue = fid;
+#if DEBUG
+                        spa.SqlValue = 13;
+#else
+                         spa.SqlValue = fid;
+#endif
+
                         StoredProcedureparas[0] = spa;
                         spa = new SqlParameter();
                         spa.ParameterName = "@WELD_PASS";
@@ -396,7 +408,9 @@ namespace JN_WELD_Service
                         spa.SqlValue = 0;
                         StoredProcedureparas[1] = spa;
                         DataTable rpdt = _sqldbhelper.ExecuteDataTable(proname, CommandType.StoredProcedure, StoredProcedureparas);
-                        break;
+                        
+                         */
+                         break;
                     }
                 case 3:case 5:case 4:
                     {
@@ -410,7 +424,7 @@ namespace JN_WELD_Service
                         break;
                     }
             }
-
+          
             int int_rs = _sqldbhelper.ExecuteNonQuery(sql, CommandType.Text, sqlpars);
             int_rs = _sqldbhelper.ExecuteNonQuery(insertSQL, CommandType.Text, sqlpars);
             if (int_rs== 0)
@@ -426,7 +440,29 @@ namespace JN_WELD_Service
                 rst.Rows.Add(val);
 
             }
+            
+            if (state == 2)
+            {
+                String proname = "evaluate_weld";
+                SqlParameter[] StoredProcedureparas = new SqlParameter[2];
+                SqlParameter spa = new SqlParameter();
+                spa.ParameterName = "@PID";
+                spa.SqlDbType = SqlDbType.BigInt;
+#if DEBUG
+                spa.SqlValue = 13;
+#else
+                         spa.SqlValue = fid;
+#endif
 
+                StoredProcedureparas[0] = spa;
+                spa = new SqlParameter();
+                spa.ParameterName = "@WELD_PASS";
+                spa.SqlDbType = SqlDbType.Int;
+                spa.SqlValue = 0;
+                StoredProcedureparas[1] = spa;
+                DataTable rpdt = _sqldbhelper.ExecuteDataTable(proname, CommandType.StoredProcedure, StoredProcedureparas);
+                        
+            }
             return rst;
         }
         /// <summary>

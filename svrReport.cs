@@ -132,7 +132,7 @@ namespace JN_WELD_Service
         public DataTable getTaskReport(DataTable fdt)
         {
             String selSQL = "";
-            selSQL = "select FSTARTTIME,FENDTIME,FweldDriverID, FWelderID,FDepartName,Fnum,channel,FTaskID,FName,";
+            selSQL = "select FSTARTTIME,FENDTIME,FweldDriverID, FWelderID,FDepartName,Fnum,FTaskID,FName,";//channel
             selSQL += " avg(va) as va ,avg(vaf) as vaf , avg(vai) as vai ,avg(vv) as vv, avg(vvf) as vvf,";
             selSQL += "avg(vvi) as vvi,avg(wv) as wv,SUM(Isnull(rpm,0)*1.5) as sum_rpm,sum(ISNULL(rpm,0)*1) as sum_rp ,SUM(wv*wa*1.2) as sum_eng,SUM(gasflux) sum_gas,";
             selSQL += "AVG(wa) as wa,SUM(good) as good,SUM(nor) as nor ,SUM(err) as err,SUM(surpass) as surpass,MAX(weldtime) as weldtime ,MAX(worktime) as worktime";
@@ -148,7 +148,7 @@ namespace JN_WELD_Service
             selSQL += " inner join t_weldEquipment as T3 on T3.FweldEquipmentID =T1.FweldDriverID";
             selSQL += " inner join t_PanasonicDriRecord as T2 on T2.nowtime between T.FSTARTTIME and T.FENDTIME and T2.nom=T1.FweldDriverID";
             selSQL += " where  t.FSTARTTIME>@FSTARTTIME and t.FENDTIME<@FENDTIME";
-            selSQL += " ) as Tb  Group by FSTARTTIME,FENDTIME,FweldDriverID, FWelderID,FDepartName,Fnum,channel,FTaskID,Fname";
+            selSQL += " ) as Tb  Group by FSTARTTIME,FENDTIME,FweldDriverID, FWelderID,FDepartName,Fnum,FTaskID,Fname";//channel
             //准备参数
             if (fdt.Columns.IndexOf("FSTARTTIME") < 0 || fdt.Columns.IndexOf("FENDTIME") < 0 )
             {
