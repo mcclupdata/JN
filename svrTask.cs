@@ -59,7 +59,7 @@ namespace JN_WELD_Service
         public DataTable CheckWeldWeldingClass(DataTable fdata, String welderNum)
         {
 
-            String welds = "";
+            String welds = "'',";
             for (int i = 0; i < fdata.Rows.Count; i++)
             {
                 welds += fdata.Rows[i][0].ToString() + ",";
