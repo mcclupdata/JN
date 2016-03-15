@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.efButton1 = new EF.EFButton();
             this.efButton2 = new EF.EFButton();
             this.efButton3 = new EF.EFButton();
             this.efButton4 = new EF.EFButton();
@@ -66,7 +65,7 @@
             this.efButton35 = new EF.EFButton();
             this.efButton36 = new EF.EFButton();
             this.efButton37 = new EF.EFButton();
-            ((System.ComponentModel.ISupportInitialize)(this.efButton1)).BeginInit();
+            this.efButton1 = new EF.EFButton();
             ((System.ComponentModel.ISupportInitialize)(this.efButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton4)).BeginInit();
@@ -103,23 +102,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.efButton35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efButton1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // efButton1
-            // 
-            this.efButton1.Authorizable = false;
-            this.efButton1.EnabledEx = true;
-            this.efButton1.FnNo = 0;
-            this.efButton1.Hint = "";
-            this.efButton1.Location = new System.Drawing.Point(34, 38);
-            this.efButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.efButton1.Name = "efButton1";
-            this.efButton1.Size = new System.Drawing.Size(161, 74);
-            this.efButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.efButton1.TabIndex = 4;
-            this.efButton1.Text = "WPS导入";
-            this.efButton1.ViewMode = EF.ViewModeEnum.Enable;
-            this.efButton1.Click += new System.EventHandler(this.efButton1_Click);
             // 
             // efButton2
             // 
@@ -127,10 +111,9 @@
             this.efButton2.EnabledEx = true;
             this.efButton2.FnNo = 0;
             this.efButton2.Hint = "";
-            this.efButton2.Location = new System.Drawing.Point(236, 38);
-            this.efButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton2.Location = new System.Drawing.Point(165, 24);
             this.efButton2.Name = "efButton2";
-            this.efButton2.Size = new System.Drawing.Size(161, 74);
+            this.efButton2.Size = new System.Drawing.Size(113, 47);
             this.efButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton2.TabIndex = 5;
             this.efButton2.Text = "焊缝导入";
@@ -143,10 +126,9 @@
             this.efButton3.EnabledEx = true;
             this.efButton3.FnNo = 0;
             this.efButton3.Hint = "";
-            this.efButton3.Location = new System.Drawing.Point(446, 38);
-            this.efButton3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton3.Location = new System.Drawing.Point(312, 24);
             this.efButton3.Name = "efButton3";
-            this.efButton3.Size = new System.Drawing.Size(161, 74);
+            this.efButton3.Size = new System.Drawing.Size(113, 47);
             this.efButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton3.TabIndex = 6;
             this.efButton3.Text = "焊工导入";
@@ -159,10 +141,9 @@
             this.efButton4.EnabledEx = true;
             this.efButton4.FnNo = 0;
             this.efButton4.Hint = "";
-            this.efButton4.Location = new System.Drawing.Point(657, 38);
-            this.efButton4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton4.Location = new System.Drawing.Point(460, 24);
             this.efButton4.Name = "efButton4";
-            this.efButton4.Size = new System.Drawing.Size(161, 74);
+            this.efButton4.Size = new System.Drawing.Size(113, 47);
             this.efButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton4.TabIndex = 7;
             this.efButton4.Text = "WPS编辑";
@@ -175,10 +156,9 @@
             this.efButton5.EnabledEx = true;
             this.efButton5.FnNo = 0;
             this.efButton5.Hint = "";
-            this.efButton5.Location = new System.Drawing.Point(657, 162);
-            this.efButton5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton5.Location = new System.Drawing.Point(460, 103);
             this.efButton5.Name = "efButton5";
-            this.efButton5.Size = new System.Drawing.Size(161, 74);
+            this.efButton5.Size = new System.Drawing.Size(113, 47);
             this.efButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton5.TabIndex = 11;
             this.efButton5.Text = "派工单管理";
@@ -191,10 +171,9 @@
             this.efButton6.EnabledEx = true;
             this.efButton6.FnNo = 0;
             this.efButton6.Hint = "";
-            this.efButton6.Location = new System.Drawing.Point(446, 162);
-            this.efButton6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton6.Location = new System.Drawing.Point(312, 103);
             this.efButton6.Name = "efButton6";
-            this.efButton6.Size = new System.Drawing.Size(161, 74);
+            this.efButton6.Size = new System.Drawing.Size(113, 47);
             this.efButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton6.TabIndex = 10;
             this.efButton6.Text = "创建派工单";
@@ -207,10 +186,9 @@
             this.efButton7.EnabledEx = true;
             this.efButton7.FnNo = 0;
             this.efButton7.Hint = "";
-            this.efButton7.Location = new System.Drawing.Point(236, 162);
-            this.efButton7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton7.Location = new System.Drawing.Point(165, 103);
             this.efButton7.Name = "efButton7";
-            this.efButton7.Size = new System.Drawing.Size(161, 74);
+            this.efButton7.Size = new System.Drawing.Size(113, 47);
             this.efButton7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton7.TabIndex = 9;
             this.efButton7.Text = "工序计划管理";
@@ -223,10 +201,9 @@
             this.efButton8.EnabledEx = true;
             this.efButton8.FnNo = 0;
             this.efButton8.Hint = "";
-            this.efButton8.Location = new System.Drawing.Point(34, 162);
-            this.efButton8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton8.Location = new System.Drawing.Point(24, 103);
             this.efButton8.Name = "efButton8";
-            this.efButton8.Size = new System.Drawing.Size(161, 74);
+            this.efButton8.Size = new System.Drawing.Size(113, 47);
             this.efButton8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton8.TabIndex = 8;
             this.efButton8.Text = "创建工序计划";
@@ -239,10 +216,9 @@
             this.efButton9.EnabledEx = true;
             this.efButton9.FnNo = 0;
             this.efButton9.Hint = "";
-            this.efButton9.Location = new System.Drawing.Point(657, 288);
-            this.efButton9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton9.Location = new System.Drawing.Point(460, 183);
             this.efButton9.Name = "efButton9";
-            this.efButton9.Size = new System.Drawing.Size(161, 74);
+            this.efButton9.Size = new System.Drawing.Size(113, 47);
             this.efButton9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton9.TabIndex = 15;
             this.efButton9.Text = "实时监控";
@@ -255,10 +231,9 @@
             this.efButton10.EnabledEx = true;
             this.efButton10.FnNo = 0;
             this.efButton10.Hint = "";
-            this.efButton10.Location = new System.Drawing.Point(446, 288);
-            this.efButton10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton10.Location = new System.Drawing.Point(312, 183);
             this.efButton10.Name = "efButton10";
-            this.efButton10.Size = new System.Drawing.Size(161, 74);
+            this.efButton10.Size = new System.Drawing.Size(113, 47);
             this.efButton10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton10.TabIndex = 14;
             this.efButton10.Text = "焊工领取任务";
@@ -271,10 +246,9 @@
             this.efButton11.EnabledEx = true;
             this.efButton11.FnNo = 0;
             this.efButton11.Hint = "";
-            this.efButton11.Location = new System.Drawing.Point(236, 288);
-            this.efButton11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton11.Location = new System.Drawing.Point(165, 183);
             this.efButton11.Name = "efButton11";
-            this.efButton11.Size = new System.Drawing.Size(161, 74);
+            this.efButton11.Size = new System.Drawing.Size(113, 47);
             this.efButton11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton11.TabIndex = 13;
             this.efButton11.Text = "任务单管理";
@@ -287,10 +261,9 @@
             this.efButton12.EnabledEx = true;
             this.efButton12.FnNo = 0;
             this.efButton12.Hint = "";
-            this.efButton12.Location = new System.Drawing.Point(34, 288);
-            this.efButton12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton12.Location = new System.Drawing.Point(24, 183);
             this.efButton12.Name = "efButton12";
-            this.efButton12.Size = new System.Drawing.Size(161, 74);
+            this.efButton12.Size = new System.Drawing.Size(113, 47);
             this.efButton12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton12.TabIndex = 12;
             this.efButton12.Text = "创建任务单";
@@ -303,10 +276,9 @@
             this.efButton13.EnabledEx = true;
             this.efButton13.FnNo = 0;
             this.efButton13.Hint = "";
-            this.efButton13.Location = new System.Drawing.Point(34, 410);
-            this.efButton13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton13.Location = new System.Drawing.Point(24, 261);
             this.efButton13.Name = "efButton13";
-            this.efButton13.Size = new System.Drawing.Size(161, 74);
+            this.efButton13.Size = new System.Drawing.Size(113, 47);
             this.efButton13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton13.TabIndex = 16;
             this.efButton13.Text = "历史监控";
@@ -318,10 +290,9 @@
             this.efButton14.EnabledEx = true;
             this.efButton14.FnNo = 0;
             this.efButton14.Hint = "";
-            this.efButton14.Location = new System.Drawing.Point(236, 410);
-            this.efButton14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton14.Location = new System.Drawing.Point(165, 261);
             this.efButton14.Name = "efButton14";
-            this.efButton14.Size = new System.Drawing.Size(161, 74);
+            this.efButton14.Size = new System.Drawing.Size(113, 47);
             this.efButton14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton14.TabIndex = 17;
             this.efButton14.Text = "焊机监控";
@@ -338,10 +309,9 @@
             this.efButton15.EnabledEx = true;
             this.efButton15.FnNo = 0;
             this.efButton15.Hint = "";
-            this.efButton15.Location = new System.Drawing.Point(446, 410);
-            this.efButton15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton15.Location = new System.Drawing.Point(312, 261);
             this.efButton15.Name = "efButton15";
-            this.efButton15.Size = new System.Drawing.Size(161, 74);
+            this.efButton15.Size = new System.Drawing.Size(113, 47);
             this.efButton15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton15.TabIndex = 18;
             this.efButton15.Text = "焊机管理";
@@ -354,10 +324,9 @@
             this.efButton16.EnabledEx = true;
             this.efButton16.FnNo = 0;
             this.efButton16.Hint = "";
-            this.efButton16.Location = new System.Drawing.Point(657, 410);
-            this.efButton16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton16.Location = new System.Drawing.Point(460, 261);
             this.efButton16.Name = "efButton16";
-            this.efButton16.Size = new System.Drawing.Size(161, 74);
+            this.efButton16.Size = new System.Drawing.Size(113, 47);
             this.efButton16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton16.TabIndex = 19;
             this.efButton16.Text = "焊机监控(pa)";
@@ -370,10 +339,9 @@
             this.efButton17.EnabledEx = true;
             this.efButton17.FnNo = 0;
             this.efButton17.Hint = "";
-            this.efButton17.Location = new System.Drawing.Point(34, 508);
-            this.efButton17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton17.Location = new System.Drawing.Point(24, 323);
             this.efButton17.Name = "efButton17";
-            this.efButton17.Size = new System.Drawing.Size(161, 74);
+            this.efButton17.Size = new System.Drawing.Size(113, 47);
             this.efButton17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton17.TabIndex = 20;
             this.efButton17.Text = "焊机监控--历史";
@@ -386,10 +354,9 @@
             this.efButton18.EnabledEx = true;
             this.efButton18.FnNo = 0;
             this.efButton18.Hint = "";
-            this.efButton18.Location = new System.Drawing.Point(236, 508);
-            this.efButton18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton18.Location = new System.Drawing.Point(165, 323);
             this.efButton18.Name = "efButton18";
-            this.efButton18.Size = new System.Drawing.Size(161, 74);
+            this.efButton18.Size = new System.Drawing.Size(113, 47);
             this.efButton18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton18.TabIndex = 21;
             this.efButton18.Text = "部门管理";
@@ -402,10 +369,9 @@
             this.efButton19.EnabledEx = true;
             this.efButton19.FnNo = 0;
             this.efButton19.Hint = "";
-            this.efButton19.Location = new System.Drawing.Point(446, 508);
-            this.efButton19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton19.Location = new System.Drawing.Point(312, 323);
             this.efButton19.Name = "efButton19";
-            this.efButton19.Size = new System.Drawing.Size(161, 74);
+            this.efButton19.Size = new System.Drawing.Size(113, 47);
             this.efButton19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton19.TabIndex = 22;
             this.efButton19.Text = "焊机区间报表";
@@ -418,10 +384,9 @@
             this.efButton20.EnabledEx = true;
             this.efButton20.FnNo = 0;
             this.efButton20.Hint = "";
-            this.efButton20.Location = new System.Drawing.Point(657, 508);
-            this.efButton20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton20.Location = new System.Drawing.Point(460, 323);
             this.efButton20.Name = "efButton20";
-            this.efButton20.Size = new System.Drawing.Size(161, 74);
+            this.efButton20.Size = new System.Drawing.Size(113, 47);
             this.efButton20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton20.TabIndex = 23;
             this.efButton20.Text = "任务信息报表";
@@ -434,10 +399,9 @@
             this.efButton21.EnabledEx = true;
             this.efButton21.FnNo = 0;
             this.efButton21.Hint = "";
-            this.efButton21.Location = new System.Drawing.Point(854, 38);
-            this.efButton21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton21.Location = new System.Drawing.Point(598, 24);
             this.efButton21.Name = "efButton21";
-            this.efButton21.Size = new System.Drawing.Size(161, 74);
+            this.efButton21.Size = new System.Drawing.Size(113, 47);
             this.efButton21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton21.TabIndex = 24;
             this.efButton21.Text = "日报表";
@@ -450,10 +414,9 @@
             this.efButton22.EnabledEx = true;
             this.efButton22.FnNo = 0;
             this.efButton22.Hint = "";
-            this.efButton22.Location = new System.Drawing.Point(854, 162);
-            this.efButton22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton22.Location = new System.Drawing.Point(598, 103);
             this.efButton22.Name = "efButton22";
-            this.efButton22.Size = new System.Drawing.Size(161, 74);
+            this.efButton22.Size = new System.Drawing.Size(113, 47);
             this.efButton22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton22.TabIndex = 25;
             this.efButton22.Text = "月报表";
@@ -466,10 +429,9 @@
             this.efButton23.EnabledEx = true;
             this.efButton23.FnNo = 0;
             this.efButton23.Hint = "";
-            this.efButton23.Location = new System.Drawing.Point(31, 599);
-            this.efButton23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton23.Location = new System.Drawing.Point(22, 381);
             this.efButton23.Name = "efButton23";
-            this.efButton23.Size = new System.Drawing.Size(164, 74);
+            this.efButton23.Size = new System.Drawing.Size(115, 47);
             this.efButton23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton23.TabIndex = 26;
             this.efButton23.Text = "自由报表";
@@ -482,10 +444,9 @@
             this.efButton24.EnabledEx = true;
             this.efButton24.FnNo = 0;
             this.efButton24.Hint = "";
-            this.efButton24.Location = new System.Drawing.Point(854, 288);
-            this.efButton24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton24.Location = new System.Drawing.Point(598, 183);
             this.efButton24.Name = "efButton24";
-            this.efButton24.Size = new System.Drawing.Size(161, 74);
+            this.efButton24.Size = new System.Drawing.Size(113, 47);
             this.efButton24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton24.TabIndex = 27;
             this.efButton24.Text = "welderEdit";
@@ -498,10 +459,9 @@
             this.efButton25.EnabledEx = true;
             this.efButton25.FnNo = 0;
             this.efButton25.Hint = "";
-            this.efButton25.Location = new System.Drawing.Point(854, 410);
-            this.efButton25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton25.Location = new System.Drawing.Point(598, 261);
             this.efButton25.Name = "efButton25";
-            this.efButton25.Size = new System.Drawing.Size(161, 74);
+            this.efButton25.Size = new System.Drawing.Size(113, 47);
             this.efButton25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton25.TabIndex = 28;
             this.efButton25.Text = "焊接等级维护";
@@ -514,10 +474,9 @@
             this.efButton26.EnabledEx = true;
             this.efButton26.FnNo = 0;
             this.efButton26.Hint = "";
-            this.efButton26.Location = new System.Drawing.Point(854, 508);
-            this.efButton26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton26.Location = new System.Drawing.Point(598, 323);
             this.efButton26.Name = "efButton26";
-            this.efButton26.Size = new System.Drawing.Size(161, 74);
+            this.efButton26.Size = new System.Drawing.Size(113, 47);
             this.efButton26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton26.TabIndex = 29;
             this.efButton26.Text = "焊缝维护";
@@ -530,10 +489,9 @@
             this.efButton27.EnabledEx = true;
             this.efButton27.FnNo = 0;
             this.efButton27.Hint = "";
-            this.efButton27.Location = new System.Drawing.Point(1050, 38);
-            this.efButton27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton27.Location = new System.Drawing.Point(735, 24);
             this.efButton27.Name = "efButton27";
-            this.efButton27.Size = new System.Drawing.Size(161, 74);
+            this.efButton27.Size = new System.Drawing.Size(113, 47);
             this.efButton27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton27.TabIndex = 30;
             this.efButton27.Text = "默认WPS维护";
@@ -546,10 +504,9 @@
             this.efButton28.EnabledEx = true;
             this.efButton28.FnNo = 0;
             this.efButton28.Hint = "";
-            this.efButton28.Location = new System.Drawing.Point(1050, 162);
-            this.efButton28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton28.Location = new System.Drawing.Point(735, 103);
             this.efButton28.Name = "efButton28";
-            this.efButton28.Size = new System.Drawing.Size(161, 74);
+            this.efButton28.Size = new System.Drawing.Size(113, 47);
             this.efButton28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton28.TabIndex = 31;
             this.efButton28.Text = "WPS自动匹配";
@@ -562,10 +519,9 @@
             this.efButton29.EnabledEx = true;
             this.efButton29.FnNo = 0;
             this.efButton29.Hint = "";
-            this.efButton29.Location = new System.Drawing.Point(1050, 288);
-            this.efButton29.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton29.Location = new System.Drawing.Point(735, 183);
             this.efButton29.Name = "efButton29";
-            this.efButton29.Size = new System.Drawing.Size(161, 74);
+            this.efButton29.Size = new System.Drawing.Size(113, 47);
             this.efButton29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton29.TabIndex = 32;
             this.efButton29.Text = "班组焊缝打包";
@@ -578,10 +534,9 @@
             this.efButton30.EnabledEx = true;
             this.efButton30.FnNo = 0;
             this.efButton30.Hint = "";
-            this.efButton30.Location = new System.Drawing.Point(1050, 410);
-            this.efButton30.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton30.Location = new System.Drawing.Point(735, 261);
             this.efButton30.Name = "efButton30";
-            this.efButton30.Size = new System.Drawing.Size(161, 74);
+            this.efButton30.Size = new System.Drawing.Size(113, 47);
             this.efButton30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton30.TabIndex = 33;
             this.efButton30.Text = "焊工等级标准库";
@@ -594,10 +549,9 @@
             this.efButton31.EnabledEx = true;
             this.efButton31.FnNo = 0;
             this.efButton31.Hint = "";
-            this.efButton31.Location = new System.Drawing.Point(1050, 508);
-            this.efButton31.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton31.Location = new System.Drawing.Point(735, 323);
             this.efButton31.Name = "efButton31";
-            this.efButton31.Size = new System.Drawing.Size(161, 74);
+            this.efButton31.Size = new System.Drawing.Size(113, 47);
             this.efButton31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton31.TabIndex = 34;
             this.efButton31.Text = "评估-焊工";
@@ -610,10 +564,9 @@
             this.efButton32.EnabledEx = true;
             this.efButton32.FnNo = 0;
             this.efButton32.Hint = "";
-            this.efButton32.Location = new System.Drawing.Point(1050, 599);
-            this.efButton32.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton32.Location = new System.Drawing.Point(735, 381);
             this.efButton32.Name = "efButton32";
-            this.efButton32.Size = new System.Drawing.Size(161, 74);
+            this.efButton32.Size = new System.Drawing.Size(113, 47);
             this.efButton32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton32.TabIndex = 35;
             this.efButton32.Text = "评估-焊缝";
@@ -626,10 +579,9 @@
             this.efButton33.EnabledEx = true;
             this.efButton33.FnNo = 0;
             this.efButton33.Hint = "";
-            this.efButton33.Location = new System.Drawing.Point(854, 599);
-            this.efButton33.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton33.Location = new System.Drawing.Point(598, 381);
             this.efButton33.Name = "efButton33";
-            this.efButton33.Size = new System.Drawing.Size(161, 74);
+            this.efButton33.Size = new System.Drawing.Size(113, 47);
             this.efButton33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton33.TabIndex = 36;
             this.efButton33.Text = "等级匹配规则库维护";
@@ -642,10 +594,9 @@
             this.efButton34.EnabledEx = true;
             this.efButton34.FnNo = 0;
             this.efButton34.Hint = "";
-            this.efButton34.Location = new System.Drawing.Point(657, 599);
-            this.efButton34.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton34.Location = new System.Drawing.Point(460, 381);
             this.efButton34.Name = "efButton34";
-            this.efButton34.Size = new System.Drawing.Size(161, 74);
+            this.efButton34.Size = new System.Drawing.Size(113, 47);
             this.efButton34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton34.TabIndex = 37;
             this.efButton34.Text = "工序计划管理(New)";
@@ -658,10 +609,9 @@
             this.efButton35.EnabledEx = true;
             this.efButton35.FnNo = 0;
             this.efButton35.Hint = "";
-            this.efButton35.Location = new System.Drawing.Point(1224, 38);
-            this.efButton35.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton35.Location = new System.Drawing.Point(857, 24);
             this.efButton35.Name = "efButton35";
-            this.efButton35.Size = new System.Drawing.Size(161, 74);
+            this.efButton35.Size = new System.Drawing.Size(113, 47);
             this.efButton35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton35.TabIndex = 38;
             this.efButton35.Text = "焊接位置维护";
@@ -674,10 +624,9 @@
             this.efButton36.EnabledEx = true;
             this.efButton36.FnNo = 0;
             this.efButton36.Hint = "";
-            this.efButton36.Location = new System.Drawing.Point(1224, 162);
-            this.efButton36.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton36.Location = new System.Drawing.Point(857, 103);
             this.efButton36.Name = "efButton36";
-            this.efButton36.Size = new System.Drawing.Size(161, 74);
+            this.efButton36.Size = new System.Drawing.Size(113, 47);
             this.efButton36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton36.TabIndex = 39;
             this.efButton36.Text = "焊接坡口维护";
@@ -690,20 +639,34 @@
             this.efButton37.EnabledEx = true;
             this.efButton37.FnNo = 0;
             this.efButton37.Hint = "";
-            this.efButton37.Location = new System.Drawing.Point(1224, 288);
-            this.efButton37.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton37.Location = new System.Drawing.Point(857, 183);
             this.efButton37.Name = "efButton37";
-            this.efButton37.Size = new System.Drawing.Size(161, 74);
+            this.efButton37.Size = new System.Drawing.Size(113, 47);
             this.efButton37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton37.TabIndex = 40;
             this.efButton37.Text = "测试";
             this.efButton37.ViewMode = EF.ViewModeEnum.Enable;
             // 
+            // efButton1
+            // 
+            this.efButton1.Authorizable = false;
+            this.efButton1.EnabledEx = true;
+            this.efButton1.FnNo = 0;
+            this.efButton1.Hint = "";
+            this.efButton1.Location = new System.Drawing.Point(24, 24);
+            this.efButton1.Name = "efButton1";
+            this.efButton1.Size = new System.Drawing.Size(113, 47);
+            this.efButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.efButton1.TabIndex = 4;
+            this.efButton1.Text = "WPS导入";
+            this.efButton1.ViewMode = EF.ViewModeEnum.Enable;
+            this.efButton1.Click += new System.EventHandler(this.efButton1_Click);
+            // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1398, 755);
+            this.ClientSize = new System.Drawing.Size(956, 474);
             this.Controls.Add(this.efButton37);
             this.Controls.Add(this.efButton36);
             this.Controls.Add(this.efButton35);
@@ -741,7 +704,7 @@
             this.Controls.Add(this.efButton3);
             this.Controls.Add(this.efButton2);
             this.Controls.Add(this.efButton1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "frmMain";
             this.Text = "江南焊机管控系统-测试";
             this.Controls.SetChildIndex(this.efButton1, 0);
@@ -781,7 +744,6 @@
             this.Controls.SetChildIndex(this.efButton35, 0);
             this.Controls.SetChildIndex(this.efButton36, 0);
             this.Controls.SetChildIndex(this.efButton37, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.efButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton4)).EndInit();
@@ -818,13 +780,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.efButton35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private EF.EFButton efButton1;
         private EF.EFButton efButton2;
         private EF.EFButton efButton3;
         private EF.EFButton efButton4;
@@ -862,5 +824,6 @@
         private EF.EFButton efButton35;
         private EF.EFButton efButton36;
         private EF.EFButton efButton37;
+        private EF.EFButton efButton1;
     }
 }

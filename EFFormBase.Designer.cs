@@ -69,7 +69,7 @@
             this.mainLayoutControlGroup.Location = new System.Drawing.Point(0, 0);
             this.mainLayoutControlGroup.Name = "Root";
             this.mainLayoutControlGroup.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.mainLayoutControlGroup.Size = new System.Drawing.Size(1021, 697);
+            this.mainLayoutControlGroup.Size = new System.Drawing.Size(1021, 696);
             this.mainLayoutControlGroup.Spacing = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.mainLayoutControlGroup.Text = "Root";
             this.mainLayoutControlGroup.TextVisible = false;
@@ -120,7 +120,7 @@
             this.detailLayout.Location = new System.Drawing.Point(0, 96);
             this.detailLayout.Name = "detailLayout";
             this.detailLayout.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
-            this.detailLayout.Size = new System.Drawing.Size(1021, 420);
+            this.detailLayout.Size = new System.Drawing.Size(1021, 419);
             this.detailLayout.Text = "detailLayout";
             // 
             // detailLayoutControlItem
@@ -129,7 +129,7 @@
             this.detailLayoutControlItem.CustomizationFormText = "detailLayoutControlItem";
             this.detailLayoutControlItem.Location = new System.Drawing.Point(0, 0);
             this.detailLayoutControlItem.Name = "detailLayoutControlItem";
-            this.detailLayoutControlItem.Size = new System.Drawing.Size(1015, 393);
+            this.detailLayoutControlItem.Size = new System.Drawing.Size(1015, 392);
             this.detailLayoutControlItem.Text = "detailLayoutControlItem";
             this.detailLayoutControlItem.TextSize = new System.Drawing.Size(0, 0);
             this.detailLayoutControlItem.TextToControlDistance = 0;
@@ -143,7 +143,7 @@
             this.detailEfPanel.Location = new System.Drawing.Point(5, 122);
             this.detailEfPanel.Margin = new System.Windows.Forms.Padding(0);
             this.detailEfPanel.Name = "detailEfPanel";
-            this.detailEfPanel.Size = new System.Drawing.Size(1011, 389);
+            this.detailEfPanel.Size = new System.Drawing.Size(1011, 388);
             this.detailEfPanel.TabIndex = 5;
             // 
             // childLayout
@@ -153,7 +153,7 @@
             this.childLayout.ExpandButtonVisible = true;
             this.childLayout.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.childLayoutControlItem});
-            this.childLayout.Location = new System.Drawing.Point(0, 522);
+            this.childLayout.Location = new System.Drawing.Point(0, 521);
             this.childLayout.Name = "childLayout";
             this.childLayout.Padding = new DevExpress.XtraLayout.Utils.Padding(0, 0, 0, 0);
             this.childLayout.Size = new System.Drawing.Size(1021, 175);
@@ -177,7 +177,7 @@
             this.childEfPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.childEfPanel.Location = new System.Drawing.Point(3, 546);
+            this.childEfPanel.Location = new System.Drawing.Point(3, 545);
             this.childEfPanel.Margin = new System.Windows.Forms.Padding(0);
             this.childEfPanel.Name = "childEfPanel";
             this.childEfPanel.Size = new System.Drawing.Size(1015, 148);
@@ -187,7 +187,7 @@
             // 
             this.detail_childSplitter.AllowHotTrack = true;
             this.detail_childSplitter.CustomizationFormText = "detail_childSplitter";
-            this.detail_childSplitter.Location = new System.Drawing.Point(0, 516);
+            this.detail_childSplitter.Location = new System.Drawing.Point(0, 515);
             this.detail_childSplitter.Name = "detail_childSplitter";
             this.detail_childSplitter.Size = new System.Drawing.Size(1021, 6);
             // 
@@ -202,15 +202,15 @@
             this.mainLayoutControl.Location = new System.Drawing.Point(0, 0);
             this.mainLayoutControl.Name = "mainLayoutControl";
             this.mainLayoutControl.Root = this.mainLayoutControlGroup;
-            this.mainLayoutControl.Size = new System.Drawing.Size(1021, 697);
+            this.mainLayoutControl.Size = new System.Drawing.Size(1021, 696);
             this.mainLayoutControl.TabIndex = 4;
             this.mainLayoutControl.Text = "layoutControl1";
             // 
-            // EFFormConciseForm
+            // EFFormBase
             // 
-            this.ClientSize = new System.Drawing.Size(1024, 746);
+            this.ClientSize = new System.Drawing.Size(1024, 745);
             this.Controls.Add(this.mainLayoutControl);
-            this.Name = "EFFormConciseForm";
+            this.Name = "EFFormBase";
             this.Controls.SetChildIndex(this.mainLayoutControl, 0);
             ((System.ComponentModel.ISupportInitialize)(this.mainLayoutControlGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.queryLayout)).EndInit();

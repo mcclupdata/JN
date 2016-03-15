@@ -242,5 +242,7 @@ namespace MC
             FormMCCL00045 frm = new FormMCCL00045();
             frm.ShowDialog(this);
         }
+        ///放的吩咐我
+        ///是的哇
     }
 }
