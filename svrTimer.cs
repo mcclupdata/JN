@@ -11,6 +11,7 @@ namespace JN_WELD_Service
 {
     public static class svrTimer
     {
+        //测试pull
          static Timer _timer;
          static SqlDbHelper _sqldhelper = new SqlDbHelper();
          static svrDevices _panansoincSvr = new svrDevices();
