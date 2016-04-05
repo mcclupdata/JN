@@ -197,7 +197,7 @@ namespace MC
         {
             FormMCCL00121 frm = new FormMCCL00121();
             //frm.ShowDialog(this);
-            frm.ShowDialog(this);
+            frm.Show(this);
         }
 
         private void efButton30_Click(object sender, EventArgs e)
@@ -242,8 +242,5 @@ namespace MC
             FormMCCL00045 frm = new FormMCCL00045();
             frm.ShowDialog(this);
         }
-        ///放的吩咐我
-        ///是的哇
-        ///dsaakvnas;lv
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.efGroupBoxEx1 = new EF.EFGroupBoxEx(this.components);
             this.DefaultWPScbo = new EF.EFComboBox(this.components);
             this.butSet = new EF.EFButton();
@@ -218,9 +218,9 @@
             // 
             this.weldwithnotwpsdataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.weldwithnotwpsdataGrid.IsUseCustomPageBar = true;
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.weldwithnotwpsdataGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.weldwithnotwpsdataGrid.Location = new System.Drawing.Point(2, 2);
             this.weldwithnotwpsdataGrid.MainView = this.weldwithnotwpsgridView;
             this.weldwithnotwpsdataGrid.Margin = new System.Windows.Forms.Padding(2);

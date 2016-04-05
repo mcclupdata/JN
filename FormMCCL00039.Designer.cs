@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.efGroupBox1 = new EF.EFGroupBox(this.components);
-            this.efGroupBox2 = new EF.EFGroupBox(this.components);
             this.butUpdate = new EF.EFButton();
+            this.efGroupBox2 = new EF.EFGroupBox(this.components);
             this.dataGrid = new EF.EFDevGrid();
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -42,9 +42,9 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).BeginInit();
             this.efGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.butUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox2)).BeginInit();
             this.efGroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.butUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
@@ -56,22 +56,11 @@
             this.efGroupBox1.Controls.Add(this.butUpdate);
             this.efGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efGroupBox1.Location = new System.Drawing.Point(0, 0);
+            this.efGroupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.efGroupBox1.Name = "efGroupBox1";
-            this.efGroupBox1.Size = new System.Drawing.Size(1024, 100);
+            this.efGroupBox1.Size = new System.Drawing.Size(717, 64);
             this.efGroupBox1.TabIndex = 4;
             this.efGroupBox1.Text = "操作";
-            // 
-            // efGroupBox2
-            // 
-            this.efGroupBox2.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.efGroupBox2.Appearance.Options.UseBackColor = true;
-            this.efGroupBox2.Controls.Add(this.dataGrid);
-            this.efGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efGroupBox2.Location = new System.Drawing.Point(0, 100);
-            this.efGroupBox2.Name = "efGroupBox2";
-            this.efGroupBox2.Size = new System.Drawing.Size(1024, 670);
-            this.efGroupBox2.TabIndex = 5;
-            this.efGroupBox2.Text = "数据";
             // 
             // butUpdate
             // 
@@ -80,27 +69,42 @@
             this.butUpdate.EnabledEx = true;
             this.butUpdate.FnNo = 0;
             this.butUpdate.Hint = "";
-            this.butUpdate.Location = new System.Drawing.Point(947, 30);
+            this.butUpdate.Location = new System.Drawing.Point(663, 23);
+            this.butUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.butUpdate.Name = "butUpdate";
-            this.butUpdate.Size = new System.Drawing.Size(75, 68);
+            this.butUpdate.Size = new System.Drawing.Size(52, 39);
             this.butUpdate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butUpdate.TabIndex = 0;
             this.butUpdate.Text = "更新";
             this.butUpdate.ViewMode = EF.ViewModeEnum.Enable;
             this.butUpdate.Click += new System.EventHandler(this.butUpdate_Click);
             // 
+            // efGroupBox2
+            // 
+            this.efGroupBox2.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.efGroupBox2.Appearance.Options.UseBackColor = true;
+            this.efGroupBox2.Controls.Add(this.dataGrid);
+            this.efGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.efGroupBox2.Location = new System.Drawing.Point(0, 64);
+            this.efGroupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.efGroupBox2.Name = "efGroupBox2";
+            this.efGroupBox2.Size = new System.Drawing.Size(717, 380);
+            this.efGroupBox2.TabIndex = 5;
+            this.efGroupBox2.Text = "数据";
+            // 
             // dataGrid
             // 
             this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid.IsUseCustomPageBar = true;
-            this.dataGrid.Location = new System.Drawing.Point(2, 30);
+            this.dataGrid.Location = new System.Drawing.Point(2, 23);
             this.dataGrid.MainView = this.gridView;
+            this.dataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.ShowAddCopyRowButton = true;
             this.dataGrid.ShowAddRowButton = true;
             this.dataGrid.ShowContextMenu = true;
             this.dataGrid.ShowDeleteRowButton = true;
-            this.dataGrid.Size = new System.Drawing.Size(1020, 638);
+            this.dataGrid.Size = new System.Drawing.Size(713, 355);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.UseEmbeddedNavigator = true;
             this.dataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -174,10 +178,11 @@
             // 
             // FormMCCL00039
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
-            this.ClientSize = new System.Drawing.Size(1024, 770);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.ClientSize = new System.Drawing.Size(717, 490);
             this.Controls.Add(this.efGroupBox2);
             this.Controls.Add(this.efGroupBox1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "FormMCCL00039";
             this.Text = "焊工等级标准库维护";
             this.Load += new System.EventHandler(this.FormMCCL00039_Load);
@@ -185,9 +190,9 @@
             this.Controls.SetChildIndex(this.efGroupBox2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).EndInit();
             this.efGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.butUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox2)).EndInit();
             this.efGroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.butUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.ResumeLayout(false);

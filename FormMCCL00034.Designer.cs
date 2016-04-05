@@ -89,15 +89,17 @@
             // efLabel1
             // 
             this.efLabel1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel1.Location = new System.Drawing.Point(19, 50);
+            this.efLabel1.Location = new System.Drawing.Point(13, 32);
+            this.efLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.efLabel1.Name = "efLabel1";
-            this.efLabel1.Size = new System.Drawing.Size(57, 28);
+            this.efLabel1.Size = new System.Drawing.Size(40, 18);
             this.efLabel1.TabIndex = 0;
             this.efLabel1.Text = "部门";
             // 
             // DepartList
             // 
-            this.DepartList.Location = new System.Drawing.Point(153, 47);
+            this.DepartList.Location = new System.Drawing.Point(107, 30);
+            this.DepartList.Margin = new System.Windows.Forms.Padding(2);
             this.DepartList.Name = "DepartList";
             this.DepartList.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.DepartList.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
@@ -105,7 +107,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DepartList.Properties.DisplayMember = "FDepartNa";
             this.DepartList.Properties.ValueMember = "FID";
-            this.DepartList.Size = new System.Drawing.Size(425, 28);
+            this.DepartList.Size = new System.Drawing.Size(297, 21);
             this.DepartList.TabIndex = 1;
             this.DepartList.EditValueChanged += new System.EventHandler(this.DepartList_EditValueChanged);
             // 
@@ -116,8 +118,9 @@
             this.efGroupBoxEx1.Controls.Add(this.DepartList);
             this.efGroupBoxEx1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efGroupBoxEx1.Location = new System.Drawing.Point(0, 0);
+            this.efGroupBoxEx1.Margin = new System.Windows.Forms.Padding(2);
             this.efGroupBoxEx1.Name = "efGroupBoxEx1";
-            this.efGroupBoxEx1.Size = new System.Drawing.Size(1024, 100);
+            this.efGroupBoxEx1.Size = new System.Drawing.Size(717, 64);
             this.efGroupBoxEx1.TabIndex = 5;
             this.efGroupBoxEx1.Text = "部门";
             // 
@@ -127,9 +130,10 @@
             this.but_OK.EnabledEx = true;
             this.but_OK.FnNo = 0;
             this.but_OK.Hint = "";
-            this.but_OK.Location = new System.Drawing.Point(627, 50);
+            this.but_OK.Location = new System.Drawing.Point(439, 32);
+            this.but_OK.Margin = new System.Windows.Forms.Padding(2);
             this.but_OK.Name = "but_OK";
-            this.but_OK.Size = new System.Drawing.Size(75, 23);
+            this.but_OK.Size = new System.Drawing.Size(52, 15);
             this.but_OK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.but_OK.TabIndex = 2;
             this.but_OK.Text = "保存";
@@ -140,21 +144,23 @@
             // 
             this.efGroupBoxEx2.Controls.Add(this.Tabs);
             this.efGroupBoxEx2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efGroupBoxEx2.Location = new System.Drawing.Point(0, 100);
+            this.efGroupBoxEx2.Location = new System.Drawing.Point(0, 64);
+            this.efGroupBoxEx2.Margin = new System.Windows.Forms.Padding(2);
             this.efGroupBoxEx2.Name = "efGroupBoxEx2";
-            this.efGroupBoxEx2.Size = new System.Drawing.Size(1024, 596);
+            this.efGroupBoxEx2.Size = new System.Drawing.Size(717, 379);
             this.efGroupBoxEx2.TabIndex = 6;
             this.efGroupBoxEx2.Text = "数据";
             // 
             // Tabs
             // 
             this.Tabs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Tabs.Location = new System.Drawing.Point(2, 30);
+            this.Tabs.Location = new System.Drawing.Point(2, 23);
+            this.Tabs.Margin = new System.Windows.Forms.Padding(2);
             this.Tabs.Name = "Tabs";
             this.Tabs.SelectedIndex = 0;
             this.Tabs.SelectedTabPage = this.welderPage;
             this.Tabs.ShowTabHeader = DevExpress.Utils.DefaultBoolean.True;
-            this.Tabs.Size = new System.Drawing.Size(1020, 564);
+            this.Tabs.Size = new System.Drawing.Size(713, 354);
             this.Tabs.TabIndex = 1;
             this.Tabs.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.welderPage,
@@ -163,8 +169,9 @@
             // welderPage
             // 
             this.welderPage.Controls.Add(this.dataGrid);
+            this.welderPage.Margin = new System.Windows.Forms.Padding(2);
             this.welderPage.Name = "welderPage";
-            this.welderPage.Size = new System.Drawing.Size(1013, 526);
+            this.welderPage.Size = new System.Drawing.Size(706, 324);
             this.welderPage.Text = "焊工";
             // 
             // dataGrid
@@ -173,6 +180,7 @@
             this.dataGrid.IsUseCustomPageBar = true;
             this.dataGrid.Location = new System.Drawing.Point(0, 0);
             this.dataGrid.MainView = this.View;
+            this.dataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.FDepartLookUpEdit,
@@ -184,7 +192,7 @@
             this.dataGrid.ShowAddRowButton = true;
             this.dataGrid.ShowContextMenuAddCopyNew = false;
             this.dataGrid.ShowDeleteRowButton = true;
-            this.dataGrid.Size = new System.Drawing.Size(1013, 526);
+            this.dataGrid.Size = new System.Drawing.Size(706, 324);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.UseEmbeddedNavigator = true;
             this.dataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -330,16 +338,18 @@
             // 
             this.classPage.Controls.Add(this.dataGrid2);
             this.classPage.Controls.Add(this.efPanel1);
+            this.classPage.Margin = new System.Windows.Forms.Padding(2);
             this.classPage.Name = "classPage";
-            this.classPage.Size = new System.Drawing.Size(1013, 526);
+            this.classPage.Size = new System.Drawing.Size(706, 324);
             this.classPage.Text = "焊工等级";
             // 
             // dataGrid2
             // 
             this.dataGrid2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid2.IsUseCustomPageBar = true;
-            this.dataGrid2.Location = new System.Drawing.Point(0, 56);
+            this.dataGrid2.Location = new System.Drawing.Point(0, 36);
             this.dataGrid2.MainView = this.View2;
+            this.dataGrid2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGrid2.Name = "dataGrid2";
             this.dataGrid2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.ClassLookUpEdit});
@@ -349,7 +359,7 @@
             this.dataGrid2.ShowDeleteRowButton = true;
             this.dataGrid2.ShowExportButton = false;
             this.dataGrid2.ShowGroupButton = false;
-            this.dataGrid2.Size = new System.Drawing.Size(1013, 470);
+            this.dataGrid2.Size = new System.Drawing.Size(706, 288);
             this.dataGrid2.TabIndex = 1;
             this.dataGrid2.UseEmbeddedNavigator = true;
             this.dataGrid2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -408,8 +418,9 @@
             this.efPanel1.Controls.Add(this.but_Ret);
             this.efPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efPanel1.Location = new System.Drawing.Point(0, 0);
+            this.efPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.efPanel1.Name = "efPanel1";
-            this.efPanel1.Size = new System.Drawing.Size(1013, 56);
+            this.efPanel1.Size = new System.Drawing.Size(706, 36);
             this.efPanel1.TabIndex = 0;
             // 
             // but_Ret
@@ -419,9 +430,10 @@
             this.but_Ret.EnabledEx = true;
             this.but_Ret.FnNo = 0;
             this.but_Ret.Hint = "";
-            this.but_Ret.Location = new System.Drawing.Point(938, 0);
+            this.but_Ret.Location = new System.Drawing.Point(654, 0);
+            this.but_Ret.Margin = new System.Windows.Forms.Padding(2);
             this.but_Ret.Name = "but_Ret";
-            this.but_Ret.Size = new System.Drawing.Size(75, 56);
+            this.but_Ret.Size = new System.Drawing.Size(52, 36);
             this.but_Ret.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.but_Ret.TabIndex = 0;
             this.but_Ret.Text = "返回";
@@ -430,10 +442,11 @@
             // 
             // FormMCCL00034
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
-            this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.ClientSize = new System.Drawing.Size(717, 489);
             this.Controls.Add(this.efGroupBoxEx2);
             this.Controls.Add(this.efGroupBoxEx1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "FormMCCL00034";
             this.Text = "焊工管理";
             this.Load += new System.EventHandler(this.FormMCCL00034_Load);

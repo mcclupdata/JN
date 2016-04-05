@@ -105,7 +105,7 @@
             this.efGroupBoxEx1.Controls.Add(this.DepartList);
             this.efGroupBoxEx1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efGroupBoxEx1.Location = new System.Drawing.Point(0, 0);
-            this.efGroupBoxEx1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.efGroupBoxEx1.Margin = new System.Windows.Forms.Padding(2);
             this.efGroupBoxEx1.Name = "efGroupBoxEx1";
             this.efGroupBoxEx1.Size = new System.Drawing.Size(330, 69);
             this.efGroupBoxEx1.TabIndex = 4;
@@ -114,7 +114,7 @@
             // DepartList
             // 
             this.DepartList.Location = new System.Drawing.Point(8, 31);
-            this.DepartList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DepartList.Margin = new System.Windows.Forms.Padding(2);
             this.DepartList.Name = "DepartList";
             this.DepartList.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.DepartList.Properties.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
@@ -133,7 +133,7 @@
             this.efPanel1.Controls.Add(this.efGroupBoxEx1);
             this.efPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.efPanel1.Location = new System.Drawing.Point(0, 0);
-            this.efPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.efPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.efPanel1.Name = "efPanel1";
             this.efPanel1.Size = new System.Drawing.Size(330, 612);
             this.efPanel1.TabIndex = 5;
@@ -143,7 +143,7 @@
             this.efGroupBoxEx5.Controls.Add(this.welderdataGrid);
             this.efGroupBoxEx5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efGroupBoxEx5.Location = new System.Drawing.Point(0, 139);
-            this.efGroupBoxEx5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.efGroupBoxEx5.Margin = new System.Windows.Forms.Padding(2);
             this.efGroupBoxEx5.Name = "efGroupBoxEx5";
             this.efGroupBoxEx5.Size = new System.Drawing.Size(330, 473);
             this.efGroupBoxEx5.TabIndex = 6;
@@ -155,7 +155,7 @@
             this.welderdataGrid.IsUseCustomPageBar = true;
             this.welderdataGrid.Location = new System.Drawing.Point(2, 23);
             this.welderdataGrid.MainView = this.weldergridView;
-            this.welderdataGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.welderdataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.welderdataGrid.Name = "welderdataGrid";
             this.welderdataGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.FDepartLookUpEdit,
@@ -281,7 +281,7 @@
             this.efGroupBoxEx2.Controls.Add(this.StartDate);
             this.efGroupBoxEx2.Dock = System.Windows.Forms.DockStyle.Top;
             this.efGroupBoxEx2.Location = new System.Drawing.Point(0, 69);
-            this.efGroupBoxEx2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.efGroupBoxEx2.Margin = new System.Windows.Forms.Padding(2);
             this.efGroupBoxEx2.Name = "efGroupBoxEx2";
             this.efGroupBoxEx2.Size = new System.Drawing.Size(330, 70);
             this.efGroupBoxEx2.TabIndex = 5;
@@ -291,7 +291,7 @@
             // 
             this.efLabel2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.efLabel2.Location = new System.Drawing.Point(9, 47);
-            this.efLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.efLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.efLabel2.Name = "efLabel2";
             this.efLabel2.Size = new System.Drawing.Size(52, 18);
             this.efLabel2.TabIndex = 5;
@@ -308,7 +308,7 @@
             // 
             this.efLabel1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.efLabel1.Location = new System.Drawing.Point(9, 26);
-            this.efLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.efLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.efLabel1.Name = "efLabel1";
             this.efLabel1.Size = new System.Drawing.Size(52, 18);
             this.efLabel1.TabIndex = 3;
@@ -327,7 +327,7 @@
             this.efPanel2.Controls.Add(this.efGroupBoxEx3);
             this.efPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efPanel2.Location = new System.Drawing.Point(330, 0);
-            this.efPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.efPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.efPanel2.Name = "efPanel2";
             this.efPanel2.Size = new System.Drawing.Size(526, 612);
             this.efPanel2.TabIndex = 6;
@@ -337,7 +337,7 @@
             this.efGroupBoxEx4.Controls.Add(this.zedGraphControl1);
             this.efGroupBoxEx4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efGroupBoxEx4.Location = new System.Drawing.Point(0, 271);
-            this.efGroupBoxEx4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.efGroupBoxEx4.Margin = new System.Windows.Forms.Padding(2);
             this.efGroupBoxEx4.Name = "efGroupBoxEx4";
             this.efGroupBoxEx4.Size = new System.Drawing.Size(526, 341);
             this.efGroupBoxEx4.TabIndex = 6;
@@ -397,7 +397,7 @@
             this.efGroupBoxEx3.Controls.Add(this.evadataGrid);
             this.efGroupBoxEx3.Dock = System.Windows.Forms.DockStyle.Top;
             this.efGroupBoxEx3.Location = new System.Drawing.Point(0, 0);
-            this.efGroupBoxEx3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.efGroupBoxEx3.Margin = new System.Windows.Forms.Padding(2);
             this.efGroupBoxEx3.Name = "efGroupBoxEx3";
             this.efGroupBoxEx3.Size = new System.Drawing.Size(526, 271);
             this.efGroupBoxEx3.TabIndex = 5;
@@ -408,7 +408,7 @@
             this.evadataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.evadataGrid.Location = new System.Drawing.Point(2, 23);
             this.evadataGrid.MainView = this.evaGridView;
-            this.evadataGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.evadataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.evadataGrid.Name = "evadataGrid";
             this.evadataGrid.Size = new System.Drawing.Size(522, 246);
             this.evadataGrid.TabIndex = 0;
@@ -519,7 +519,7 @@
             this.ClientSize = new System.Drawing.Size(856, 658);
             this.Controls.Add(this.efPanel2);
             this.Controls.Add(this.efPanel1);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "FormMCCL0040CS";
             this.Text = "焊缝评估报表-焊工";
             this.Load += new System.EventHandler(this.FormMCCL0040CS_Load);

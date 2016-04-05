@@ -43,6 +43,7 @@
             this.CFDispatchHeadID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CFOPDEPARTID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CFPARENTDEPARTNAME = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CFOPDEPARTNAME = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CFWeldCount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BodyList = new EF.EFDevGrid();
             this.BodyListView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -53,7 +54,6 @@
             this.CAS3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CFWeldName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CRuleNum = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.CFOPDEPARTNAME = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox2)).BeginInit();
             this.efGroupBox2.SuspendLayout();
@@ -105,12 +105,13 @@
             // Head
             // 
             this.Head.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Head.Location = new System.Drawing.Point(2, 30);
+            this.Head.Location = new System.Drawing.Point(2, 23);
             this.Head.MainView = this.HeadGridView;
+            this.Head.Margin = new System.Windows.Forms.Padding(2);
             this.Head.Name = "Head";
             this.Head.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
-            this.Head.Size = new System.Drawing.Size(594, 332);
+            this.Head.Size = new System.Drawing.Size(415, 207);
             this.Head.TabIndex = 5;
             this.Head.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HeadGridView});
@@ -200,10 +201,11 @@
             // BodyIndex
             // 
             this.BodyIndex.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BodyIndex.Location = new System.Drawing.Point(2, 30);
+            this.BodyIndex.Location = new System.Drawing.Point(2, 23);
             this.BodyIndex.MainView = this.BodyIndexView;
+            this.BodyIndex.Margin = new System.Windows.Forms.Padding(2);
             this.BodyIndex.Name = "BodyIndex";
-            this.BodyIndex.Size = new System.Drawing.Size(594, 189);
+            this.BodyIndex.Size = new System.Drawing.Size(415, 110);
             this.BodyIndex.TabIndex = 6;
             this.BodyIndex.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BodyIndexView});
@@ -249,6 +251,15 @@
             this.CFPARENTDEPARTNAME.Visible = true;
             this.CFPARENTDEPARTNAME.VisibleIndex = 0;
             // 
+            // CFOPDEPARTNAME
+            // 
+            this.CFOPDEPARTNAME.Caption = "班组";
+            this.CFOPDEPARTNAME.FieldName = "FOPDEPARTNAME";
+            this.CFOPDEPARTNAME.Name = "CFOPDEPARTNAME";
+            this.CFOPDEPARTNAME.OptionsColumn.AllowEdit = false;
+            this.CFOPDEPARTNAME.Visible = true;
+            this.CFOPDEPARTNAME.VisibleIndex = 2;
+            // 
             // CFWeldCount
             // 
             this.CFWeldCount.Caption = "焊缝数量";
@@ -261,10 +272,11 @@
             // BodyList
             // 
             this.BodyList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BodyList.Location = new System.Drawing.Point(2, 30);
+            this.BodyList.Location = new System.Drawing.Point(2, 23);
             this.BodyList.MainView = this.BodyListView;
+            this.BodyList.Margin = new System.Windows.Forms.Padding(2);
             this.BodyList.Name = "BodyList";
-            this.BodyList.Size = new System.Drawing.Size(418, 553);
+            this.BodyList.Size = new System.Drawing.Size(290, 342);
             this.BodyList.TabIndex = 7;
             this.BodyList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BodyListView});
@@ -349,20 +361,11 @@
             this.CRuleNum.Visible = true;
             this.CRuleNum.VisibleIndex = 5;
             // 
-            // CFOPDEPARTNAME
-            // 
-            this.CFOPDEPARTNAME.Caption = "班组";
-            this.CFOPDEPARTNAME.FieldName = "FOPDEPARTNAME";
-            this.CFOPDEPARTNAME.Name = "CFOPDEPARTNAME";
-            this.CFOPDEPARTNAME.OptionsColumn.AllowEdit = false;
-            this.CFOPDEPARTNAME.Visible = true;
-            this.CFOPDEPARTNAME.VisibleIndex = 2;
-            // 
             // FormMCCL00432
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 770);
+            this.ClientSize = new System.Drawing.Size(717, 490);
             this.Name = "FormMCCL00432";
             this.Text = "派工单管理";
             this.Load += new System.EventHandler(this.FormMCCL00432_Load);

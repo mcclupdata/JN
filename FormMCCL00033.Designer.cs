@@ -40,6 +40,7 @@
             this.modifyms = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.fullPanel = new EF.EFPanelStyleXP();
+            this.IsWeld = new EF.EFCheckBox();
             this.Fleve = new EF.EFDevLookUpEdit(this.components);
             this.FParentID = new EF.EFDevLookUpEdit(this.components);
             this.butCancel = new EF.EFButton();
@@ -50,7 +51,6 @@
             this.FName = new EF.EFTextBox();
             this.efLabel1 = new EF.EFLabel();
             this.efPanelStyleXP3 = new EF.EFPanelStyleXP();
-            this.IsWeld = new EF.EFCheckBox();
             this.leftPanel.SuspendLayout();
             this.mainms.SuspendLayout();
             this.fullPanel.SuspendLayout();
@@ -66,9 +66,8 @@
             this.leftPanel.Controls.Add(this.Departments);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
-            this.leftPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(397, 900);
+            this.leftPanel.Size = new System.Drawing.Size(278, 573);
             this.leftPanel.TabIndex = 4;
             // 
             // Departments
@@ -78,10 +77,9 @@
             this.Departments.ImageIndex = 0;
             this.Departments.ImageList = this.imageList1;
             this.Departments.Location = new System.Drawing.Point(0, 0);
-            this.Departments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Departments.Name = "Departments";
             this.Departments.SelectedImageIndex = 0;
-            this.Departments.Size = new System.Drawing.Size(397, 900);
+            this.Departments.Size = new System.Drawing.Size(278, 573);
             this.Departments.TabIndex = 0;
             // 
             // mainms
@@ -93,36 +91,36 @@
             this.toolStripSeparator1,
             this.modifyms});
             this.mainms.Name = "contextMenuStrip1";
-            this.mainms.Size = new System.Drawing.Size(153, 100);
+            this.mainms.Size = new System.Drawing.Size(125, 82);
             // 
             // addms
             // 
             this.addms.Name = "addms";
-            this.addms.Size = new System.Drawing.Size(152, 28);
+            this.addms.Size = new System.Drawing.Size(124, 22);
             this.addms.Text = "增加部门";
             this.addms.Click += new System.EventHandler(this.addms_Click);
             // 
             // Separatorms
             // 
             this.Separatorms.Name = "Separatorms";
-            this.Separatorms.Size = new System.Drawing.Size(149, 6);
+            this.Separatorms.Size = new System.Drawing.Size(121, 6);
             // 
             // delms
             // 
             this.delms.Name = "delms";
-            this.delms.Size = new System.Drawing.Size(152, 28);
+            this.delms.Size = new System.Drawing.Size(124, 22);
             this.delms.Text = "删除部门";
             this.delms.Click += new System.EventHandler(this.delms_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(121, 6);
             // 
             // modifyms
             // 
             this.modifyms.Name = "modifyms";
-            this.modifyms.Size = new System.Drawing.Size(152, 28);
+            this.modifyms.Size = new System.Drawing.Size(124, 22);
             this.modifyms.Text = "编辑部门";
             this.modifyms.Click += new System.EventHandler(this.modifyms_Click);
             // 
@@ -147,34 +145,43 @@
             this.fullPanel.Controls.Add(this.FName);
             this.fullPanel.Controls.Add(this.efLabel1);
             this.fullPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fullPanel.Location = new System.Drawing.Point(397, 0);
-            this.fullPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.fullPanel.Location = new System.Drawing.Point(278, 0);
             this.fullPanel.Name = "fullPanel";
-            this.fullPanel.Size = new System.Drawing.Size(1066, 900);
+            this.fullPanel.Size = new System.Drawing.Size(615, 573);
             this.fullPanel.TabIndex = 5;
+            // 
+            // IsWeld
+            // 
+            this.IsWeld.AutoSize = true;
+            this.IsWeld.BackColor = System.Drawing.Color.Transparent;
+            this.IsWeld.Location = new System.Drawing.Point(98, 235);
+            this.IsWeld.Margin = new System.Windows.Forms.Padding(2);
+            this.IsWeld.Name = "IsWeld";
+            this.IsWeld.Size = new System.Drawing.Size(98, 18);
+            this.IsWeld.TabIndex = 25;
+            this.IsWeld.Text = "是否焊接部门";
+            this.IsWeld.UseVisualStyleBackColor = true;
             // 
             // Fleve
             // 
             this.Fleve.EditValue = 0;
-            this.Fleve.Location = new System.Drawing.Point(140, 137);
-            this.Fleve.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Fleve.Location = new System.Drawing.Point(98, 87);
             this.Fleve.Name = "Fleve";
             this.Fleve.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.Fleve.Size = new System.Drawing.Size(424, 28);
+            this.Fleve.Size = new System.Drawing.Size(297, 21);
             this.Fleve.TabIndex = 23;
             // 
             // FParentID
             // 
             this.FParentID.EditValue = 0;
-            this.FParentID.Location = new System.Drawing.Point(140, 269);
-            this.FParentID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FParentID.Location = new System.Drawing.Point(98, 171);
             this.FParentID.Name = "FParentID";
             this.FParentID.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.FParentID.Properties.DisplayMember = "FDepartName";
             this.FParentID.Properties.ValueMember = "FID";
-            this.FParentID.Size = new System.Drawing.Size(424, 28);
+            this.FParentID.Size = new System.Drawing.Size(297, 21);
             this.FParentID.TabIndex = 22;
             // 
             // butCancel
@@ -183,10 +190,9 @@
             this.butCancel.EnabledEx = true;
             this.butCancel.FnNo = 0;
             this.butCancel.Hint = "";
-            this.butCancel.Location = new System.Drawing.Point(404, 471);
-            this.butCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butCancel.Location = new System.Drawing.Point(283, 300);
             this.butCancel.Name = "butCancel";
-            this.butCancel.Size = new System.Drawing.Size(107, 36);
+            this.butCancel.Size = new System.Drawing.Size(75, 23);
             this.butCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butCancel.TabIndex = 21;
             this.butCancel.Text = "取消";
@@ -199,10 +205,9 @@
             this.butOK.EnabledEx = true;
             this.butOK.FnNo = 0;
             this.butOK.Hint = "";
-            this.butOK.Location = new System.Drawing.Point(140, 471);
-            this.butOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butOK.Location = new System.Drawing.Point(98, 300);
             this.butOK.Name = "butOK";
-            this.butOK.Size = new System.Drawing.Size(107, 36);
+            this.butOK.Size = new System.Drawing.Size(75, 23);
             this.butOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butOK.TabIndex = 13;
             this.butOK.Text = "提交";
@@ -214,30 +219,27 @@
             this.FID.EFEname = null;
             this.FID.EFLeaveExpression = ".*";
             this.FID.EFLen = 32767;
-            this.FID.Location = new System.Drawing.Point(24, 404);
-            this.FID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FID.Location = new System.Drawing.Point(17, 257);
             this.FID.Name = "FID";
-            this.FID.Size = new System.Drawing.Size(45, 29);
+            this.FID.Size = new System.Drawing.Size(33, 22);
             this.FID.TabIndex = 12;
             this.FID.Visible = false;
             // 
             // efLabel2
             // 
             this.efLabel2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel2.Location = new System.Drawing.Point(24, 273);
-            this.efLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efLabel2.Location = new System.Drawing.Point(17, 174);
             this.efLabel2.Name = "efLabel2";
-            this.efLabel2.Size = new System.Drawing.Size(107, 22);
+            this.efLabel2.Size = new System.Drawing.Size(75, 14);
             this.efLabel2.TabIndex = 4;
             this.efLabel2.Text = "上级部门";
             // 
             // lbl1
             // 
             this.lbl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lbl1.Location = new System.Drawing.Point(24, 141);
-            this.lbl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lbl1.Location = new System.Drawing.Point(17, 90);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(107, 22);
+            this.lbl1.Size = new System.Drawing.Size(75, 14);
             this.lbl1.TabIndex = 2;
             this.lbl1.Text = "部门级别";
             // 
@@ -246,19 +248,17 @@
             this.FName.EFEname = null;
             this.FName.EFLeaveExpression = ".*";
             this.FName.EFLen = 32767;
-            this.FName.Location = new System.Drawing.Point(140, 39);
-            this.FName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FName.Location = new System.Drawing.Point(98, 25);
             this.FName.Name = "FName";
-            this.FName.Size = new System.Drawing.Size(423, 29);
+            this.FName.Size = new System.Drawing.Size(297, 22);
             this.FName.TabIndex = 1;
             // 
             // efLabel1
             // 
             this.efLabel1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel1.Location = new System.Drawing.Point(24, 44);
-            this.efLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efLabel1.Location = new System.Drawing.Point(17, 28);
             this.efLabel1.Name = "efLabel1";
-            this.efLabel1.Size = new System.Drawing.Size(107, 22);
+            this.efLabel1.Size = new System.Drawing.Size(75, 14);
             this.efLabel1.TabIndex = 0;
             this.efLabel1.Text = "部门名称";
             // 
@@ -268,32 +268,20 @@
             this.efPanelStyleXP3.Controls.Add(this.leftPanel);
             this.efPanelStyleXP3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efPanelStyleXP3.Location = new System.Drawing.Point(0, 0);
-            this.efPanelStyleXP3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efPanelStyleXP3.Name = "efPanelStyleXP3";
-            this.efPanelStyleXP3.Size = new System.Drawing.Size(1463, 900);
+            this.efPanelStyleXP3.Size = new System.Drawing.Size(893, 573);
             this.efPanelStyleXP3.TabIndex = 6;
-            // 
-            // IsWeld
-            // 
-            this.IsWeld.AutoSize = true;
-            this.IsWeld.BackColor = System.Drawing.Color.Transparent;
-            this.IsWeld.Location = new System.Drawing.Point(140, 370);
-            this.IsWeld.Name = "IsWeld";
-            this.IsWeld.Size = new System.Drawing.Size(144, 26);
-            this.IsWeld.TabIndex = 25;
-            this.IsWeld.Text = "是否焊接部门";
-            this.IsWeld.UseVisualStyleBackColor = true;
             // 
             // FormMCCL00033
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BarSaveEnable = true;
-            this.ClientSize = new System.Drawing.Size(1463, 972);
+            this.ClientSize = new System.Drawing.Size(893, 619);
             this.Controls.Add(this.efPanelStyleXP3);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.EFMsgInfo = "执行 F10 操作";
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "FormMCCL00033";
             this.Text = "部门管理";
             this.Load += new System.EventHandler(this.FormMCCL00026_Load);

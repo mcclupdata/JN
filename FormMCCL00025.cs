@@ -23,11 +23,19 @@ namespace MC
         private PointPairList list2 = new PointPairList();
         private PointPairList listConA = new PointPairList();
         private PointPairList listConV = new PointPairList();
+        private PointPairList listConMxA = new PointPairList();
+        private PointPairList listConMxV = new PointPairList();
+        private PointPairList listConMiA = new PointPairList();
+        private PointPairList listConMiV = new PointPairList();
         double y = 0;
         LineItem curve1;
         LineItem curve2;
         LineItem curve_ConA;
         LineItem curve_ConV;
+        LineItem ConMxA;
+        LineItem ConMiA;
+        LineItem ConMxV;
+        LineItem ConMinV;
         double _BA = 0;
         double _BV = 0;
         private int timerDrawI = 0;
@@ -104,6 +112,10 @@ namespace MC
             list2.Clear();
             listConA.Clear();
             listConV.Clear();
+            listConMiA.Clear();
+            listConMiV.Clear();
+            listConMxV.Clear();
+            listConMxA.Clear();
             zedGraphControl1.IsEnableHEdit = false;
             zedGraphControl1.IsEnableHZoom = false;
             zedGraphControl1.IsEnableZoom = false;
@@ -115,11 +127,36 @@ namespace MC
             curve_ConA = myPane.AddCurve("标准电流", listConA, Color.Red, SymbolType.None);
             curve_ConV = myPane.AddCurve("标准电压", listConV, Color.Black, SymbolType.None);
             curve_ConV.IsY2Axis = true;
+
+            ConMxA = myPane.AddCurve("标准电流上限", listConMxA, Color.DeepPink, SymbolType.None);
+            ConMiA = myPane.AddCurve("标准电流下限", listConMiA, Color.DeepPink, SymbolType.None);
+
+            ConMxV = myPane.AddCurve("标准电压上限", listConMxV, Color.DarkBlue, SymbolType.None);
+            ConMinV = myPane.AddCurve("标准电压下限", listConMiV, Color.DarkBlue, SymbolType.None);
+            ConMxV.IsY2Axis = true;
+            ConMinV.IsY2Axis=true;
+
+           
             //曲线加粗
             curve1.Line.Width = 4.0F;
             curve2.Line.Width = 4.0F;
             curve_ConA.Line.Width = 4.0F;
             curve_ConV.Line.Width = 4.0F;
+            ConMiA.Line.Style = System.Drawing.Drawing2D.DashStyle.Dot;
+            ConMiA.Line.Width = 4.0F;
+
+            ConMiA.Line.Style = System.Drawing.Drawing2D.DashStyle.Dot;
+            ConMiA.Line.Width = 4.0F;
+
+            ConMxA.Line.Style = System.Drawing.Drawing2D.DashStyle.Dot;
+            ConMxA.Line.Width = 4.0F;
+
+            ConMxV.Line.Style = System.Drawing.Drawing2D.DashStyle.Dot;
+            ConMxV.Line.Width = 4.0F;
+
+            ConMinV.Line.Style = System.Drawing.Drawing2D.DashStyle.Dot;
+            ConMinV.Line.Width = 4.0F;
+
             int curcount = zedGraphControl1.GraphPane.CurveList.Count;
             curcount = myPane.CurveList.Count;
             //设置标题
@@ -206,6 +243,14 @@ namespace MC
                    list2.Add(x, wv);//电压曲线
                    listConA.Add(x, _BA);
                    listConV.Add(x, _BV);
+                   listConMxA.Add(x, Convert.IsDBNull(historyrec.Rows[i]["va_up"]) ? 0 : Convert.ToDouble(historyrec.Rows[i]["va_up"]));
+                   listConMiA.Add(x, Convert.IsDBNull(historyrec.Rows[i]["va_down"]) ? 0 : Convert.ToDouble(historyrec.Rows[i]["va_down"]));
+                   listConMxV.Add(x, Convert.IsDBNull(historyrec.Rows[i]["vv_up"]) ? 0 : Convert.ToDouble(historyrec.Rows[i]["vv_up"]));
+                   listConMiV.Add(x, Convert.IsDBNull(historyrec.Rows[i]["vv_down"]) ? 0 : Convert.ToDouble(historyrec.Rows[i]["vv_down"]));
+
+
+
+
                    
                 }
             }
@@ -302,6 +347,11 @@ namespace MC
                 wv = Convert.ToDouble(panansonicinfos.Rows[0]["wv"]);
                 _BV = Convert.ToDouble(panansonicinfos.Rows[0]["vv"]);
                 _BA = Convert.ToDouble(panansonicinfos.Rows[0]["va"]);
+                listConMxA.Add(x, Convert.IsDBNull(panansonicinfos.Rows[0]["va_up"]) ? 0 : Convert.ToDouble(panansonicinfos.Rows[0]["va_up"]));
+                listConMiA.Add(x, Convert.IsDBNull(panansonicinfos.Rows[0]["va_down"]) ? 0 : Convert.ToDouble(panansonicinfos.Rows[0]["va_down"]));
+                listConMxV.Add(x, Convert.IsDBNull(panansonicinfos.Rows[0]["vv_up"]) ? 0 : Convert.ToDouble(panansonicinfos.Rows[0]["vv_up"]));
+                listConMiV.Add(x, Convert.IsDBNull(panansonicinfos.Rows[0]["vv_down"]) ? 0 : Convert.ToDouble(panansonicinfos.Rows[0]["vv_down"]));
+
             }
             if (_taskState == 2)//历史数据
             {
@@ -333,6 +383,10 @@ namespace MC
             listConA.Add(x, _BA);
             listConV.Add(x, _BV);
 
+
+
+
+
             Scale xScale = zedGraphControl1.GraphPane.XAxis.Scale;
             zedGraphControl1.AxisChange();
 
@@ -344,6 +398,10 @@ namespace MC
                 list2.RemoveAt(0);
                 listConV.RemoveAt(0);
                 listConA.RemoveAt(0);
+                listConMxA.RemoveAt(0);
+                listConMiA.RemoveAt(0);
+                listConMxV.RemoveAt(0);
+                listConMiV.RemoveAt(0);
             }
             //y = (double)Math.Sin(timerDrawI / 10f);
         }

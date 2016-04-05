@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.efGroupBox1 = new EF.EFGroupBox(this.components);
+            this.butCancel = new EF.EFButton();
             this.nom = new EF.EFLabelText();
+            this.butOK = new EF.EFButton();
             this.FName = new EF.EFLabelText();
             this.efGroupBox2 = new EF.EFGroupBox(this.components);
-            this.butCancel = new EF.EFButton();
-            this.butOK = new EF.EFButton();
             this.dataGrid = new EF.EFDevGrid();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.CPART1_NAME2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -51,10 +51,10 @@
             this.CWELD_V_MIN = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).BeginInit();
             this.efGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.efGroupBox2)).BeginInit();
-            this.efGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.butCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.butOK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efGroupBox2)).BeginInit();
+            this.efGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -74,52 +74,6 @@
             this.efGroupBox1.TabIndex = 4;
             this.efGroupBox1.Text = "任务概要";
             // 
-            // nom
-            // 
-            this.nom.BackColor = System.Drawing.Color.Transparent;
-            this.nom.EFArrange = EF.ArrangeMode.horizontal;
-            this.nom.EFCname = "焊机";
-            this.nom.EFEname = null;
-            this.nom.EFEnterText = "";
-            this.nom.EFLeaveExpression = ".*";
-            this.nom.EFLen = 32767;
-            this.nom.EFType = EF.ValueType.EFString;
-            this.nom.EFUpperCase = false;
-            this.nom.Location = new System.Drawing.Point(215, 26);
-            this.nom.Name = "nom";
-            this.nom.ReadOnly = true;
-            this.nom.Size = new System.Drawing.Size(180, 23);
-            this.nom.TabIndex = 1;
-            // 
-            // FName
-            // 
-            this.FName.BackColor = System.Drawing.Color.Transparent;
-            this.FName.EFArrange = EF.ArrangeMode.horizontal;
-            this.FName.EFCname = "焊工";
-            this.FName.EFEname = null;
-            this.FName.EFEnterText = "";
-            this.FName.EFLeaveExpression = ".*";
-            this.FName.EFLen = 32767;
-            this.FName.EFType = EF.ValueType.EFString;
-            this.FName.EFUpperCase = false;
-            this.FName.Location = new System.Drawing.Point(13, 27);
-            this.FName.Name = "FName";
-            this.FName.ReadOnly = true;
-            this.FName.Size = new System.Drawing.Size(186, 23);
-            this.FName.TabIndex = 0;
-            // 
-            // efGroupBox2
-            // 
-            this.efGroupBox2.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.efGroupBox2.Appearance.Options.UseBackColor = true;
-            this.efGroupBox2.Controls.Add(this.dataGrid);
-            this.efGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efGroupBox2.Location = new System.Drawing.Point(0, 64);
-            this.efGroupBox2.Name = "efGroupBox2";
-            this.efGroupBox2.Size = new System.Drawing.Size(903, 299);
-            this.efGroupBox2.TabIndex = 5;
-            this.efGroupBox2.Text = "明细";
-            // 
             // butCancel
             // 
             this.butCancel.Authorizable = false;
@@ -135,6 +89,23 @@
             this.butCancel.ViewMode = EF.ViewModeEnum.Enable;
             this.butCancel.Click += new System.EventHandler(this.butCancel_Click);
             // 
+            // nom
+            // 
+            this.nom.BackColor = System.Drawing.Color.Transparent;
+            this.nom.EFArrange = EF.ArrangeMode.horizontal;
+            this.nom.EFCname = "焊机";
+            this.nom.EFEname = null;
+            this.nom.EFEnterText = "";
+            this.nom.EFLeaveExpression = ".*";
+            this.nom.EFLen = 32767;
+            this.nom.EFType = EF.ValueType.EFString;
+            this.nom.EFUpperCase = false;
+            this.nom.Location = new System.Drawing.Point(215, 26);
+            this.nom.Name = "nom";
+            this.nom.ReadOnly = true;
+            this.nom.Size = new System.Drawing.Size(180, 22);
+            this.nom.TabIndex = 1;
+            // 
             // butOK
             // 
             this.butOK.Authorizable = false;
@@ -149,6 +120,35 @@
             this.butOK.Text = "确定";
             this.butOK.ViewMode = EF.ViewModeEnum.Enable;
             this.butOK.Click += new System.EventHandler(this.butOK_Click);
+            // 
+            // FName
+            // 
+            this.FName.BackColor = System.Drawing.Color.Transparent;
+            this.FName.EFArrange = EF.ArrangeMode.horizontal;
+            this.FName.EFCname = "焊工";
+            this.FName.EFEname = null;
+            this.FName.EFEnterText = "";
+            this.FName.EFLeaveExpression = ".*";
+            this.FName.EFLen = 32767;
+            this.FName.EFType = EF.ValueType.EFString;
+            this.FName.EFUpperCase = false;
+            this.FName.Location = new System.Drawing.Point(13, 27);
+            this.FName.Name = "FName";
+            this.FName.ReadOnly = true;
+            this.FName.Size = new System.Drawing.Size(186, 22);
+            this.FName.TabIndex = 0;
+            // 
+            // efGroupBox2
+            // 
+            this.efGroupBox2.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.efGroupBox2.Appearance.Options.UseBackColor = true;
+            this.efGroupBox2.Controls.Add(this.dataGrid);
+            this.efGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.efGroupBox2.Location = new System.Drawing.Point(0, 64);
+            this.efGroupBox2.Name = "efGroupBox2";
+            this.efGroupBox2.Size = new System.Drawing.Size(903, 299);
+            this.efGroupBox2.TabIndex = 5;
+            this.efGroupBox2.Text = "明细";
             // 
             // dataGrid
             // 
@@ -299,17 +299,17 @@
             this.Controls.Add(this.efGroupBox2);
             this.Controls.Add(this.efGroupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "FormMCCL00023";
             this.Text = "任务明细";
             this.Controls.SetChildIndex(this.efGroupBox1, 0);
             this.Controls.SetChildIndex(this.efGroupBox2, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).EndInit();
             this.efGroupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.efGroupBox2)).EndInit();
-            this.efGroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.butCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.butOK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efGroupBox2)).EndInit();
+            this.efGroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);

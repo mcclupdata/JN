@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.efButton1 = new EF.EFButton();
             this.efButton2 = new EF.EFButton();
             this.efButton3 = new EF.EFButton();
             this.efButton4 = new EF.EFButton();
@@ -64,8 +65,7 @@
             this.efButton34 = new EF.EFButton();
             this.efButton35 = new EF.EFButton();
             this.efButton36 = new EF.EFButton();
-            this.efButton37 = new EF.EFButton();
-            this.efButton1 = new EF.EFButton();
+            ((System.ComponentModel.ISupportInitialize)(this.efButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton4)).BeginInit();
@@ -101,9 +101,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.efButton34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton36)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efButton37)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efButton1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // efButton1
+            // 
+            this.efButton1.Authorizable = false;
+            this.efButton1.EnabledEx = true;
+            this.efButton1.FnNo = 0;
+            this.efButton1.Hint = "";
+            this.efButton1.Location = new System.Drawing.Point(24, 24);
+            this.efButton1.Name = "efButton1";
+            this.efButton1.Size = new System.Drawing.Size(113, 47);
+            this.efButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.efButton1.TabIndex = 4;
+            this.efButton1.Text = "WPS导入";
+            this.efButton1.ViewMode = EF.ViewModeEnum.Enable;
+            this.efButton1.Click += new System.EventHandler(this.efButton1_Click);
             // 
             // efButton2
             // 
@@ -633,41 +646,11 @@
             this.efButton36.ViewMode = EF.ViewModeEnum.Enable;
             this.efButton36.Click += new System.EventHandler(this.efButton36_Click);
             // 
-            // efButton37
-            // 
-            this.efButton37.Authorizable = false;
-            this.efButton37.EnabledEx = true;
-            this.efButton37.FnNo = 0;
-            this.efButton37.Hint = "";
-            this.efButton37.Location = new System.Drawing.Point(857, 183);
-            this.efButton37.Name = "efButton37";
-            this.efButton37.Size = new System.Drawing.Size(113, 47);
-            this.efButton37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.efButton37.TabIndex = 40;
-            this.efButton37.Text = "测试";
-            this.efButton37.ViewMode = EF.ViewModeEnum.Enable;
-            // 
-            // efButton1
-            // 
-            this.efButton1.Authorizable = false;
-            this.efButton1.EnabledEx = true;
-            this.efButton1.FnNo = 0;
-            this.efButton1.Hint = "";
-            this.efButton1.Location = new System.Drawing.Point(24, 24);
-            this.efButton1.Name = "efButton1";
-            this.efButton1.Size = new System.Drawing.Size(113, 47);
-            this.efButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.efButton1.TabIndex = 4;
-            this.efButton1.Text = "WPS导入";
-            this.efButton1.ViewMode = EF.ViewModeEnum.Enable;
-            this.efButton1.Click += new System.EventHandler(this.efButton1_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 474);
-            this.Controls.Add(this.efButton37);
+            this.ClientSize = new System.Drawing.Size(896, 480);
             this.Controls.Add(this.efButton36);
             this.Controls.Add(this.efButton35);
             this.Controls.Add(this.efButton34);
@@ -743,7 +726,7 @@
             this.Controls.SetChildIndex(this.efButton34, 0);
             this.Controls.SetChildIndex(this.efButton35, 0);
             this.Controls.SetChildIndex(this.efButton36, 0);
-            this.Controls.SetChildIndex(this.efButton37, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.efButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton4)).EndInit();
@@ -779,14 +762,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.efButton34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton36)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efButton37)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.efButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private EF.EFButton efButton1;
         private EF.EFButton efButton2;
         private EF.EFButton efButton3;
         private EF.EFButton efButton4;
@@ -823,7 +805,5 @@
         private EF.EFButton efButton34;
         private EF.EFButton efButton35;
         private EF.EFButton efButton36;
-        private EF.EFButton efButton37;
-        private EF.EFButton efButton1;
     }
 }

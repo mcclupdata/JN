@@ -102,12 +102,13 @@
             // Head
             // 
             this.Head.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Head.Location = new System.Drawing.Point(2, 30);
+            this.Head.Location = new System.Drawing.Point(2, 23);
             this.Head.MainView = this.HeadGridView;
+            this.Head.Margin = new System.Windows.Forms.Padding(2);
             this.Head.Name = "Head";
             this.Head.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
-            this.Head.Size = new System.Drawing.Size(594, 332);
+            this.Head.Size = new System.Drawing.Size(415, 207);
             this.Head.TabIndex = 5;
             this.Head.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HeadGridView});
@@ -191,10 +192,11 @@
             // BodyIndex
             // 
             this.BodyIndex.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BodyIndex.Location = new System.Drawing.Point(2, 30);
+            this.BodyIndex.Location = new System.Drawing.Point(2, 23);
             this.BodyIndex.MainView = this.BodyIndexView;
+            this.BodyIndex.Margin = new System.Windows.Forms.Padding(2);
             this.BodyIndex.Name = "BodyIndex";
-            this.BodyIndex.Size = new System.Drawing.Size(594, 189);
+            this.BodyIndex.Size = new System.Drawing.Size(415, 110);
             this.BodyIndex.TabIndex = 6;
             this.BodyIndex.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BodyIndexView});
@@ -249,10 +251,11 @@
             // BodyList
             // 
             this.BodyList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BodyList.Location = new System.Drawing.Point(2, 30);
+            this.BodyList.Location = new System.Drawing.Point(2, 23);
             this.BodyList.MainView = this.BodyListView;
+            this.BodyList.Margin = new System.Windows.Forms.Padding(2);
             this.BodyList.Name = "BodyList";
-            this.BodyList.Size = new System.Drawing.Size(418, 553);
+            this.BodyList.Size = new System.Drawing.Size(290, 342);
             this.BodyList.TabIndex = 7;
             this.BodyList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BodyListView});
@@ -339,8 +342,8 @@
             // 
             // FormMCCL00431
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
-            this.ClientSize = new System.Drawing.Size(1024, 770);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.ClientSize = new System.Drawing.Size(717, 490);
             this.Name = "FormMCCL00431";
             this.Load += new System.EventHandler(this.FormMCCL00431_Load);
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).EndInit();

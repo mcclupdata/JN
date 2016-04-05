@@ -454,6 +454,30 @@ namespace MC
 
         protected Boolean loadTab()
         {
+            //modify by junlin filter welder by group
+
+            long welder_departid = 0;
+            DataTable welder_dt = _Client.ServiceCall(5101502, null);
+            if (this.Fnum.Text.Length == 8)
+            {
+                welder_dt.DefaultView.RowFilter = "Fnum='" + this.Fnum.Text + "'";
+                welder_dt = welder_dt.DefaultView.ToTable();
+                if (welder_dt.Rows.Count == 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    welder_departid = Convert.ToInt64(welder_dt.Rows[0]["Fdepart"]);
+                }
+            }
+            else
+            {
+                return false;
+            }
+            
+
+            //
             DataTable panasoicWelderDT = new DataTable();
             panasoicWelderDT = _Client.ServiceCall(cmd_WeldDrivers_GetDrivers, null);
             // { "焊机序号", "设备编号", "工作状态", "机型", "初期电流", "初期电压", "预置电流", "预置电压", "收弧电流", "收弧电压", "焊接电流", "焊接电压", "送丝速度", "气体", "材质", "丝径", "焊接控制", "脉冲有无", "点焊时间", "操作者", "故障类型", "任务编号", "工件温度", "气体流量", "瞬时功率", "上传时间", "开机时间", "关机时间", "焊接时间", "工作时间", "当前通道", "通道数量" };
@@ -473,47 +497,56 @@ namespace MC
             {
                 ListViewGroup lvg = new ListViewGroup(groups_dt.Rows[goupc]["FDepartID"].ToString(), groups_dt.Rows[goupc]["FTODepartName"].ToString());
                 this.welderDrvs.Groups.Add(lvg);
-                 
+
             }
+            //panasoicWelderDT.DefaultView.RowFilter = "nom=822";
+            //panasoicWelderDT = panasoicWelderDT.DefaultView.ToTable();
                 for (int i = 0; i < panasoicWelderDT.Rows.Count; i++)
                 {
+                   
+
                     DataRow row = panasoicWelderDT.Rows[i];
 
                     DataView fweldedv = weldEquipments_dt.Copy().DefaultView;
-                    fweldedv.RowFilter = "FweldEquipmentID=" + row["nom"].ToString();
+                    fweldedv.RowFilter = "FweldEquipmentID="+row["nom"].ToString();
                     DataTable fweldedt = fweldedv.ToTable();
 
                     if (fweldedt.Rows.Count == 1)
                     {
-                        ListViewItem vitem = new ListViewItem();
-                        vitem.Text = "焊机名称："+ Convert.ToString(row["equipname"]);//"焊机:" + Convert.ToString(row["nom"]) + " 名称：" + Convert.ToString(row["equipname"]) + '\n' + "焊接电压:" + Convert.ToString(row["wa"]) + "V 焊接电流:" + Convert.ToString(row["wa"]);
-                        vitem.ToolTipText = Convert.ToString(row["nom"]);
-
-                        String vstate = Convert.ToString(row["state"]);
-                        if (vstate == "待机")
+                        if (this.showAllWelds.Checked == true || (Convert.ToInt64(fweldedt.Rows[0]["FDepartID"]) == welder_departid))
                         {
-                            vitem.ImageIndex = 0;
+                            ListViewItem vitem = new ListViewItem();
+                            vitem.Text = "焊机名称：" + Convert.ToString(fweldedt.Rows[0]["FEquipName"]);//row["equipname"]);//"焊机名称：" + Convert.ToString(row["equipname"]) + '\n';// +"焊接电压:" + Convert.ToString(row["wa"]) + "V 焊接电流:" + Convert.ToString(row["wa"]);
+                            vitem.ToolTipText = Convert.ToString(row["nom"]);
 
-                        }
-                        else
-                        {
-                            vitem.ImageIndex = 1;
-
-                        }
-                        for (int g = 0; g < this.welderDrvs.Groups.Count; g++)
-                        {
-                            ListViewGroup vg = this.welderDrvs.Groups[g];
-                            if (fweldedt.Rows[0]["FDepartID"].ToString() == vg.Name)
+                            String vstate = Convert.ToString(row["state"]);
+                            if (vstate == "待机")
                             {
-                                vitem.Group = vg;
+                                vitem.ImageIndex = 0;
+
                             }
+                            else
+                            {
+                                vitem.ImageIndex = 1;
+
+                            }
+
+                            for (int g = 0; g < this.welderDrvs.Groups.Count; g++)
+                            {
+                                ListViewGroup vg = this.welderDrvs.Groups[g];
+                                if (fweldedt.Rows[0]["FDepartID"].ToString() == vg.Name)
+                                {
+                                    vitem.Group = vg;
+                                }
+                            }
+                            this.welderDrvs.Items.Add(vitem);
                         }
-                        this.welderDrvs.Items.Add(vitem);
                     }
 
                 }
             int c = this.welderDrvs.Items.Count;
             this.welderDrvs.Visible = true;
+            //this.welderDrvs.Groups.
             this.welderDrvs.EndUpdate();
             return true;
 
@@ -674,18 +707,13 @@ namespace MC
                     {
                         vitem = welderDrvs.SelectedItems[0];
                         nom = Convert.ToInt32(vitem.ToolTipText);
-#if DEBUG
-                       
-#else
- if (CheckWelderCanused(nom) == false)
+                        if (CheckWelderCanused(nom) == false)
                         {
                             //焊机状态不是待机状态，不能使用；
                             MessageBox.Show("焊机被使用中或报警中不能分配任务");
                             Fnum_TextChanged(Fnum, null);
-                              return true;
-
+                            return true;
                         }
-#endif
                         drs = MessageBox.Show(this, "请确认使用该焊机进行焊接", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
                         //检测焊机状态 
                        
@@ -786,15 +814,8 @@ namespace MC
                             FormMCCL00023 vfrm = new FormMCCL00023(showdt);
                             if (vfrm.ShowDialog(this) == DialogResult.Yes)
                             {
-                                try
-                                {
-                                    showDownloadThread.Start();
-                                }
-                                catch
-                                {
-                                   showDownloadThread= new Thread(showDownLoadThreadpro);
-                                   showDownloadThread.Start();
-                                }
+                                showDownloadThread = new Thread(showDownLoadThreadpro);
+                                showDownloadThread.Start();
                                 DataTable rsdt = _Client.ServiceCall(7004, _curWelderTaskFID_DT);
                                 
                                 // this.dataGrid.DataSource = _curWelderTaskFID_DT;
@@ -1093,6 +1114,11 @@ namespace MC
         {
             ReadCardTimer.Enabled = true;
             ReadCardTimer.Start();
+        }
+
+        private void showAllWelds_CheckedChanged(object sender, EventArgs e)
+        {
+            loadTab();
         }
     }
 }
