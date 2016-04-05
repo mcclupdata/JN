@@ -143,10 +143,14 @@ namespace JN_WELD_Service
             upparams.Add(par);
             insertparams.Add(par);
             DataTable rdt;
+
+            String upsql = "select * from t_weldEquipment";
+
             if (Convert.ToInt64(Convert.IsDBNull(data.Rows[0]["FID"])?0:data.Rows[0]["FID"]) == 0)
             {
                 //插入
-                int rs = _sqldbhelper.ExecuteNonQuery(insertSQL, CommandType.Text, insertparams);
+               // int rs = _sqldbhelper.ExecuteNonQuery(insertSQL, CommandType.Text, insertparams);
+                rdt=_sqldbhelper.UpdateByDataTable(upsql, data, "FID",1);
             }
             else
             {
@@ -159,7 +163,8 @@ namespace JN_WELD_Service
                     delpa.SqlValue = Convert.ToInt64(data.Rows[0]["FID"]);
                     delparams.Add(delpa);
 
-                    int rs = _sqldbhelper.ExecuteNonQuery(delSQL,CommandType.Text, delparams);
+                    //int rs = _sqldbhelper.ExecuteNonQuery(delSQL,CommandType.Text, delparams);
+                    rdt = _sqldbhelper.UpdateByDataTable(upsql, data, "FID", 2);
                 }
 
                 else
@@ -170,7 +175,8 @@ namespace JN_WELD_Service
                     delpa.SqlValue = Convert.ToInt64(data.Rows[0]["FID"]);
                     upparams.Add(delpa);
 
-                    int rs = _sqldbhelper.ExecuteNonQuery(upSQL, CommandType.Text, upparams);
+                    //int rs = _sqldbhelper.ExecuteNonQuery(upSQL, CommandType.Text, upparams);
+                    rdt = _sqldbhelper.UpdateByDataTable(upsql, data, "FID", 0);
                 }
 
             }

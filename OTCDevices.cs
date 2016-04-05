@@ -434,7 +434,7 @@ namespace JN_WELD_Service
             }
             
             //选定通道
-            if (channelid>Maxchannel)
+            if (channelid+1>Maxchannel)
             {
                 Console.WriteLine(String.Format("准备焊机{0},焊机最大通道数{1} 因此不能下载",nom, channelid));
                 return;
@@ -509,6 +509,7 @@ namespace JN_WELD_Service
                 //回写OTC接口;
                 otcwps.AcceptChanges();
                 DataTable Rsdt = Downloadwpsbyid(otcwps);
+                Console.WriteLine(String.Format("OTC 规范 通道{0} 下载 成功", channelid));
                 return;
             }
      
