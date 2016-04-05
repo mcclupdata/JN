@@ -132,6 +132,7 @@
             this.efRadioButton2 = new EF.EFRadioButton(this.components);
             this.efRadioButton1 = new EF.EFRadioButton(this.components);
             this.cobChannel = new EF.EFComboBox(this.components);
+            this.efPanel1 = new EF.EFPanel(this.components);
             this.efTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.efTabControl3.SuspendLayout();
@@ -145,34 +146,31 @@
             this.efTabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.efButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efPanel1)).BeginInit();
+            this.efPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // efTabControl1
             // 
             this.efTabControl1.Controls.Add(this.tabPage1);
-            this.efTabControl1.Location = new System.Drawing.Point(1, 58);
+            this.efTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.efTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.efTabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efTabControl1.Name = "efTabControl1";
             this.efTabControl1.SelectedIndex = 0;
-            this.efTabControl1.Size = new System.Drawing.Size(993, 585);
+            this.efTabControl1.Size = new System.Drawing.Size(1419, 983);
             this.efTabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.cobWeldNom);
             this.tabPage1.Controls.Add(this.efTabControl3);
-            this.tabPage1.Controls.Add(this.efLabel58);
-            this.tabPage1.Controls.Add(this.efLabel57);
-            this.tabPage1.Controls.Add(this.efLabel56);
+            this.tabPage1.Controls.Add(this.efPanel1);
             this.tabPage1.Controls.Add(this.efGroupBox2);
-            this.tabPage1.Controls.Add(this.efTabControl2);
-            this.tabPage1.Controls.Add(this.efButton1);
-            this.tabPage1.Controls.Add(this.efRadioButton2);
-            this.tabPage1.Controls.Add(this.efRadioButton1);
-            this.tabPage1.Controls.Add(this.cobChannel);
-            this.tabPage1.Location = new System.Drawing.Point(4, 23);
+            this.tabPage1.Location = new System.Drawing.Point(4, 31);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(985, 558);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage1.Size = new System.Drawing.Size(1411, 948);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "单台规范设置";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -185,10 +183,11 @@
             this.cobWeldNom.EFDropDown = false;
             this.cobWeldNom.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.cobWeldNom.FormattingEnabled = true;
-            this.cobWeldNom.Location = new System.Drawing.Point(236, 10);
+            this.cobWeldNom.Location = new System.Drawing.Point(124, 11);
+            this.cobWeldNom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cobWeldNom.Name = "cobWeldNom";
             this.cobWeldNom.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cobWeldNom.Size = new System.Drawing.Size(90, 22);
+            this.cobWeldNom.Size = new System.Drawing.Size(127, 30);
             this.cobWeldNom.SQL = null;
             this.cobWeldNom.TabIndex = 20;
             this.cobWeldNom.UserValue = "";
@@ -197,10 +196,12 @@
             // efTabControl3
             // 
             this.efTabControl3.Controls.Add(this.tabPage5);
-            this.efTabControl3.Location = new System.Drawing.Point(160, 168);
+            this.efTabControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.efTabControl3.Location = new System.Drawing.Point(215, 317);
+            this.efTabControl3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efTabControl3.Name = "efTabControl3";
             this.efTabControl3.SelectedIndex = 0;
-            this.efTabControl3.Size = new System.Drawing.Size(825, 388);
+            this.efTabControl3.Size = new System.Drawing.Size(1192, 626);
             this.efTabControl3.TabIndex = 10;
             // 
             // tabPage5
@@ -208,10 +209,11 @@
             this.tabPage5.BackColor = System.Drawing.Color.White;
             this.tabPage5.Controls.Add(this.efGroupBox1);
             this.tabPage5.Controls.Add(this.efGroupBoxEx1);
-            this.tabPage5.Location = new System.Drawing.Point(4, 23);
+            this.tabPage5.Location = new System.Drawing.Point(4, 31);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(817, 361);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage5.Size = new System.Drawing.Size(1184, 591);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "焊接参数";
             // 
@@ -246,180 +248,200 @@
             this.efGroupBox1.Controls.Add(this.cobAlm);
             this.efGroupBox1.Controls.Add(this.efTextBox48);
             this.efGroupBox1.Controls.Add(this.efTextBox45);
-            this.efGroupBox1.Location = new System.Drawing.Point(8, 177);
+            this.efGroupBox1.Location = new System.Drawing.Point(11, 278);
+            this.efGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efGroupBox1.Name = "efGroupBox1";
-            this.efGroupBox1.Size = new System.Drawing.Size(800, 167);
+            this.efGroupBox1.Size = new System.Drawing.Size(1143, 262);
             this.efGroupBox1.TabIndex = 1;
             this.efGroupBox1.Text = "报警参数设置";
             // 
             // efLabel19
             // 
             this.efLabel19.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel19.Location = new System.Drawing.Point(770, 35);
+            this.efLabel19.Location = new System.Drawing.Point(1100, 55);
+            this.efLabel19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel19.Name = "efLabel19";
-            this.efLabel19.Size = new System.Drawing.Size(13, 16);
+            this.efLabel19.Size = new System.Drawing.Size(19, 25);
             this.efLabel19.TabIndex = 89;
             this.efLabel19.Text = "V";
             // 
             // efLabel18
             // 
             this.efLabel18.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel18.Location = new System.Drawing.Point(630, 34);
+            this.efLabel18.Location = new System.Drawing.Point(900, 53);
+            this.efLabel18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel18.Name = "efLabel18";
-            this.efLabel18.Size = new System.Drawing.Size(13, 16);
+            this.efLabel18.Size = new System.Drawing.Size(19, 25);
             this.efLabel18.TabIndex = 88;
             this.efLabel18.Text = "V";
             // 
             // efLabel17
             // 
             this.efLabel17.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel17.Location = new System.Drawing.Point(388, 34);
+            this.efLabel17.Location = new System.Drawing.Point(554, 53);
+            this.efLabel17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel17.Name = "efLabel17";
-            this.efLabel17.Size = new System.Drawing.Size(12, 16);
+            this.efLabel17.Size = new System.Drawing.Size(17, 25);
             this.efLabel17.TabIndex = 87;
             this.efLabel17.Text = "A";
             // 
             // efLabel16
             // 
             this.efLabel16.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel16.Location = new System.Drawing.Point(243, 35);
+            this.efLabel16.Location = new System.Drawing.Point(347, 55);
+            this.efLabel16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel16.Name = "efLabel16";
-            this.efLabel16.Size = new System.Drawing.Size(13, 16);
+            this.efLabel16.Size = new System.Drawing.Size(19, 25);
             this.efLabel16.TabIndex = 86;
             this.efLabel16.Text = "A";
             // 
             // efLabel15
             // 
             this.efLabel15.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel15.Location = new System.Drawing.Point(423, 92);
+            this.efLabel15.Location = new System.Drawing.Point(604, 145);
+            this.efLabel15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel15.Name = "efLabel15";
-            this.efLabel15.Size = new System.Drawing.Size(94, 24);
+            this.efLabel15.Size = new System.Drawing.Size(134, 38);
             this.efLabel15.TabIndex = 85;
             this.efLabel15.Text = "停机延时时间：";
             // 
             // efLabel14
             // 
             this.efLabel14.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel14.Location = new System.Drawing.Point(16, 121);
+            this.efLabel14.Location = new System.Drawing.Point(23, 190);
+            this.efLabel14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel14.Name = "efLabel14";
-            this.efLabel14.Size = new System.Drawing.Size(97, 24);
+            this.efLabel14.Size = new System.Drawing.Size(139, 38);
             this.efLabel14.TabIndex = 84;
             this.efLabel14.Text = "停机冻结时间：";
             // 
             // efLabel13
             // 
             this.efLabel13.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel13.Location = new System.Drawing.Point(16, 92);
+            this.efLabel13.Location = new System.Drawing.Point(23, 145);
+            this.efLabel13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel13.Name = "efLabel13";
-            this.efLabel13.Size = new System.Drawing.Size(94, 24);
+            this.efLabel13.Size = new System.Drawing.Size(134, 38);
             this.efLabel13.TabIndex = 83;
             this.efLabel13.Text = "报警延时时间：";
             // 
             // efLabel12
             // 
             this.efLabel12.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel12.Location = new System.Drawing.Point(16, 63);
+            this.efLabel12.Location = new System.Drawing.Point(23, 99);
+            this.efLabel12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel12.Name = "efLabel12";
-            this.efLabel12.Size = new System.Drawing.Size(101, 24);
+            this.efLabel12.Size = new System.Drawing.Size(144, 38);
             this.efLabel12.TabIndex = 82;
             this.efLabel12.Text = "报警模式选项：";
             // 
             // efLabel11
             // 
             this.efLabel11.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel11.Location = new System.Drawing.Point(16, 31);
+            this.efLabel11.Location = new System.Drawing.Point(23, 49);
+            this.efLabel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel11.Name = "efLabel11";
-            this.efLabel11.Size = new System.Drawing.Size(86, 24);
+            this.efLabel11.Size = new System.Drawing.Size(123, 38);
             this.efLabel11.TabIndex = 81;
             this.efLabel11.Text = "焊接电流报警";
             // 
             // efLabel10
             // 
             this.efLabel10.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel10.Location = new System.Drawing.Point(134, 33);
+            this.efLabel10.Location = new System.Drawing.Point(191, 52);
+            this.efLabel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel10.Name = "efLabel10";
-            this.efLabel10.Size = new System.Drawing.Size(36, 19);
+            this.efLabel10.Size = new System.Drawing.Size(51, 30);
             this.efLabel10.TabIndex = 80;
             this.efLabel10.Text = "上限：";
             // 
             // efLabel9
             // 
             this.efLabel9.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel9.Location = new System.Drawing.Point(276, 33);
+            this.efLabel9.Location = new System.Drawing.Point(394, 52);
+            this.efLabel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel9.Name = "efLabel9";
-            this.efLabel9.Size = new System.Drawing.Size(36, 19);
+            this.efLabel9.Size = new System.Drawing.Size(51, 30);
             this.efLabel9.TabIndex = 79;
             this.efLabel9.Text = "下限：";
             // 
             // efLabel8
             // 
             this.efLabel8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel8.Location = new System.Drawing.Point(672, 33);
+            this.efLabel8.Location = new System.Drawing.Point(960, 52);
+            this.efLabel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel8.Name = "efLabel8";
-            this.efLabel8.Size = new System.Drawing.Size(36, 19);
+            this.efLabel8.Size = new System.Drawing.Size(51, 30);
             this.efLabel8.TabIndex = 78;
             this.efLabel8.Text = "下限：";
             // 
             // efLabel7
             // 
             this.efLabel7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel7.Location = new System.Drawing.Point(423, 31);
+            this.efLabel7.Location = new System.Drawing.Point(604, 49);
+            this.efLabel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel7.Name = "efLabel7";
-            this.efLabel7.Size = new System.Drawing.Size(133, 21);
+            this.efLabel7.Size = new System.Drawing.Size(190, 33);
             this.efLabel7.TabIndex = 77;
             this.efLabel7.Text = "焊接电压报警 上限：";
             // 
             // efLabel6
             // 
             this.efLabel6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel6.Location = new System.Drawing.Point(630, 90);
+            this.efLabel6.Location = new System.Drawing.Point(900, 141);
+            this.efLabel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel6.Name = "efLabel6";
-            this.efLabel6.Size = new System.Drawing.Size(17, 28);
+            this.efLabel6.Size = new System.Drawing.Size(24, 44);
             this.efLabel6.TabIndex = 70;
             this.efLabel6.Text = "s";
             // 
             // efLabel5
             // 
             this.efLabel5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel5.Location = new System.Drawing.Point(664, 96);
+            this.efLabel5.Location = new System.Drawing.Point(949, 151);
+            this.efLabel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel5.Name = "efLabel5";
-            this.efLabel5.Size = new System.Drawing.Size(108, 20);
+            this.efLabel5.Size = new System.Drawing.Size(154, 31);
             this.efLabel5.TabIndex = 68;
             this.efLabel5.Text = "(0.1s - 25.0s)";
             // 
             // efLabel4
             // 
             this.efLabel4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel4.Location = new System.Drawing.Point(290, 94);
+            this.efLabel4.Location = new System.Drawing.Point(414, 148);
+            this.efLabel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel4.Name = "efLabel4";
-            this.efLabel4.Size = new System.Drawing.Size(108, 20);
+            this.efLabel4.Size = new System.Drawing.Size(154, 31);
             this.efLabel4.TabIndex = 67;
             this.efLabel4.Text = "(0.1s - 25.0s)";
             // 
             // efLabel3
             // 
             this.efLabel3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel3.Location = new System.Drawing.Point(290, 127);
+            this.efLabel3.Location = new System.Drawing.Point(414, 200);
+            this.efLabel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel3.Name = "efLabel3";
-            this.efLabel3.Size = new System.Drawing.Size(108, 20);
+            this.efLabel3.Size = new System.Drawing.Size(154, 31);
             this.efLabel3.TabIndex = 66;
             this.efLabel3.Text = "(0.1s - 25.0s)";
             // 
             // efLabel2
             // 
             this.efLabel2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel2.Location = new System.Drawing.Point(255, 120);
+            this.efLabel2.Location = new System.Drawing.Point(364, 189);
+            this.efLabel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel2.Name = "efLabel2";
-            this.efLabel2.Size = new System.Drawing.Size(17, 28);
+            this.efLabel2.Size = new System.Drawing.Size(24, 44);
             this.efLabel2.TabIndex = 65;
             this.efLabel2.Text = "s";
             // 
             // efLabel1
             // 
             this.efLabel1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel1.Location = new System.Drawing.Point(255, 90);
+            this.efLabel1.Location = new System.Drawing.Point(364, 141);
+            this.efLabel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel1.Name = "efLabel1";
-            this.efLabel1.Size = new System.Drawing.Size(17, 28);
+            this.efLabel1.Size = new System.Drawing.Size(24, 44);
             this.efLabel1.TabIndex = 64;
             this.efLabel1.Text = "s";
             // 
@@ -429,9 +451,10 @@
             this.efTextBox66.EFLeaveExpression = ".*";
             this.efTextBox66.EFLen = 32767;
             this.efTextBox66.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.efTextBox66.Location = new System.Drawing.Point(567, 91);
+            this.efTextBox66.Location = new System.Drawing.Point(810, 143);
+            this.efTextBox66.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efTextBox66.Name = "efTextBox66";
-            this.efTextBox66.Size = new System.Drawing.Size(55, 22);
+            this.efTextBox66.Size = new System.Drawing.Size(77, 29);
             this.efTextBox66.TabIndex = 57;
             this.efTextBox66.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -441,9 +464,10 @@
             this.efTextBox62.EFLeaveExpression = ".*";
             this.efTextBox62.EFLen = 32767;
             this.efTextBox62.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.efTextBox62.Location = new System.Drawing.Point(715, 30);
+            this.efTextBox62.Location = new System.Drawing.Point(1021, 47);
+            this.efTextBox62.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efTextBox62.Name = "efTextBox62";
-            this.efTextBox62.Size = new System.Drawing.Size(47, 22);
+            this.efTextBox62.Size = new System.Drawing.Size(65, 29);
             this.efTextBox62.TabIndex = 53;
             this.efTextBox62.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -453,9 +477,10 @@
             this.efTextBox60.EFLeaveExpression = ".*";
             this.efTextBox60.EFLen = 32767;
             this.efTextBox60.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.efTextBox60.Location = new System.Drawing.Point(567, 30);
+            this.efTextBox60.Location = new System.Drawing.Point(810, 47);
+            this.efTextBox60.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efTextBox60.Name = "efTextBox60";
-            this.efTextBox60.Size = new System.Drawing.Size(55, 22);
+            this.efTextBox60.Size = new System.Drawing.Size(77, 29);
             this.efTextBox60.TabIndex = 51;
             this.efTextBox60.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -465,9 +490,10 @@
             this.efTextBox53.EFLeaveExpression = ".*";
             this.efTextBox53.EFLen = 32767;
             this.efTextBox53.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.efTextBox53.Location = new System.Drawing.Point(177, 92);
+            this.efTextBox53.Location = new System.Drawing.Point(253, 145);
+            this.efTextBox53.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efTextBox53.Name = "efTextBox53";
-            this.efTextBox53.Size = new System.Drawing.Size(59, 22);
+            this.efTextBox53.Size = new System.Drawing.Size(83, 29);
             this.efTextBox53.TabIndex = 44;
             this.efTextBox53.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -477,9 +503,10 @@
             this.efTextBox54.EFLeaveExpression = ".*";
             this.efTextBox54.EFLen = 32767;
             this.efTextBox54.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.efTextBox54.Location = new System.Drawing.Point(177, 124);
+            this.efTextBox54.Location = new System.Drawing.Point(253, 195);
+            this.efTextBox54.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efTextBox54.Name = "efTextBox54";
-            this.efTextBox54.Size = new System.Drawing.Size(59, 22);
+            this.efTextBox54.Size = new System.Drawing.Size(83, 29);
             this.efTextBox54.TabIndex = 45;
             this.efTextBox54.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -495,9 +522,10 @@
             "不启用",
             "只报警",
             "报警停机"});
-            this.cobAlm.Location = new System.Drawing.Point(177, 63);
+            this.cobAlm.Location = new System.Drawing.Point(253, 99);
+            this.cobAlm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cobAlm.Name = "cobAlm";
-            this.cobAlm.Size = new System.Drawing.Size(114, 22);
+            this.cobAlm.Size = new System.Drawing.Size(161, 30);
             this.cobAlm.SQL = null;
             this.cobAlm.TabIndex = 8;
             this.cobAlm.UserValue = "";
@@ -509,9 +537,10 @@
             this.efTextBox48.EFLeaveExpression = ".*";
             this.efTextBox48.EFLen = 32767;
             this.efTextBox48.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.efTextBox48.Location = new System.Drawing.Point(320, 30);
+            this.efTextBox48.Location = new System.Drawing.Point(457, 47);
+            this.efTextBox48.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efTextBox48.Name = "efTextBox48";
-            this.efTextBox48.Size = new System.Drawing.Size(60, 22);
+            this.efTextBox48.Size = new System.Drawing.Size(84, 29);
             this.efTextBox48.TabIndex = 5;
             this.efTextBox48.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -521,9 +550,10 @@
             this.efTextBox45.EFLeaveExpression = ".*";
             this.efTextBox45.EFLen = 32767;
             this.efTextBox45.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.efTextBox45.Location = new System.Drawing.Point(177, 31);
+            this.efTextBox45.Location = new System.Drawing.Point(253, 49);
+            this.efTextBox45.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efTextBox45.Name = "efTextBox45";
-            this.efTextBox45.Size = new System.Drawing.Size(59, 22);
+            this.efTextBox45.Size = new System.Drawing.Size(83, 29);
             this.efTextBox45.TabIndex = 2;
             this.efTextBox45.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -575,271 +605,300 @@
             this.efGroupBoxEx1.Controls.Add(this.efTextBox14);
             this.efGroupBoxEx1.Controls.Add(this.efTextBox13);
             this.efGroupBoxEx1.Controls.Add(this.efTextBox12);
-            this.efGroupBoxEx1.Location = new System.Drawing.Point(7, 7);
+            this.efGroupBoxEx1.Location = new System.Drawing.Point(10, 11);
+            this.efGroupBoxEx1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efGroupBoxEx1.Name = "efGroupBoxEx1";
-            this.efGroupBoxEx1.Size = new System.Drawing.Size(801, 164);
+            this.efGroupBoxEx1.Size = new System.Drawing.Size(1144, 258);
             this.efGroupBoxEx1.TabIndex = 0;
             this.efGroupBoxEx1.Text = "预置参数设置";
             // 
             // efLabel48
             // 
             this.efLabel48.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel48.Location = new System.Drawing.Point(740, 36);
+            this.efLabel48.Location = new System.Drawing.Point(1057, 57);
+            this.efLabel48.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel48.Name = "efLabel48";
-            this.efLabel48.Size = new System.Drawing.Size(13, 16);
+            this.efLabel48.Size = new System.Drawing.Size(19, 25);
             this.efLabel48.TabIndex = 101;
             this.efLabel48.Text = "V";
             // 
             // efLabel47
             // 
             this.efLabel47.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel47.Location = new System.Drawing.Point(579, 135);
+            this.efLabel47.Location = new System.Drawing.Point(827, 212);
+            this.efLabel47.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel47.Name = "efLabel47";
-            this.efLabel47.Size = new System.Drawing.Size(13, 16);
+            this.efLabel47.Size = new System.Drawing.Size(19, 25);
             this.efLabel47.TabIndex = 100;
             this.efLabel47.Text = "V";
             // 
             // efLabel46
             // 
             this.efLabel46.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel46.Location = new System.Drawing.Point(579, 105);
+            this.efLabel46.Location = new System.Drawing.Point(827, 165);
+            this.efLabel46.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel46.Name = "efLabel46";
-            this.efLabel46.Size = new System.Drawing.Size(13, 16);
+            this.efLabel46.Size = new System.Drawing.Size(19, 25);
             this.efLabel46.TabIndex = 99;
             this.efLabel46.Text = "V";
             // 
             // efLabel45
             // 
             this.efLabel45.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel45.Location = new System.Drawing.Point(579, 76);
+            this.efLabel45.Location = new System.Drawing.Point(827, 119);
+            this.efLabel45.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel45.Name = "efLabel45";
-            this.efLabel45.Size = new System.Drawing.Size(13, 16);
+            this.efLabel45.Size = new System.Drawing.Size(19, 25);
             this.efLabel45.TabIndex = 98;
             this.efLabel45.Text = "V";
             // 
             // efLabel44
             // 
             this.efLabel44.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel44.Location = new System.Drawing.Point(740, 135);
+            this.efLabel44.Location = new System.Drawing.Point(1057, 212);
+            this.efLabel44.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel44.Name = "efLabel44";
-            this.efLabel44.Size = new System.Drawing.Size(13, 16);
+            this.efLabel44.Size = new System.Drawing.Size(19, 25);
             this.efLabel44.TabIndex = 97;
             this.efLabel44.Text = "V";
             // 
             // efLabel43
             // 
             this.efLabel43.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel43.Location = new System.Drawing.Point(740, 105);
+            this.efLabel43.Location = new System.Drawing.Point(1057, 165);
+            this.efLabel43.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel43.Name = "efLabel43";
-            this.efLabel43.Size = new System.Drawing.Size(13, 16);
+            this.efLabel43.Size = new System.Drawing.Size(19, 25);
             this.efLabel43.TabIndex = 96;
             this.efLabel43.Text = "V";
             // 
             // efLabel42
             // 
             this.efLabel42.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel42.Location = new System.Drawing.Point(740, 73);
+            this.efLabel42.Location = new System.Drawing.Point(1057, 115);
+            this.efLabel42.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel42.Name = "efLabel42";
-            this.efLabel42.Size = new System.Drawing.Size(13, 16);
+            this.efLabel42.Size = new System.Drawing.Size(19, 25);
             this.efLabel42.TabIndex = 95;
             this.efLabel42.Text = "V";
             // 
             // efLabel41
             // 
             this.efLabel41.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel41.Location = new System.Drawing.Point(198, 75);
+            this.efLabel41.Location = new System.Drawing.Point(283, 118);
+            this.efLabel41.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel41.Name = "efLabel41";
-            this.efLabel41.Size = new System.Drawing.Size(13, 16);
+            this.efLabel41.Size = new System.Drawing.Size(19, 25);
             this.efLabel41.TabIndex = 94;
             this.efLabel41.Text = "A";
             // 
             // efLabel40
             // 
             this.efLabel40.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel40.Location = new System.Drawing.Point(198, 103);
+            this.efLabel40.Location = new System.Drawing.Point(283, 162);
+            this.efLabel40.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel40.Name = "efLabel40";
-            this.efLabel40.Size = new System.Drawing.Size(13, 16);
+            this.efLabel40.Size = new System.Drawing.Size(19, 25);
             this.efLabel40.TabIndex = 93;
             this.efLabel40.Text = "A";
             // 
             // efLabel39
             // 
             this.efLabel39.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel39.Location = new System.Drawing.Point(198, 134);
+            this.efLabel39.Location = new System.Drawing.Point(283, 211);
+            this.efLabel39.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel39.Name = "efLabel39";
-            this.efLabel39.Size = new System.Drawing.Size(13, 16);
+            this.efLabel39.Size = new System.Drawing.Size(19, 25);
             this.efLabel39.TabIndex = 92;
             this.efLabel39.Text = "A";
             // 
             // efLabel38
             // 
             this.efLabel38.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel38.Location = new System.Drawing.Point(345, 133);
+            this.efLabel38.Location = new System.Drawing.Point(493, 209);
+            this.efLabel38.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel38.Name = "efLabel38";
-            this.efLabel38.Size = new System.Drawing.Size(13, 16);
+            this.efLabel38.Size = new System.Drawing.Size(19, 25);
             this.efLabel38.TabIndex = 91;
             this.efLabel38.Text = "A";
             // 
             // efLabel37
             // 
             this.efLabel37.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel37.Location = new System.Drawing.Point(345, 103);
+            this.efLabel37.Location = new System.Drawing.Point(493, 162);
+            this.efLabel37.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel37.Name = "efLabel37";
-            this.efLabel37.Size = new System.Drawing.Size(13, 16);
+            this.efLabel37.Size = new System.Drawing.Size(19, 25);
             this.efLabel37.TabIndex = 90;
             this.efLabel37.Text = "A";
             // 
             // efLabel36
             // 
             this.efLabel36.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel36.Location = new System.Drawing.Point(345, 71);
+            this.efLabel36.Location = new System.Drawing.Point(493, 112);
+            this.efLabel36.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel36.Name = "efLabel36";
-            this.efLabel36.Size = new System.Drawing.Size(13, 16);
+            this.efLabel36.Size = new System.Drawing.Size(19, 25);
             this.efLabel36.TabIndex = 89;
             this.efLabel36.Text = "A";
             // 
             // efLabel35
             // 
             this.efLabel35.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel35.Location = new System.Drawing.Point(568, 34);
+            this.efLabel35.Location = new System.Drawing.Point(811, 53);
+            this.efLabel35.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel35.Name = "efLabel35";
-            this.efLabel35.Size = new System.Drawing.Size(13, 16);
+            this.efLabel35.Size = new System.Drawing.Size(19, 25);
             this.efLabel35.TabIndex = 88;
             this.efLabel35.Text = "A";
             // 
             // efLabel34
             // 
             this.efLabel34.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel34.Location = new System.Drawing.Point(635, 128);
+            this.efLabel34.Location = new System.Drawing.Point(907, 201);
+            this.efLabel34.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel34.Name = "efLabel34";
-            this.efLabel34.Size = new System.Drawing.Size(35, 27);
+            this.efLabel34.Size = new System.Drawing.Size(50, 42);
             this.efLabel34.TabIndex = 87;
             this.efLabel34.Text = "微调：";
             // 
             // efLabel33
             // 
             this.efLabel33.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel33.Location = new System.Drawing.Point(635, 94);
+            this.efLabel33.Location = new System.Drawing.Point(907, 148);
+            this.efLabel33.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel33.Name = "efLabel33";
-            this.efLabel33.Size = new System.Drawing.Size(35, 27);
+            this.efLabel33.Size = new System.Drawing.Size(50, 42);
             this.efLabel33.TabIndex = 86;
             this.efLabel33.Text = "微调：";
             // 
             // efLabel32
             // 
             this.efLabel32.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel32.Location = new System.Drawing.Point(635, 66);
+            this.efLabel32.Location = new System.Drawing.Point(907, 104);
+            this.efLabel32.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel32.Name = "efLabel32";
-            this.efLabel32.Size = new System.Drawing.Size(35, 27);
+            this.efLabel32.Size = new System.Drawing.Size(50, 42);
             this.efLabel32.TabIndex = 85;
             this.efLabel32.Text = "微调：";
             // 
             // efLabel31
             // 
             this.efLabel31.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel31.Location = new System.Drawing.Point(247, 128);
+            this.efLabel31.Location = new System.Drawing.Point(353, 201);
+            this.efLabel31.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel31.Name = "efLabel31";
-            this.efLabel31.Size = new System.Drawing.Size(35, 27);
+            this.efLabel31.Size = new System.Drawing.Size(50, 42);
             this.efLabel31.TabIndex = 84;
             this.efLabel31.Text = "微调：";
             // 
             // efLabel30
             // 
             this.efLabel30.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel30.Location = new System.Drawing.Point(247, 97);
+            this.efLabel30.Location = new System.Drawing.Point(353, 152);
+            this.efLabel30.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel30.Name = "efLabel30";
-            this.efLabel30.Size = new System.Drawing.Size(35, 27);
+            this.efLabel30.Size = new System.Drawing.Size(50, 42);
             this.efLabel30.TabIndex = 83;
             this.efLabel30.Text = "微调：";
             // 
             // efLabel29
             // 
             this.efLabel29.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel29.Location = new System.Drawing.Point(247, 68);
+            this.efLabel29.Location = new System.Drawing.Point(353, 107);
+            this.efLabel29.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel29.Name = "efLabel29";
-            this.efLabel29.Size = new System.Drawing.Size(35, 27);
+            this.efLabel29.Size = new System.Drawing.Size(50, 42);
             this.efLabel29.TabIndex = 82;
             this.efLabel29.Text = "微调：";
             // 
             // efLabel28
             // 
             this.efLabel28.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel28.Location = new System.Drawing.Point(418, 129);
+            this.efLabel28.Location = new System.Drawing.Point(597, 203);
+            this.efLabel28.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel28.Name = "efLabel28";
-            this.efLabel28.Size = new System.Drawing.Size(64, 21);
+            this.efLabel28.Size = new System.Drawing.Size(91, 33);
             this.efLabel28.TabIndex = 81;
             this.efLabel28.Text = "收弧电压：";
             // 
             // efLabel27
             // 
             this.efLabel27.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel27.Location = new System.Drawing.Point(418, 98);
+            this.efLabel27.Location = new System.Drawing.Point(597, 154);
+            this.efLabel27.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel27.Name = "efLabel27";
-            this.efLabel27.Size = new System.Drawing.Size(64, 21);
+            this.efLabel27.Size = new System.Drawing.Size(91, 33);
             this.efLabel27.TabIndex = 80;
             this.efLabel27.Text = "焊接电压：";
             // 
             // efLabel26
             // 
             this.efLabel26.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel26.Location = new System.Drawing.Point(418, 71);
+            this.efLabel26.Location = new System.Drawing.Point(597, 112);
+            this.efLabel26.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel26.Name = "efLabel26";
-            this.efLabel26.Size = new System.Drawing.Size(64, 21);
+            this.efLabel26.Size = new System.Drawing.Size(91, 33);
             this.efLabel26.TabIndex = 79;
             this.efLabel26.Text = "初期电压：";
             // 
             // efLabel25
             // 
             this.efLabel25.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel25.Location = new System.Drawing.Point(62, 100);
+            this.efLabel25.Location = new System.Drawing.Point(89, 157);
+            this.efLabel25.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel25.Name = "efLabel25";
-            this.efLabel25.Size = new System.Drawing.Size(64, 21);
+            this.efLabel25.Size = new System.Drawing.Size(91, 33);
             this.efLabel25.TabIndex = 78;
             this.efLabel25.Text = "焊接电流：";
-            //this.efLabel25.Click += new System.EventHandler(this.efLabel25_Click);
             // 
             // efLabel24
             // 
             this.efLabel24.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel24.Location = new System.Drawing.Point(62, 131);
+            this.efLabel24.Location = new System.Drawing.Point(89, 206);
+            this.efLabel24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel24.Name = "efLabel24";
-            this.efLabel24.Size = new System.Drawing.Size(64, 21);
+            this.efLabel24.Size = new System.Drawing.Size(91, 33);
             this.efLabel24.TabIndex = 77;
             this.efLabel24.Text = "收弧电流：";
             // 
             // efLabel23
             // 
             this.efLabel23.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel23.Location = new System.Drawing.Point(409, 34);
+            this.efLabel23.Location = new System.Drawing.Point(584, 53);
+            this.efLabel23.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel23.Name = "efLabel23";
-            this.efLabel23.Size = new System.Drawing.Size(64, 21);
+            this.efLabel23.Size = new System.Drawing.Size(91, 33);
             this.efLabel23.TabIndex = 76;
             this.efLabel23.Text = "电流补偿：";
             // 
             // efLabel22
             // 
             this.efLabel22.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel22.Location = new System.Drawing.Point(603, 33);
+            this.efLabel22.Location = new System.Drawing.Point(861, 52);
+            this.efLabel22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel22.Name = "efLabel22";
-            this.efLabel22.Size = new System.Drawing.Size(64, 21);
+            this.efLabel22.Size = new System.Drawing.Size(91, 33);
             this.efLabel22.TabIndex = 75;
             this.efLabel22.Text = "电压补偿：";
             // 
             // efLabel21
             // 
             this.efLabel21.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel21.Location = new System.Drawing.Point(62, 70);
+            this.efLabel21.Location = new System.Drawing.Point(89, 110);
+            this.efLabel21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel21.Name = "efLabel21";
-            this.efLabel21.Size = new System.Drawing.Size(64, 21);
+            this.efLabel21.Size = new System.Drawing.Size(91, 33);
             this.efLabel21.TabIndex = 74;
             this.efLabel21.Text = "初期电流：";
             // 
             // efLabel20
             // 
             this.efLabel20.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel20.Location = new System.Drawing.Point(62, 33);
+            this.efLabel20.Location = new System.Drawing.Point(89, 52);
+            this.efLabel20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel20.Name = "efLabel20";
-            this.efLabel20.Size = new System.Drawing.Size(64, 21);
+            this.efLabel20.Size = new System.Drawing.Size(91, 33);
             this.efLabel20.TabIndex = 73;
             this.efLabel20.Text = "规范描述：";
             // 
@@ -850,9 +909,10 @@
             this.Textwsv.EFLeaveExpression = ".*";
             this.Textwsv.EFLen = 32767;
             this.Textwsv.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Textwsv.Location = new System.Drawing.Point(684, 131);
+            this.Textwsv.Location = new System.Drawing.Point(977, 206);
+            this.Textwsv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Textwsv.Name = "Textwsv";
-            this.Textwsv.Size = new System.Drawing.Size(48, 22);
+            this.Textwsv.Size = new System.Drawing.Size(67, 29);
             this.Textwsv.TabIndex = 39;
             this.Textwsv.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -863,9 +923,10 @@
             this.Textsv.EFLeaveExpression = ".*";
             this.Textsv.EFLen = 32767;
             this.Textsv.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Textsv.Location = new System.Drawing.Point(512, 131);
+            this.Textsv.Location = new System.Drawing.Point(731, 206);
+            this.Textsv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Textsv.Name = "Textsv";
-            this.Textsv.Size = new System.Drawing.Size(59, 22);
+            this.Textsv.Size = new System.Drawing.Size(83, 29);
             this.Textsv.TabIndex = 37;
             this.Textsv.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -875,9 +936,10 @@
             this.Textwhv.EFLeaveExpression = ".*";
             this.Textwhv.EFLen = 32767;
             this.Textwhv.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Textwhv.Location = new System.Drawing.Point(684, 100);
+            this.Textwhv.Location = new System.Drawing.Point(977, 157);
+            this.Textwhv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Textwhv.Name = "Textwhv";
-            this.Textwhv.Size = new System.Drawing.Size(48, 22);
+            this.Textwhv.Size = new System.Drawing.Size(67, 29);
             this.Textwhv.TabIndex = 31;
             this.Textwhv.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -888,9 +950,10 @@
             this.Textwcv.EFLeaveExpression = ".*";
             this.Textwcv.EFLen = 32767;
             this.Textwcv.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Textwcv.Location = new System.Drawing.Point(684, 68);
+            this.Textwcv.Location = new System.Drawing.Point(977, 107);
+            this.Textwcv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Textwcv.Name = "Textwcv";
-            this.Textwcv.Size = new System.Drawing.Size(48, 22);
+            this.Textwcv.Size = new System.Drawing.Size(67, 29);
             this.Textwcv.TabIndex = 30;
             this.Textwcv.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -900,9 +963,10 @@
             this.Texthv.EFLeaveExpression = ".*";
             this.Texthv.EFLen = 32767;
             this.Texthv.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Texthv.Location = new System.Drawing.Point(512, 100);
+            this.Texthv.Location = new System.Drawing.Point(731, 157);
+            this.Texthv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Texthv.Name = "Texthv";
-            this.Texthv.Size = new System.Drawing.Size(59, 22);
+            this.Texthv.Size = new System.Drawing.Size(83, 29);
             this.Texthv.TabIndex = 29;
             this.Texthv.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -913,9 +977,10 @@
             this.Textcv.EFLeaveExpression = ".*";
             this.Textcv.EFLen = 32767;
             this.Textcv.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Textcv.Location = new System.Drawing.Point(512, 69);
+            this.Textcv.Location = new System.Drawing.Point(731, 108);
+            this.Textcv.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Textcv.Name = "Textcv";
-            this.Textcv.Size = new System.Drawing.Size(58, 22);
+            this.Textcv.Size = new System.Drawing.Size(81, 29);
             this.Textcv.TabIndex = 28;
             this.Textcv.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -926,9 +991,10 @@
             this.Textwsa.EFLeaveExpression = ".*";
             this.Textwsa.EFLen = 32767;
             this.Textwsa.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Textwsa.Location = new System.Drawing.Point(289, 131);
+            this.Textwsa.Location = new System.Drawing.Point(413, 206);
+            this.Textwsa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Textwsa.Name = "Textwsa";
-            this.Textwsa.Size = new System.Drawing.Size(47, 22);
+            this.Textwsa.Size = new System.Drawing.Size(65, 29);
             this.Textwsa.TabIndex = 27;
             this.Textwsa.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -938,9 +1004,10 @@
             this.Textwha.EFLeaveExpression = ".*";
             this.Textwha.EFLen = 32767;
             this.Textwha.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Textwha.Location = new System.Drawing.Point(289, 99);
+            this.Textwha.Location = new System.Drawing.Point(413, 156);
+            this.Textwha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Textwha.Name = "Textwha";
-            this.Textwha.Size = new System.Drawing.Size(47, 22);
+            this.Textwha.Size = new System.Drawing.Size(65, 29);
             this.Textwha.TabIndex = 26;
             this.Textwha.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -951,9 +1018,10 @@
             this.Textwca.EFLeaveExpression = ".*";
             this.Textwca.EFLen = 32767;
             this.Textwca.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Textwca.Location = new System.Drawing.Point(289, 69);
+            this.Textwca.Location = new System.Drawing.Point(413, 108);
+            this.Textwca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Textwca.Name = "Textwca";
-            this.Textwca.Size = new System.Drawing.Size(47, 22);
+            this.Textwca.Size = new System.Drawing.Size(65, 29);
             this.Textwca.TabIndex = 25;
             this.Textwca.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -964,9 +1032,10 @@
             this.Textsa.EFLeaveExpression = ".*";
             this.Textsa.EFLen = 32767;
             this.Textsa.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Textsa.Location = new System.Drawing.Point(143, 131);
+            this.Textsa.Location = new System.Drawing.Point(204, 206);
+            this.Textsa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Textsa.Name = "Textsa";
-            this.Textsa.Size = new System.Drawing.Size(47, 22);
+            this.Textsa.Size = new System.Drawing.Size(65, 29);
             this.Textsa.TabIndex = 18;
             this.Textsa.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -976,9 +1045,10 @@
             this.Textha.EFLeaveExpression = ".*";
             this.Textha.EFLen = 32767;
             this.Textha.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Textha.Location = new System.Drawing.Point(143, 99);
+            this.Textha.Location = new System.Drawing.Point(204, 156);
+            this.Textha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Textha.Name = "Textha";
-            this.Textha.Size = new System.Drawing.Size(47, 22);
+            this.Textha.Size = new System.Drawing.Size(65, 29);
             this.Textha.TabIndex = 17;
             this.Textha.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -989,9 +1059,10 @@
             this.Textca.EFLeaveExpression = ".*";
             this.Textca.EFLen = 32767;
             this.Textca.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Textca.Location = new System.Drawing.Point(143, 68);
+            this.Textca.Location = new System.Drawing.Point(204, 107);
+            this.Textca.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Textca.Name = "Textca";
-            this.Textca.Size = new System.Drawing.Size(47, 22);
+            this.Textca.Size = new System.Drawing.Size(65, 29);
             this.Textca.TabIndex = 16;
             this.Textca.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
@@ -1001,9 +1072,10 @@
             this.efTextBox14.EFLeaveExpression = ".*";
             this.efTextBox14.EFLen = 32767;
             this.efTextBox14.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.efTextBox14.Location = new System.Drawing.Point(673, 30);
+            this.efTextBox14.Location = new System.Drawing.Point(961, 47);
+            this.efTextBox14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efTextBox14.Name = "efTextBox14";
-            this.efTextBox14.Size = new System.Drawing.Size(59, 22);
+            this.efTextBox14.Size = new System.Drawing.Size(83, 29);
             this.efTextBox14.TabIndex = 15;
             this.efTextBox14.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.efTextBox14_KeyPress);
             this.efTextBox14.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
@@ -1014,9 +1086,10 @@
             this.efTextBox13.EFLeaveExpression = ".*";
             this.efTextBox13.EFLen = 32767;
             this.efTextBox13.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.efTextBox13.Location = new System.Drawing.Point(481, 29);
+            this.efTextBox13.Location = new System.Drawing.Point(687, 46);
+            this.efTextBox13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efTextBox13.Name = "efTextBox13";
-            this.efTextBox13.Size = new System.Drawing.Size(80, 22);
+            this.efTextBox13.Size = new System.Drawing.Size(113, 29);
             this.efTextBox13.TabIndex = 14;
             this.efTextBox13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.efTextBox13_KeyPress);
             this.efTextBox13.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
@@ -1027,36 +1100,40 @@
             this.efTextBox12.EFLeaveExpression = ".*";
             this.efTextBox12.EFLen = 32767;
             this.efTextBox12.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.efTextBox12.Location = new System.Drawing.Point(156, 30);
+            this.efTextBox12.Location = new System.Drawing.Point(223, 47);
+            this.efTextBox12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efTextBox12.Name = "efTextBox12";
-            this.efTextBox12.Size = new System.Drawing.Size(233, 22);
+            this.efTextBox12.Size = new System.Drawing.Size(331, 29);
             this.efTextBox12.TabIndex = 13;
             this.efTextBox12.TextChanged += new System.EventHandler(this.efTextBox12_TextChanged);
             // 
             // efLabel58
             // 
             this.efLabel58.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel58.Location = new System.Drawing.Point(392, 40);
+            this.efLabel58.Location = new System.Drawing.Point(347, 58);
+            this.efLabel58.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel58.Name = "efLabel58";
-            this.efLabel58.Size = new System.Drawing.Size(42, 19);
+            this.efLabel58.Size = new System.Drawing.Size(60, 30);
             this.efLabel58.TabIndex = 16;
             this.efLabel58.Text = "状态：";
             // 
             // efLabel57
             // 
             this.efLabel57.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel57.Location = new System.Drawing.Point(160, 42);
+            this.efLabel57.Location = new System.Drawing.Point(16, 61);
+            this.efLabel57.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel57.Name = "efLabel57";
-            this.efLabel57.Size = new System.Drawing.Size(64, 16);
+            this.efLabel57.Size = new System.Drawing.Size(91, 25);
             this.efLabel57.TabIndex = 15;
             this.efLabel57.Text = "通道选择：";
             // 
             // efLabel56
             // 
             this.efLabel56.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel56.Location = new System.Drawing.Point(160, 9);
+            this.efLabel56.Location = new System.Drawing.Point(16, 9);
+            this.efLabel56.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel56.Name = "efLabel56";
-            this.efLabel56.Size = new System.Drawing.Size(64, 23);
+            this.efLabel56.Size = new System.Drawing.Size(91, 36);
             this.efLabel56.TabIndex = 14;
             this.efLabel56.Text = "当前焊机:";
             // 
@@ -1065,17 +1142,21 @@
             this.efGroupBox2.Appearance.BackColor = System.Drawing.SystemColors.Window;
             this.efGroupBox2.Appearance.Options.UseBackColor = true;
             this.efGroupBox2.Controls.Add(this.efManList);
-            this.efGroupBox2.Location = new System.Drawing.Point(3, 3);
+            this.efGroupBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.efGroupBox2.Location = new System.Drawing.Point(4, 5);
+            this.efGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efGroupBox2.Name = "efGroupBox2";
-            this.efGroupBox2.Size = new System.Drawing.Size(148, 549);
+            this.efGroupBox2.Size = new System.Drawing.Size(211, 938);
             this.efGroupBox2.TabIndex = 13;
             this.efGroupBox2.Text = "焊机列表";
             // 
             // efManList
             // 
-            this.efManList.Location = new System.Drawing.Point(3, 30);
+            this.efManList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.efManList.Location = new System.Drawing.Point(2, 30);
+            this.efManList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efManList.Name = "efManList";
-            this.efManList.Size = new System.Drawing.Size(138, 514);
+            this.efManList.Size = new System.Drawing.Size(207, 906);
             this.efManList.TabIndex = 13;
             this.efManList.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.efManList_NodeMouseClick);
             // 
@@ -1083,11 +1164,12 @@
             // 
             this.efTabControl2.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.efTabControl2.Controls.Add(this.tabPage3);
-            this.efTabControl2.Location = new System.Drawing.Point(159, 68);
+            this.efTabControl2.Location = new System.Drawing.Point(14, 102);
+            this.efTabControl2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efTabControl2.Name = "efTabControl2";
             this.efTabControl2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.efTabControl2.SelectedIndex = 0;
-            this.efTabControl2.Size = new System.Drawing.Size(825, 94);
+            this.efTabControl2.Size = new System.Drawing.Size(1179, 148);
             this.efTabControl2.TabIndex = 9;
             // 
             // tabPage3
@@ -1107,74 +1189,82 @@
             this.tabPage3.Controls.Add(this.cobPWTime);
             this.tabPage3.Controls.Add(this.cobWC);
             this.tabPage3.Controls.Add(this.cobWP);
-            this.tabPage3.Location = new System.Drawing.Point(4, 23);
+            this.tabPage3.Location = new System.Drawing.Point(4, 31);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabPage3.Size = new System.Drawing.Size(817, 67);
+            this.tabPage3.Size = new System.Drawing.Size(1171, 113);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "焊接条件";
             // 
             // efLabel55
             // 
             this.efLabel55.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel55.Location = new System.Drawing.Point(409, 34);
+            this.efLabel55.Location = new System.Drawing.Point(584, 53);
+            this.efLabel55.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel55.Name = "efLabel55";
-            this.efLabel55.Size = new System.Drawing.Size(70, 22);
+            this.efLabel55.Size = new System.Drawing.Size(100, 35);
             this.efLabel55.TabIndex = 20;
             this.efLabel55.Text = "点焊时间：";
             // 
             // efLabel54
             // 
             this.efLabel54.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel54.Location = new System.Drawing.Point(213, 34);
+            this.efLabel54.Location = new System.Drawing.Point(304, 53);
+            this.efLabel54.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel54.Name = "efLabel54";
-            this.efLabel54.Size = new System.Drawing.Size(66, 20);
+            this.efLabel54.Size = new System.Drawing.Size(94, 31);
             this.efLabel54.TabIndex = 19;
             this.efLabel54.Text = "丝径：";
             // 
             // efLabel53
             // 
             this.efLabel53.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel53.Location = new System.Drawing.Point(24, 34);
+            this.efLabel53.Location = new System.Drawing.Point(34, 53);
+            this.efLabel53.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel53.Name = "efLabel53";
-            this.efLabel53.Size = new System.Drawing.Size(68, 19);
+            this.efLabel53.Size = new System.Drawing.Size(97, 30);
             this.efLabel53.TabIndex = 18;
             this.efLabel53.Text = "焊接控制：";
             // 
             // efLabel52
             // 
             this.efLabel52.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel52.Location = new System.Drawing.Point(597, 7);
+            this.efLabel52.Location = new System.Drawing.Point(853, 11);
+            this.efLabel52.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel52.Name = "efLabel52";
-            this.efLabel52.Size = new System.Drawing.Size(66, 20);
+            this.efLabel52.Size = new System.Drawing.Size(94, 31);
             this.efLabel52.TabIndex = 17;
             this.efLabel52.Text = "输出控制：";
             // 
             // efLabel51
             // 
             this.efLabel51.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel51.Location = new System.Drawing.Point(409, 7);
+            this.efLabel51.Location = new System.Drawing.Point(584, 11);
+            this.efLabel51.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel51.Name = "efLabel51";
-            this.efLabel51.Size = new System.Drawing.Size(70, 22);
+            this.efLabel51.Size = new System.Drawing.Size(100, 35);
             this.efLabel51.TabIndex = 16;
             this.efLabel51.Text = "脉冲有无：";
             // 
             // efLabel50
             // 
             this.efLabel50.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel50.Location = new System.Drawing.Point(213, 7);
+            this.efLabel50.Location = new System.Drawing.Point(304, 11);
+            this.efLabel50.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel50.Name = "efLabel50";
-            this.efLabel50.Size = new System.Drawing.Size(66, 20);
+            this.efLabel50.Size = new System.Drawing.Size(94, 31);
             this.efLabel50.TabIndex = 15;
             this.efLabel50.Text = "材质：";
             // 
             // efLabel49
             // 
             this.efLabel49.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.efLabel49.Location = new System.Drawing.Point(24, 7);
+            this.efLabel49.Location = new System.Drawing.Point(34, 11);
+            this.efLabel49.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efLabel49.Name = "efLabel49";
-            this.efLabel49.Size = new System.Drawing.Size(68, 19);
+            this.efLabel49.Size = new System.Drawing.Size(97, 30);
             this.efLabel49.TabIndex = 14;
             this.efLabel49.Text = "气体：";
             // 
@@ -1193,10 +1283,11 @@
             "软铝",
             "药芯碳钢",
             "药芯不锈钢"});
-            this.cobMT.Location = new System.Drawing.Point(295, 6);
+            this.cobMT.Location = new System.Drawing.Point(421, 9);
+            this.cobMT.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cobMT.Name = "cobMT";
             this.cobMT.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cobMT.Size = new System.Drawing.Size(90, 22);
+            this.cobMT.Size = new System.Drawing.Size(127, 30);
             this.cobMT.SQL = null;
             this.cobMT.TabIndex = 13;
             this.cobMT.UserValue = "";
@@ -1218,10 +1309,11 @@
             "1.2",
             "1.4",
             "1.6"});
-            this.cobWD.Location = new System.Drawing.Point(295, 34);
+            this.cobWD.Location = new System.Drawing.Point(421, 53);
+            this.cobWD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cobWD.Name = "cobWD";
             this.cobWD.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cobWD.Size = new System.Drawing.Size(90, 22);
+            this.cobWD.Size = new System.Drawing.Size(127, 30);
             this.cobWD.SQL = null;
             this.cobWD.TabIndex = 12;
             this.cobWD.UserValue = "";
@@ -1238,10 +1330,11 @@
             this.cobYiYuan.Items.AddRange(new object[] {
             "分别",
             "一元化"});
-            this.cobYiYuan.Location = new System.Drawing.Point(679, 6);
+            this.cobYiYuan.Location = new System.Drawing.Point(970, 9);
+            this.cobYiYuan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cobYiYuan.Name = "cobYiYuan";
             this.cobYiYuan.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cobYiYuan.Size = new System.Drawing.Size(90, 22);
+            this.cobYiYuan.Size = new System.Drawing.Size(127, 30);
             this.cobYiYuan.SQL = null;
             this.cobYiYuan.TabIndex = 11;
             this.cobYiYuan.UserValue = "";
@@ -1258,10 +1351,11 @@
             this.cobMP.Items.AddRange(new object[] {
             "脉冲无",
             "脉冲有"});
-            this.cobMP.Location = new System.Drawing.Point(486, 6);
+            this.cobMP.Location = new System.Drawing.Point(694, 9);
+            this.cobMP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cobMP.Name = "cobMP";
             this.cobMP.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cobMP.Size = new System.Drawing.Size(90, 22);
+            this.cobMP.Size = new System.Drawing.Size(127, 30);
             this.cobMP.SQL = null;
             this.cobMP.TabIndex = 10;
             this.cobMP.UserValue = "";
@@ -1286,10 +1380,11 @@
             "8",
             "9",
             "10"});
-            this.cobPWTime.Location = new System.Drawing.Point(486, 32);
+            this.cobPWTime.Location = new System.Drawing.Point(694, 50);
+            this.cobPWTime.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cobPWTime.Name = "cobPWTime";
             this.cobPWTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cobPWTime.Size = new System.Drawing.Size(90, 22);
+            this.cobPWTime.Size = new System.Drawing.Size(127, 30);
             this.cobPWTime.SQL = null;
             this.cobPWTime.TabIndex = 9;
             this.cobPWTime.UserValue = "";
@@ -1308,10 +1403,11 @@
             "收弧有",
             "初期收弧有",
             "电弧点焊"});
-            this.cobWC.Location = new System.Drawing.Point(106, 32);
+            this.cobWC.Location = new System.Drawing.Point(151, 50);
+            this.cobWC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cobWC.Name = "cobWC";
             this.cobWC.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cobWC.Size = new System.Drawing.Size(90, 22);
+            this.cobWC.Size = new System.Drawing.Size(127, 30);
             this.cobWC.SQL = null;
             this.cobWC.TabIndex = 8;
             this.cobWC.UserValue = "";
@@ -1329,10 +1425,11 @@
             "CO2",
             "MAG",
             "MIG"});
-            this.cobWP.Location = new System.Drawing.Point(106, 6);
+            this.cobWP.Location = new System.Drawing.Point(151, 9);
+            this.cobWP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cobWP.Name = "cobWP";
             this.cobWP.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cobWP.Size = new System.Drawing.Size(90, 22);
+            this.cobWP.Size = new System.Drawing.Size(127, 30);
             this.cobWP.SQL = null;
             this.cobWP.TabIndex = 1;
             this.cobWP.UserValue = "";
@@ -1344,9 +1441,10 @@
             this.efButton1.EnabledEx = true;
             this.efButton1.FnNo = 0;
             this.efButton1.Hint = "";
-            this.efButton1.Location = new System.Drawing.Point(595, 37);
+            this.efButton1.Location = new System.Drawing.Point(637, 53);
+            this.efButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efButton1.Name = "efButton1";
-            this.efButton1.Size = new System.Drawing.Size(78, 23);
+            this.efButton1.Size = new System.Drawing.Size(111, 36);
             this.efButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.efButton1.TabIndex = 8;
             this.efButton1.Text = "保存(S)";
@@ -1356,9 +1454,10 @@
             // efRadioButton2
             // 
             this.efRadioButton2.AutoSize = true;
-            this.efRadioButton2.Location = new System.Drawing.Point(516, 41);
+            this.efRadioButton2.Location = new System.Drawing.Point(524, 59);
+            this.efRadioButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efRadioButton2.Name = "efRadioButton2";
-            this.efRadioButton2.Size = new System.Drawing.Size(49, 18);
+            this.efRadioButton2.Size = new System.Drawing.Size(71, 26);
             this.efRadioButton2.TabIndex = 7;
             this.efRadioButton2.TabStop = true;
             this.efRadioButton2.Text = "禁用";
@@ -1368,9 +1467,10 @@
             // efRadioButton1
             // 
             this.efRadioButton1.AutoSize = true;
-            this.efRadioButton1.Location = new System.Drawing.Point(441, 42);
+            this.efRadioButton1.Location = new System.Drawing.Point(417, 61);
+            this.efRadioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efRadioButton1.Name = "efRadioButton1";
-            this.efRadioButton1.Size = new System.Drawing.Size(49, 18);
+            this.efRadioButton1.Size = new System.Drawing.Size(71, 26);
             this.efRadioButton1.TabIndex = 6;
             this.efRadioButton1.TabStop = true;
             this.efRadioButton1.Text = "启用";
@@ -1394,24 +1494,43 @@
             "7号通道",
             "8号通道",
             "9号通道"});
-            this.cobChannel.Location = new System.Drawing.Point(236, 38);
+            this.cobChannel.Location = new System.Drawing.Point(124, 55);
+            this.cobChannel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cobChannel.Name = "cobChannel";
-            this.cobChannel.Size = new System.Drawing.Size(117, 22);
+            this.cobChannel.Size = new System.Drawing.Size(165, 30);
             this.cobChannel.SQL = null;
             this.cobChannel.TabIndex = 4;
             this.cobChannel.UserValue = "";
             this.cobChannel.SelectedIndexChanged += new System.EventHandler(this.efComboBox1_SelectedIndexChanged);
             this.cobChannel.Click += new System.EventHandler(this.efComboBox1_SelectedIndexChanged);
             // 
+            // efPanel1
+            // 
+            this.efPanel1.Controls.Add(this.cobChannel);
+            this.efPanel1.Controls.Add(this.cobWeldNom);
+            this.efPanel1.Controls.Add(this.efRadioButton1);
+            this.efPanel1.Controls.Add(this.efRadioButton2);
+            this.efPanel1.Controls.Add(this.efLabel58);
+            this.efPanel1.Controls.Add(this.efButton1);
+            this.efPanel1.Controls.Add(this.efLabel57);
+            this.efPanel1.Controls.Add(this.efTabControl2);
+            this.efPanel1.Controls.Add(this.efLabel56);
+            this.efPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efPanel1.Location = new System.Drawing.Point(215, 5);
+            this.efPanel1.Name = "efPanel1";
+            this.efPanel1.Size = new System.Drawing.Size(1192, 312);
+            this.efPanel1.TabIndex = 21;
+            // 
             // MCCL6322
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 696);
+            this.ClientSize = new System.Drawing.Size(1419, 1055);
             this.Controls.Add(this.efTabControl1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.EFMsgInfo = "执行 F6 操作";
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MCCL6322";
             this.Text = "通道规范管理";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1419,7 +1538,6 @@
             this.Controls.SetChildIndex(this.efTabControl1, 0);
             this.efTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.efTabControl3.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).EndInit();
@@ -1433,6 +1551,9 @@
             this.efTabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.efButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efPanel1)).EndInit();
+            this.efPanel1.ResumeLayout(false);
+            this.efPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1542,6 +1663,7 @@
         private EF.EFLabel efLabel57;
         private EF.EFLabel efLabel56;
         private EF.EFComboBox cobWeldNom;
+        private EF.EFPanel efPanel1;
     }
 }
 

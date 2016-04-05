@@ -369,6 +369,12 @@
     <Compile Include="frmWeldPart.Designer.cs">
       <DependentUpon>frmWeldPart.cs</DependentUpon>
     </Compile>
+    <Compile Include="MCCL6322.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MCCL6322.designer.cs">
+      <DependentUpon>MCCL6322.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="EFFormBase.resx">
@@ -481,6 +487,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmWeldPart.resx">
       <DependentUpon>frmWeldPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MCCL6322.resx">
+      <DependentUpon>MCCL6322.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -6,15 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using HolisticDefine;
+//using HolisticDefine;
 
 namespace MC
 {
     public partial class MCCL6322 : Formbase
     {
-        AutoSizeFormClass asc = new AutoSizeFormClass();
-        SysDefine SD = new SysDefine();
-        List<WeldInfo> listweldinfo = new List<WeldInfo>();
+        //AutoSizeFormClass asc = new AutoSizeFormClass();
+        //SysDefine SD = new SysDefine();
+        //List<WeldInfo> listweldinfo = new List<WeldInfo>();
         protected DataTable _criterion;//焊接标准 
         DataTable _alldrvlist;
         DataTable _OTCalldrvlist;
@@ -65,7 +65,7 @@ namespace MC
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            asc.controllInitializeSize(this);
+            //asc.controllInitializeSize(this);
             //DataGridViewInit();
             weldEquipmentbase webase = new weldEquipmentbase();
             webase.LoadweldEquipment2Tree(ref this.efManList);
@@ -85,7 +85,7 @@ namespace MC
 
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
-            asc.controlAutoSize(this);
+            //asc.controlAutoSize(this);
             //this.WindowState = (System.Windows.Forms.FormWindowState)(2);//记录完控件的初始位置和大小后，再最大化
         }
 
