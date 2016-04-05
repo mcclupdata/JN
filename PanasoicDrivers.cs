@@ -339,7 +339,7 @@ namespace JN_WELD_Service
                 //材质
                 for (int i = 0; i < _frm.cobMT.Items.Count; i++)
                 {
-                    if (_frm.cobMT.Items[0].ToString() == Convert.ToString(row["WELD_MATERIAL"]))
+                    if (_frm.cobMT.Items[i].ToString() == Convert.ToString(row["WELD_MATERIAL"]))
                         _frm.cobMT.SelectedIndex = i;
 
                 }
@@ -348,8 +348,12 @@ namespace JN_WELD_Service
                 //丝径
                 for (int i = 0; i < _frm.cobWD.Items.Count; i++)
                 {
-                    if (_frm.cobWD.Items[i].ToString()== Convert.ToString(row["WELD_WIRE_DIA"]))
-                        _frm.cobWD.SelectedIndex = i;
+                    try
+                    {
+                        if (Convert.ToDouble(_frm.cobWD.Items[i].ToString()) == Convert.ToDouble(row["WELD_WIRE_DIA"]))
+                            _frm.cobWD.SelectedIndex = i;
+                    }
+                    catch { }
 
                 }
 
