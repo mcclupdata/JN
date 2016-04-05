@@ -152,6 +152,7 @@ namespace JN_WELD_Service
                         rst.weldDataTable = xml;
                         break;
                     }
+               
                 case 1014:////1014;//通过查询条件得到工序计划表?
                     {
                         svrdbProject cls = new svrdbProject();
@@ -2583,6 +2584,42 @@ namespace JN_WELD_Service
                             xml = clsConvertXMLDataTable.ConvertDataTableToXML(sdt);
 
                         }
+                        rst.BoolValue = true;
+                        rst.weldDataTable = xml;
+                        break;
+                    }
+                case 6032201://1012;//通过查询条件得到WPS数据
+                    {
+                        panasonicDevices cls = new panasonicDevices();
+                        DataTable filter = clsConvertXMLDataTable.ConvertXMLToDataTable(cmd.weldDataTable);
+
+                        DataTable empbd = cls.GetDrivesChannelInfos();
+                        empbd.TableName = "wpsrule";
+
+                        rst.RowsCount = empbd.Rows.Count;
+                        String xml;
+                        if (rst.RowsCount == 0)
+                            xml = clsConvertXMLDataTable.ConvertDataTableToSchema(empbd);
+                        else
+                            xml = clsConvertXMLDataTable.ConvertDataTableToXML(empbd);
+                        rst.BoolValue = true;
+                        rst.weldDataTable = xml;
+                        break;
+                    }
+                case 6033101://1012;//通过查询条件得到WPS数据
+                    {
+                        OTCDevices cls = new OTCDevices();
+                        DataTable filter = clsConvertXMLDataTable.ConvertXMLToDataTable(cmd.weldDataTable);
+
+                        DataTable empbd = cls.GetDrivesChannelInfos();
+                        empbd.TableName = "wpsrule";
+
+                        rst.RowsCount = empbd.Rows.Count;
+                        String xml;
+                        if (rst.RowsCount == 0)
+                            xml = clsConvertXMLDataTable.ConvertDataTableToSchema(empbd);
+                        else
+                            xml = clsConvertXMLDataTable.ConvertDataTableToXML(empbd);
                         rst.BoolValue = true;
                         rst.weldDataTable = xml;
                         break;

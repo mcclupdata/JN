@@ -374,8 +374,21 @@ namespace JN_WELD_Service
         public DataTable GetOTCDrivesChannelInfos()
         {
             DataTable dt = new DataTable();
-
-            return dt;
+            DataTable drvs = GetOTCDrives();
+            drvs.DefaultView.ToTable(true, "nom");
+            DataTable onedrv=null;
+            for (int i = 0; i < drvs.Rows.Count; i++)
+            {
+                String nom = drvs.Rows[i]["nom"].ToString();
+                DataTable tonedrv=GetOTCDrivesChannelInfos(nom);
+                if (onedrv == null)
+                    onedrv = tonedrv.Clone();
+                for (int k = 0; k < tonedrv.Rows.Count; k++)
+                {
+                    onedrv.ImportRow(tonedrv.Rows[i]);
+                }
+            }
+            return onedrv;
 
         }
         /// <summary>
@@ -434,7 +447,7 @@ namespace JN_WELD_Service
             }
             
             //选定通道
-            if (channelid+1>Maxchannel)
+            if (channelid + 1 > Maxchannel)
             {
                 Console.WriteLine(String.Format("准备焊机{0},焊机最大通道数{1} 因此不能下载",nom, channelid));
                 return;
