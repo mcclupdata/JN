@@ -473,7 +473,7 @@ namespace MC
             {
                 ListViewGroup lvg = new ListViewGroup(groups_dt.Rows[goupc]["FDepartID"].ToString(), groups_dt.Rows[goupc]["FTODepartName"].ToString());
                 this.welderDrvs.Groups.Add(lvg);
-                
+                 
             }
                 for (int i = 0; i < panasoicWelderDT.Rows.Count; i++)
                 {
@@ -486,7 +486,7 @@ namespace MC
                     if (fweldedt.Rows.Count == 1)
                     {
                         ListViewItem vitem = new ListViewItem();
-                        vitem.Text = "焊机:" + Convert.ToString(row["nom"]) + " 名称：" + Convert.ToString(row["equipname"]) + '\n' + "焊接电压:" + Convert.ToString(row["wa"]) + "V 焊接电流:" + Convert.ToString(row["wa"]);
+                        vitem.Text = "焊机名称："+ Convert.ToString(row["equipname"]);//"焊机:" + Convert.ToString(row["nom"]) + " 名称：" + Convert.ToString(row["equipname"]) + '\n' + "焊接电压:" + Convert.ToString(row["wa"]) + "V 焊接电流:" + Convert.ToString(row["wa"]);
                         vitem.ToolTipText = Convert.ToString(row["nom"]);
 
                         String vstate = Convert.ToString(row["state"]);
