@@ -1,6 +1,6 @@
 ﻿namespace MC
 {
-    partial class MCCL6322
+    partial class FormMCCL6322
     {
         /// <summary>
         /// 必需的设计器变量fff。

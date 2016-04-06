@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace MC
 {
-    public partial class MCCL6322 : Formbase
+    public partial class FormMCCL6322 : Formbase
     {
         //AutoSizeFormClass asc = new AutoSizeFormClass();
         //SysDefine SD = new SysDefine();
@@ -22,7 +22,7 @@ namespace MC
         int _changeflage = 0;
         int _fillflage = 0;
         int _ManufacturerIDflage = 0;
-        public MCCL6322()
+        public FormMCCL6322()
         {
             InitializeComponent();
             _fillflage = 1;

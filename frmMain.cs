@@ -242,5 +242,11 @@ namespace MC
             FormMCCL00045 frm = new FormMCCL00045();
             frm.ShowDialog(this);
         }
+
+        private void efButton37_Click(object sender, EventArgs e)
+        {
+            FormMCCL6322 frm = new FormMCCL6322();
+            frm.ShowDialog(this);
+        }
     }
 }
