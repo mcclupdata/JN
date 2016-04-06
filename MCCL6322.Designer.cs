@@ -3,7 +3,7 @@
     partial class MCCL6322
     {
         /// <summary>
-        /// 必需的设计器变量。
+        /// 必需的设计器变量fff。
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 

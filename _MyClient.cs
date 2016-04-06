@@ -23,9 +23,9 @@ namespace MC
 //#else
 //        const String _WCFSVRDress = "http://10.30.7.34:8734/JN_WELD_Service/Service1/";
 //#endif
-       // const String _WCFSVRDress = "http://127.0.0.1:8734/JN_WELD_Service/Service1/";
+       const String _WCFSVRDress = "http://127.0.0.1:8734/JN_WELD_Service/Service1/";
 
-        const String _WCFSVRDress = "http://10.30.7.34:8734/JN_WELD_Service/Service1/";
+        //const String _WCFSVRDress = "http://10.30.7.34:8734/JN_WELD_Service/Service1/";
         protected void buildConnectSvr()
         {
             //建立连接绑定
