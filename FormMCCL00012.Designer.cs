@@ -170,6 +170,7 @@
             this.butAdd.TabIndex = 6;
             this.butAdd.Text = "添加";
             this.butAdd.ViewMode = EF.ViewModeEnum.Enable;
+            this.butAdd.Click += new System.EventHandler(this.butAdd_Click);
             // 
             // ClassGroup
             // 
@@ -261,12 +262,13 @@
             this.but_Del.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.but_Del.Name = "but_Del";
+            this.but_Del.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // CFWelderName
             // 
             this.CFWelderName.Caption = "焊工";
             this.CFWelderName.CustomizationCaption = "焊工";
-            this.CFWelderName.FieldName = "Fweldername";
+            this.CFWelderName.FieldName = "FwelderName";
             this.CFWelderName.Name = "CFWelderName";
             this.CFWelderName.Visible = true;
             this.CFWelderName.VisibleIndex = 1;
@@ -292,8 +294,6 @@
             this.CFDepart.CustomizationCaption = "CFDepart";
             this.CFDepart.FieldName = "FOPDEPARTID";
             this.CFDepart.Name = "CFDepart";
-            this.CFDepart.Visible = true;
-            this.CFDepart.VisibleIndex = 3;
             // 
             // CFSTARTTIME
             // 
@@ -302,7 +302,7 @@
             this.CFSTARTTIME.FieldName = "FDispatchSTARTTIME";
             this.CFSTARTTIME.Name = "CFSTARTTIME";
             this.CFSTARTTIME.Visible = true;
-            this.CFSTARTTIME.VisibleIndex = 4;
+            this.CFSTARTTIME.VisibleIndex = 3;
             // 
             // CWeldCount
             // 
@@ -311,7 +311,7 @@
             this.CWeldCount.FieldName = "WeldCount";
             this.CWeldCount.Name = "CWeldCount";
             this.CWeldCount.Visible = true;
-            this.CWeldCount.VisibleIndex = 5;
+            this.CWeldCount.VisibleIndex = 4;
             // 
             // CCWELD
             // 
@@ -321,7 +321,7 @@
             this.CCWELD.FieldName = "CCWELD";
             this.CCWELD.Name = "CCWELD";
             this.CCWELD.Visible = true;
-            this.CCWELD.VisibleIndex = 6;
+            this.CCWELD.VisibleIndex = 5;
             // 
             // but_AddWelds
             // 
@@ -329,6 +329,7 @@
             this.but_AddWelds.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.but_AddWelds.Name = "but_AddWelds";
+            this.but_AddWelds.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // FormMCCL00012
             // 

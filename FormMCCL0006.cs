@@ -33,7 +33,16 @@ namespace MC
                 _cls = new clsFirstDispatch(ref frm);
             else
                 _cls = new clsFirstDispatch(_HeadID, ref frm);
-            
+            this.gridView2.OptionsView.ColumnAutoWidth = true;
+            //MessageBox.Show(System.Reflection.Assembly.GetExecutingAssembly().CodeBase);
+            //String s = System.Reflection.Assembly.GetExecutingAssembly().CodeBase;
+            //String[] gs=s.Split('/');
+            //String n = "";
+            //for (int i = 3; i < gs.Length - 1; i++)
+            //{
+            //    n+=gs[i]+"/";
+            //}
+            //MessageBox.Show(n);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -71,6 +80,11 @@ namespace MC
             //DevExpress.XtraGrid.Views.Grid.GridView v=this.dataGrid.Views[0];
             //_cls.clsFirstDispatch_CellContentClick(sender, e);
            
+        }
+
+        private void butAdd_Click(object sender, EventArgs e)
+        {
+
         }
 
      

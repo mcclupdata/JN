@@ -891,7 +891,7 @@ namespace MC
             //((DataGridView)FindControl("dataGrid")).DataSource = _DispatchBodyIndex;
             //((DataGridView)FindControl("dataGrid")).Refresh();
             dgv.DataSource = _DispatchBodyIndex;
-
+            ((DevExpress.XtraGrid.Views.Grid.GridView)dgv.Views[0]).OptionsView.ColumnAutoWidth = true;
             //将可用部门进行绑定
             long fdodepartid = 0;
             DataTable dt = new DataTable();

@@ -183,7 +183,6 @@
             this.CEdit.Caption = "编辑";
             this.CEdit.ColumnEdit = this.repositoryItemButtonEdit1;
             this.CEdit.Name = "CEdit";
-            this.CEdit.OptionsColumn.AllowEdit = false;
             this.CEdit.Visible = true;
             this.CEdit.VisibleIndex = 4;
             // 

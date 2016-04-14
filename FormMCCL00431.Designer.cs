@@ -75,6 +75,7 @@
             // 
             this.efGroupBox1.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.efGroupBox1.Appearance.Options.UseBackColor = true;
+            this.efGroupBox1.Size = new System.Drawing.Size(841, 392);
             this.efGroupBox1.Text = "数据";
             // 
             // efGroupBox2
@@ -88,12 +89,17 @@
             this.efGroupBox4.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.efGroupBox4.Appearance.Options.UseBackColor = true;
             this.efGroupBox4.Controls.Add(this.BodyList);
+            this.efGroupBox4.Size = new System.Drawing.Size(418, 367);
             // 
             // efGroupBox3
             // 
             this.efGroupBox3.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.efGroupBox3.Appearance.Options.UseBackColor = true;
             this.efGroupBox3.Controls.Add(this.BodyIndex);
+            // 
+            // efGroupBoxEx1
+            // 
+            this.efGroupBoxEx1.Size = new System.Drawing.Size(841, 52);
             // 
             // efLabel1
             // 
@@ -255,7 +261,7 @@
             this.BodyList.MainView = this.BodyListView;
             this.BodyList.Margin = new System.Windows.Forms.Padding(2);
             this.BodyList.Name = "BodyList";
-            this.BodyList.Size = new System.Drawing.Size(290, 342);
+            this.BodyList.Size = new System.Drawing.Size(414, 342);
             this.BodyList.TabIndex = 7;
             this.BodyList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BodyListView});
@@ -343,7 +349,7 @@
             // FormMCCL00431
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
-            this.ClientSize = new System.Drawing.Size(717, 490);
+            this.ClientSize = new System.Drawing.Size(841, 490);
             this.Name = "FormMCCL00431";
             this.Load += new System.EventHandler(this.FormMCCL00431_Load);
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).EndInit();

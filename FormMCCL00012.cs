@@ -30,9 +30,15 @@ namespace MC
                 _cls = new clsTask(ref frm);
             else
                 _cls = new clsTask(1, ref frm, _welderid, _starttime);
+            this.gridView1.OptionsView.ColumnAutoWidth = true;
         }
 
         private void dataGrid_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butAdd_Click(object sender, EventArgs e)
         {
 
         }

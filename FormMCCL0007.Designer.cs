@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.efGroupBox1 = new EF.EFGroupBox(this.components);
             this.butCancel = new EF.EFButton();
             this.butOK = new EF.EFButton();
@@ -61,6 +61,8 @@
             this.CWELD1_CODE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CWELD2_CODE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.CWELD_TYPE = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CBUFF = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CAS3 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).BeginInit();
             this.efGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.butCancel)).BeginInit();
@@ -91,21 +93,20 @@
             this.efGroupBox1.Controls.Add(this.butSelectAll);
             this.efGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efGroupBox1.Location = new System.Drawing.Point(0, 0);
-            this.efGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efGroupBox1.Name = "efGroupBox1";
-            this.efGroupBox1.Size = new System.Drawing.Size(1463, 83);
+            this.efGroupBox1.Size = new System.Drawing.Size(896, 53);
             this.efGroupBox1.TabIndex = 4;
             // 
             // butCancel
             // 
             this.butCancel.Authorizable = false;
+            this.butCancel.Dock = System.Windows.Forms.DockStyle.Right;
             this.butCancel.EnabledEx = true;
             this.butCancel.FnNo = 0;
             this.butCancel.Hint = "";
-            this.butCancel.Location = new System.Drawing.Point(383, 41);
-            this.butCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butCancel.Location = new System.Drawing.Point(656, 23);
             this.butCancel.Name = "butCancel";
-            this.butCancel.Size = new System.Drawing.Size(107, 31);
+            this.butCancel.Size = new System.Drawing.Size(75, 28);
             this.butCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butCancel.TabIndex = 13;
             this.butCancel.Text = "取消F2";
@@ -114,13 +115,13 @@
             // butOK
             // 
             this.butOK.Authorizable = false;
+            this.butOK.Dock = System.Windows.Forms.DockStyle.Right;
             this.butOK.EnabledEx = true;
             this.butOK.FnNo = 0;
             this.butOK.Hint = "";
-            this.butOK.Location = new System.Drawing.Point(213, 41);
-            this.butOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butOK.Location = new System.Drawing.Point(731, 23);
             this.butOK.Name = "butOK";
-            this.butOK.Size = new System.Drawing.Size(107, 31);
+            this.butOK.Size = new System.Drawing.Size(80, 28);
             this.butOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butOK.TabIndex = 12;
             this.butOK.Text = "确定F1";
@@ -131,10 +132,9 @@
             this.txtValue.EFEname = null;
             this.txtValue.EFLeaveExpression = ".*";
             this.txtValue.EFLen = 32767;
-            this.txtValue.Location = new System.Drawing.Point(504, 82);
-            this.txtValue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtValue.Location = new System.Drawing.Point(353, 52);
             this.txtValue.Name = "txtValue";
-            this.txtValue.Size = new System.Drawing.Size(225, 29);
+            this.txtValue.Size = new System.Drawing.Size(159, 22);
             this.txtValue.TabIndex = 11;
             this.txtValue.Visible = false;
             // 
@@ -144,10 +144,9 @@
             this.cbbCondition.EFCname = "";
             this.cbbCondition.EFDropDown = true;
             this.cbbCondition.FormattingEnabled = true;
-            this.cbbCondition.Location = new System.Drawing.Point(380, 82);
-            this.cbbCondition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbbCondition.Location = new System.Drawing.Point(266, 52);
             this.cbbCondition.Name = "cbbCondition";
-            this.cbbCondition.Size = new System.Drawing.Size(88, 30);
+            this.cbbCondition.Size = new System.Drawing.Size(63, 22);
             this.cbbCondition.SQL = null;
             this.cbbCondition.TabIndex = 9;
             this.cbbCondition.UserValue = "";
@@ -159,10 +158,9 @@
             this.butreturn.EnabledEx = true;
             this.butreturn.FnNo = 0;
             this.butreturn.Hint = "";
-            this.butreturn.Location = new System.Drawing.Point(911, 79);
-            this.butreturn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butreturn.Location = new System.Drawing.Point(638, 50);
             this.butreturn.Name = "butreturn";
-            this.butreturn.Size = new System.Drawing.Size(133, 36);
+            this.butreturn.Size = new System.Drawing.Size(93, 23);
             this.butreturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butreturn.TabIndex = 7;
             this.butreturn.Text = "还原";
@@ -176,10 +174,9 @@
             this.butSeachin.EnabledEx = true;
             this.butSeachin.FnNo = 0;
             this.butSeachin.Hint = "";
-            this.butSeachin.Location = new System.Drawing.Point(770, 82);
-            this.butSeachin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butSeachin.Location = new System.Drawing.Point(539, 52);
             this.butSeachin.Name = "butSeachin";
-            this.butSeachin.Size = new System.Drawing.Size(133, 36);
+            this.butSeachin.Size = new System.Drawing.Size(93, 23);
             this.butSeachin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butSeachin.TabIndex = 6;
             this.butSeachin.Text = "结果内搜索";
@@ -190,10 +187,9 @@
             // Label3
             // 
             this.Label3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.Label3.Location = new System.Drawing.Point(46, 80);
-            this.Label3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Label3.Location = new System.Drawing.Point(32, 51);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(57, 35);
+            this.Label3.Size = new System.Drawing.Size(40, 22);
             this.Label3.TabIndex = 4;
             this.Label3.Text = "字段";
             this.Label3.Visible = false;
@@ -204,10 +200,9 @@
             this.cbbField.EFCname = "";
             this.cbbField.EFDropDown = false;
             this.cbbField.FormattingEnabled = true;
-            this.cbbField.Location = new System.Drawing.Point(111, 82);
-            this.cbbField.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbbField.Location = new System.Drawing.Point(78, 52);
             this.cbbField.Name = "cbbField";
-            this.cbbField.Size = new System.Drawing.Size(264, 30);
+            this.cbbField.Size = new System.Drawing.Size(186, 22);
             this.cbbField.SQL = null;
             this.cbbField.TabIndex = 2;
             this.cbbField.UserValue = "";
@@ -216,13 +211,13 @@
             // butSelectAll
             // 
             this.butSelectAll.Authorizable = false;
+            this.butSelectAll.Dock = System.Windows.Forms.DockStyle.Right;
             this.butSelectAll.EnabledEx = true;
             this.butSelectAll.FnNo = 0;
             this.butSelectAll.Hint = "";
-            this.butSelectAll.Location = new System.Drawing.Point(25, 41);
-            this.butSelectAll.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butSelectAll.Location = new System.Drawing.Point(811, 23);
             this.butSelectAll.Name = "butSelectAll";
-            this.butSelectAll.Size = new System.Drawing.Size(119, 107);
+            this.butSelectAll.Size = new System.Drawing.Size(83, 28);
             this.butSelectAll.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butSelectAll.TabIndex = 1;
             this.butSelectAll.Text = "全部/反选";
@@ -235,24 +230,22 @@
             this.efGroupBox2.Appearance.Options.UseBackColor = true;
             this.efGroupBox2.Controls.Add(this.dataGrid);
             this.efGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efGroupBox2.Location = new System.Drawing.Point(0, 83);
-            this.efGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efGroupBox2.Location = new System.Drawing.Point(0, 53);
             this.efGroupBox2.Name = "efGroupBox2";
-            this.efGroupBox2.Size = new System.Drawing.Size(1463, 889);
+            this.efGroupBox2.Size = new System.Drawing.Size(896, 539);
             this.efGroupBox2.TabIndex = 5;
             // 
             // dataGrid
             // 
             this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid.IsUseCustomPageBar = true;
-            this.dataGrid.Location = new System.Drawing.Point(2, 30);
+            this.dataGrid.Location = new System.Drawing.Point(2, 23);
             this.dataGrid.MainView = this.gridview;
-            this.dataGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.ItemBut_Choose,
             this.ItemCheckEdit});
-            this.dataGrid.Size = new System.Drawing.Size(1459, 857);
+            this.dataGrid.Size = new System.Drawing.Size(892, 514);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.UseEmbeddedNavigator = true;
             this.dataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -276,7 +269,9 @@
             this.CWELD_POS,
             this.CWELD1_CODE,
             this.CWELD2_CODE,
-            this.CWELD_TYPE});
+            this.CWELD_TYPE,
+            this.CBUFF,
+            this.CAS3});
             this.gridview.FixedLineWidth = 1;
             this.gridview.GridControl = this.dataGrid;
             this.gridview.IndicatorWidth = 35;
@@ -317,7 +312,7 @@
             // 
             this.ItemBut_Choose.AutoHeight = false;
             this.ItemBut_Choose.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "选择WPS", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "选择WPS", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.ItemBut_Choose.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.ItemBut_Choose.Name = "ItemBut_Choose";
             // 
@@ -349,7 +344,7 @@
             this.PART1_NAME2.Name = "PART1_NAME2";
             this.PART1_NAME2.OptionsColumn.AllowEdit = false;
             this.PART1_NAME2.Visible = true;
-            this.PART1_NAME2.VisibleIndex = 4;
+            this.PART1_NAME2.VisibleIndex = 6;
             // 
             // CPART_NAME2
             // 
@@ -359,7 +354,7 @@
             this.CPART_NAME2.Name = "CPART_NAME2";
             this.CPART_NAME2.OptionsColumn.AllowEdit = false;
             this.CPART_NAME2.Visible = true;
-            this.CPART_NAME2.VisibleIndex = 5;
+            this.CPART_NAME2.VisibleIndex = 7;
             // 
             // CTHICK1
             // 
@@ -369,7 +364,7 @@
             this.CTHICK1.Name = "CTHICK1";
             this.CTHICK1.OptionsColumn.AllowEdit = false;
             this.CTHICK1.Visible = true;
-            this.CTHICK1.VisibleIndex = 6;
+            this.CTHICK1.VisibleIndex = 8;
             // 
             // CTHICK2
             // 
@@ -379,7 +374,7 @@
             this.CTHICK2.Name = "CTHICK2";
             this.CTHICK2.OptionsColumn.AllowEdit = false;
             this.CTHICK2.Visible = true;
-            this.CTHICK2.VisibleIndex = 7;
+            this.CTHICK2.VisibleIndex = 9;
             // 
             // CGRADE1
             // 
@@ -389,7 +384,7 @@
             this.CGRADE1.Name = "CGRADE1";
             this.CGRADE1.OptionsColumn.AllowEdit = false;
             this.CGRADE1.Visible = true;
-            this.CGRADE1.VisibleIndex = 8;
+            this.CGRADE1.VisibleIndex = 10;
             // 
             // CGRADE2
             // 
@@ -399,7 +394,7 @@
             this.CGRADE2.Name = "CGRADE2";
             this.CGRADE2.OptionsColumn.AllowEdit = false;
             this.CGRADE2.Visible = true;
-            this.CGRADE2.VisibleIndex = 9;
+            this.CGRADE2.VisibleIndex = 11;
             // 
             // CWELD_T_LEN
             // 
@@ -409,7 +404,7 @@
             this.CWELD_T_LEN.Name = "CWELD_T_LEN";
             this.CWELD_T_LEN.OptionsColumn.AllowEdit = false;
             this.CWELD_T_LEN.Visible = true;
-            this.CWELD_T_LEN.VisibleIndex = 10;
+            this.CWELD_T_LEN.VisibleIndex = 12;
             // 
             // CWELD_MOD
             // 
@@ -419,7 +414,7 @@
             this.CWELD_MOD.Name = "CWELD_MOD";
             this.CWELD_MOD.OptionsColumn.AllowEdit = false;
             this.CWELD_MOD.Visible = true;
-            this.CWELD_MOD.VisibleIndex = 11;
+            this.CWELD_MOD.VisibleIndex = 13;
             // 
             // CWELD_POS
             // 
@@ -429,7 +424,7 @@
             this.CWELD_POS.Name = "CWELD_POS";
             this.CWELD_POS.OptionsColumn.AllowEdit = false;
             this.CWELD_POS.Visible = true;
-            this.CWELD_POS.VisibleIndex = 12;
+            this.CWELD_POS.VisibleIndex = 14;
             this.CWELD_POS.Width = 62;
             // 
             // CWELD1_CODE
@@ -440,7 +435,7 @@
             this.CWELD1_CODE.Name = "CWELD1_CODE";
             this.CWELD1_CODE.OptionsColumn.AllowEdit = false;
             this.CWELD1_CODE.Visible = true;
-            this.CWELD1_CODE.VisibleIndex = 13;
+            this.CWELD1_CODE.VisibleIndex = 15;
             // 
             // CWELD2_CODE
             // 
@@ -450,7 +445,7 @@
             this.CWELD2_CODE.Name = "CWELD2_CODE";
             this.CWELD2_CODE.OptionsColumn.AllowEdit = false;
             this.CWELD2_CODE.Visible = true;
-            this.CWELD2_CODE.VisibleIndex = 14;
+            this.CWELD2_CODE.VisibleIndex = 16;
             // 
             // CWELD_TYPE
             // 
@@ -460,16 +455,32 @@
             this.CWELD_TYPE.Name = "CWELD_TYPE";
             this.CWELD_TYPE.OptionsColumn.AllowEdit = false;
             this.CWELD_TYPE.Visible = true;
-            this.CWELD_TYPE.VisibleIndex = 15;
+            this.CWELD_TYPE.VisibleIndex = 17;
+            // 
+            // CBUFF
+            // 
+            this.CBUFF.Caption = "BUFF";
+            this.CBUFF.FieldName = "BUFF1";
+            this.CBUFF.Name = "CBUFF";
+            this.CBUFF.Visible = true;
+            this.CBUFF.VisibleIndex = 4;
+            // 
+            // CAS3
+            // 
+            this.CAS3.Caption = "AS3";
+            this.CAS3.FieldName = "AS3";
+            this.CAS3.Name = "CAS3";
+            this.CAS3.Visible = true;
+            this.CAS3.VisibleIndex = 5;
             // 
             // FormMCCL0007
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1463, 1044);
+            this.ClientSize = new System.Drawing.Size(896, 638);
             this.Controls.Add(this.efGroupBox2);
             this.Controls.Add(this.efGroupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "FormMCCL0007";
             this.Text = "任务-焊缝-WPS配置";
             this.EF_DO_F1 += new EF.EFButtonBar.EFDoFnEventHandler(this.FormMCCL0007_EF_DO_F1);
@@ -529,6 +540,8 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit ItemCheckEdit;
         private EF.EFButton butCancel;
         private EF.EFButton butOK;
+        private DevExpress.XtraGrid.Columns.GridColumn CBUFF;
+        private DevExpress.XtraGrid.Columns.GridColumn CAS3;
 
     }
 }
