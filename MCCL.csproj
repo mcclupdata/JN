@@ -81,6 +81,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\EP\JNCommon.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
     <Reference Include="office, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\EP\office.dll</HintPath>
@@ -147,6 +148,7 @@
     <Compile Include="clsweldingclass.cs" />
     <Compile Include="clsWeldWeldingAdpatEdit.cs" />
     <Compile Include="clswpsEdit.cs" />
+    <Compile Include="DataToExcel.cs" />
     <Compile Include="EFFormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +341,12 @@
     <Compile Include="FormMCCL00432.Designer.cs">
       <DependentUpon>FormMCCL00432.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMCCL0646.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMCCL0646.designer.cs">
+      <DependentUpon>FormMCCL0646.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMCCLTaskPros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -472,6 +480,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMCCL00432.resx">
       <DependentUpon>FormMCCL00432.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMCCL0646.resx">
+      <DependentUpon>FormMCCL0646.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMCCLTaskPros.resx">
       <DependentUpon>FormMCCLTaskPros.cs</DependentUpon>

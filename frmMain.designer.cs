@@ -66,6 +66,7 @@
             this.efButton35 = new EF.EFButton();
             this.efButton36 = new EF.EFButton();
             this.efButton37 = new EF.EFButton();
+            this.efButton38 = new EF.EFButton();
             ((System.ComponentModel.ISupportInitialize)(this.efButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton3)).BeginInit();
@@ -103,6 +104,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efButton35)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efButton38)).BeginInit();
             this.SuspendLayout();
             // 
             // efButton1
@@ -700,11 +702,28 @@
             this.efButton37.ViewMode = EF.ViewModeEnum.Enable;
             this.efButton37.Click += new System.EventHandler(this.efButton37_Click);
             // 
+            // efButton38
+            // 
+            this.efButton38.Authorizable = false;
+            this.efButton38.EnabledEx = true;
+            this.efButton38.FnNo = 0;
+            this.efButton38.Hint = "";
+            this.efButton38.Location = new System.Drawing.Point(1224, 288);
+            this.efButton38.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efButton38.Name = "efButton38";
+            this.efButton38.Size = new System.Drawing.Size(161, 74);
+            this.efButton38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.efButton38.TabIndex = 41;
+            this.efButton38.Text = "组包焊缝评估";
+            this.efButton38.ViewMode = EF.ViewModeEnum.Enable;
+            this.efButton38.Click += new System.EventHandler(this.efButton38_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 754);
+            this.ClientSize = new System.Drawing.Size(1468, 754);
+            this.Controls.Add(this.efButton38);
             this.Controls.Add(this.efButton37);
             this.Controls.Add(this.efButton36);
             this.Controls.Add(this.efButton35);
@@ -782,6 +801,7 @@
             this.Controls.SetChildIndex(this.efButton35, 0);
             this.Controls.SetChildIndex(this.efButton36, 0);
             this.Controls.SetChildIndex(this.efButton37, 0);
+            this.Controls.SetChildIndex(this.efButton38, 0);
             ((System.ComponentModel.ISupportInitialize)(this.efButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton3)).EndInit();
@@ -819,6 +839,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.efButton35)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.efButton37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efButton38)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -863,5 +884,6 @@
         private EF.EFButton efButton35;
         private EF.EFButton efButton36;
         private EF.EFButton efButton37;
+        private EF.EFButton efButton38;
     }
 }
