@@ -205,7 +205,7 @@ namespace JN_WELD_Service
                 //String sql = "select 0 as FOPDEPARTID ,FWELDID,FWELDWPSID ,FProjectBodyID from view_ProjectDetail";
                 //sql += " where FID=@FID and SHIP_NO=@SHIP_NO and TREE_NAME=@TREE_NAME and BUFF1=@BUFF1 and FDoDepartID=@FDoDepartID";
 
-            String sql = "select k.*,TP.RuleNum,TP.FID as RuleFID,PART1_NAME2,PART2_NAME2,t.THICK1,t.THICK2,t.GRADE1,t.GRADE2,WELD_T_LEN,t.WELD_MOD,WELD_POS,t.WELD1_CODE,t.WELD2_CODE,t.WELD_TYPE ";
+            String sql = "select k.*,TP.RuleNum,TP.FID as RuleFID,PART1_NAME2,PART2_NAME2,t.BUFF1,t.AS3,t.THICK1,t.THICK2,t.GRADE1,t.GRADE2,WELD_T_LEN,t.WELD_MOD,WELD_POS,t.WELD1_CODE,t.WELD2_CODE,t.WELD_TYPE ";
                 sql+=" from ( select 0 as FChecked,0 AS FID, 0 as FOPDEPARTID ,FWELDID,FWELDWPSID ,FProjectBodyID,0 as FProjectHeadID from view_ProjectDetail ";
                 sql+="where FID=@FID and SHIP_NO=@SHIP_NO and TREE_NAME=@TREE_NAME and BUFF1=@BUFF1 and FDoDepartID=@FDoDepartID ";
                 sql+=" and FWELDID  not in (Select FWELDID from t_DispatchingBody) ";

@@ -106,7 +106,9 @@
     <Compile Include="svrRealTime.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="svrWelder.cs" />
     <Compile Include="svrWelderEdit.cs" />
+    <Compile Include="svrWelderparamsedit.cs" />
     <Compile Include="svrWelderTask.cs" />
     <Compile Include="svrweldingclass.cs" />
     <Compile Include="weldService.cs" />

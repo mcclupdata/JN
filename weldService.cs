@@ -2624,6 +2624,54 @@ namespace JN_WELD_Service
                         rst.weldDataTable = xml;
                         break;
                     }
+                case 6040701://获得起弧收弧时间查询报警
+                    {
+                        DataTable data = clsConvertXMLDataTable.ConvertXMLToDataTable(cmd.weldDataTable);
+                        int vtype = Convert.ToInt32(cmd.StringValue);
+                        svrWelder sw = new svrWelder();
+                        //svrweldcodepostEdit svr = new svrweldcodepostEdit();
+                        DataTable sdt = new DataTable();
+
+                        sdt = sw.Updatealm(data);
+
+                        String xml;
+                        if (sdt.Rows.Count == 0)
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToSchema(sdt);
+                        }
+                        else
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToXML(sdt);
+
+                        }
+                        rst.BoolValue = true;
+                        rst.weldDataTable = xml;
+                        break;
+                    }
+                case 6040702://获得起弧收弧时间查询统计列表
+                    {
+                        DataTable data = clsConvertXMLDataTable.ConvertXMLToDataTable(cmd.weldDataTable);
+                        int vtype = Convert.ToInt32(cmd.StringValue);
+                        svrWelder sw = new svrWelder();
+                        //svrweldcodepostEdit svr = new svrweldcodepostEdit();
+                        DataTable sdt = new DataTable();
+
+                        sdt = sw.Updatecot(data);
+
+                        String xml;
+                        if (sdt.Rows.Count == 0)
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToSchema(sdt);
+                        }
+                        else
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToXML(sdt);
+
+                        }
+                        rst.BoolValue = true;
+                        rst.weldDataTable = xml;
+                        break;
+                    }
                 case 9001://开启定时器
                     {
                         //svrTimer.Start();
