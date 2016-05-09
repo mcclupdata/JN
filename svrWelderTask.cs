@@ -123,6 +123,8 @@ namespace JN_WELD_Service
         public DataTable GetWelderTaskLists(DataTable dt)
         {
             String sql = "Select  0 as Ftype, * from View_Task_Welder_Index where FSTARTTIME=@FSTARTTIME";
+            sql += " union ";
+            sql += "Select  0 as Ftype, * from View_Task_Welder_Index where FState=1 and FSTARTTIME<>@FSTARTTIME";
             ArrayList sqlpars = new ArrayList();
             SqlParameter par = new SqlParameter();
             par.ParameterName = "@FSTARTTIME";
@@ -265,8 +267,18 @@ namespace JN_WELD_Service
             //    DataTable dt_FID = _sqldbhelper.ExecuteDataTable(selFIDSQL);
             //    dt.Rows[0]["FID"] = dt_FID.Rows[0][0];
             //}
-
-            String sql = "", insertSQL = "insert into t_Task_DoingRec (FTaskID,FSTARTTIME,FSTATE) values(@FID,@sTime,@FSTATE)";
+            long lastnom = 0;
+            if (state != 1)
+            {
+                String sellastnom = "select Fnom from t_Task_DoingRec where FID=(select Max(FID) from  t_Task_DoingRec where FTaskID={0})";
+                sellastnom = String.Format(sellastnom, FID);
+                DataTable Lastnom_dt = _sqldbhelper.ExecuteDataTable(sellastnom);
+                if (Lastnom_dt != null && Lastnom_dt.Rows.Count>0)
+                {
+                    lastnom = Convert.ToInt64(Lastnom_dt.Rows[0][0]);
+                }
+            }
+            String sql = "", insertSQL = "insert into t_Task_DoingRec (FTaskID,FSTARTTIME,FSTATE,Fnom) values(@FID,@sTime,@FSTATE,@Fnom)";
             //0 未开始 1 开始 2 完成 3 取消 4,挂起，5 重新开始
             switch (state)
             {
@@ -295,6 +307,13 @@ namespace JN_WELD_Service
                     {
                         //修改状态为1
                         dt.Rows[0]["FSTATE"] = 1;
+                        sql = "Update t_TasklistBody set FSTATE=@FSTATE ";
+                        break;
+                    }
+                case 6://切换焊机;
+                    {
+                        //修改状态为1
+                        dt.Rows[0]["FSTATE"] = 6;
                         sql = "Update t_TasklistBody set FSTATE=@FSTATE ";
                         break;
                     }
@@ -340,6 +359,14 @@ namespace JN_WELD_Service
             par.SqlDbType = SqlDbType.BigInt;
             par.SqlValue = dt.Rows[0]["FweldDriverID"];
             sqlpars.Add(par);
+
+            par = new SqlParameter();
+            par.ParameterName = "@Fnom";
+            par.SqlDbType = SqlDbType.BigInt;
+            par.SqlValue =lastnom;// dt.Rows[0]["FweldDriverID"];
+            sqlpars.Add(par);
+
+
             //获取焊道信息
             long vFID = 0; long vFWELDID = 0;
 
@@ -412,7 +439,7 @@ namespace JN_WELD_Service
                          */
                          break;
                     }
-                case 3:case 5:case 4:
+                case 3:case 5:case 4:case 6:
                     {
                         break;
                     }

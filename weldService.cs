@@ -1128,6 +1128,24 @@ namespace JN_WELD_Service
 
                         
                     }
+                case 642101:
+                    {
+                        svrWeldEquipmentReal svr = new svrWeldEquipmentReal();
+                        DataTable sdt = svr.getWelderPoint();
+                        String xml;
+                        if (sdt.Rows.Count == 0)
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToSchema(sdt);
+                        }
+                        else
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToXML(sdt);
+
+                        }
+                        rst.BoolValue = true;
+                        rst.weldDataTable = xml;
+                        break;
+                    }
                 //焊机监控--通过给定的焊机编号，查询得到焊机的基本信息：预置电流，预置电压，状态
                 case 509203:
                     {
@@ -2657,6 +2675,57 @@ namespace JN_WELD_Service
                         DataTable sdt = new DataTable();
 
                         sdt = sw.Updatecot(data);
+
+                        String xml;
+                        if (sdt.Rows.Count == 0)
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToSchema(sdt);
+                        }
+                        else
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToXML(sdt);
+
+                        }
+                        rst.BoolValue = true;
+                        rst.weldDataTable = xml;
+                        break;
+                    }
+
+                //6042701
+                case 6042701://取消一条班组焊缝合并
+                    {
+                        DataTable data = clsConvertXMLDataTable.ConvertXMLToDataTable(cmd.weldDataTable);
+                        int vtype = Convert.ToInt32(cmd.StringValue);
+                        svrClassMergeWeld sw = new svrClassMergeWeld();
+                        //svrweldcodepostEdit svr = new svrweldcodepostEdit();
+                        DataTable sdt = new DataTable();
+
+                        sdt = sw.CancelMargedwelds(data);
+
+                        String xml;
+                        if (sdt.Rows.Count == 0)
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToSchema(sdt);
+                        }
+                        else
+                        {
+                            xml = clsConvertXMLDataTable.ConvertDataTableToXML(sdt);
+
+                        }
+                        rst.BoolValue = true;
+                        rst.weldDataTable = xml;
+                        break;
+                    }
+                ///获取包内的焊缝 6042702
+                case 6042702://取消一条班组焊缝合并
+                    {
+                        DataTable data = clsConvertXMLDataTable.ConvertXMLToDataTable(cmd.weldDataTable);
+                        int vtype = Convert.ToInt32(cmd.StringValue);
+                        svrClassMergeWeld sw = new svrClassMergeWeld();
+                        //svrweldcodepostEdit svr = new svrweldcodepostEdit();
+                        DataTable sdt = new DataTable();
+
+                        sdt = sw.GetBagWelds(data);
 
                         String xml;
                         if (sdt.Rows.Count == 0)

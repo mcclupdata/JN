@@ -32,9 +32,9 @@ namespace JN_WELD_Service
                 StoredProcedureparas[1] = spa;
 
                 spa = new SqlParameter();
-                spa.ParameterName = "@nom";
+                spa.ParameterName = "@Fnum";
                 spa.SqlDbType = SqlDbType.BigInt;
-                spa.SqlValue = Convert.ToInt32(dt.Rows[0]["nom"].ToString());
+                spa.SqlValue = Convert.ToInt32(dt.Rows[0]["Fnum"].ToString());
                 StoredProcedureparas[2] = spa;
                 rpdt = _sqldbhelper.ExecuteDataTable(proname, CommandType.StoredProcedure, StoredProcedureparas);
             }
@@ -61,9 +61,9 @@ namespace JN_WELD_Service
                 StoredProcedureparas[1] = spa;
 
                 spa = new SqlParameter();
-                spa.ParameterName = "@nom";
+                spa.ParameterName = "@Fnum";
                 spa.SqlDbType = SqlDbType.BigInt;
-                spa.SqlValue = Convert.ToInt32(dt.Rows[0]["nom"].ToString());
+                spa.SqlValue = Convert.ToInt32(dt.Rows[0]["Fnum"].ToString());
                 StoredProcedureparas[2] = spa;
                 rpdt = _sqldbhelper.ExecuteDataTable(proname, CommandType.StoredProcedure, StoredProcedureparas);
             }

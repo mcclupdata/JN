@@ -47,6 +47,17 @@ namespace JN_WELD_Service
             return dt;
         }
         /// <summary>
+        /// 获取焊机位置信息集合（链接焊工集合）
+        /// </summary>
+        /// <returns></returns>
+        public DataTable getWelderPoint()
+        {
+            DataTable dt;
+            String selSQL = "select distinct FDepartID,FDepartName from t_weldEquipment";
+            dt = _sqldbhelper.ExecuteDataTable(selSQL);
+            return dt;
+        }
+        /// <summary>
         /// 5092602
         /// </summary>
         /// <param name="fdt"></param>
