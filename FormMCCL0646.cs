@@ -14,8 +14,8 @@ namespace MC
     {
         DataTable _alarmlist;
         DataTable _countlist;
-        DataTable dt_point;
-        String nom;
+        //DataTable dt_point;
+        String fnum;
         _MyClient _Client = new _MyClient();
         clsFrmBase _clsfrm = new clsFrmBase();
         int cmd_alm = 6040701;
@@ -29,6 +29,7 @@ namespace MC
         private PointPairList listConMxV = new PointPairList();
         private PointPairList listConMiA = new PointPairList();
         private PointPairList listConMiV = new PointPairList();
+        private PointPairList Listgood = new PointPairList();
         double y = 0;
         LineItem curve1;
         LineItem curve2;
@@ -38,6 +39,7 @@ namespace MC
         LineItem ConMiA;
         LineItem ConMxV;
         LineItem ConMinV;
+        LineItem curGood;
         double _BA = 0;
         double _BV = 0;
         string name;
@@ -54,9 +56,9 @@ namespace MC
 
         private void FormMCCL0646_Load(object sender, EventArgs e)
         {
-            weldEquipmentbase webase = new weldEquipmentbase();
-            dt_point = _Client.ServiceCall(clsCMD.cmd_weldEquipment_weldPoint, null);
-            webase.LoadweldEquipment2Tree(ref this.efTreeView1);
+            weldWorkerbase webase = new weldWorkerbase();
+            //dt_point = _Client.ServiceCall(clsCMD.cmd_weldEquipment_weldPoint, null);
+            webase.LoadwelderTree(ref this.Treeview_welders);
             StartTime.Value = Convert.ToDateTime("08:00:00");
             iniZEDGrap();
             this.gridView2.OptionsView.ColumnAutoWidth = true;
@@ -68,10 +70,16 @@ namespace MC
         {
             //折线图初始化
             GraphPane myPane = zedGraphControl1.GraphPane;
+            GraphPane myPane2 = zedGraphControl2.GraphPane;
+ 
             zedGraphControl1.GraphPane.CurveList.Clear();
             zedGraphControl1.GraphPane.GraphObjList.Clear();
             zedGraphControl1.AxisChange();
             zedGraphControl1.Refresh();
+
+          
+
+
             list1.Clear();
             list2.Clear();
             listConA.Clear();
@@ -82,6 +90,8 @@ namespace MC
             listConMiV.Clear();
             listConMxV.Clear();
             listConMxA.Clear();
+
+            Listgood.Clear();
 
             zedGraphControl1.IsEnableHEdit = false;
             zedGraphControl1.IsEnableHZoom = false;
@@ -103,6 +113,19 @@ namespace MC
             ConMxV.IsY2Axis = true;
             ConMinV.IsY2Axis = true;
 
+            //curGood = myPane2.AddCurve("合格率", Listgood, Color.DarkBlue,SymbolType.Square);
+
+            //myPane2.YAxis.MajorGrid.IsVisible = true;
+            ////myPane.XAxis.MajorGrid.Color = Color.Gray;
+            //myPane2.YAxis.MajorGrid.Color = Color.Gray;
+
+
+            //myPane2.XAxis.MajorTic.IsBetweenLabels = true;
+            ////myPane2.XAxis.Scale.TextLabels = labels;
+            //myPane2.XAxis.Type = AxisType.Text;
+            //// myPane.Fill = new Fill(Color.White, Color.FromArgb(200, 200, 255), 45.0f);
+            //myPane2.Chart.Fill = new Fill(Color.White, Color.LightGoldenrodYellow, 45.0f);
+
 
             //曲线加粗
             curve1.Line.Width = 4.0F;
@@ -123,6 +146,8 @@ namespace MC
             ConMinV.Line.Style = System.Drawing.Drawing2D.DashStyle.Dot;
             ConMinV.Line.Width = 1.0F;
 
+            //curGood.Line.Style = System.Drawing.Drawing2D.DashStyle.Solid;
+            //curGood.Line.Width = 1.0F;
 
             int curcount = zedGraphControl1.GraphPane.CurveList.Count;
             curcount = myPane.CurveList.Count;
@@ -157,6 +182,9 @@ namespace MC
 
             myPane.Y2Axis.Scale.Max = 60;
             myPane.Y2Axis.Scale.Min = 0;
+
+            myPane2.XAxis.Scale.Min = 0;	//X轴最小值0
+            myPane2.XAxis.Scale.Max = 100;
 
 
             //myPane.XAxis.Scale.MinorStep = 0.02;//X轴小步长1,也就是小间隔
@@ -208,6 +236,20 @@ namespace MC
 
             zedGraphControl2.Invalidate();
         }
+
+        private Boolean InitialzedGraph(int index)
+        {
+            switch (index)
+            {
+                case 0:
+                    break;
+                case 1:
+
+                    break;
+                default: break;
+            }
+            return false;
+        }
         /// <summary>
         /// 柱状图
         /// </summary>
@@ -216,57 +258,66 @@ namespace MC
         {
 
             //得到GraphPane的引用
+
+            zedGraphControl2.GraphPane.CurveList.Clear();
+            zedGraphControl2.GraphPane.GraphObjList.Clear();
+            zedGraphControl2.AxisChange();
+            zedGraphControl2.Refresh();
+
+            list.Clear();
+
             GraphPane myPane = zgc.GraphPane;
 
             string[] labels = new string[100];
             
             //Random rand = new Random();
-            DataTable _cpcountlist = _countlist.Copy();
+            DataTable _cpcountlist = _alarmlist.Copy();// _countlist.Copy();
             DataView dv = _cpcountlist.DefaultView;
-            name = gridView2.GetRowCellValue(rowindex, "Fname").ToString();
+            //if (rowindex == 0)
+            //    return;
+            //name = gridView2.GetRowCellValue(rowindex, "Fname").ToString();
 
-            string s = string.Format("nowtime2 >= '{0}' and nowtime1 <= '{1}' and FName ='{2}'", SDtime, EDtime, name);
-            dv.RowFilter = s;
+            //string s = string.Format("Starttme >= '{0}' and Endtme <= '{1}' and FName ='{2}'", SDtime, EDtime, name);
+            //dv.RowFilter = s;
             DataTable ndt = dv.ToTable();
+            labels = new string[ndt.Rows.Count];
+            zedGraphControl2.GraphPane.XAxis.Scale.Max = ndt.Rows.Count;
             for (int x = 0; x < ndt.Rows.Count; x++)         //赋值
             {
-                double y = double.Parse(ndt.Rows[x]["rpm"].ToString());
+                double y = Convert.ToInt32((double.Parse(ndt.Rows[x]["good"].ToString()) / (Convert.ToInt32(ndt.Rows[x]["allc"])))*100);
                 list.Add(x, y);
                 labels[x] = Convert.ToString(x);
+                //Listgood.Add(x, y);
             }
 
-            BarItem myCurve = myPane.AddBar("", list, Color.Blue);
+           BarItem myCurve = myPane.AddBar("", list, Color.Blue);
+            //Listgood = list;
+
             myCurve.Bar.Fill = new Fill(Color.White, Color.Blue, 45f);
 
             //对图像添加灰色网格
-            //myPane.XAxis.MajorGrid.IsVisible = true;
-            myPane.YAxis.MajorGrid.IsVisible = true;
-            //myPane.XAxis.MajorGrid.Color = Color.Gray;
-            myPane.YAxis.MajorGrid.Color = Color.Gray;
+            myPane.XAxis.MajorGrid.IsVisible = true;
 
-
-            myPane.XAxis.MajorTic.IsBetweenLabels = true;
-            myPane.XAxis.Scale.TextLabels = labels;
-            myPane.XAxis.Type = AxisType.Text;
-            // myPane.Fill = new Fill(Color.White, Color.FromArgb(200, 200, 255), 45.0f);
-            myPane.Chart.Fill = new Fill(Color.White, Color.LightGoldenrodYellow, 45.0f);
-            zgc.AxisChange();
+            zedGraphControl2.AxisChange();
+            zedGraphControl2.Invalidate();
         }
         /// <summary>
         /// 折线图
         /// </summary>
         /// <param name="zgc"></param>
-        private void CreateGraphx(ZedGraphControl zgc)
+        private void CreateGraphx(ZedGraphControl zgc,DataTable data)
         {
             double x = 0;
             double wa = 0;
             double wv = 0;
-            DataTable _cpcountlist = _countlist.Copy();
-            DataView dv = _cpcountlist.DefaultView;
-            name = gridView2.GetRowCellValue(rowindex, "Fname").ToString();
-            //dv.RowFilter = "nowtime1 between" + StartTime.Value + "and " + EndTime.Value;
-            string.Format("nowtime1 >= '{0}' and date <= '{1}' and FName ='{2}'", SDtime, EDtime,name);
-            DataTable ndt = dv.ToTable();
+            //DataTable _cpcountlist = _countlist.Copy();
+            //DataView dv = _cpcountlist.DefaultView;
+            //if (rowindex == 0) return;
+            //name = gridView2.GetRowCellValue(rowindex, "Fname").ToString();
+            ////dv.RowFilter = "nowtime1 between" + StartTime.Value + "and " + EndTime.Value;
+            //string.Format("nowtime1 >= '{0}' and date <= '{1}' and FName ='{2}'", SDtime, EDtime,name);
+            //DataTable ndt = dv.ToTable();
+            DataTable ndt = data;
             for (int i = 0; i < ndt.Rows.Count; i++)
             {
                 x = (double)new XDate(Convert.ToDateTime(ndt.Rows[i]["nowtime1"]));//焊机返string.Format("date >= '{0}' and date <= '{1}'",StartDate,EndDate)回时间
@@ -297,42 +348,40 @@ namespace MC
             int n=0;
             string[] dtfname = new string[255];//表内焊工名
             string zname;
-            //try
-            //{
-                if (_alarmlist.Rows.Count > 0)
+            if (_alarmlist.Rows.Count > 0)
+            {
+                dtfname[0] = _alarmlist.Rows[0]["Fname"].ToString();
+                n++;
+                for (int i = 1; i < _alarmlist.Rows.Count; i++)
                 {
-                    dtfname[0] = _alarmlist.Rows[0]["Fname"].ToString();
-                    n++;
-                    for (int i = 1; i < _alarmlist.Rows.Count; i++)
+                    zname = _alarmlist.Rows[i]["Fname"].ToString();
+                    if (zname != _alarmlist.Rows[i - 1]["Fname"].ToString())
                     {
-                        zname = _alarmlist.Rows[i]["Fname"].ToString();
-                        if (zname != _alarmlist.Rows[i - 1]["Fname"].ToString())
-                        {
-                            dtfname[n] = zname;
-                            n++;
-                        }
-                    }
-                    for (int i = 0; i < n; i++)
-                    {
-                        DataTable _cpalmlist = _alarmlist.Copy();
-                        DataView dv = _cpalmlist.DefaultView;
-                        string sn = "Fname=" + "'" + dtfname[i] + "'";
-                        dv.RowFilter = sn;
-                        DataTable ndt = dv.ToTable();
-                        _cpalmlist.Columns.Remove("Fname");
-                        _cpalmlist.Columns.Remove("minid");
-                        _cpalmlist.Columns.Remove("Maxid");
-                        _cpalmlist.Columns.Remove("allc");
-                        string fn = dtfname[i];
-                        string daex;
-                        daex = "姓名:"+fn + "  " + daexbody;
-                        fname = re.toexcel(_cpalmlist, 1,daex,fn,i+1);
-                        if (fname != null)
-                            re.RunExcelMacro(fname, "模板1", new Object[] { }, out objRtn, false);
-                        else
-                            return;
+                        dtfname[n] = zname;
+                        n++;
                     }
                 }
+                for (int i = 0; i < n; i++)
+                {
+                    DataTable _cpalmlist = _alarmlist.Copy();
+                    DataView dv = _cpalmlist.DefaultView;
+                    string sn = "Fname=" + "'" + dtfname[i] + "'";
+                    dv.RowFilter = sn;
+                    DataTable ndt = dv.ToTable();
+                    _cpalmlist.Columns.Remove("Fname");
+                    _cpalmlist.Columns.Remove("minid");
+                    _cpalmlist.Columns.Remove("Maxid");
+                    _cpalmlist.Columns.Remove("allc");
+                    string fn = dtfname[i];
+                    string daex;
+                    daex = "姓名:"+fn + "  " + daexbody;
+                    fname = re.toexcel(_cpalmlist, 1,daex);
+                    if (fname != null)
+                        re.RunExcelMacro(fname, "模板1", new Object[] { }, out objRtn, false);
+                    else
+                        return;
+                }
+            }
             //}
             //catch
             //{
@@ -349,36 +398,52 @@ namespace MC
                  + StartTime.Value.Hour.ToString() + ':' + StartTime.Value.Minute.ToString() + ':' + StartTime.Value.Second.ToString());
               EDtime = Convert.ToDateTime(CheckData.Value.Year.ToString() + '/' + CheckData.Value.Month.ToString() + '/' + CheckData.Value.Day.ToString() + ' '
                  + EndTime.Value.Hour.ToString() + ':' + EndTime.Value.Minute.ToString() + ':' + EndTime.Value.Second.ToString());
-              daexbody = "焊机:" + nom + "  " + "查询时间:" + SDtime.ToString() + "-" + EDtime.ToString();
+              daexbody = "查询时间:" + SDtime.ToString() + "-" + EDtime.ToString();
               DataTable dt = new DataTable();
               dt.Columns.Add("SDTime", typeof(DateTime));
               dt.Columns.Add("EDTime", typeof(DateTime));
-              dt.Columns.Add("nom", typeof(Int32));
+              dt.Columns.Add("Fnum", typeof(String));
               DataRow dr = dt.NewRow();
               dr["SDTime"] = SDtime;
               dr["EDTime"] = EDtime;
+              if (this.Treeview_welders.SelectedNode == null)
+              {
+                  MessageBox.Show(this, "请选择焊工", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                  return;
+              }
+              string nae = this.Treeview_welders.SelectedNode.Name;
+              string key = this.Treeview_welders.SelectedNode.Text;
+              if (nae == key)
+                  return;
+              String  welderNum = nae;
+
+
+
               try
               {
-                  dr["nom"] = int.Parse(nom);
+                  dr["Fnum"] = welderNum;
               }
               catch
               {
-                  MessageBox.Show("请选择树节点", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                  MessageBox.Show("请选择焊工", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                   return;
               }
               dt.Rows.Add(dr);
               _alarmlist = _Client.ServiceCall(cmd_alm, dt);
               _countlist = _Client.ServiceCall(cmd_cot, dt);
               this.efDevGrid1.DataSource = _alarmlist;
-              try
-              {
+              this.gridView2.OptionsView.ColumnAutoWidth = true;
+             // try
+             // {
+                  
+                 // CreateGraphx(zedGraphControl1,);
+                  gridView2_RowClick(null,null);
                   CreateGraphz(zedGraphControl2);
-                  CreateGraphx(zedGraphControl1);
-              }
-              catch
-              {
-                  return;
-              }
+             // }
+             // catch
+              //{
+              //    return;
+              //}
         }
 
         private void efTreeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -387,20 +452,29 @@ namespace MC
             string key = e.Node.Text;
             if (e.Node.Name == e.Node.Text)
                 return;
-            nom = e.Node.Name;
+            fnum = e.Node.Name;
         }
-
-
-
-        private void gridView2_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 重现焊接曲线
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void gridView2_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            rowindex = gridView2.FocusedRowHandle;
-            if (rowindex < 0)
-                return;
-            name = gridView2.GetRowCellValue(rowindex, "Fname").ToString();
-            CreateGraphx(zedGraphControl1);
+            //获取ID范围值
+            long startid = 0;
+            long endid = 0;
+            int rowindex = this.gridView2.FocusedRowHandle ;
+            startid = Convert.ToInt64(this.gridView2.GetRowCellValue(rowindex, "minid"));
+            endid = Convert.ToInt64(this.gridView2.GetRowCellValue(rowindex, "Maxid"));
+            String filter = " id >= {0} and id <={1}";
+            filter = String.Format(filter, startid, endid);
+            DataTable vdt = _countlist.Copy();
+            vdt.DefaultView.RowFilter = filter;
+            iniZEDGrap();
+            DataTable dt = vdt.DefaultView.ToTable();
+            CreateGraphx(this.zedGraphControl1, dt);
             CreateGraphz(zedGraphControl2);
         }
-
     }
 }

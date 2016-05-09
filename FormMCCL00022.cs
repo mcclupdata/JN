@@ -221,7 +221,7 @@ namespace MC
 
             DataView dv = _toDayTaskLists.DefaultView;
 
-            String rowfilter = "Fnum='{0}' and (FSTATE=1) and FSTARTTIME=#{1}#";
+            String rowfilter = "Fnum='{0}' and (FSTATE=1) ";//and FSTARTTIME=#{1}#";
             //如果存在正在进行的任务，则不显示其他任务
             dv.RowFilter = String.Format(rowfilter, weldernum, stime);
             DataTable dt = dv.ToTable();
@@ -381,6 +381,35 @@ namespace MC
                 this.tabPage1.Parent = null;
                 _curWelderTask_eRowIndex = rindex;
                 //this.dataGrid.Enabled = false;
+            }
+
+            if (bName == "CBUTCHANGE")
+            {
+                //切换焊机
+                if (vstate != 1)
+                {
+                    MessageBox.Show(this, "任务未开始或挂起或完成，不能切换", "警告", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    return;
+                }
+
+                DataView tmpDv = ((DataTable)dataGrid.DataSource).DefaultView;
+                String rowfilter = "FWELDID in ({0})";
+                tmpDv.RowFilter = String.Format(rowfilter, vFIDstr);
+                _curWelderTaskFID_DT = tmpDv.ToTable();
+                //frmWelderTask frm = new frmWelderTask(tmpDt);
+                //frm.ShowDialog(this);
+                DataTable curData = tmpDv.ToTable();
+                // this.dataGrid.DataSource = _curWelderTaskFID_DT;
+                //if (vstate == 4)
+                //{
+                    //切换焊机动作；
+                    _curWelderTaskFID_DT.Rows[0]["FSTATE"] = 6;
+                    welder_Task_Do(6, rindex, 0, _curWelderTaskFID_DT, "FSTATE_DES");
+                   //继续进行焊接动作
+                    _curWelderTaskFID_DT.Rows[0]["FSTATE"] = 1;
+                    welder_Task_Do(1, rindex, 0, _curWelderTaskFID_DT, "FSTATE_DES");
+                    return;
+                //}
             }
             if (bName == "CPUASE")
             {
@@ -683,7 +712,7 @@ namespace MC
         /// <summary>
         /// 焊工选择焊机后进行下一步工作
         /// </summary>
-        /// <param name="vstate">工作状态0 未开始 1 开始 2 完成 3 取消 4 挂起 5 继续</param>
+        /// <param name="vstate">工作状态0 未开始 1 开始 2 完成 3 取消 4 挂起 5 继续 6 切换焊机</param>
         /// <returns></returns>
         private Boolean welder_Task_Do(int vstate, int cur_Rowindex, int cur_ColIndex, DataTable data, String curCellName)
         {
@@ -703,7 +732,7 @@ namespace MC
             }
             switch (vstate)
             {
-                case 1://开始
+                case 1:case 6://开始
                     {
                         vitem = welderDrvs.SelectedItems[0];
                         nom = Convert.ToInt32(vitem.ToolTipText);
@@ -719,6 +748,7 @@ namespace MC
                        
                         break;
                     }
+                    
                 case 2://完成
                     {
                         drs = MessageBox.Show(this, "请确认完成焊接", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
@@ -826,7 +856,7 @@ namespace MC
 
                                 switch (vstate)
                                 {
-                                    case 1://开始
+                                    case 1:case 6://开始
                                         {
                                             if (this.gridView1.RowCount == 1)
                                                 cur_Rowindex = 0;

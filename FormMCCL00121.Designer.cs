@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.repositoryItemCheckEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
@@ -88,9 +89,59 @@
             this.New = new DevExpress.XtraGrid.Columns.GridColumn();
             this.FID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RuleName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ButCancel = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CancelButtonEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.RuleFID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ChooseWPSButtonEdit = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.butUpdate = new EF.EFButton();
+            this.EditMergweldsTab = new System.Windows.Forms.TabPage();
+            this.efPanel2 = new EF.EFPanel(this.components);
+            this.efGroupBox3 = new EF.EFGroupBox(this.components);
+            this.OutBagWelddataGrid = new EF.EFDevGrid();
+            this.OutBagWeldView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn52 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit6 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.efPanel3 = new EF.EFPanel(this.components);
+            this.efGroupBox2 = new EF.EFGroupBox(this.components);
+            this.inBagWeldsdataGrid = new EF.EFDevGrid();
+            this.InBagWeldsView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemCheckEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.efPanel5 = new EF.EFPanel(this.components);
+            this.butOut = new EF.EFButton();
+            this.butIN = new EF.EFButton();
+            this.efGroupBox1 = new EF.EFGroupBox(this.components);
+            this.BagdataGrid = new EF.EFDevGrid();
+            this.BagView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.efPanel4 = new EF.EFPanel(this.components);
+            this.butSaveEdit = new EF.EFButton();
+            this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
@@ -113,8 +164,37 @@
             this.MergedweldsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMerged)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CancelButtonEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChooseWPSButtonEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.butUpdate)).BeginInit();
+            this.EditMergweldsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efPanel2)).BeginInit();
+            this.efPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efGroupBox3)).BeginInit();
+            this.efGroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OutBagWelddataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OutBagWeldView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efPanel3)).BeginInit();
+            this.efPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.efGroupBox2)).BeginInit();
+            this.efGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.inBagWeldsdataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InBagWeldsView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efPanel5)).BeginInit();
+            this.efPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.butOut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.butIN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).BeginInit();
+            this.efGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BagdataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BagView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efPanel4)).BeginInit();
+            this.efPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.butSaveEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // repositoryItemCheckEdit4
@@ -394,12 +474,14 @@
             // 
             this.tabControl.Controls.Add(this.UnMergweldsTab);
             this.tabControl.Controls.Add(this.MergedweldsTab);
+            this.tabControl.Controls.Add(this.EditMergweldsTab);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(2, 30);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(1272, 786);
             this.tabControl.TabIndex = 6;
+            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // UnMergweldsTab
             // 
@@ -410,7 +492,7 @@
             this.UnMergweldsTab.Padding = new System.Windows.Forms.Padding(3);
             this.UnMergweldsTab.Size = new System.Drawing.Size(1264, 751);
             this.UnMergweldsTab.TabIndex = 0;
-            this.UnMergweldsTab.Text = "未合并焊缝";
+            this.UnMergweldsTab.Text = "创建焊缝包";
             this.UnMergweldsTab.UseVisualStyleBackColor = true;
             // 
             // dataGrid
@@ -445,7 +527,8 @@
             this.gridColumn17,
             this.gridColumn18,
             this.gridColumn19,
-            this.gridColumn20});
+            this.gridColumn20,
+            this.gridColumn56});
             this.gridView1.FixedLineWidth = 1;
             this.gridView1.GridControl = this.dataGrid;
             this.gridView1.IndicatorWidth = 35;
@@ -573,7 +656,7 @@
             this.MergedweldsTab.Padding = new System.Windows.Forms.Padding(3);
             this.MergedweldsTab.Size = new System.Drawing.Size(1264, 751);
             this.MergedweldsTab.TabIndex = 1;
-            this.MergedweldsTab.Text = "已合并焊缝";
+            this.MergedweldsTab.Text = "焊缝包设定";
             this.MergedweldsTab.UseVisualStyleBackColor = true;
             // 
             // dataGridMerged
@@ -585,7 +668,8 @@
             this.dataGridMerged.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridMerged.Name = "dataGridMerged";
             this.dataGridMerged.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.ChooseWPSButtonEdit});
+            this.ChooseWPSButtonEdit,
+            this.CancelButtonEdit});
             this.dataGridMerged.ShowExportButton = false;
             this.dataGridMerged.ShowGroupButton = false;
             this.dataGridMerged.ShowPageButton = false;
@@ -612,6 +696,7 @@
             this.New,
             this.FID,
             this.RuleName,
+            this.ButCancel,
             this.RuleFID});
             this.gridView3.FixedLineWidth = 1;
             this.gridView3.GridControl = this.dataGridMerged;
@@ -718,6 +803,23 @@
             this.RuleName.Visible = true;
             this.RuleName.VisibleIndex = 10;
             // 
+            // ButCancel
+            // 
+            this.ButCancel.Caption = "取消";
+            this.ButCancel.ColumnEdit = this.CancelButtonEdit;
+            this.ButCancel.Name = "ButCancel";
+            this.ButCancel.Visible = true;
+            this.ButCancel.VisibleIndex = 12;
+            // 
+            // CancelButtonEdit
+            // 
+            this.CancelButtonEdit.AutoHeight = false;
+            this.CancelButtonEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.CancelButtonEdit.Name = "CancelButtonEdit";
+            this.CancelButtonEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.CancelButtonEdit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.CancelButtonEdit_ButtonClick);
+            // 
             // RuleFID
             // 
             this.RuleFID.Caption = "规程";
@@ -731,7 +833,7 @@
             // 
             this.ChooseWPSButtonEdit.AutoHeight = false;
             this.ChooseWPSButtonEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "选择规程", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "选择规程", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.ChooseWPSButtonEdit.Name = "ChooseWPSButtonEdit";
             this.ChooseWPSButtonEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.ChooseWPSButtonEdit.Click += new System.EventHandler(this.ChooseWPSButtonEdit_Click);
@@ -751,6 +853,517 @@
             this.butUpdate.Text = "保存";
             this.butUpdate.ViewMode = EF.ViewModeEnum.Enable;
             this.butUpdate.Click += new System.EventHandler(this.efButton1_Click);
+            // 
+            // EditMergweldsTab
+            // 
+            this.EditMergweldsTab.Controls.Add(this.efPanel2);
+            this.EditMergweldsTab.Controls.Add(this.efPanel4);
+            this.EditMergweldsTab.Location = new System.Drawing.Point(4, 31);
+            this.EditMergweldsTab.Name = "EditMergweldsTab";
+            this.EditMergweldsTab.Size = new System.Drawing.Size(1264, 751);
+            this.EditMergweldsTab.TabIndex = 2;
+            this.EditMergweldsTab.Text = "编辑焊缝包";
+            this.EditMergweldsTab.UseVisualStyleBackColor = true;
+            // 
+            // efPanel2
+            // 
+            this.efPanel2.Controls.Add(this.efGroupBox3);
+            this.efPanel2.Controls.Add(this.efPanel3);
+            this.efPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.efPanel2.Location = new System.Drawing.Point(0, 60);
+            this.efPanel2.Name = "efPanel2";
+            this.efPanel2.Size = new System.Drawing.Size(1264, 691);
+            this.efPanel2.TabIndex = 0;
+            // 
+            // efGroupBox3
+            // 
+            this.efGroupBox3.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.efGroupBox3.Appearance.Options.UseBackColor = true;
+            this.efGroupBox3.Controls.Add(this.OutBagWelddataGrid);
+            this.efGroupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.efGroupBox3.Location = new System.Drawing.Point(771, 0);
+            this.efGroupBox3.Name = "efGroupBox3";
+            this.efGroupBox3.Size = new System.Drawing.Size(493, 691);
+            this.efGroupBox3.TabIndex = 1;
+            this.efGroupBox3.Text = "包外焊缝";
+            // 
+            // OutBagWelddataGrid
+            // 
+            this.OutBagWelddataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OutBagWelddataGrid.IsUseCustomPageBar = true;
+            this.OutBagWelddataGrid.Location = new System.Drawing.Point(2, 30);
+            this.OutBagWelddataGrid.MainView = this.OutBagWeldView;
+            this.OutBagWelddataGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.OutBagWelddataGrid.Name = "OutBagWelddataGrid";
+            this.OutBagWelddataGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit6});
+            this.OutBagWelddataGrid.ShowExportButton = false;
+            this.OutBagWelddataGrid.ShowGroupButton = false;
+            this.OutBagWelddataGrid.ShowPageButton = false;
+            this.OutBagWelddataGrid.ShowRowIndicator = false;
+            this.OutBagWelddataGrid.ShowSaveLayoutButton = false;
+            this.OutBagWelddataGrid.Size = new System.Drawing.Size(489, 659);
+            this.OutBagWelddataGrid.TabIndex = 6;
+            this.OutBagWelddataGrid.UseEmbeddedNavigator = true;
+            this.OutBagWelddataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.OutBagWeldView});
+            // 
+            // OutBagWeldView
+            // 
+            this.OutBagWeldView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn47,
+            this.gridColumn48,
+            this.gridColumn49,
+            this.gridColumn50,
+            this.gridColumn51,
+            this.gridColumn52,
+            this.gridColumn53,
+            this.gridColumn54,
+            this.gridColumn55});
+            this.OutBagWeldView.FixedLineWidth = 1;
+            this.OutBagWeldView.GridControl = this.OutBagWelddataGrid;
+            this.OutBagWeldView.IndicatorWidth = 35;
+            this.OutBagWeldView.Name = "OutBagWeldView";
+            this.OutBagWeldView.OptionsSelection.MultiSelect = true;
+            this.OutBagWeldView.OptionsView.ColumnAutoWidth = false;
+            this.OutBagWeldView.OptionsView.EnableAppearanceEvenRow = true;
+            this.OutBagWeldView.OptionsView.EnableAppearanceOddRow = true;
+            this.OutBagWeldView.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn47
+            // 
+            this.gridColumn47.Caption = "工程名";
+            this.gridColumn47.FieldName = "SHIP_NO";
+            this.gridColumn47.Name = "gridColumn47";
+            this.gridColumn47.Visible = true;
+            this.gridColumn47.VisibleIndex = 0;
+            // 
+            // gridColumn48
+            // 
+            this.gridColumn48.Caption = "分段号";
+            this.gridColumn48.FieldName = "BLK_NO";
+            this.gridColumn48.Name = "gridColumn48";
+            this.gridColumn48.Visible = true;
+            this.gridColumn48.VisibleIndex = 1;
+            // 
+            // gridColumn49
+            // 
+            this.gridColumn49.Caption = "分段号";
+            this.gridColumn49.FieldName = "TREE_NAME";
+            this.gridColumn49.Name = "gridColumn49";
+            this.gridColumn49.Visible = true;
+            this.gridColumn49.VisibleIndex = 2;
+            // 
+            // gridColumn50
+            // 
+            this.gridColumn50.Caption = "焊缝名";
+            this.gridColumn50.FieldName = "WELD_NO";
+            this.gridColumn50.Name = "gridColumn50";
+            this.gridColumn50.Visible = true;
+            this.gridColumn50.VisibleIndex = 3;
+            // 
+            // gridColumn51
+            // 
+            this.gridColumn51.Caption = "组立";
+            this.gridColumn51.FieldName = "AS3";
+            this.gridColumn51.Name = "gridColumn51";
+            this.gridColumn51.Visible = true;
+            this.gridColumn51.VisibleIndex = 4;
+            // 
+            // gridColumn52
+            // 
+            this.gridColumn52.Caption = "阶段";
+            this.gridColumn52.FieldName = "BUFF1";
+            this.gridColumn52.Name = "gridColumn52";
+            this.gridColumn52.Visible = true;
+            this.gridColumn52.VisibleIndex = 5;
+            // 
+            // gridColumn53
+            // 
+            this.gridColumn53.Caption = "零件名";
+            this.gridColumn53.FieldName = "PART1_NAME2";
+            this.gridColumn53.Name = "gridColumn53";
+            this.gridColumn53.Visible = true;
+            this.gridColumn53.VisibleIndex = 6;
+            // 
+            // gridColumn54
+            // 
+            this.gridColumn54.Caption = "零件名";
+            this.gridColumn54.FieldName = "PART2_NAME2";
+            this.gridColumn54.Name = "gridColumn54";
+            this.gridColumn54.Visible = true;
+            this.gridColumn54.VisibleIndex = 7;
+            // 
+            // gridColumn55
+            // 
+            this.gridColumn55.Caption = "hanfengID";
+            this.gridColumn55.FieldName = "FWELDID";
+            this.gridColumn55.Name = "gridColumn55";
+            this.gridColumn55.Visible = true;
+            this.gridColumn55.VisibleIndex = 8;
+            // 
+            // repositoryItemCheckEdit6
+            // 
+            this.repositoryItemCheckEdit6.AutoHeight = false;
+            this.repositoryItemCheckEdit6.Caption = "选中";
+            this.repositoryItemCheckEdit6.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryItemCheckEdit6.Name = "repositoryItemCheckEdit6";
+            this.repositoryItemCheckEdit6.ValueChecked = 1;
+            this.repositoryItemCheckEdit6.ValueUnchecked = 0;
+            // 
+            // efPanel3
+            // 
+            this.efPanel3.Controls.Add(this.efGroupBox2);
+            this.efPanel3.Controls.Add(this.efGroupBox1);
+            this.efPanel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.efPanel3.Location = new System.Drawing.Point(0, 0);
+            this.efPanel3.Name = "efPanel3";
+            this.efPanel3.Size = new System.Drawing.Size(771, 691);
+            this.efPanel3.TabIndex = 0;
+            // 
+            // efGroupBox2
+            // 
+            this.efGroupBox2.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.efGroupBox2.Appearance.Options.UseBackColor = true;
+            this.efGroupBox2.Controls.Add(this.inBagWeldsdataGrid);
+            this.efGroupBox2.Controls.Add(this.efPanel5);
+            this.efGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.efGroupBox2.Location = new System.Drawing.Point(0, 445);
+            this.efGroupBox2.Name = "efGroupBox2";
+            this.efGroupBox2.Size = new System.Drawing.Size(771, 246);
+            this.efGroupBox2.TabIndex = 1;
+            this.efGroupBox2.Text = "包内焊缝";
+            // 
+            // inBagWeldsdataGrid
+            // 
+            this.inBagWeldsdataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.inBagWeldsdataGrid.IsUseCustomPageBar = true;
+            this.inBagWeldsdataGrid.Location = new System.Drawing.Point(2, 30);
+            this.inBagWeldsdataGrid.MainView = this.InBagWeldsView;
+            this.inBagWeldsdataGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.inBagWeldsdataGrid.Name = "inBagWeldsdataGrid";
+            this.inBagWeldsdataGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit5});
+            this.inBagWeldsdataGrid.ShowExportButton = false;
+            this.inBagWeldsdataGrid.ShowGroupButton = false;
+            this.inBagWeldsdataGrid.ShowPageButton = false;
+            this.inBagWeldsdataGrid.ShowRowIndicator = false;
+            this.inBagWeldsdataGrid.ShowSaveLayoutButton = false;
+            this.inBagWeldsdataGrid.Size = new System.Drawing.Size(720, 214);
+            this.inBagWeldsdataGrid.TabIndex = 6;
+            this.inBagWeldsdataGrid.UseEmbeddedNavigator = true;
+            this.inBagWeldsdataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.InBagWeldsView});
+            // 
+            // InBagWeldsView
+            // 
+            this.InBagWeldsView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn36,
+            this.gridColumn37,
+            this.gridColumn38,
+            this.gridColumn41,
+            this.gridColumn42,
+            this.gridColumn43,
+            this.gridColumn44,
+            this.gridColumn45,
+            this.gridColumn46});
+            this.InBagWeldsView.FixedLineWidth = 1;
+            this.InBagWeldsView.GridControl = this.inBagWeldsdataGrid;
+            this.InBagWeldsView.IndicatorWidth = 35;
+            this.InBagWeldsView.Name = "InBagWeldsView";
+            this.InBagWeldsView.OptionsSelection.MultiSelect = true;
+            this.InBagWeldsView.OptionsView.ColumnAutoWidth = false;
+            this.InBagWeldsView.OptionsView.EnableAppearanceEvenRow = true;
+            this.InBagWeldsView.OptionsView.EnableAppearanceOddRow = true;
+            this.InBagWeldsView.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn36
+            // 
+            this.gridColumn36.Caption = "工程名";
+            this.gridColumn36.FieldName = "SHIP_NO";
+            this.gridColumn36.Name = "gridColumn36";
+            this.gridColumn36.Visible = true;
+            this.gridColumn36.VisibleIndex = 0;
+            // 
+            // gridColumn37
+            // 
+            this.gridColumn37.Caption = "分段号";
+            this.gridColumn37.FieldName = "BLK_NO";
+            this.gridColumn37.Name = "gridColumn37";
+            this.gridColumn37.Visible = true;
+            this.gridColumn37.VisibleIndex = 1;
+            // 
+            // gridColumn38
+            // 
+            this.gridColumn38.Caption = "分段号";
+            this.gridColumn38.FieldName = "TREE_NAME";
+            this.gridColumn38.Name = "gridColumn38";
+            this.gridColumn38.Visible = true;
+            this.gridColumn38.VisibleIndex = 2;
+            // 
+            // gridColumn41
+            // 
+            this.gridColumn41.Caption = "焊缝名";
+            this.gridColumn41.FieldName = "WELD_NO";
+            this.gridColumn41.Name = "gridColumn41";
+            this.gridColumn41.Visible = true;
+            this.gridColumn41.VisibleIndex = 3;
+            // 
+            // gridColumn42
+            // 
+            this.gridColumn42.Caption = "组立";
+            this.gridColumn42.FieldName = "AS3";
+            this.gridColumn42.Name = "gridColumn42";
+            this.gridColumn42.Visible = true;
+            this.gridColumn42.VisibleIndex = 4;
+            // 
+            // gridColumn43
+            // 
+            this.gridColumn43.Caption = "阶段";
+            this.gridColumn43.FieldName = "BUFF1";
+            this.gridColumn43.Name = "gridColumn43";
+            this.gridColumn43.Visible = true;
+            this.gridColumn43.VisibleIndex = 5;
+            // 
+            // gridColumn44
+            // 
+            this.gridColumn44.Caption = "零件名";
+            this.gridColumn44.FieldName = "PART1_NAME2";
+            this.gridColumn44.Name = "gridColumn44";
+            this.gridColumn44.Visible = true;
+            this.gridColumn44.VisibleIndex = 6;
+            // 
+            // gridColumn45
+            // 
+            this.gridColumn45.Caption = "零件名";
+            this.gridColumn45.FieldName = "PART2_NAME2";
+            this.gridColumn45.Name = "gridColumn45";
+            this.gridColumn45.Visible = true;
+            this.gridColumn45.VisibleIndex = 7;
+            // 
+            // gridColumn46
+            // 
+            this.gridColumn46.Caption = "焊缝ID";
+            this.gridColumn46.FieldName = "FWELDID";
+            this.gridColumn46.Name = "gridColumn46";
+            this.gridColumn46.Visible = true;
+            this.gridColumn46.VisibleIndex = 8;
+            // 
+            // repositoryItemCheckEdit5
+            // 
+            this.repositoryItemCheckEdit5.AutoHeight = false;
+            this.repositoryItemCheckEdit5.Caption = "选中";
+            this.repositoryItemCheckEdit5.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.repositoryItemCheckEdit5.Name = "repositoryItemCheckEdit5";
+            this.repositoryItemCheckEdit5.ValueChecked = 1;
+            this.repositoryItemCheckEdit5.ValueUnchecked = 0;
+            // 
+            // efPanel5
+            // 
+            this.efPanel5.Controls.Add(this.butOut);
+            this.efPanel5.Controls.Add(this.butIN);
+            this.efPanel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.efPanel5.Location = new System.Drawing.Point(722, 30);
+            this.efPanel5.Name = "efPanel5";
+            this.efPanel5.Size = new System.Drawing.Size(47, 214);
+            this.efPanel5.TabIndex = 7;
+            // 
+            // butOut
+            // 
+            this.butOut.Authorizable = false;
+            this.butOut.EnabledEx = true;
+            this.butOut.FnNo = 0;
+            this.butOut.Hint = "";
+            this.butOut.Location = new System.Drawing.Point(1, 109);
+            this.butOut.Name = "butOut";
+            this.butOut.Size = new System.Drawing.Size(45, 43);
+            this.butOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.butOut.TabIndex = 1;
+            this.butOut.Text = ">>";
+            this.butOut.ViewMode = EF.ViewModeEnum.Enable;
+            this.butOut.Click += new System.EventHandler(this.butOut_Click);
+            // 
+            // butIN
+            // 
+            this.butIN.Authorizable = false;
+            this.butIN.EnabledEx = true;
+            this.butIN.FnNo = 0;
+            this.butIN.Hint = "";
+            this.butIN.Location = new System.Drawing.Point(2, 21);
+            this.butIN.Name = "butIN";
+            this.butIN.Size = new System.Drawing.Size(45, 43);
+            this.butIN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.butIN.TabIndex = 0;
+            this.butIN.Text = "<<";
+            this.butIN.ViewMode = EF.ViewModeEnum.Enable;
+            this.butIN.Click += new System.EventHandler(this.butIN_Click);
+            // 
+            // efGroupBox1
+            // 
+            this.efGroupBox1.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.efGroupBox1.Appearance.Options.UseBackColor = true;
+            this.efGroupBox1.Controls.Add(this.BagdataGrid);
+            this.efGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efGroupBox1.Location = new System.Drawing.Point(0, 0);
+            this.efGroupBox1.Name = "efGroupBox1";
+            this.efGroupBox1.Size = new System.Drawing.Size(771, 445);
+            this.efGroupBox1.TabIndex = 0;
+            this.efGroupBox1.Text = "包";
+            // 
+            // BagdataGrid
+            // 
+            this.BagdataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BagdataGrid.IsUseCustomPageBar = true;
+            this.BagdataGrid.Location = new System.Drawing.Point(2, 30);
+            this.BagdataGrid.MainView = this.BagView;
+            this.BagdataGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BagdataGrid.Name = "BagdataGrid";
+            this.BagdataGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemButtonEdit2,
+            this.repositoryItemButtonEdit1});
+            this.BagdataGrid.ShowExportButton = false;
+            this.BagdataGrid.ShowGroupButton = false;
+            this.BagdataGrid.ShowPageButton = false;
+            this.BagdataGrid.ShowRowIndicator = false;
+            this.BagdataGrid.ShowSaveLayoutButton = false;
+            this.BagdataGrid.Size = new System.Drawing.Size(767, 413);
+            this.BagdataGrid.TabIndex = 7;
+            this.BagdataGrid.UseEmbeddedNavigator = true;
+            this.BagdataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.BagView});
+            // 
+            // BagView
+            // 
+            this.BagView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn30,
+            this.gridColumn31,
+            this.gridColumn32,
+            this.gridColumn33,
+            this.gridColumn34,
+            this.gridColumn35,
+            this.gridColumn39,
+            this.gridColumn40});
+            this.BagView.FixedLineWidth = 1;
+            this.BagView.GridControl = this.BagdataGrid;
+            this.BagView.IndicatorWidth = 35;
+            this.BagView.Name = "BagView";
+            this.BagView.OptionsView.ColumnAutoWidth = false;
+            this.BagView.OptionsView.EnableAppearanceEvenRow = true;
+            this.BagView.OptionsView.EnableAppearanceOddRow = true;
+            this.BagView.OptionsView.ShowGroupPanel = false;
+            this.BagView.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.BagView_RowClick);
+            // 
+            // gridColumn30
+            // 
+            this.gridColumn30.Caption = "工程号";
+            this.gridColumn30.FieldName = "SHIP_NO";
+            this.gridColumn30.Name = "gridColumn30";
+            this.gridColumn30.Visible = true;
+            this.gridColumn30.VisibleIndex = 1;
+            // 
+            // gridColumn31
+            // 
+            this.gridColumn31.Caption = "分段号";
+            this.gridColumn31.FieldName = "BLK_NO";
+            this.gridColumn31.Name = "gridColumn31";
+            this.gridColumn31.Visible = true;
+            this.gridColumn31.VisibleIndex = 2;
+            // 
+            // gridColumn32
+            // 
+            this.gridColumn32.Caption = "分段号";
+            this.gridColumn32.FieldName = "TREE_NAME";
+            this.gridColumn32.Name = "gridColumn32";
+            this.gridColumn32.Visible = true;
+            this.gridColumn32.VisibleIndex = 3;
+            // 
+            // gridColumn33
+            // 
+            this.gridColumn33.Caption = "焊缝号";
+            this.gridColumn33.FieldName = "WELD_NO";
+            this.gridColumn33.Name = "gridColumn33";
+            this.gridColumn33.Visible = true;
+            this.gridColumn33.VisibleIndex = 4;
+            // 
+            // gridColumn34
+            // 
+            this.gridColumn34.Caption = "组立";
+            this.gridColumn34.FieldName = "AS3";
+            this.gridColumn34.Name = "gridColumn34";
+            this.gridColumn34.Visible = true;
+            this.gridColumn34.VisibleIndex = 5;
+            // 
+            // gridColumn35
+            // 
+            this.gridColumn35.Caption = "阶段";
+            this.gridColumn35.FieldName = "BUFF1";
+            this.gridColumn35.Name = "gridColumn35";
+            this.gridColumn35.Visible = true;
+            this.gridColumn35.VisibleIndex = 6;
+            // 
+            // gridColumn39
+            // 
+            this.gridColumn39.Caption = "新工程名";
+            this.gridColumn39.FieldName = "FNewName";
+            this.gridColumn39.Name = "gridColumn39";
+            this.gridColumn39.Visible = true;
+            this.gridColumn39.VisibleIndex = 0;
+            this.gridColumn39.Width = 158;
+            // 
+            // gridColumn40
+            // 
+            this.gridColumn40.Caption = "FID";
+            this.gridColumn40.FieldName = "FID";
+            this.gridColumn40.Name = "gridColumn40";
+            // 
+            // repositoryItemButtonEdit2
+            // 
+            this.repositoryItemButtonEdit2.AutoHeight = false;
+            this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "选择规程", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
+            this.repositoryItemButtonEdit2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // repositoryItemButtonEdit1
+            // 
+            this.repositoryItemButtonEdit1.AutoHeight = false;
+            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
+            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // efPanel4
+            // 
+            this.efPanel4.Controls.Add(this.butSaveEdit);
+            this.efPanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efPanel4.Location = new System.Drawing.Point(0, 0);
+            this.efPanel4.Name = "efPanel4";
+            this.efPanel4.Size = new System.Drawing.Size(1264, 60);
+            this.efPanel4.TabIndex = 1;
+            // 
+            // butSaveEdit
+            // 
+            this.butSaveEdit.Authorizable = false;
+            this.butSaveEdit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.butSaveEdit.EnabledEx = true;
+            this.butSaveEdit.FnNo = 0;
+            this.butSaveEdit.Hint = "";
+            this.butSaveEdit.Location = new System.Drawing.Point(1136, 0);
+            this.butSaveEdit.Name = "butSaveEdit";
+            this.butSaveEdit.Size = new System.Drawing.Size(128, 60);
+            this.butSaveEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.butSaveEdit.TabIndex = 0;
+            this.butSaveEdit.Text = "保存变更";
+            this.butSaveEdit.ViewMode = EF.ViewModeEnum.Enable;
+            this.butSaveEdit.Click += new System.EventHandler(this.butSaveEdit_Click);
+            // 
+            // gridColumn56
+            // 
+            this.gridColumn56.Caption = "焊缝内码";
+            this.gridColumn56.FieldName = "FWELDID";
+            this.gridColumn56.Name = "gridColumn56";
+            this.gridColumn56.Visible = true;
+            this.gridColumn56.VisibleIndex = 9;
             // 
             // FormMCCL00121
             // 
@@ -787,8 +1400,37 @@
             this.MergedweldsTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMerged)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CancelButtonEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChooseWPSButtonEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.butUpdate)).EndInit();
+            this.EditMergweldsTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efPanel2)).EndInit();
+            this.efPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efGroupBox3)).EndInit();
+            this.efGroupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.OutBagWelddataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OutBagWeldView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efPanel3)).EndInit();
+            this.efPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.efGroupBox2)).EndInit();
+            this.efGroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.inBagWeldsdataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InBagWeldsView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efPanel5)).EndInit();
+            this.efPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.butOut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.butIN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efGroupBox1)).EndInit();
+            this.efGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BagdataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BagView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efPanel4)).EndInit();
+            this.efPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.butSaveEdit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -856,6 +1498,56 @@
         private DevExpress.XtraGrid.Columns.GridColumn RuleFID;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit ChooseWPSButtonEdit;
         private EF.EFButton butUpdate;
+        private DevExpress.XtraGrid.Columns.GridColumn ButCancel;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit CancelButtonEdit;
+        private System.Windows.Forms.TabPage EditMergweldsTab;
+        private EF.EFPanel efPanel2;
+        private EF.EFGroupBox efGroupBox3;
+        private EF.EFPanel efPanel3;
+        private EF.EFGroupBox efGroupBox2;
+        private EF.EFGroupBox efGroupBox1;
+        private EF.EFDevGrid OutBagWelddataGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView OutBagWeldView;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn47;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn48;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn49;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn50;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn51;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn52;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn53;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn54;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit6;
+        private EF.EFDevGrid inBagWeldsdataGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView InBagWeldsView;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn36;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn42;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn45;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit5;
+        private EF.EFDevGrid BagdataGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView BagView;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn39;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn40;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
+        private EF.EFPanel efPanel4;
+        private EF.EFButton butSaveEdit;
+        private EF.EFPanel efPanel5;
+        private EF.EFButton butOut;
+        private EF.EFButton butIN;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn46;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn55;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn56;
 
     }
 }

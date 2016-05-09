@@ -701,6 +701,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="weldEquipmentbase.cs" />
+    <Compile Include="weldWorkerbase.cs" />
     <Compile Include="_MyClient.cs" />
     <Compile Include="FormMCCL00044.cs">
       <SubType>Form</SubType>

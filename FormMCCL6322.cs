@@ -128,10 +128,10 @@ namespace MC
                 
                 sada["nom"] = cobWeldNom.Text;
                 sada["channel"] = (cobChannel.SelectedIndex + 1).ToString();
-                string used = "0";
-                if (efRadioButton1.Checked)
-                    used = "1";
-                sada["used"] = used;
+                //string used = "0";
+                //if (efRadioButton1.Checked)
+                //    used = "1";
+                //sada["used"] = used;
                 int vai_up = int.Parse(Textca.Text) + int.Parse(Textwca.Text);
                 int vai_down = int.Parse(Textca.Text) - int.Parse(Textwca.Text);
                 float vvi_up = float.Parse(Textcv.Text) + float.Parse(Textwcv.Text);
@@ -295,10 +295,10 @@ namespace MC
                     DataTable ndt = dv.ToTable();
                     if (ndt.Rows.Count == 1)
                     {
-                        if (ndt.Rows[0]["used"].ToString() == "1")
-                            efRadioButton1.Checked = true;
-                        else if (ndt.Rows[0]["used"].ToString() == "0")
-                            efRadioButton1.Checked = false;
+                        //if (ndt.Rows[0]["used"].ToString() == "1")
+                        //    efRadioButton1.Checked = true;
+                        //else if (ndt.Rows[0]["used"].ToString() == "0")
+                        //    efRadioButton1.Checked = false;
                         string wca;
                         Textca.Text = imoth(ndt.Rows[0]["vai_up"].ToString(), ndt.Rows[0]["vai_down"].ToString(), out wca);//初期电流
                         Textwca.Text = wca;

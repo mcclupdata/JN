@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("焊机001");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("班组一", new System.Windows.Forms.TreeNode[] {
-            treeNode4});
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("焊机总成", new System.Windows.Forms.TreeNode[] {
-            treeNode5});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("焊机001");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("班组一", new System.Windows.Forms.TreeNode[] {
+            treeNode1});
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("焊机总成", new System.Windows.Forms.TreeNode[] {
+            treeNode2});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMCCL000252));
             this.efGroupBox1 = new EF.EFGroupBox(this.components);
             this.efPanelStyleXP2 = new EF.EFPanelStyleXP();
@@ -123,7 +123,7 @@
             this.efGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efGroupBox1.Location = new System.Drawing.Point(0, 0);
             this.efGroupBox1.Name = "efGroupBox1";
-            this.efGroupBox1.Size = new System.Drawing.Size(896, 516);
+            this.efGroupBox1.Size = new System.Drawing.Size(1060, 580);
             this.efGroupBox1.TabIndex = 4;
             this.efGroupBox1.Text = "焊机监控";
             this.efGroupBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.efGroupBox1_Paint);
@@ -132,11 +132,11 @@
             // 
             this.efPanelStyleXP2.Controls.Add(this.efPanelStyleXP4);
             this.efPanelStyleXP2.Controls.Add(this.efPanelStyleXP3);
-            this.efPanelStyleXP2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.efPanelStyleXP2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.efPanelStyleXP2.Location = new System.Drawing.Point(287, 23);
             this.efPanelStyleXP2.Margin = new System.Windows.Forms.Padding(2);
             this.efPanelStyleXP2.Name = "efPanelStyleXP2";
-            this.efPanelStyleXP2.Size = new System.Drawing.Size(607, 496);
+            this.efPanelStyleXP2.Size = new System.Drawing.Size(771, 555);
             this.efPanelStyleXP2.TabIndex = 1;
             this.efPanelStyleXP2.Paint += new System.Windows.Forms.PaintEventHandler(this.efPanelStyleXP2_Paint);
             // 
@@ -147,7 +147,7 @@
             this.efPanelStyleXP4.Location = new System.Drawing.Point(0, 351);
             this.efPanelStyleXP4.Margin = new System.Windows.Forms.Padding(2);
             this.efPanelStyleXP4.Name = "efPanelStyleXP4";
-            this.efPanelStyleXP4.Size = new System.Drawing.Size(607, 145);
+            this.efPanelStyleXP4.Size = new System.Drawing.Size(771, 204);
             this.efPanelStyleXP4.TabIndex = 1;
             // 
             // dataGrid
@@ -157,7 +157,7 @@
             this.dataGrid.MainView = this.gridView1;
             this.dataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.Size = new System.Drawing.Size(607, 145);
+            this.dataGrid.Size = new System.Drawing.Size(771, 204);
             this.dataGrid.TabIndex = 0;
             this.dataGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -313,7 +313,7 @@
             this.efPanelStyleXP3.Location = new System.Drawing.Point(0, 0);
             this.efPanelStyleXP3.Margin = new System.Windows.Forms.Padding(2);
             this.efPanelStyleXP3.Name = "efPanelStyleXP3";
-            this.efPanelStyleXP3.Size = new System.Drawing.Size(607, 351);
+            this.efPanelStyleXP3.Size = new System.Drawing.Size(771, 351);
             this.efPanelStyleXP3.TabIndex = 2;
             // 
             // zedGraphControl1
@@ -358,7 +358,7 @@
             this.zedGraphControl1.ScrollMinX = 0;
             this.zedGraphControl1.ScrollMinY = 0;
             this.zedGraphControl1.ScrollMinY2 = 0;
-            this.zedGraphControl1.Size = new System.Drawing.Size(146, 351);
+            this.zedGraphControl1.Size = new System.Drawing.Size(310, 351);
             this.zedGraphControl1.TabIndex = 3;
             this.zedGraphControl1.ZoomButtons = System.Windows.Forms.MouseButtons.Left;
             this.zedGraphControl1.ZoomButtons2 = System.Windows.Forms.MouseButtons.None;
@@ -825,7 +825,7 @@
             this.efPanelStyleXP1.Location = new System.Drawing.Point(2, 23);
             this.efPanelStyleXP1.Margin = new System.Windows.Forms.Padding(2);
             this.efPanelStyleXP1.Name = "efPanelStyleXP1";
-            this.efPanelStyleXP1.Size = new System.Drawing.Size(285, 491);
+            this.efPanelStyleXP1.Size = new System.Drawing.Size(285, 555);
             this.efPanelStyleXP1.TabIndex = 0;
             // 
             // weldEquipList
@@ -836,17 +836,17 @@
             this.weldEquipList.Location = new System.Drawing.Point(0, 101);
             this.weldEquipList.Margin = new System.Windows.Forms.Padding(2);
             this.weldEquipList.Name = "weldEquipList";
-            treeNode4.ImageIndex = 1;
-            treeNode4.Name = "节点2";
-            treeNode4.Text = "焊机001";
-            treeNode5.Name = "节点1";
-            treeNode5.Text = "班组一";
-            treeNode6.Name = "root";
-            treeNode6.Text = "焊机总成";
+            treeNode1.ImageIndex = 1;
+            treeNode1.Name = "节点2";
+            treeNode1.Text = "焊机001";
+            treeNode2.Name = "节点1";
+            treeNode2.Text = "班组一";
+            treeNode3.Name = "root";
+            treeNode3.Text = "焊机总成";
             this.weldEquipList.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode6});
+            treeNode3});
             this.weldEquipList.SelectedImageIndex = 0;
-            this.weldEquipList.Size = new System.Drawing.Size(285, 390);
+            this.weldEquipList.Size = new System.Drawing.Size(285, 454);
             this.weldEquipList.TabIndex = 0;
             this.weldEquipList.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.weldEquipList_NodeMouseDoubleClick);
             // 
@@ -942,7 +942,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 562);
+            this.ClientSize = new System.Drawing.Size(1060, 626);
             this.Controls.Add(this.efGroupBox1);
             this.Margin = new System.Windows.Forms.Padding(3);
             this.Name = "FormMCCL000252";
@@ -975,29 +975,10 @@
 
         private EF.EFGroupBox efGroupBox1;
         private EF.EFPanelStyleXP efPanelStyleXP2;
-        private EF.EFPanelStyleXP efPanelStyleXP1;
-        private EF.EFPanelStyleXP efPanelStyleXP4;
-        private EF.EFDevGrid dataGrid;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
-        private EF.EFTreeView weldEquipList;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Timer Timer_ZED;
         private System.Windows.Forms.Timer Timer_Equip;
         private System.Windows.Forms.Timer Timer_Task;
-        private EF.EFDateTimePicker EndDate;
-        private EF.EFDateTimePicker StartDate;
-        private EF.EFLabel efLabel8;
-        private EF.EFLabel efLabel9;
-        private EF.EFDevTimeEdit DStartTime;
-        private EF.EFDevTimeEdit DEndTime;
-        private EF.EFPanel efPanel1;
         private EF.EFPanelStyleXP efPanelStyleXP3;
         private ZedGraph.ZedGraphControl zedGraphControl1;
         private EF.EFPanelStyleXP efPanelStyleXP5;
@@ -1027,12 +1008,31 @@
         private YutouCSharpNameSpace.TNS_YutouControlLED.TC_SevenSegmentLED va;
         private EF.EFTextBox state;
         private EF.EFLabel efLabel14;
+        private EF.EFPanelStyleXP efPanelStyleXP4;
+        private EF.EFDevGrid dataGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private EF.EFPanelStyleXP efPanelStyleXP1;
+        private EF.EFTreeView weldEquipList;
+        private EF.EFPanel efPanel1;
+        private EF.EFDevTimeEdit DStartTime;
+        private EF.EFDevTimeEdit DEndTime;
+        private EF.EFDateTimePicker EndDate;
+        private EF.EFDateTimePicker StartDate;
+        private EF.EFLabel efLabel8;
+        private EF.EFLabel efLabel9;
 
     }
 }

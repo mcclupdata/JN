@@ -61,15 +61,23 @@ namespace MC
             long classid = 0;
             DataRowView workdrw = (DataRowView)this.ClassGroup.SelectedItem;
             classid = Convert.ToInt64(workdrw["FID"]);
+
             this.dataGrid.DataSource = _cls.getClassWeldsForMerge(classid);
+            this.gridView1.OptionsView.ColumnAutoWidth = true;
             this.dataGridMerged.DataSource = _cls.getClassMergedwelds(classid);
+            tabControl_SelectedIndexChanged(tabControl, null);
+            this.inBagWeldsdataGrid.DataSource = null;
         }
 
         private void FormMCCL00121_LocationChanged(object sender, EventArgs e)
         {
 
         }
-
+        /// <summary>
+        /// 合并焊缝
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void butMerge_Click(object sender, EventArgs e)
         {
             if (this.gridView1.RowCount == 0)
@@ -190,6 +198,132 @@ namespace MC
             DataRowView workdrw = (DataRowView)this.ClassGroup.SelectedItem;
             classid = Convert.ToInt64(workdrw["FID"]);
             this.dataGridMerged.DataSource = _cls.getClassMergedwelds(classid) ;
+        }
+        /// <summary>
+        /// 取消焊缝合并
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CancelButtonEdit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            DataTable dt = (DataTable)this.dataGridMerged.DataSource;
+            //获取当前数据
+            int curIndex = this.gridView3.FocusedRowHandle;
+            DataTable data = dt.Clone();
+            DataRow row = dt.Rows[curIndex];
+            data.ImportRow(row);
+
+            if (dt == null)
+                return;
+            if (MessageBox.Show(this, "是否确定解除打包?", "消息", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+            {
+                bool rs = _cls.clsClassCancelMargwelds(data);
+                //dt = _cls.UpdateMargedWeldWPS(dt);
+                long classid = 0;
+                DataRowView workdrw = (DataRowView)this.ClassGroup.SelectedItem;
+                classid = Convert.ToInt64(workdrw["FID"]);
+                this.dataGridMerged.DataSource = _cls.getClassMergedwelds(classid);
+                this.dataGrid.DataSource = _cls.getClassWeldsForMerge(classid);
+            }
+           
+
+
+
+        
+        }
+
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.tabControl.SelectedIndex == 2)
+            {
+                this.BagdataGrid.DataSource = ((DataTable)this.dataGridMerged.DataSource).Copy();
+                this.OutBagWelddataGrid.DataSource = ((DataTable)this.dataGrid.DataSource).Copy() ;
+            }
+        }
+        /// <summary>
+        /// 添加焊缝；
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void butIN_Click(object sender, EventArgs e)
+        {
+            int[] selindex = this.OutBagWeldView.GetSelectedRows();
+            
+            for (int i = 0; i < selindex.Length; i++)
+            {
+                DataTable vdt=(DataTable)this.OutBagWelddataGrid.DataSource;
+                DataRow nr = this.OutBagWeldView.GetDataRow(selindex[i]);
+                DataTable sdt = (DataTable)this.inBagWeldsdataGrid.DataSource;
+                if (sdt == null)
+                    return;
+                sdt.ImportRow(nr);
+               
+                
+                
+                
+            }
+            this.OutBagWeldView.DeleteSelectedRows();
+            //((DataTable)this.inBagWeldsdataGrid.DataSource).ImportRow(selDT.Rows[0]);
+        }
+
+        private void BagView_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            //加载保内的焊缝；
+            long vFID = Convert.ToInt64(this.BagView.GetRowCellValue(e.RowHandle, "FID"));
+            this.inBagWeldsdataGrid.DataSource = _cls.GetBagWelds(vFID);
+            this.OutBagWelddataGrid.DataSource = ((DataTable)this.dataGrid.DataSource).Copy();
+        }
+
+        private void butOut_Click(object sender, EventArgs e)
+        {
+            int[] selindex = this.InBagWeldsView.GetSelectedRows();
+            for (int i = 0; i < selindex.Length; i++)
+            {
+                DataTable vdt = (DataTable)this.inBagWeldsdataGrid.DataSource;
+                DataRow nr =this.InBagWeldsView.GetDataRow(selindex[i]);
+                DataTable sdt = (DataTable)this.OutBagWelddataGrid.DataSource;
+                if (sdt == null)
+                    return;
+                sdt.ImportRow(nr);
+                //this.InBagWeldsView.DeleteRow(selindex[i]);
+            }
+            InBagWeldsView.DeleteSelectedRows();
+        }
+
+        private void butSaveEdit_Click(object sender, EventArgs e)
+        {
+            this.inBagWeldsdataGrid.Update();
+            String name = "";
+            int curRowhandel = this.BagView.FocusedRowHandle;
+            if (curRowhandel < 0)
+                return;
+            DataTable idata = ((DataTable)this.BagdataGrid.DataSource).Clone();
+            idata.ImportRow(this.BagView.GetDataRow(curRowhandel));
+
+
+            name = this.BagView.GetRowCellValue(curRowhandel, "FNewName").ToString();
+            DataTable inBagwelds_dt = (DataTable)this.inBagWeldsdataGrid.DataSource;
+            if (inBagwelds_dt.GetChanges(DataRowState.Added).Rows.Count > 0 || inBagwelds_dt.GetChanges(DataRowState.Deleted).Rows.Count > 0)
+            {
+                if (MessageBox.Show(this, "是否确定包编辑并提交?", "消息", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+                {
+                    DataTable data = (DataTable)this.inBagWeldsdataGrid.DataSource;
+                    data = _cls.Editupdate(idata, data, name);
+
+                    long classid = 0;
+                    DataRowView workdrw = (DataRowView)this.ClassGroup.SelectedItem;
+                    classid = Convert.ToInt64(workdrw["FID"]);
+                    this.dataGrid.DataSource = _cls.getClassWeldsForMerge(classid);
+                    this.dataGridMerged.DataSource = _cls.getClassMergedwelds(classid);
+                    tabControl_SelectedIndexChanged(tabControl, null);
+                    this.inBagWeldsdataGrid.DataSource = null;
+                }
+            }
+            else
+            {
+                return;
+            }
+
         }
     }
 }

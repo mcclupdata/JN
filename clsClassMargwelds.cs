@@ -21,6 +21,10 @@ namespace MC
         /// 焊缝合并，更新合并后新焊缝的WPS 命令；
         /// </summary>
         static int cmd_Margwelds_UpnewWPS = 6030901;
+        //撤销
+        static int cmd_CancelMargwelds=6042701;
+        //获取焊缝包内的焊缝
+        static int cmd_GetBagWelds = 6042702;
         /// <summary>
         /// 焊缝合并，更新合并后新焊缝的WPS
         /// </summary>
@@ -48,6 +52,16 @@ namespace MC
             data.AcceptChanges();
             DataTable rs=_Client.ServiceCall(cmd_Margwelds_UpnewWPS, data);
             return rs;
+        }
+        /// <summary>
+        /// 取消打包合并；
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns></returns>
+        public bool clsClassCancelMargwelds(DataTable data)
+        {
+            DataTable rs = _Client.ServiceCall(cmd_CancelMargwelds, data);
+            return false;
         }
         public clsClassMargwelds(ref Formbase frm)
         {
@@ -135,6 +149,59 @@ namespace MC
             {
                 return null;
             }
+        }
+        
+        /// <summary>
+        /// 获取保内的焊缝信息
+        /// </summary>
+        /// <returns></returns>
+        public DataTable GetBagWelds(long vFID)
+        {
+            DataTable data=new DataTable();
+            data.Columns.Add("FID",typeof(long));
+            data.Rows.Add(vFID);
+
+            if (data.Rows.Count == 1)
+            {
+                data= _Client.ServiceCall(cmd_GetBagWelds, data);
+                //for (int i = 0; i < data.Rows.Count; i++)
+                //{
+                //    data.Rows[i]["FWELDID"] = data.Rows[i]["FID"];
+                //}
+                    return data;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        /// <summary>
+        /// 保存编辑更新
+        /// </summary>
+        /// <param name="data"></param>
+        /// <param name="nname"></param>
+        /// <returns></returns>
+        public DataTable Editupdate(DataTable idata, DataTable data, String nname)
+        {
+
+            data.AcceptChanges();
+            if (data.Columns.IndexOf("FNewName")<0)
+            data.Columns.Add("FNewName", typeof(String));
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                data.Rows[i]["FNewName"] = nname;
+                //data.Rows[i]["FWELDID"] = data.Rows[i][0];
+            }
+            DataTable rs = _Client.ServiceCall(cmd_CancelMargwelds, idata);
+            long vindex =Convert.ToInt64(idata.Rows[0]["FWELDID"]);
+            DataTable    fdata=new DataTable();
+            fdata.Columns.Add("FID",typeof(long));
+            fdata.Rows.Add(vindex);
+
+           // idata=_Client.ServiceCall(cmd_GetBagWelds,fdata);
+
+            rs=this.MergeWelds(data);
+            return rs;
         }
     }
 }

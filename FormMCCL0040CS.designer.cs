@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition1 = new DevExpress.XtraGrid.StyleFormatCondition();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition2 = new DevExpress.XtraGrid.StyleFormatCondition();
             this.G = new DevExpress.XtraGrid.Columns.GridColumn();
             this.efGroupBoxEx1 = new EF.EFGroupBoxEx(this.components);
             this.DepartList = new EF.EFDevLookUpEdit(this.components);
@@ -66,6 +66,7 @@
             this.GY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GZ = new DevExpress.XtraGrid.Columns.GridColumn();
             this.GV = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.efButton1 = new EF.EFButton();
             ((System.ComponentModel.ISupportInitialize)(this.efGroupBoxEx1)).BeginInit();
             this.efGroupBoxEx1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DepartList.Properties)).BeginInit();
@@ -90,6 +91,7 @@
             this.efGroupBoxEx3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.evadataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.evaGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // G
@@ -260,7 +262,7 @@
             // 
             this.leveButton.AutoHeight = false;
             this.leveButton.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "焊接等级", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "焊接等级", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, null, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.leveButton.Name = "leveButton";
             this.leveButton.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -275,6 +277,7 @@
             // 
             // efGroupBoxEx2
             // 
+            this.efGroupBoxEx2.Controls.Add(this.efButton1);
             this.efGroupBoxEx2.Controls.Add(this.efLabel2);
             this.efGroupBoxEx2.Controls.Add(this.EndDate);
             this.efGroupBoxEx2.Controls.Add(this.efLabel1);
@@ -428,14 +431,14 @@
             this.GV,
             this.G});
             this.evaGridView.FixedLineWidth = 1;
-            styleFormatCondition1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            styleFormatCondition1.Appearance.Options.UseBackColor = true;
-            styleFormatCondition1.ApplyToRow = true;
-            styleFormatCondition1.Column = this.G;
-            styleFormatCondition1.Condition = DevExpress.XtraGrid.FormatConditionEnum.Less;
-            styleFormatCondition1.Value1 = 60;
+            styleFormatCondition2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            styleFormatCondition2.Appearance.Options.UseBackColor = true;
+            styleFormatCondition2.ApplyToRow = true;
+            styleFormatCondition2.Column = this.G;
+            styleFormatCondition2.Condition = DevExpress.XtraGrid.FormatConditionEnum.Less;
+            styleFormatCondition2.Value1 = 60;
             this.evaGridView.FormatConditions.AddRange(new DevExpress.XtraGrid.StyleFormatCondition[] {
-            styleFormatCondition1});
+            styleFormatCondition2});
             this.evaGridView.GridControl = this.evadataGrid;
             this.evaGridView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways;
             this.evaGridView.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -513,6 +516,21 @@
             this.GV.Visible = true;
             this.GV.VisibleIndex = 7;
             // 
+            // efButton1
+            // 
+            this.efButton1.Authorizable = false;
+            this.efButton1.EnabledEx = true;
+            this.efButton1.FnNo = 0;
+            this.efButton1.Hint = "";
+            this.efButton1.Location = new System.Drawing.Point(222, 26);
+            this.efButton1.Name = "efButton1";
+            this.efButton1.Size = new System.Drawing.Size(83, 38);
+            this.efButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.efButton1.TabIndex = 6;
+            this.efButton1.Text = "导出";
+            this.efButton1.ViewMode = EF.ViewModeEnum.Enable;
+            this.efButton1.Click += new System.EventHandler(this.efButton1_Click);
+            // 
             // FormMCCL0040CS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
@@ -549,6 +567,7 @@
             this.efGroupBoxEx3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.evadataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.evaGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.efButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -590,5 +609,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn GV;
         private DevExpress.XtraGrid.Columns.GridColumn G;
         private ZedGraph.ZedGraphControl zedGraphControl1;
+        private EF.EFButton efButton1;
     }
 }

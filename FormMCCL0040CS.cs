@@ -12,6 +12,8 @@ namespace MC
     {
         _MyClient _Client = new _MyClient();
         clsEvaWelders _cls = new clsEvaWelders();
+        DataTable data;
+        String check;
         public FormMCCL0040CS()
         {
             InitializeComponent();
@@ -56,9 +58,11 @@ namespace MC
         {
             int eRowhandle = e.RowHandle;
             String fnum = this.weldergridView.GetRowCellValue(eRowhandle, "Fnum").ToString();
+            string name = this.weldergridView.GetRowCellValue(eRowhandle, "FName").ToString();
             String startdt = this.StartDate.Value.ToShortDateString();
             String enddt = this.EndDate.Value.AddDays(1).ToShortDateString();
-            DataTable data=_cls.getEvaluation_Welders(fnum,startdt,enddt);
+            check = name + "  " + startdt + "--" + enddt;
+            data=_cls.getEvaluation_Welders(fnum,startdt,enddt);
             this.evadataGrid.DataSource = data;
             initZEG(data);
     
@@ -137,6 +141,15 @@ namespace MC
             this.zedGraphControl1.AxisChange();
             this.zedGraphControl1.Refresh();
             return false;
+        }
+
+        private void efButton1_Click(object sender, EventArgs e)
+        {
+            DataToExcel weuate = new DataToExcel();
+            object objRtn = new object();
+            string filen;
+            filen = weuate.toexcel(data, 1, check);
+            weuate.RunExcelMacro(filen, "Macro3", new Object[] { }, out objRtn, false);
         }
     }
 }

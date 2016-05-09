@@ -12,6 +12,10 @@ namespace MC
         /// </summary>
         public static int cmd_weldEquipment_weldPoint=0509202;//获取焊机位置命令
         /// <summary>
+        /// 获取焊机位置命令（链接焊工）
+        /// </summary>
+        public static int cmd_weldEquipment_welderPoint = 0642101;
+        /// <summary>
         /// 获取焊机集合命令
         /// </summary>
         public static int cmd_weldEquipment_get = 0509201;//获取焊机集合命令；

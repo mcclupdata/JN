@@ -69,9 +69,8 @@
             this.efGroupBox1.Controls.Add(this.txtFileName);
             this.efGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.efGroupBox1.Location = new System.Drawing.Point(0, 0);
-            this.efGroupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.efGroupBox1.Name = "efGroupBox1";
-            this.efGroupBox1.Size = new System.Drawing.Size(1463, 179);
+            this.efGroupBox1.Size = new System.Drawing.Size(959, 114);
             this.efGroupBox1.TabIndex = 4;
             this.efGroupBox1.Text = " ";
             // 
@@ -81,10 +80,9 @@
             this.butOK.EnabledEx = true;
             this.butOK.FnNo = 0;
             this.butOK.Hint = "";
-            this.butOK.Location = new System.Drawing.Point(531, 113);
-            this.butOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butOK.Location = new System.Drawing.Point(372, 72);
             this.butOK.Name = "butOK";
-            this.butOK.Size = new System.Drawing.Size(107, 57);
+            this.butOK.Size = new System.Drawing.Size(75, 36);
             this.butOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butOK.TabIndex = 3;
             this.butOK.Text = "导入";
@@ -96,10 +94,9 @@
             this.butRead.EnabledEx = true;
             this.butRead.FnNo = 0;
             this.butRead.Hint = "";
-            this.butRead.Location = new System.Drawing.Point(166, 113);
-            this.butRead.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.butRead.Location = new System.Drawing.Point(116, 72);
             this.butRead.Name = "butRead";
-            this.butRead.Size = new System.Drawing.Size(127, 57);
+            this.butRead.Size = new System.Drawing.Size(89, 36);
             this.butRead.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.butRead.TabIndex = 2;
             this.butRead.Text = "读取数据";
@@ -111,10 +108,9 @@
             this.But_ChooseFile.EnabledEx = true;
             this.But_ChooseFile.FnNo = 0;
             this.But_ChooseFile.Hint = "";
-            this.But_ChooseFile.Location = new System.Drawing.Point(734, 66);
-            this.But_ChooseFile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.But_ChooseFile.Location = new System.Drawing.Point(514, 42);
             this.But_ChooseFile.Name = "But_ChooseFile";
-            this.But_ChooseFile.Size = new System.Drawing.Size(133, 36);
+            this.But_ChooseFile.Size = new System.Drawing.Size(93, 23);
             this.But_ChooseFile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.But_ChooseFile.TabIndex = 1;
             this.But_ChooseFile.Text = "选择文件";
@@ -132,11 +128,10 @@
             this.txtFileName.EFLen = 32767;
             this.txtFileName.EFType = EF.ValueType.EFString;
             this.txtFileName.EFUpperCase = false;
-            this.txtFileName.Location = new System.Drawing.Point(43, 68);
-            this.txtFileName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFileName.Location = new System.Drawing.Point(30, 43);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.ReadOnly = false;
-            this.txtFileName.Size = new System.Drawing.Size(664, 29);
+            this.txtFileName.Size = new System.Drawing.Size(465, 23);
             this.txtFileName.TabIndex = 0;
             // 
             // efGroupBox2
@@ -145,10 +140,9 @@
             this.efGroupBox2.Appearance.Options.UseBackColor = true;
             this.efGroupBox2.Controls.Add(this.tabControl1);
             this.efGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.efGroupBox2.Location = new System.Drawing.Point(0, 179);
-            this.efGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.efGroupBox2.Location = new System.Drawing.Point(0, 114);
             this.efGroupBox2.Name = "efGroupBox2";
-            this.efGroupBox2.Size = new System.Drawing.Size(1463, 793);
+            this.efGroupBox2.Size = new System.Drawing.Size(959, 317);
             this.efGroupBox2.TabIndex = 5;
             this.efGroupBox2.Text = "数据";
             this.efGroupBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.efGroupBox2_Paint);
@@ -158,21 +152,19 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(2, 30);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabControl1.Location = new System.Drawing.Point(2, 23);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1459, 761);
+            this.tabControl1.Size = new System.Drawing.Size(955, 292);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dataGrid_WPS);
-            this.tabPage1.Location = new System.Drawing.Point(4, 31);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage1.Size = new System.Drawing.Size(1451, 726);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Size = new System.Drawing.Size(947, 265);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "WPS规程主体";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -182,11 +174,10 @@
             // 
             this.dataGrid_WPS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid_WPS.IsUseCustomPageBar = true;
-            this.dataGrid_WPS.Location = new System.Drawing.Point(4, 5);
+            this.dataGrid_WPS.Location = new System.Drawing.Point(3, 3);
             this.dataGrid_WPS.MainView = this.view;
-            this.dataGrid_WPS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGrid_WPS.Name = "dataGrid_WPS";
-            this.dataGrid_WPS.Size = new System.Drawing.Size(1443, 716);
+            this.dataGrid_WPS.Size = new System.Drawing.Size(941, 259);
             this.dataGrid_WPS.TabIndex = 0;
             this.dataGrid_WPS.UseEmbeddedNavigator = true;
             this.dataGrid_WPS.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -206,11 +197,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dataGrid_WPSSub);
-            this.tabPage2.Location = new System.Drawing.Point(4, 31);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage2.Location = new System.Drawing.Point(4, 23);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabPage2.Size = new System.Drawing.Size(1451, 759);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Size = new System.Drawing.Size(947, 265);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "wps规程-焊道";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -222,11 +212,10 @@
             gridLevelNode1.RelationName = "Level1";
             this.dataGrid_WPSSub.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.dataGrid_WPSSub.Location = new System.Drawing.Point(4, 5);
+            this.dataGrid_WPSSub.Location = new System.Drawing.Point(3, 3);
             this.dataGrid_WPSSub.MainView = this.gridView1;
-            this.dataGrid_WPSSub.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGrid_WPSSub.Name = "dataGrid_WPSSub";
-            this.dataGrid_WPSSub.Size = new System.Drawing.Size(1443, 749);
+            this.dataGrid_WPSSub.Size = new System.Drawing.Size(941, 259);
             this.dataGrid_WPSSub.TabIndex = 0;
             this.dataGrid_WPSSub.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -245,12 +234,12 @@
             // 
             // FormMCCL0002
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1463, 1044);
+            this.ClientSize = new System.Drawing.Size(959, 477);
             this.Controls.Add(this.efGroupBox2);
             this.Controls.Add(this.efGroupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.Name = "FormMCCL0002";
             this.Text = "WPS规程批量导入";
             this.Load += new System.EventHandler(this.FormMCCL0002_Load);

@@ -11,8 +11,15 @@ using System.Reflection;
 using System.Windows.Forms;namespace MC
 {
     class DataToExcel
-    {
-        public string toexcel(System.Data.DataTable dt, int titleRowCount,string title,string sheetname,int a)
+    {   
+        /// <summary>
+        /// dt->excel
+        /// </summary>
+        /// <param name="dt">datatable</param>
+        /// <param name="titleRowCount">标题行</param>
+        /// <param name="title">标题</param>
+        /// <returns></returns>
+        public string toexcel(System.Data.DataTable dt, int titleRowCount,string title)
         {
             string s = Assembly.GetExecutingAssembly().CodeBase;
             string[] ss = s.Split('/');
@@ -51,8 +58,7 @@ using System.Windows.Forms;namespace MC
             Microsoft.Office.Interop.Excel.Workbook workbook = xlApp.Application.Workbooks.Open(fileName, 2, false, oMissing, oMissing, oMissing, oMissing, oMissing, oMissing, oMissing, oMissing, oMissing, oMissing, oMissing, oMissing);
             ;
             //Microsoft.Office.Interop.Excel.Workbook workbook = workbooks.Add(Microsoft.Office.Interop.Excel.XlWBATemplate.xlWBATWorksheet);
-            Microsoft.Office.Interop.Excel.Worksheet worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Worksheets[a];//取得sheet1
-            worksheet.Name = sheetname;
+            Microsoft.Office.Interop.Excel.Worksheet worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Worksheets[1];//取得sheet1
             //写Title
             if (titleRowCount != 0)
                 MergeCells(worksheet, 1, 1, titleRowCount, dt.Columns.Count, title);
