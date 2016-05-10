@@ -124,7 +124,7 @@ namespace JN_WELD_Service
         {
             String sql = "Select  0 as Ftype, * from View_Task_Welder_Index where FSTARTTIME=@FSTARTTIME";
             sql += " union ";
-            sql += "Select  0 as Ftype, * from View_Task_Welder_Index where FState=1 and FSTARTTIME<>@FSTARTTIME";
+            sql += "Select  0 as Ftype, * from View_Task_Welder_Index where FState<>2 and FSTARTTIME<>@FSTARTTIME";
             ArrayList sqlpars = new ArrayList();
             SqlParameter par = new SqlParameter();
             par.ParameterName = "@FSTARTTIME";
