@@ -221,7 +221,7 @@ namespace MC
 
             DataView dv = _toDayTaskLists.DefaultView;
 
-            String rowfilter = "Fnum='{0}' and (FSTATE=1) ";//and FSTARTTIME=#{1}#";
+            String rowfilter = "Fnum='{0}' and (FSTATE<>2) ";//and FSTARTTIME=#{1}#";
             //如果存在正在进行的任务，则不显示其他任务
             dv.RowFilter = String.Format(rowfilter, weldernum, stime);
             DataTable dt = dv.ToTable();
